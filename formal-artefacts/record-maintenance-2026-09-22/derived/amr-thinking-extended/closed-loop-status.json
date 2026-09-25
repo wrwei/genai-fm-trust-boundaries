@@ -1,0 +1,15 @@
+{
+  "entered": true,
+  "episodes": 10,
+  "selected_source": {
+    "condition": "T64-F",
+    "limit": 12,
+    "response_path": "attempts/002/response.bin",
+    "repair": 1,
+    "sha256": "ccaf1b8c973b72cd27bccabe008fb8d6ae5c2f8b186bacad359facc3fec3df24"
+  },
+  "manual_replacement": false,
+  "new_model_calls": 0,
+  "all_scenarios_executed": true,
+  "scope": "exploratory physical demonstration of one repaired source from two configurations of one observed failed candidate; not an independent task evaluation or safety theorem"
+}

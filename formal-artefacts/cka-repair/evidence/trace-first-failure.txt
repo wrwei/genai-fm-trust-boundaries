@@ -1,0 +1,48 @@
+Started at Sun Sep 13 15:10:59 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/Bridge_Algebra_Repair
+Running Bridge_Algebra_Repair ...
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Trace_Repair
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair 100% (0.100s cumulated time)
+Bridge_Algebra_Repair FAILED (see also "isabelle build_log -H Error Bridge_Algebra_Repair")
+*** Failed to finish proof (line 60 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/Bridge_Trace_Repair.thy"):
+*** goal (1 subgoal):
+***  1. ?xa xs ys.
+***        ??ys��D. filter (��e. e �� C) ys = [];
+***         ?xs ys zs C.
+***            ?interleaves xs ys zs; filter (��e. e �� C) ys = []?
+***            ? filter (��e. e �� C) zs = filter (��e. e �� C) xs;
+***         xs �� P; ys �� D; interleaves xs ys xa?
+***        ? filter (��e. e �� C) xa
+***           �� filter (��e. e �� C) `
+***             P
+*** At command "by" (line 60 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/Bridge_Trace_Repair.thy")
+*** 
+*** At command "ML" (line 108 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/Bridge_Trace_Repair.thy")
+*** Failed to finish proof (line 60 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/Bridge_Trace_Repair.thy"):
+*** goal (1 subgoal):
+***  1. ?xa xs ys.
+***        ??ys��D. filter (��e. e �� C) ys = [];
+***         ?xs ys zs C.
+***            ?interleaves xs ys zs; filter (��e. e �� C) ys = []?
+***            ? filter (��e. e �� C) zs = filter (��e. e �� C) xs;
+***         xs �� P; ys �� D; interleaves xs ys xa?
+***        ? filter (��e. e �� C) xa
+***           �� filter (��e. e �� C) `
+***             P
+*** At command "by" (line 60 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/Bridge_Trace_Repair.thy")
+Unfinished session(s): Bridge_Algebra_Repair
+
+Finished at Sun Sep 13 15:11:07 GMT+8 2026
+0:00:07 elapsed time

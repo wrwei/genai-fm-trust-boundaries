@@ -1,0 +1,7 @@
+session AMR_Closed_Loop_Timing = AMR_Runtime_Binding +
+  options [document=false, threads=2, timeout=300]
+  sessions
+    AMR_Extraction_Faithfulness
+    AMR_Progress_Obligations
+  theories AMR_Closed_Loop_Timing
+  export_files (in "export") "*:timing.csv" "*:source.csv" "*:timing-proof-audit.txt"

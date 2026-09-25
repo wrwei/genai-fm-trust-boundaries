@@ -1,0 +1,9 @@
+{
+  "status": "not_entered",
+  "reason": "all six chains exhausted; no accepted candidate",
+  "new_generated_episodes": 0,
+  "new_handwritten_episodes": 0,
+  "paired_episodes_executed": 0,
+  "planned_conditional_paired_episodes": 10,
+  "manual_substitution": false
+}

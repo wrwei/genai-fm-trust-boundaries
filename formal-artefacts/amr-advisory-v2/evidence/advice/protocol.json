@@ -1,0 +1,69 @@
+{
+  "prepared_utc": "2026-09-21T14:52:05.094218+00:00",
+  "samples": [
+    {
+      "sample": "W1-R1",
+      "index": 0,
+      "request_sha256": "db2f7dbf1312f1fe98f64e6b902be821bc93f14ff0851a0182a6722f13efa939"
+    },
+    {
+      "sample": "W2-R1",
+      "index": 1,
+      "request_sha256": "943e9d91792d19a42c1870338133a72a50814a3d74ae1ae0dcae2edc0834a1f6"
+    },
+    {
+      "sample": "W3-R1",
+      "index": 2,
+      "request_sha256": "b9d2a2f9369469f27e0f877957f55bf83c96a9a28420fc7616629a287e9d07a3"
+    },
+    {
+      "sample": "W1-R2",
+      "index": 3,
+      "request_sha256": "db2f7dbf1312f1fe98f64e6b902be821bc93f14ff0851a0182a6722f13efa939"
+    },
+    {
+      "sample": "W2-R2",
+      "index": 4,
+      "request_sha256": "943e9d91792d19a42c1870338133a72a50814a3d74ae1ae0dcae2edc0834a1f6"
+    },
+    {
+      "sample": "W3-R2",
+      "index": 5,
+      "request_sha256": "b9d2a2f9369469f27e0f877957f55bf83c96a9a28420fc7616629a287e9d07a3"
+    }
+  ],
+  "maximum_requests": 6,
+  "retries": 0,
+  "window_seconds": 3.63,
+  "approach_sha256": "60a242ecf5e9471ce86150e24ca162e92b00cacc2c1c81fd36846dab8f166648",
+  "latch_rule": "fixed paced approach finish; zero waiting for reply; arrival cutoff uses monotonic time",
+  "scope": "six one-decision runtime samples; no response-quality rate or throughput claim",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "inputs": {
+    "formal-artefacts/amr-advisory-v2/advice_trial.py": "2cef70057e9cdb7e407dda1a54499b324870193393741a54df93951f4adb8821",
+    "formal-artefacts/amr-advisory-v2/protocol.py": "f35566d6a94b4f09e914c8781f7ff6ad54b29db49be9c0d01a42264d82c5a2cd",
+    "formal-artefacts/amr-advisory-v2/advice_mailbox.py": "aba2efa0731cedcc4a6d7c5cf8f61cf950ac32b3f05d3aff6b6a53fad75fddda",
+    "formal-artefacts/amr-advisory-v2/source_check.py": "bee8ab0031b0228dd5d140ccbf4fd4e8cb7e83eb5d5045253bec04d5ec6aafde",
+    "formal-artefacts/amr-deepseek-smoke/smoke.py": "4cd7aeb114588967ba5168ef2201d9dfc549da98ebfddfc75f4770f37e5b09c7",
+    "formal-artefacts/amr-llm-trial/trial.py": "741fab8db555c96b55772625c152379b04529b7d6f08519d28066d715bf76161",
+    "formal-artefacts/amr-forge-diagnostic/diagnostics.py": "6566bb2a05bd241d08e3b8722593e5e633291a58e04738c07c66f00d3a273b81",
+    "formal-artefacts/amr-advisory-v2/evidence/source/summary.json": "e53b5ffcb4036a6757fe9b8bdb3d0924f215e3f94bf5b48d11e1b3ca16d7651c",
+    "formal-artefacts/amr-advisory-v2/evidence/source/sources/9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd.json": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6",
+    "formal-artefacts/amr-forge-diagnostic/profiles/__init__.py": "62fce7b366546e395a9e8c164616ff2f0365537cc30bd2f8b4757df329e956ec",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/__init__.py": "566bdcf2c48440ef2d382fec07c0e8a5e98d5792bc2a8735dbe403985d48d86a",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/language.py": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/__init__.py": "e9cc2b25ee29ab3f87eed58f62cd595fee7f60d58d0562d98564228c65f02714",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/language.py": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "formal-artefacts/amr-corridor/controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "formal-artefacts/amr-corridor/oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "formal-artefacts/amr-corridor/plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "formal-artefacts/amr-corridor/run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "formal-artefacts/amr-corridor/simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+  }
+}

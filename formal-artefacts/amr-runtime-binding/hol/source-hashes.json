@@ -1,0 +1,8 @@
+{
+  "formal-artefacts/amr-runtime-binding/hol/AMR_Runtime_Binding.thy": "f7aa40646f47705bd0b9bc521ff04eeb0778537415982be0cb5645e87d32ad48",
+  "formal-artefacts/amr-runtime-binding/hol/ROOT": "f7ee7569e012f61acf5359ab3bd2d12a3068fd0f5006a584f8b62f4d8c5f065b",
+  "formal-artefacts/amr-runtime-binding/hol/build.py": "f5eae1b6221debcc64c52e5138adeb5199e524d96d9df8991eed08a57dfd78e0",
+  "formal-artefacts/amr-advisory-v2/hol/AMR_Protocol.thy": "47f8ee71c4cdddfa6946588169be8f3df738740838c6bfb492c30797ece3dcf5",
+  "formal-artefacts/cka-repair/Bridge_Trace_Repair.thy": "4374d9286a27aedea6fdaf58206ab68c439f7cf457bff36e58a9cabd0d9a0a6f",
+  "formal-artefacts/cka-repair/Bridge_Algebra_Repair.thy": "0564c62e271af94187c14e5ee3e5864d24263b3f68f30ce6e7e3ac853d94bfd3"
+}

@@ -1,0 +1,11 @@
+{
+  "command_argv": [
+    "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "formal-artefacts\\cka-repair\\runtime-interface\\sqlite-runtime\\test_runtime.py",
+    "RuntimeTests.test_revocation_at_commit"
+  ],
+  "return_code": 1,
+  "reason": "Missing transactional initialization; NotImplementedError, not an import failure",
+  "test_sha256": "66255a7d789ebbf9e631d028d6f965cf5f0024fa5b855609f6bc5731dfda3414"
+}

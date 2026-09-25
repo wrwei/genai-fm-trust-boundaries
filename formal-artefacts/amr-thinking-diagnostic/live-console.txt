@@ -1,0 +1,13 @@
+{"condition": "N12-F", "repair": 1, "source_bad": 784, "accepted": false, "fatal": null}
+{"condition": "T12-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "truncated"}
+{
+  "protocol_id": "amr-thinking-diagnostic/v1",
+  "mode": "live",
+  "new_calls": 2,
+  "network_dispatches": 2,
+  "stop": "truncated",
+  "selected_for_exploratory_physics": null,
+  "old_run_unchanged": true,
+  "finished_at_utc": "2026-09-17T06:30:00.499588+00:00",
+  "scope": "two solving configurations from one previously observed failure; not independent task samples"
+}

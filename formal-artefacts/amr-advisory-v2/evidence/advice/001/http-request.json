@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "max_tokens": 128,
+  "stream": false,
+  "temperature": 0,
+  "thinking": {
+    "type": "disabled"
+  },
+  "response_format": {
+    "type": "json_object"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Two AMRs share a single-lane factory corridor. A carries routine stock due in30minutes; B carries a repair spare due in10minutes. Both are currently eligible. Recommend the earlier-deadline task.\nThis is advisory data only. Return exactly one JSON object with the single key \"prefer\" and value \"A\" or \"B\". No code, actions, credentials or explanation."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+P-A True complete
+P-B True complete
+P-none True complete
+E2-center True complete
+E2-whole True complete
+E3a-bad True bounded_witness
+E3a-good True bounded_witness
+E3b-bad True bounded_witness
+E3b-good True bounded_witness
+E4-wait True horizon
+E4-fifo True complete
+B2-temporary True complete
+B2-permanent True horizon
+Brake-inside True standstill
+Brake-outside True standstill
+https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/amr-advisory-v2/evidence/physical/20260921T144921Z

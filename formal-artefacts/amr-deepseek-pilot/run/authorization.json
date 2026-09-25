@@ -1,0 +1,27 @@
+{
+  "scope": "user-authorized fixed six-chain continuation including inherited smoke response",
+  "created_at_utc": "2026-09-17T05:11:21.526082+00:00",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "config": {
+    "record_mode": "live",
+    "provider": "deepseek",
+    "model_id": "deepseek-flash",
+    "model_revision": "provider-not-exposed",
+    "decoding": {
+      "temperature": 0,
+      "thinking": {
+        "type": "disabled"
+      },
+      "stream": false
+    },
+    "max_output_tokens": 2048,
+    "transport": "direct-https-chat-completions-single-post"
+  },
+  "max_total_attempts": 18,
+  "max_new_network_posts": 17,
+  "max_repairs_per_sample": 2,
+  "max_retries": 0,
+  "client_wall_deadline_seconds": 90,
+  "historical_preparation_inputs_verified": 47,
+  "prompt_source": "trial.prepare_request only; no manual feedback"
+}

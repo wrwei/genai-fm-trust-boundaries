@@ -1,0 +1,5835 @@
+[
+  {
+    "name": "empty",
+    "constructed_fault": null,
+    "granted": [
+      "A"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "A"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "valid-B",
+    "constructed_fault": null,
+    "granted": [
+      "B"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "B"
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "accepted",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "B"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": true
+          },
+          "raw_action": "SelectB",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": "B",
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": "B",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "B"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "wrong-binding",
+    "constructed_fault": null,
+    "granted": [
+      "A"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "A"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "malformed",
+    "constructed_fault": null,
+    "granted": [
+      "A"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\",\"grant\":true}"
+        ],
+        "events": [],
+        "verdict": "invalid_payload",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "A"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "duplicate",
+    "constructed_fault": null,
+    "granted": [
+      "B"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "B"
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "accepted",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "A"
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"A\"}"
+        ],
+        "events": [],
+        "verdict": "duplicate_ignored",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "B"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": true
+          },
+          "raw_action": "SelectB",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": "B",
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": "B",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "B"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "late-B",
+    "constructed_fault": null,
+    "granted": [
+      "A"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Validate",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Validate"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "B"
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "accepted",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": false,
+            "RequestA": false,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": true
+          },
+          "raw_action": "Defer",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 2,
+            "advice": "B",
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "valid_advice"
+          }
+        }
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "bad-burst",
+    "constructed_fault": null,
+    "granted": [
+      "A"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Provider",
+          null
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "wrong_binding",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "A"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "skip-binding",
+    "constructed_fault": "skip_binding",
+    "granted": [
+      "B"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [
+      3
+    ],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "B"
+        ],
+        "raw_input": [
+          "Message",
+          "old",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "accepted",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "B"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": true
+          },
+          "raw_action": "SelectB",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": "B",
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": "B",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "B"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "reset-pending",
+    "constructed_fault": "reset_pending",
+    "granted": [
+      "B"
+    ],
+    "supplied_services": 2,
+    "blocked_service_opportunities": 0,
+    "conformance_mismatches": [
+      4
+    ],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Validate",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Validate"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Provider",
+          "B"
+        ],
+        "raw_input": [
+          "Message",
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\"}"
+        ],
+        "events": [],
+        "verdict": "accepted",
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            "B"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": true,
+            "PreferA": false,
+            "PreferB": true
+          },
+          "raw_action": "SelectB",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 2,
+            "advice": "B",
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": "B",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": "B"
+        },
+        "event": [
+          "Trusted",
+          [
+            "Service",
+            null
+          ],
+          [
+            [
+              "Grant",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Service"
+        ],
+        "events": [
+          [
+            "Grant",
+            "B"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "wait-empty",
+    "constructed_fault": "wait",
+    "granted": [],
+    "supplied_services": 0,
+    "blocked_service_opportunities": 2,
+    "conformance_mismatches": [],
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "RequestAdvice"
+          ],
+          []
+        ],
+        "raw_input": [
+          "RequestAdvice"
+        ],
+        "events": [],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": true,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "B"
+          ],
+          [
+            [
+              "Registered",
+              "B"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "B"
+        ],
+        "events": [
+          [
+            "Registered",
+            "B"
+          ]
+        ],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  },
+  {
+    "name": "revoked-before-commit",
+    "rows": [
+      {
+        "before": {
+          "core": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Register",
+            "A"
+          ],
+          [
+            [
+              "Registered",
+              "A"
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Register",
+          "A"
+        ],
+        "events": [
+          [
+            "Registered",
+            "A"
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Validate",
+            "A"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Validate"
+        ],
+        "events": [],
+        "source": {
+          "facts": {
+            "OwnerFree": true,
+            "RequestA": true,
+            "RequestB": false,
+            "PreferA": false,
+            "PreferB": false
+          },
+          "raw_action": "SelectA",
+          "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "req",
+            "context_id": "ctx",
+            "reason": "no_valid_advice"
+          }
+        }
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Observe",
+            true,
+            true
+          ],
+          [
+            [
+              "Observed",
+              true,
+              true
+            ]
+          ]
+        ],
+        "raw_input": [
+          "Observe",
+          true,
+          true
+        ],
+        "events": [
+          [
+            "Observed",
+            true,
+            true
+          ]
+        ],
+        "source": null
+      },
+      {
+        "before": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "after": {
+          "core": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "requested": false,
+          "slot": null
+        },
+        "event": [
+          "Trusted",
+          [
+            "Commit"
+          ],
+          []
+        ],
+        "raw_input": [
+          "Commit"
+        ],
+        "events": [],
+        "source": null
+      }
+    ],
+    "expected_outcome_observed": true
+  }
+]

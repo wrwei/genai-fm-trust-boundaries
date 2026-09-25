@@ -1,0 +1,24 @@
+Bounded continuation runner implementation, 2026-09-17
+
+Files: pilot.py and tests/test_pilot.py.
+TDD evidence: the initial 12 behavioral tests failed because the runner was absent;
+the implemented runner passed those 12. Two child/model guard tests also pass.
+Final offline run: 14 tests passed; output is in offline-runner-tests.txt.
+Tests replace only the transport worker, forbid credential reads, and verify that
+the original smoke run's complete file hash inventory stays unchanged.
+
+execute(key_path, *, run=None, prior=None, worker=run_worker) initializes and executes
+one exclusive new run. initialize(run=None, prior=None) is offline but consumes that
+directory; do not initialize the same path before calling execute. CLI --key-file
+uses only the fixed amr-deepseek-pilot/run path. Child dispatch directories are
+transport/002 through transport/018, matching the inherited trial record numbering.
+
+summary.json contains trial_summary, calls (inherited/new/total and observed new
+dispatch markers), timestamps, and stopped reason. Calls count
+worker invocations conservatively; an observed dispatch marker identifies the sole
+POST attempt. Each response stores
+raw HTTP bytes, decoded assistant UTF-8 bytes without normalization, envelope,
+usage, provider-reported identity, and timestamps.
+
+No live runner, network call, credential read, old-artifact edit, or git mutation
+was performed during this implementation task.

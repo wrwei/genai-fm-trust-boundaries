@@ -1,0 +1,89 @@
+{
+  "id": "amr-independent-replication/v1",
+  "mode": "live",
+  "created_at_utc": "2026-09-21T13:18:36.759784+00:00",
+  "sample_ids": [
+    "P1-R1",
+    "P2-R1",
+    "P3-R1",
+    "P1-R2",
+    "P2-R2",
+    "P3-R2"
+  ],
+  "max_repairs": 2,
+  "max_calls": 18,
+  "max_retries": 0,
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "model_configs": {
+    "P1-R1": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "P2-R1": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "P3-R1": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "P1-R2": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "P2-R2": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "P3-R2": {
+      "model": "deepseek-flash",
+      "max_tokens": 65536,
+      "stream": false,
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    }
+  },
+  "max_output_tokens": 65536,
+  "client_wall_deadline_seconds": 660,
+  "socket_timeout_seconds": 600,
+  "source_spec": "amr-supervisor-obligations/v1.1",
+  "rule_limit": 12,
+  "initial_context": "original task only; no candidate, feedback, or shared conversation",
+  "scheduling": "all six initials, then repair 1, then repair 2; skip terminal chains",
+  "maximum_payload_bytes": 65536,
+  "physics_selection": "first accepted attempt per sample; exact source-byte SHA-256 dedup in sample order",
+  "physics_cases": [
+    "normal_A",
+    "normal_B",
+    "temporary",
+    "blackout",
+    "permanent"
+  ]
+}

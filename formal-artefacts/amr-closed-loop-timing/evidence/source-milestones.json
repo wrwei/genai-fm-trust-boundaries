@@ -1,0 +1,166 @@
+{
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "passed": true,
+  "rows": [
+    {
+      "name": "unusable",
+      "mode": "Traversing",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Brake",
+      "expected_next": "BrakeRequested",
+      "actual_action": "Brake",
+      "actual_next": "BrakeRequested",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "braking_owner",
+      "mode": "BrakeRequested",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Brake",
+      "expected_next": "BrakeRequested",
+      "actual_action": "Brake",
+      "actual_next": "BrakeRequested",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "halted_owner",
+      "mode": "BrakeRequested",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Proceed",
+      "expected_next": "Traversing",
+      "actual_action": "Proceed",
+      "actual_next": "Traversing",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "waiting_owner",
+      "mode": "Waiting",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Proceed",
+      "expected_next": "Traversing",
+      "actual_action": "Proceed",
+      "actual_next": "Traversing",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "clear_owner",
+      "mode": "Traversing",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": false,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Release",
+      "expected_next": "Traversing",
+      "actual_action": "Release",
+      "actual_next": "Traversing",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "released_motion",
+      "mode": "Traversing",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "expected_action": "Proceed",
+      "expected_next": "Traversing",
+      "actual_action": "Proceed",
+      "actual_next": "Traversing",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "goal_brake",
+      "mode": "Traversing",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "expected_action": "Brake",
+      "expected_next": "BrakeRequested",
+      "actual_action": "Brake",
+      "actual_next": "BrakeRequested",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    {
+      "name": "goal_finish",
+      "mode": "BrakeRequested",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": true,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "expected_action": "Finish",
+      "expected_next": "Done",
+      "actual_action": "Finish",
+      "actual_next": "Done",
+      "passed": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    }
+  ]
+}

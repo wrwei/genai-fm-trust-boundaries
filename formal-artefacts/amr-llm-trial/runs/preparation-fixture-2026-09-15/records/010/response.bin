@@ -1,0 +1,37 @@
+{
+  "schema": "amr-supervisor/v1",
+  "select": [
+    {
+      "when": "OwnerFree and RequestA and not RequestB",
+      "action": "SelectA"
+    },
+    {
+      "when": "OwnerFree and RequestB and not RequestA",
+      "action": "SelectB"
+    },
+    {
+      "when": "OwnerFree and RequestA and RequestB and (PreferA or not PreferB)",
+      "action": "SelectA"
+    },
+    {
+      "when": "OwnerFree and RequestA and RequestB",
+      "action": "SelectB"
+    },
+    {
+      "when": "True",
+      "action": "Defer"
+    }
+  ],
+  "step": [
+    {
+      "when": "Halted",
+      "action": "Brake",
+      "next": "Stopped"
+    },
+    {
+      "when": "True",
+      "action": "Brake",
+      "next": "BrakeRequested"
+    }
+  ]
+}

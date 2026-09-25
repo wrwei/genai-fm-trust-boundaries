@@ -1,0 +1,157 @@
+{
+  "finite": {
+    "rows": 77760,
+    "mismatch_count": 0,
+    "examples": [],
+    "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "table_sha256": "7c29cb63bfe723d854b83ced8aa753ff5bcf1e29cf2f91b0d9dd97da9fb41ab4",
+    "scope": "finite equality classes and parsed values; not a proof of Python or JSON parsing"
+  },
+  "parser": [
+    {
+      "name": "A",
+      "expected": "A",
+      "actual": "A",
+      "passed": true
+    },
+    {
+      "name": "B",
+      "expected": "B",
+      "actual": "B",
+      "passed": true
+    },
+    {
+      "name": "space",
+      "expected": "B",
+      "actual": "B",
+      "passed": true
+    },
+    {
+      "name": "escaped_key",
+      "expected": "B",
+      "actual": "B",
+      "passed": true
+    },
+    {
+      "name": "escaped_value",
+      "expected": "B",
+      "actual": "B",
+      "passed": true
+    },
+    {
+      "name": "limit_1024",
+      "expected": "B",
+      "actual": "B",
+      "passed": true
+    },
+    {
+      "name": "limit_1025",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "empty",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "word",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "truncated",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "unknown",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "extra",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "duplicate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "escaped_duplicate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "array",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "null",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "bool",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "number",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "nested",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "nonascii",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "nan",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "bytes",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "surrogate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "deep",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

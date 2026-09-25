@@ -1,0 +1,80 @@
+{
+  "schema": "amr-supervisor/v1",
+  "select": [
+    {
+      "when": "not OwnerFree",
+      "action": "Defer"
+    },
+    {
+      "when": "RequestA and not RequestB",
+      "action": "SelectA"
+    },
+    {
+      "when": "RequestB and not RequestA",
+      "action": "SelectB"
+    },
+    {
+      "when": "RequestA and RequestB and PreferA and not PreferB",
+      "action": "SelectA"
+    },
+    {
+      "when": "RequestA and RequestB and PreferB and not PreferA",
+      "action": "SelectB"
+    },
+    {
+      "when": "RequestA and RequestB",
+      "action": "SelectA"
+    },
+    {
+      "when": "True",
+      "action": "Defer"
+    }
+  ],
+  "step": [
+    {
+      "when": "Halted and (not ObservationUsable or not TaskActive or PedestrianBlocked)",
+      "action": "Brake",
+      "next": "Stopped"
+    },
+    {
+      "when": "not Halted and (not ObservationUsable or not TaskActive or PedestrianBlocked)",
+      "action": "Brake",
+      "next": "BrakeRequested"
+    },
+    {
+      "when": "AtGoal and Released and Halted",
+      "action": "Finish",
+      "next": "Done"
+    },
+    {
+      "when": "AtGoal and Released and not Halted",
+      "action": "Brake",
+      "next": "BrakeRequested"
+    },
+    {
+      "when": "OwnReservation and BodyClearOfZ",
+      "action": "Release",
+      "next": "Traversing"
+    },
+    {
+      "when": "ModeBrakeRequested and not Halted",
+      "action": "Brake",
+      "next": "BrakeRequested"
+    },
+    {
+      "when": "not OwnReservation and not Released",
+      "action": "Request",
+      "next": "Waiting"
+    },
+    {
+      "when": "ModeStopped",
+      "action": "Resume",
+      "next": "ResumePending"
+    },
+    {
+      "when": "True",
+      "action": "Proceed",
+      "next": "Traversing"
+    }
+  ]
+}

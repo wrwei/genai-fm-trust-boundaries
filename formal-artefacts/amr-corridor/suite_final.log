@@ -1,0 +1,13 @@
+{"case": "C01_A_first", "completed": ["A", "B"], "time": 57.4, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C01_B_first", "completed": ["A", "B"], "time": 57.4, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C10_temporary_pedestrian", "completed": ["A", "B"], "time": 64.95, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C12_permanent_pedestrian", "completed": [], "time": 120.0, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C12_always_stop", "completed": [], "time": 120.0, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C05_front_only_release", "completed": ["A", "B"], "time": 53.95, "collisions": [], "unresolved": [], "early_releases": 2}
+{"case": "C08_observation_blackout", "completed": ["A", "B"], "time": 62.9, "collisions": [], "unresolved": [], "early_releases": 0}
+{"case": "C07_full_bound", "clearance": 0.5250000000000091, "margin_violation": false, "crossed_boundary": false}
+{"case": "C07_omit_reaction", "clearance": 0.07500000000001872, "margin_violation": true, "crossed_boundary": false}
+{"case": "C12_weak_brake", "clearance": -0.09999999999999087, "margin_violation": true, "crossed_boundary": true}
+{"refinement": "C01_A_first", "dt": 0.005, "same_outcomes": true, "time_difference": 0.0, "max_final_coordinate_difference": 8.100187187665142e-13, "coarse_early_release_count": 0, "fine_early_release_count": 0}
+{"refinement": "C10_temporary_pedestrian", "dt": 0.005, "same_outcomes": true, "time_difference": 0.0, "max_final_coordinate_difference": 8.064660050877137e-13, "coarse_early_release_count": 0, "fine_early_release_count": 0}
+{"refinement": "C05_front_only_release", "dt": 0.005, "same_outcomes": true, "time_difference": 0.0, "max_final_coordinate_difference": 8.100187187665142e-13, "coarse_early_release_count": 2, "fine_early_release_count": 2}

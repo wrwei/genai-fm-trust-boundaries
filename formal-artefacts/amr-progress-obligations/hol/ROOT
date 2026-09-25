@@ -1,0 +1,4 @@
+session AMR_Progress_Obligations = HOL +
+  options [document=false, threads=2, timeout=300]
+  theories AMR_Progress
+  export_files (in "export") "*:progress-audit.txt"

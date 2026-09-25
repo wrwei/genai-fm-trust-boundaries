@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "raw_samples": 6,
+  "distinct_sources": 5,
+  "concrete_extraction_equalities": 10,
+  "concrete_universal_preservation_corollaries": 10,
+  "expression_structures": 19,
+  "paired_interpreter_valuations": 152,
+  "source_identity": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "snapshot_inputs_verified": 21,
+  "proof_inputs_verified": 4,
+  "previous_runtime_package_entries_unchanged": 36,
+  "general_audit_sha256": "43b3da1241532124a85c6498d3335b2e6b0b954d20b105dce8354b20f2fb726d",
+  "concrete_audit_sha256": "f1d81e682f676d20ef70c4a1758433cd711e00f252583733fa10171b7f261416",
+  "snapshot_sha256": "73ce7b148de5495339a09100e70139f75e7752ef7001ced5025adb77e10e97e2",
+  "verifier_sha256": "aa8c922df40f70022c353801454ee0caadd5f0bb0b71b16965b69d27033263fb",
+  "api_requests": 0,
+  "scope": "deterministic snapshot regeneration and identities; no general Python/parser proof"
+}

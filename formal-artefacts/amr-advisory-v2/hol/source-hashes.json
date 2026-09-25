@@ -1,0 +1,10 @@
+{
+  "amr-advisory-v2/hol/AMR_Protocol.thy": "47f8ee71c4cdddfa6946588169be8f3df738740838c6bfb492c30797ece3dcf5",
+  "amr-advisory-v2/hol/ROOT": "77e55092cdc51a09d7181315301c9e2cecf6ccd4ef7ed22ab8dedce5213532cc",
+  "amr-advisory-v2/hol/build.py": "23659d944ed895d2f46748b52bc7ab3c650c2e4d20c206c0b6bbd6fa3dbc63a0",
+  "amr-advisory-v2/hol/interface.md": "b646c6685dd2ad7292a150f359ca4ec28334730b481c77427ec1a3994c056a68",
+  "amr-advisory-v2/hol/README.md": "5d04046cff0085e88a5f0fd427cebca29bb67cdd2be5499df2f54bb793a0b69e",
+  "cka-repair/ROOT": "e0d3af0bc0aa28c3b424cbf04d7f4544995fc2828c724c8d61f2979d067cb909",
+  "cka-repair/Bridge_Algebra_Repair.thy": "0564c62e271af94187c14e5ee3e5864d24263b3f68f30ce6e7e3ac853d94bfd3",
+  "cka-repair/Bridge_Trace_Repair.thy": "4374d9286a27aedea6fdaf58206ab68c439f7cf457bff36e58a9cabd0d9a0a6f"
+}

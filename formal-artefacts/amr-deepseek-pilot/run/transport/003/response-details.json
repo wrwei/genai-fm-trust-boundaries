@@ -1,0 +1,29 @@
+{
+  "started_at_utc": "2026-09-17T05:11:23.603368+00:00",
+  "finished_at_utc": "2026-09-17T05:11:25.055107+00:00",
+  "transport": {
+    "status": "received",
+    "http_status": 200,
+    "credential_echo_redacted": false,
+    "body_limit_exceeded": false
+  },
+  "response_status": "ok",
+  "provider_reported_model": "deepseek-flash",
+  "provider_system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "usage": {
+    "prompt_tokens": 2039,
+    "completion_tokens": 263,
+    "total_tokens": 2302,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 1015
+  },
+  "usage_summary": {
+    "input_tokens": 2039,
+    "output_tokens": 263,
+    "cache_hit_tokens": 1024,
+    "cache_miss_tokens": 1015
+  }
+}

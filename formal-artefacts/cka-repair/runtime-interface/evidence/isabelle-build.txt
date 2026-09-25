@@ -1,0 +1,22 @@
+Started at Sun Sep 13 16:55:20 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/Runtime_Interface
+Running Runtime_Interface ...
+Runtime_Interface: theory Runtime_Interface.Runtime_Interface
+Runtime_Interface: theory Runtime_Interface.Runtime_Interface 100% (11.050s cumulated time)
+Timing Runtime_Interface (2 threads, 6.942s elapsed time, 7.609s cpu time, 0.234s GC time, factor 1.10)
+Finished Runtime_Interface (0:00:08 elapsed time)
+
+Finished at Sun Sep 13 16:55:33 GMT+8 2026
+0:00:13 elapsed time

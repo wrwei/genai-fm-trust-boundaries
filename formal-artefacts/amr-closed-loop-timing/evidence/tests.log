@@ -1,0 +1,20 @@
+test_exact_selected_source_produces_literal_milestone_responses (test_source_milestones.SourceMilestoneTests.test_exact_selected_source_produces_literal_milestone_responses) ... ok
+test_selected_source_identity_is_fixed (test_source_milestones.SourceMilestoneTests.test_selected_source_identity_is_fixed) ... ok
+test_unknown_mode_and_fact_override_are_rejected (test_source_milestones.SourceMilestoneTests.test_unknown_mode_and_fact_override_are_rejected) ... ok
+test_brake_requested_start_waits_for_halt_threshold (test_timing_model.TimingModelTests.test_brake_requested_start_waits_for_halt_threshold) ... ok
+test_finish_includes_observation_command_and_halt_timer (test_timing_model.TimingModelTests.test_finish_includes_observation_command_and_halt_timer) ... ok
+test_invalid_ticks_modes_and_temporal_order_are_rejected (test_timing_model.TimingModelTests.test_invalid_ticks_modes_and_temporal_order_are_rejected) ... ok
+test_next_control_keeps_on_grid_event_and_rounds_other_residues_up (test_timing_model.TimingModelTests.test_next_control_keeps_on_grid_event_and_rounds_other_residues_up) ... ok
+test_observation_and_release_include_sampling_and_delivery (test_timing_model.TimingModelTests.test_observation_and_release_include_sampling_and_delivery) ... ok
+test_two_task_bound_contains_both_complete_task_chains (test_timing_model.TimingModelTests.test_two_task_bound_contains_both_complete_task_chains) ... ok
+test_waiting_start_includes_next_control_and_command_delivery (test_timing_model.TimingModelTests.test_waiting_start_includes_next_control_and_command_delivery) ... ok
+test_finish_before_halt_timer_is_rejected (test_trace_binding.TraceBindingTests.test_finish_before_halt_timer_is_rejected) ... ok
+test_late_proceed_application_breaks_start_bound (test_trace_binding.TraceBindingTests.test_late_proceed_application_breaks_start_bound) ... ok
+test_late_release_breaks_clearance_response_bound (test_trace_binding.TraceBindingTests.test_late_release_breaks_clearance_response_bound) ... ok
+test_missing_goal_brake_application_is_rejected (test_trace_binding.TraceBindingTests.test_missing_goal_brake_application_is_rejected) ... ok
+test_retained_trace_meets_stronger_milestone_bounds (test_trace_binding.TraceBindingTests.test_retained_trace_meets_stronger_milestone_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.022s
+
+OK

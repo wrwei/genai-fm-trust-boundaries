@@ -1,0 +1,10 @@
+{
+  "generation_and_physics_inventory_verified": {
+    "run": 90,
+    "closed-loop": 70
+  },
+  "physical_inputs_verified": 166,
+  "local_document_links_verified": 42,
+  "physical_audit_matches_summary": true,
+  "report_has_no_pending_result_placeholder": true
+}

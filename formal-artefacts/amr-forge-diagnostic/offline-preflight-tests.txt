@@ -1,0 +1,80 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_current_examples_cover_both_standstill_states_in_stable_order (test_diagnostics.DiagnosticTests.test_current_examples_cover_both_standstill_states_in_stable_order) ... ok
+test_current_group_cap_and_first_enumerated_representatives (test_diagnostics.DiagnosticTests.test_current_group_cap_and_first_enumerated_representatives) ... ok
+test_frozen_assessment_fields_and_original_feedback_are_exact (test_diagnostics.DiagnosticTests.test_frozen_assessment_fields_and_original_feedback_are_exact) ... ok
+test_history_prioritizes_regressed_then_repaired_then_unresolved (test_diagnostics.DiagnosticTests.test_history_prioritizes_regressed_then_repaired_then_unresolved) ... ok
+test_history_recomputes_locations_caps_at_four_and_excludes_current (test_diagnostics.DiagnosticTests.test_history_recomputes_locations_caps_at_four_and_excludes_current) ... ok
+test_invalid_text_has_no_fabricated_full_domain_or_history_evaluations (test_diagnostics.DiagnosticTests.test_invalid_text_has_no_fabricated_full_domain_or_history_evaluations) ... ok
+test_nine_twelve_thirteen_rule_boundaries_apply_to_each_function (test_diagnostics.DiagnosticTests.test_nine_twelve_thirteen_rule_boundaries_apply_to_each_function) ... ok
+test_profile_twelve_does_not_mutate_frozen_or_profile_eight_parser (test_diagnostics.DiagnosticTests.test_profile_twelve_does_not_mutate_frozen_or_profile_eight_parser) ... ok
+test_profiles_accept_fixed_positives_with_complete_input_domain (test_diagnostics.DiagnosticTests.test_profiles_accept_fixed_positives_with_complete_input_domain) ... ok
+test_program_key_uses_ast_preserves_rule_order_and_invalid_raw_bytes (test_diagnostics.DiagnosticTests.test_program_key_uses_ast_preserves_rule_order_and_invalid_raw_bytes) ... ok
+test_refresh_all_history_detects_regression_after_unsent_repair (test_diagnostics.DiagnosticTests.test_refresh_all_history_detects_regression_after_unsent_repair) ... ok
+test_relaxed_rule_limit_does_not_relax_action_or_expression_syntax (test_diagnostics.DiagnosticTests.test_relaxed_rule_limit_does_not_relax_action_or_expression_syntax) ... ok
+test_relaxed_rule_limit_preserves_safety_and_progress_obligations (test_diagnostics.DiagnosticTests.test_relaxed_rule_limit_preserves_safety_and_progress_obligations) ... ok
+test_select_allowed_outputs_include_both_eligible_vehicles (test_diagnostics.DiagnosticTests.test_select_allowed_outputs_include_both_eligible_vehicles) ... ok
+test_uncovered_inputs_are_distinguished_from_defined_disagreement (test_diagnostics.DiagnosticTests.test_uncovered_inputs_are_distinguished_from_defined_disagreement) ... ok
+test_unknown_profile_limits_are_rejected (test_diagnostics.DiagnosticTests.test_unknown_profile_limits_are_rejected) ... ok
+test_update_history_accumulates_both_sets_without_mutation_or_reordering (test_diagnostics.DiagnosticTests.test_update_history_accumulates_both_sets_without_mutation_or_reordering) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "D12-O", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "D8-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "D12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+test_accepted_source_stops_before_cycle_check (test_runner.RunnerTests.test_accepted_source_stops_before_cycle_check) ... ok
+test_fatal_assessment_never_reenters_broken_parser (test_runner.RunnerTests.test_fatal_assessment_never_reenters_broken_parser) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-O", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-O", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-O", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+test_four_round_ceiling_and_round_robin_order (test_runner.RunnerTests.test_four_round_ceiling_and_round_robin_order) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "invalid_utf8"}
+test_malformed_envelopes_stop_without_retry (test_runner.RunnerTests.test_malformed_envelopes_stop_without_retry) ... ok
+test_nonlive_worker_cannot_be_marked_live (test_runner.RunnerTests.test_nonlive_worker_cannot_be_marked_live) ... ok
+test_original_feedback_first_prompt_exactly_reproduces_old_repair (test_runner.RunnerTests.test_original_feedback_first_prompt_exactly_reproduces_old_repair) ... ok
+test_oversized_payload_never_dispatched (test_runner.RunnerTests.test_oversized_payload_never_dispatched) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+test_repeated_starting_candidate_stops_each_chain_after_one (test_runner.RunnerTests.test_repeated_starting_candidate_stops_each_chain_after_one) ... ok
+[Legacy-only test entry omitted during record maintenance.]
+test_rule_limit_prompt_changes_do_not_change_expression_depth (test_runner.RunnerTests.test_rule_limit_prompt_changes_do_not_change_expression_depth) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+test_transport_failure_stops_batch_without_retry (test_runner.RunnerTests.test_transport_failure_stops_batch_without_retry) ... ok
+{"condition": "D8-O", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "invalid_usage"}
+test_invalid_usage_stops_whole_batch (test_runner.RunnerTests.test_invalid_usage_stops_whole_batch) ... ok
+test_changed_feedback_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_changed_feedback_is_rejected_before_post) ... ok
+test_changed_payload_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_changed_payload_is_rejected_before_post) ... ok
+test_changed_prompt_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_changed_prompt_is_rejected_before_post) ... ok
+test_dependency_hash_drift_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_dependency_hash_drift_is_rejected_before_post) ... ok
+test_finished_run_is_rejected_before_claim (test_worker_guards.WorkerGuardTests.test_finished_run_is_rejected_before_claim) ... ok
+test_fixture_mode_is_rejected_before_claim (test_worker_guards.WorkerGuardTests.test_fixture_mode_is_rejected_before_claim) ... ok
+[Legacy-only test entry omitted during record maintenance.]
+test_out_of_order_attempt_number_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_out_of_order_attempt_number_is_rejected_before_post) ... ok
+test_out_of_order_condition_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_out_of_order_condition_is_rejected_before_post) ... ok
+test_prior_fatal_record_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_prior_fatal_record_is_rejected_before_post) ... ok
+test_setup_hash_drift_is_rejected_before_post (test_worker_guards.WorkerGuardTests.test_setup_hash_drift_is_rejected_before_post) ... ok
+test_valid_exact_payload_reaches_stub_once_and_claim_blocks_second_call (test_worker_guards.WorkerGuardTests.test_valid_exact_payload_reaches_stub_once_and_claim_blocks_second_call) ... ok
+test_wrong_path_number_and_call_ceiling_fail_before_claim (test_worker_guards.WorkerGuardTests.test_wrong_path_number_and_call_ceiling_fail_before_claim) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 70.439s
+
+OK

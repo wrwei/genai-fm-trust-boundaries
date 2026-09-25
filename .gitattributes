@@ -1,0 +1,34 @@
+# Preserve exact bytes of archived sources, prompts, outputs and their SHA256 evidence.
+# These research snapshots intentionally contain both LF and CRLF files.
+/formal-artefacts/amr-corridor/** -text
+/formal-artefacts/amr-supervisor/** -text
+/formal-artefacts/amr-llm-trial/** -text
+/formal-artefacts/amr-deepseek-smoke/** -text
+/formal-artefacts/amr-deepseek-pilot/** -text
+/formal-artefacts/amr-forge-diagnostic/** -text
+/formal-artefacts/amr-thinking-diagnostic/** -text
+/formal-artefacts/amr-thinking-extended/** -text
+/formal-artefacts/amr-independent-replication/** -text
+/formal-artefacts/amr-advisory-v2/** -text
+/formal-artefacts/record-maintenance-2026-09-22/** -text
+/formal-artefacts/amr-runtime-binding/** -text
+/formal-artefacts/amr-extraction-faithfulness/** -text
+/formal-artefacts/amr-progress-obligations/** -text
+/formal-artefacts/amr-closed-loop-timing/** -text
+/formal-artefacts/cka-repair/** -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-13.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-14.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-15.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-17.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-21.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-22.md -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-13.json -text
+/literature/scholar_search_2026-09-10/followup/*_2026-09-15.json -text
+
+# Keep verbatim transcripts, diff context and vendored preview inputs unchanged.
+/formal-artefacts/amr-corridor/review_package_*.txt -whitespace
+/formal-artefacts/amr-supervisor/review_package_*.txt -whitespace
+/formal-artefacts/amr-llm-trial/*.diff -whitespace
+/formal-artefacts/amr-llm-trial/*.log -whitespace
+/formal-artefacts/cka-repair/evidence/*.txt -whitespace
+/formal-artefacts/cka-repair/runtime-interface/sqlite-runtime/evidence/*.txt -whitespace

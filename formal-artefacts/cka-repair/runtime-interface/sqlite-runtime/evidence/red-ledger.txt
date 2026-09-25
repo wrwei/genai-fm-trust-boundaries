@@ -1,0 +1,15 @@
+"""Single-operation transactional ledger; implementation pending (red stage)."""
+
+
+class Ledger:
+    def __init__(self, path):
+        self.path = path
+
+    def initialize(self):
+        raise NotImplementedError("transactional initialization is not implemented")
+
+    def apply(self, command, **arguments):
+        raise NotImplementedError("transactional command is not implemented")
+
+    def snapshot(self):
+        raise NotImplementedError("durable snapshot is not implemented")

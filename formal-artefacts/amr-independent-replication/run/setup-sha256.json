@@ -1,0 +1,12 @@
+{
+  "frozen-inputs.json": "5c987ee77c6bcd4a6eb4000177056d0abae2f91a4f592d2f59e2272406fd8647",
+  "protocol.json": "2c8751d8c33e6b85a34c807e8a870303ebf80d52cd876edcc45855add94709b4",
+  "prior-inventory.json": "a3956d4462d47e6c509f0d30b75f444fa0cb7aecf0b0ae30870aeb33b3b05c77",
+  "forge-inventory.json": "3a8757a60fca0e2f632f53559322c2a0d4f3492a2b22f0628179fb3c73c87227",
+  "thinking-inventory.json": "fbd34cc4bf24003fc6aab920b9cced5a71ce45a62dcf98088880e9b71ee234b8",
+  "extended-inventory.json": "d9b7d091b90227d4fa09bc12bbeb49a2ca1b164ef911037bcd2f860fe9957d85",
+  "extended-closed-loop-inventory.json": "70f5041592a701498dce51f533a075fb7da05a9a60a3cb41692283eb002aa955",
+  "forge-frozen-inputs.json": "c52d6343bfe2424ba9600dc9a81c445e4b926219ffdf4aeae4cc1fb9bf3fed1b",
+  "thinking-frozen-inputs.json": "d765ed2b217fd0c56bc60a0661cbca773de06776b5d28996553e2b7d90d1361e",
+  "extended-frozen-inputs.json": "f0a595c1d7252d6921c064a029c61c92f8ed8f545994f4876599d28b229db6f0"
+}

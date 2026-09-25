@@ -1,0 +1,26 @@
+Started at Tue Sep 22 19:19:22 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/AMR_Advisory_V2
+Session Unsorted/AMR_Runtime_Binding
+Running AMR_Runtime_Binding ...
+AMR_Runtime_Binding: theory AMR_Runtime_Binding.AMR_Runtime_Binding
+AMR_Runtime_Binding: theory AMR_Runtime_Binding.AMR_Runtime_Binding 100% (3.811s cumulated time)
+Timing AMR_Runtime_Binding (2 threads, 3.553s elapsed time, 5.344s cpu time, 0.141s GC time, factor 1.50)
+Finished AMR_Runtime_Binding (0:00:04 elapsed time)
+Exporting AMR_Runtime_Binding ...
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-runtime-binding/hol/export/AMR_Runtime_Binding.AMR_Runtime_Binding/binding-proof-audit.txt"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-runtime-binding/hol/export/AMR_Runtime_Binding.AMR_Runtime_Binding/binding.csv"
+
+Finished at Tue Sep 22 19:19:33 GMT+8 2026
+0:00:10 elapsed time

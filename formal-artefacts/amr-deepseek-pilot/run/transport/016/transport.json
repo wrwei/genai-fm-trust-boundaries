@@ -1,0 +1,6 @@
+{
+  "status": "received",
+  "http_status": 200,
+  "credential_echo_redacted": false,
+  "body_limit_exceeded": false
+}

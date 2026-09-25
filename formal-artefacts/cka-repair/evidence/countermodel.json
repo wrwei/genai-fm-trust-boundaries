@@ -1,0 +1,38 @@
+{
+  "carrier": "powerset of the additive monoid Z/3Z",
+  "carrier_size": 8,
+  "addition_and_order": "union and subset",
+  "sequential_and_parallel": "setwise addition modulo 3",
+  "algebraic_zero": [],
+  "algebraic_unit": [
+    0
+  ],
+  "projection_element_map": {
+    "0": 0,
+    "1": 0,
+    "2": 1
+  },
+  "semiring_parallel_exchange_laws": "passed exhaustively",
+  "projection_monotone_zero_unit_union": "passed exhaustively",
+  "witness": {
+    "planner": [
+      1
+    ],
+    "advisory": [
+      1
+    ],
+    "guard": [
+      0
+    ],
+    "premises_hold": true,
+    "lhs": [
+      1
+    ],
+    "rhs": [
+      0
+    ],
+    "conclusion_holds": false
+  },
+  "two_basic_lemmas_in_this_model": "passed",
+  "scope": "Refutes the old displayed assumptions as sufficient; not CKA itself, not an Isabelle run."
+}

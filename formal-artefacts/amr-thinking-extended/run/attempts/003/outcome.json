@@ -1,0 +1,39 @@
+{
+  "condition": "N64-F",
+  "repair": 2,
+  "started_at_utc": "2026-09-17T06:46:12.243287+00:00",
+  "finished_at_utc": "2026-09-17T06:46:14.838597+00:00",
+  "usage_summary": {
+    "input_tokens": 2889,
+    "output_tokens": 270,
+    "cache_hit_tokens": 2688,
+    "cache_miss_tokens": 201
+  },
+  "fatal": null,
+  "accepted": false,
+  "provider_model": "deepseek-flash",
+  "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "provider_request_id": "9f9900ce-2494-4d28-8561-a07b08c8e765",
+  "thinking": {
+    "requested_mode": "disabled",
+    "requested_reasoning_effort": null,
+    "reasoning_content_present": false,
+    "reasoning_content_bytes": null,
+    "reasoning_tokens": null,
+    "mode_evidence": "unconfirmed"
+  },
+  "files_sha256": {
+    "assessment.json.gz": "f5d760951046b6111ea37ff43693a9050d14192142eb2df953c9ea37c4995b50",
+    "dispatch-intent.json": "331e5ddab40fdaca869f59ed1ac04176e95f32db60904908d9181c73078d66a9",
+    "dispatch.json": "2b934bca6646309287505a4cdc24af42027f5336c8b93a0d9d2cbc3d8eaf39ea",
+    "feedback.json": "06c41dfa7c9fd796baba8894b386fdb2b8c80bc8473503ea9006342112374ae5",
+    "http-body.bin": "c4742e6af7ffbe98472fa7954fde49e6a967f181da585dc38f03b7db0e0a0824",
+    "http-request.json": "c263f44cf1398a3297e46d8aa29278070504471c92f8cb721c70d9dcc8e1b0a0",
+    "preflight.json": "d1e1ce47046ae3c12afb27997c5b4ba1b000f054d13043aed3e5c34a3e07822b",
+    "prompt.txt": "1b4fef4dda1988031e22fff252124226f7202067dcb280764664bafbfb2b9a65",
+    "request.json": "6bd0d8302b032705ff4ab65ce9929dfe953c0f067183eb1fbe88d764ce0e166c",
+    "response.bin": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+    "transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "worker-claim.json": "9b6a247eab2207f77d502a77b69cf345f705e07eda36294281e5ac13e92feb34"
+  }
+}

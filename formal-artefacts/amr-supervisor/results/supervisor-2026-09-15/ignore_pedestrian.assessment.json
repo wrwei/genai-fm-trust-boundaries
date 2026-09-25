@@ -1,0 +1,198 @@
+{
+  "spec_id": "amr-supervisor-obligations/v1.1",
+  "source_sha256": "5b922b5a81e1b9beb9092732d30b50080b5abf28fc1d06fbb56552a440da84b2",
+  "translator_fault": null,
+  "parse_pass": true,
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "select_inputs": 32,
+  "step_inputs": 1792,
+  "source_violation_inputs": 187,
+  "model_violation_inputs": 187,
+  "correspondence_mismatches": 0,
+  "source_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    }
+  ],
+  "model_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Request",
+          "Waiting"
+        ]
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Request",
+          "Waiting"
+        ]
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Request",
+          "Waiting"
+        ]
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": true,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Request",
+          "Waiting"
+        ]
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    }
+  ],
+  "correspondence_witnesses": [],
+  "source_policy_pass": false,
+  "model_policy_pass": false,
+  "correspondence_pass": true,
+  "accepted": false
+}

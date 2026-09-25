@@ -1,0 +1,37 @@
+Started at Tue Sep 22 21:19:41 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Extraction_Faithfulness
+Session Unsorted/AMR_Progress_Obligations
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/AMR_Advisory_V2
+Session Unsorted/AMR_Runtime_Binding
+Session Unsorted/AMR_Closed_Loop_Timing
+Running AMR_Closed_Loop_Timing ...
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction 100% (1.946s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress 100% (2.009s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts 100% (9.419s cumulated time)
+AMR_Closed_Loop_Timing FAILED (see also "isabelle build_log -H Error AMR_Closed_Loop_Timing")
+*** Undefined method: "norm_num" (line 138 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** At command "by" (line 138 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** 
+*** At command "ML" (line 146 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Undefined method: "norm_num" (line 138 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** At command "by" (line 138 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+Unfinished session(s): AMR_Closed_Loop_Timing
+
+Finished at Tue Sep 22 21:19:58 GMT+8 2026
+0:00:16 elapsed time

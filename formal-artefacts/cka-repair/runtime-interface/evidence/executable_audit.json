@@ -1,0 +1,169 @@
+{
+  "input_sha256": "54448f6ef3e0e8144420bcea0faa2261088bfea01520e7d7d916b20ab8e69190",
+  "state_encoding": "4*phase + 2*permission + advice_available; phases Idle/Pending/Approved/Completed = 0/1/2/3",
+  "event_encoding": "1=Commit, 2=Policy False, 3=Policy True, 10+command=Hidden command",
+  "commands": [
+    "Submit",
+    "Service",
+    "Revoke",
+    "Restore",
+    "AdviceUnavailable",
+    "AdviceAvailable",
+    "LostAck",
+    "Poll"
+  ],
+  "results": {
+    "guarded": {
+      "transitions_checked": 128,
+      "one_step_reference_failures": [],
+      "unauthorised_effect_witness": null,
+      "duplicate_effect_witness": null,
+      "revocation_scenario": {
+        "final_state": 8,
+        "visible_events": [
+          2
+        ]
+      },
+      "lost_ack_scenario": {
+        "final_state": 14,
+        "visible_events": [
+          1
+        ]
+      },
+      "advice_outage_scenario": {
+        "final_state": 14,
+        "completed": true
+      }
+    },
+    "cached": {
+      "transitions_checked": 128,
+      "one_step_reference_failures": [
+        {
+          "state": 8,
+          "command": "Service",
+          "target": 12,
+          "event": 1
+        },
+        {
+          "state": 9,
+          "command": "Service",
+          "target": 13,
+          "event": 1
+        }
+      ],
+      "unauthorised_effect_witness": {
+        "commands": [
+          "Submit",
+          "Service",
+          "Revoke",
+          "Service"
+        ],
+        "length": 4,
+        "state_before": 8,
+        "state_after": 12,
+        "event": 1,
+        "search": "breadth-first over the reachable finite product graph"
+      },
+      "duplicate_effect_witness": null,
+      "revocation_scenario": {
+        "final_state": 12,
+        "visible_events": [
+          2,
+          1
+        ]
+      },
+      "lost_ack_scenario": {
+        "final_state": 14,
+        "visible_events": [
+          1
+        ]
+      },
+      "advice_outage_scenario": {
+        "final_state": 14,
+        "completed": true
+      }
+    },
+    "advice_blocked": {
+      "transitions_checked": 128,
+      "one_step_reference_failures": [],
+      "unauthorised_effect_witness": null,
+      "duplicate_effect_witness": null,
+      "revocation_scenario": {
+        "final_state": 8,
+        "visible_events": [
+          2
+        ]
+      },
+      "lost_ack_scenario": {
+        "final_state": 10,
+        "visible_events": []
+      },
+      "advice_outage_scenario": {
+        "final_state": 10,
+        "completed": false
+      }
+    },
+    "retry": {
+      "transitions_checked": 128,
+      "one_step_reference_failures": [
+        {
+          "state": 12,
+          "command": "LostAck",
+          "target": 8,
+          "event": 16
+        },
+        {
+          "state": 13,
+          "command": "LostAck",
+          "target": 9,
+          "event": 16
+        },
+        {
+          "state": 14,
+          "command": "LostAck",
+          "target": 10,
+          "event": 16
+        },
+        {
+          "state": 15,
+          "command": "LostAck",
+          "target": 11,
+          "event": 16
+        }
+      ],
+      "unauthorised_effect_witness": null,
+      "duplicate_effect_witness": {
+        "commands": [
+          "Submit",
+          "Service",
+          "Service",
+          "LostAck",
+          "Service"
+        ],
+        "length": 5,
+        "state_before": 10,
+        "state_after": 14,
+        "event": 1,
+        "search": "breadth-first over the reachable finite product graph"
+      },
+      "revocation_scenario": {
+        "final_state": 8,
+        "visible_events": [
+          2
+        ]
+      },
+      "lost_ack_scenario": {
+        "final_state": 14,
+        "visible_events": [
+          1,
+          1
+        ]
+      },
+      "advice_outage_scenario": {
+        "final_state": 14,
+        "completed": true
+      }
+    }
+  },
+  "scope": "Complete 16-state by 8-input tables for four generated pure kernels. No physical actuator, network failure or deployment was tested."
+}

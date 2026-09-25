@@ -1,0 +1,6 @@
+{
+  "formal-artefacts/amr-extraction-faithfulness/hol/AMR_Artifacts.thy": "1c00caa30023d7e7f4949278c1d85e15fafc50d0d9a1d77a1d180e403bad81b6",
+  "formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy": "b6a9f64cd57c9faac26407a34af30f0e660cff4ebcbfad163f2dead7356e03bc",
+  "formal-artefacts/amr-extraction-faithfulness/hol/ROOT": "455052a5ecd4815f36e399c2dbf2eac558e5f33e82bcee7d3d25559cf963d221",
+  "formal-artefacts/amr-extraction-faithfulness/hol/build.py": "95eed9b816923946851beeff22214b75bd054fd2240fb2ed7eb88b7e41f1ec84"
+}

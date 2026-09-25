@@ -1,0 +1,54 @@
+{
+  "recorded_at_utc": "2026-09-13T09:37:44.517423+00:00",
+  "base": "442ec0efc5af4c3a3c7e85f60dd9cd4b5e964aa7",
+  "checks": {
+    "protected_tex_bib_historical_json_unchanged": 399,
+    "original_objects_preserved": 363,
+    "screening_records": 330,
+    "comparison_records": 82,
+    "screening_counts": {
+      "background": 125,
+      "exclude_scope": 27,
+      "retain_relevant": 169,
+      "unresolved_access": 2,
+      "duplicate_record": 7
+    },
+    "prior_source_and_evidence_hashes_preserved": 30,
+    "latest_source_model_and_test_hashes_match": true,
+    "markdown_local_links_checked": 124,
+    "source_whitespace_files_checked": 23,
+    "draft_citation_keys_resolve": 18,
+    "new_bib_keys_without_collision": 6,
+    "git_diff_check": "passed"
+  },
+  "new_batch_file_sha256": {
+    "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+    "evidence/mutant-authority_bypass.json": "8a55bc6b348189a89dceac135cc1084f2518f7f56df7368510e918913910cb9b",
+    "evidence/mutant-authority_bypass.txt": "f8ac67ed59a6395a2ffa817bfd467ea876054ff5eef9d22100d397b178eb5229",
+    "evidence/mutant-cached_permission.json": "8a55bc6b348189a89dceac135cc1084f2518f7f56df7368510e918913910cb9b",
+    "evidence/mutant-cached_permission.txt": "2a4811b9a83005e26c6cc455de33bb18a86f961d111cfedbe4123fe2e48b1788",
+    "evidence/mutant-split_transaction.json": "f44b94d10c4585e7a226de6b7ce4b5260658e9e24d991e313290cb467b382df5",
+    "evidence/mutant-split_transaction.txt": "7168e5a21ba8af0cc2f127dc1f336e4784aceede55ec66ca5c2b9aaf4caf96d9",
+    "evidence/red-ledger.txt": "c951e78469a083e08f0bc6399d161afab2f54287d200a987de619c612a0dd528",
+    "evidence/red-record.json": "fd9fa91f7808fa534e7d9de83fe8241dc03caebc2352f96a5185ff613237cce8",
+    "evidence/red-test.txt": "6261bfd9a4c3fa2c938fd8e14e644180ec1c6179d7b37dc37ecd66e493c12260",
+    "evidence/run_record.json": "948ee877d3640dda30774b84233856befe317e5f2e0d9cf2a622e3a7a30bcb2b",
+    "evidence/source_checks.json": "f6e9054491ee0c47a768b31bd4681c4bf234ad9ce2d933cafe7a9e83b2bb6e68",
+    "evidence/test-run-01-results.json": "e0701b7380415f282a7658a5521e4c84b80697931b2603388d7542b480dfb15c",
+    "evidence/test-run-01.json": "19a0f488291fddd8fdc0ec35ac985a2a79bab3af0fe43e268d9973f11d24ff32",
+    "evidence/test-run-01.txt": "e0a78c0b71856ce04738b7b44a22542bba50dd686fecc4a2435507f989595801",
+    "evidence/tests.json": "9b088cf0f602b911f0d2d1a032337dca854c8c0c407a566ce725bfdd6a0aae86",
+    "evidence/tests.txt": "e32f17ab6af72c6b85a1e9312eb942b8134031cda481fb2573bf7e9862154f00",
+    "ingress.py": "e54e247cf553db70d7296bfb2482a4d703f148748b32ccff7709b46e7b762cb8",
+    "ledger.py": "e73ccaf15bfad705d6b4654b1ccb93bc35de350698bc8086054fdadfbdab2c36",
+    "README.md": "9a36a2d7cc67bf14c100ba717f57ad6c0d8ab49c59087a64f34400748c39dffe",
+    "test_runtime.py": "60baafeececb3751e0ffd4b779a748be9f754a59c125c51e01f7383e29fa5544",
+    "verify.py": "70455e5034753a5f0d39d33f60a151a1d05bf4ede8b9b9f79cf747d51e6a88ff"
+  },
+  "not_done": [
+    "No commit or push",
+    "No manuscript or main bibliography edits",
+    "No new Isabelle build in this batch; prior files and evidence preserved",
+    "No external literature experiment replication or new Scholar search"
+  ]
+}

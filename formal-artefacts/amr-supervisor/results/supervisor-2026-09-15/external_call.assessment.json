@@ -1,0 +1,20 @@
+{
+  "spec_id": "amr-supervisor-obligations/v1.1",
+  "source_sha256": "0e194108a5757b44fbfccc0ee46f2928857012b686c7876d88e91292048c914b",
+  "translator_fault": null,
+  "parse_pass": false,
+  "parse_error": "forbidden expression syntax or name: Call",
+  "checked_inputs": 0,
+  "select_inputs": 0,
+  "step_inputs": 0,
+  "source_violation_inputs": 0,
+  "model_violation_inputs": 0,
+  "correspondence_mismatches": 0,
+  "source_witnesses": [],
+  "model_witnesses": [],
+  "correspondence_witnesses": [],
+  "source_policy_pass": false,
+  "model_policy_pass": false,
+  "correspondence_pass": false,
+  "accepted": false
+}

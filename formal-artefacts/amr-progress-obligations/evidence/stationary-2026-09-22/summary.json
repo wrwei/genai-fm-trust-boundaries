@@ -1,0 +1,45 @@
+{
+  "collision_pairs": [],
+  "collision_witnesses": [],
+  "unresolved_pairs": [],
+  "distance_lower_bound_m": 3.6793477672871995,
+  "continuous_intervals_checked": 108000,
+  "early_releases": [],
+  "reference_violations": [],
+  "grant_order": [
+    "A"
+  ],
+  "completion_times": {},
+  "pedestrian_trigger": null,
+  "pedestrian_brakes": 0,
+  "resumes_after_pedestrian": 0,
+  "pedestrian_brake_evidence": [],
+  "completed_robots": [],
+  "completion_mismatches": [],
+  "termination": "horizon",
+  "time": 120.0,
+  "final_poses": {
+    "A": [
+      4.0,
+      -2.0,
+      0.0
+    ],
+    "B": [
+      20.0,
+      2.0,
+      3.141592653589793
+    ]
+  },
+  "final_speeds": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "config": {
+    "advice_events": [],
+    "pedestrian": "none",
+    "horizon": 120.0
+  },
+  "trace_sha256": "4d85bc2d2752c0d5529769f0373fd4024bd3fb4ef354bf914e210fbcca5e85b0",
+  "constructed_mutation": "StationaryPlant"
+}

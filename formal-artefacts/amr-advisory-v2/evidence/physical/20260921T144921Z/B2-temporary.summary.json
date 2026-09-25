@@ -1,0 +1,89 @@
+{
+  "collision_pairs": [],
+  "collision_witnesses": [],
+  "unresolved_pairs": [],
+  "distance_lower_bound_m": 0.26068542394925565,
+  "continuous_intervals_checked": 61215,
+  "early_releases": [],
+  "reference_violations": [],
+  "grant_order": [
+    "A",
+    "B"
+  ],
+  "completion_times": {
+    "A": 40.1,
+    "B": 66.1
+  },
+  "pedestrian_trigger": {
+    "time": 10.68,
+    "robot": "A",
+    "pose": [
+      8.000000618484114,
+      3.796218185829576e-15,
+      -8.482797797526587e-16
+    ],
+    "speed": 0.0007864376269063212,
+    "domain": "straight_N_before_H"
+  },
+  "pedestrian_brakes": 1,
+  "resumes_after_pedestrian": 1,
+  "pedestrian_brake_evidence": [
+    {
+      "time": 10.75,
+      "robot": "A",
+      "observation": {
+        "robot_id": "A",
+        "sample_time": 10.7,
+        "pose": [
+          8.000116347236652,
+          3.796120015468862e-15,
+          -8.482797797526587e-16
+        ],
+        "speed": 0.010786437626906321,
+        "blocked": true,
+        "mission_revision": 1,
+        "map_revision": 1
+      },
+      "age": 0.05000000000000071,
+      "domain": true,
+      "distance": 3.099883652763348,
+      "bound": 0.29370302082622535,
+      "condition": true
+    }
+  ],
+  "completed_robots": [
+    "A",
+    "B"
+  ],
+  "completion_mismatches": [],
+  "termination": "complete",
+  "time": 66.1,
+  "final_poses": {
+    "A": [
+      22.00000000000038,
+      -1.999999999999989,
+      -2.598615767013257e-15
+    ],
+    "B": [
+      2.0000000000000466,
+      1.9999999999999938,
+      3.141592653589787
+    ]
+  },
+  "final_speeds": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "config": {
+    "advice": null,
+    "center_clear": false,
+    "wait_advice": false,
+    "pedestrian": "temporary",
+    "horizon": 120.0
+  },
+  "run_id": "B2-temporary",
+  "trace": "B2-temporary.jsonl.gz",
+  "trace_sha256": "7ff3772c5d3d5767dabf6b41904fbf02af86e3c7da5419f025414e2b5183aa1a",
+  "expected_outcome_observed": true
+}

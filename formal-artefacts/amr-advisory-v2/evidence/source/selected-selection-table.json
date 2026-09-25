@@ -1,0 +1,642 @@
+[
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": false,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "Defer",
+    "target": [
+      "Defer"
+    ],
+    "required": "Defer",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "SelectB",
+    "target": [
+      "SelectB"
+    ],
+    "required": "SelectB",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "SelectB",
+    "target": [
+      "SelectB"
+    ],
+    "required": "SelectB",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "SelectB",
+    "target": [
+      "SelectB"
+    ],
+    "required": "SelectB",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": false,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "SelectB",
+    "target": [
+      "SelectB"
+    ],
+    "required": "SelectB",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": false,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": false
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": false,
+      "PreferB": true
+    },
+    "source": "SelectB",
+    "target": [
+      "SelectB"
+    ],
+    "required": "SelectB",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": false
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  },
+  {
+    "kind": "select",
+    "facts": {
+      "OwnerFree": true,
+      "RequestA": true,
+      "RequestB": true,
+      "PreferA": true,
+      "PreferB": true
+    },
+    "source": "SelectA",
+    "target": [
+      "SelectA"
+    ],
+    "required": "SelectA",
+    "old_source_ok": true,
+    "old_target_ok": true,
+    "source_ok": true,
+    "target_ok": true,
+    "correspondence": true
+  }
+]

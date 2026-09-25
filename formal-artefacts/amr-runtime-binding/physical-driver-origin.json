@@ -1,0 +1,6 @@
+{
+  "origin": "amr-advisory-v2/physical.py",
+  "origin_sha256": "6cd2b6a8fb2eeb307c495ad880d70c0eafad6ffca13452e8276ff90c4a7772cd",
+  "derived_sha256": "8fd490901322114766b68eb7390481810d5faf62fe6c7dc996e174758b763211",
+  "scope": "function copied with explicit adapter substitutions; same plant/geometry; v2 unchanged"
+}

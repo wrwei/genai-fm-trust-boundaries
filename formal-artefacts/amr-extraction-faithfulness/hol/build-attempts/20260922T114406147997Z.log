@@ -1,0 +1,32 @@
+Started at Tue Sep 22 19:43:57 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Extraction_Faithfulness
+Running AMR_Extraction_Faithfulness ...
+AMR_Extraction_Faithfulness: theory AMR_Extraction_Faithfulness.AMR_Extraction
+AMR_Extraction_Faithfulness FAILED (see also "isabelle build_log -H Error AMR_Extraction_Faithfulness")
+*** Outer syntax error (line 96 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy"): proposition expected,
+*** but end-of-input (line 96 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy") was found
+*** At command "<malformed>" (line 96 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy")
+*** Failed to finish proof (line 42 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy"):
+*** goal (1 subgoal):
+***  1. ?ys x2b.
+***        ?code = ys @ [Neg]; run_code ys env st = Some x2b;
+***         instruction env Neg x2b = Some (b # rest)?
+***        ? x2b =
+***           (? b) #
+***           rest
+*** At command "by" (line 41 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/AMR_Extraction.thy")
+Unfinished session(s): AMR_Extraction_Faithfulness
+
+Finished at Tue Sep 22 19:44:05 GMT+8 2026
+0:00:08 elapsed time

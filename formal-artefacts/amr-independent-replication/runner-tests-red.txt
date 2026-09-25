@@ -1,0 +1,211 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_child_wall_deadline_is_660_seconds (test_runner.RunnerTests.test_child_wall_deadline_is_660_seconds) ... FAIL
+test_cycles_are_local_to_chain_and_do_not_suppress_other_initials (test_runner.RunnerTests.test_cycles_are_local_to_chain_and_do_not_suppress_other_initials) ... FAIL
+test_eighteen_call_ceiling_all_initials_then_two_repair_rounds (test_runner.RunnerTests.test_eighteen_call_ceiling_all_initials_then_two_repair_rounds) ... FAIL
+test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content (test_runner.RunnerTests.test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content) ... FAIL
+test_falsey_nontext_content_and_deep_json_are_fatal (test_runner.RunnerTests.test_falsey_nontext_content_and_deep_json_are_fatal) ... FAIL
+test_fatal_after_acceptance_still_disables_all_physics_selection (test_runner.RunnerTests.test_fatal_after_acceptance_still_disables_all_physics_selection) ... FAIL
+test_fatal_assessment_does_not_reenter_failed_parser (test_runner.RunnerTests.test_fatal_assessment_does_not_reenter_failed_parser) ... FAIL
+test_fatal_transports_and_truncation_never_retry (test_runner.RunnerTests.test_fatal_transports_and_truncation_never_retry) ... FAIL
+test_first_acceptance_counts_and_exact_byte_source_deduplication (test_runner.RunnerTests.test_first_acceptance_counts_and_exact_byte_source_deduplication) ... FAIL
+test_fixture_cannot_enter_live_execution (test_runner.RunnerTests.test_fixture_cannot_enter_live_execution) ... FAIL
+test_historical_dependency_drift_prevents_initialization (test_runner.RunnerTests.test_historical_dependency_drift_prevents_initialization) ... FAIL
+test_impossible_reasoning_count_is_invalid_usage (test_runner.RunnerTests.test_impossible_reasoning_count_is_invalid_usage) ... FAIL
+test_initial_prompts_are_only_original_task_with_three_rule_limit_edits (test_runner.RunnerTests.test_initial_prompts_are_only_original_task_with_three_rule_limit_edits) ... FAIL
+test_malformed_provider_json_stops_without_retry (test_runner.RunnerTests.test_malformed_provider_json_stops_without_retry) ... FAIL
+test_old_run_inventories_and_dependencies_are_frozen_before_calls (test_runner.RunnerTests.test_old_run_inventories_and_dependencies_are_frozen_before_calls) ... FAIL
+test_oversized_repair_stops_after_all_six_initials_without_post (test_runner.RunnerTests.test_oversized_repair_stops_after_all_six_initials_without_post) ... FAIL
+test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint (test_runner.RunnerTests.test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint) ... FAIL
+test_post_redacts_credential_echo_and_exception_messages (test_runner.RunnerTests.test_post_redacts_credential_echo_and_exception_messages) ... FAIL
+test_repair_feedback_and_program_cycles_use_only_same_chain (test_runner.RunnerTests.test_repair_feedback_and_program_cycles_use_only_same_chain) ... FAIL
+test_invalid_usage_stops_batch (test_runner.RunnerTests.test_invalid_usage_stops_batch) ... FAIL
+
+======================================================================
+FAIL: test_child_wall_deadline_is_660_seconds (test_runner.RunnerTests.test_child_wall_deadline_is_660_seconds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_cycles_are_local_to_chain_and_do_not_suppress_other_initials (test_runner.RunnerTests.test_cycles_are_local_to_chain_and_do_not_suppress_other_initials)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_eighteen_call_ceiling_all_initials_then_two_repair_rounds (test_runner.RunnerTests.test_eighteen_call_ceiling_all_initials_then_two_repair_rounds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content (test_runner.RunnerTests.test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_falsey_nontext_content_and_deep_json_are_fatal (test_runner.RunnerTests.test_falsey_nontext_content_and_deep_json_are_fatal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_fatal_after_acceptance_still_disables_all_physics_selection (test_runner.RunnerTests.test_fatal_after_acceptance_still_disables_all_physics_selection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_fatal_assessment_does_not_reenter_failed_parser (test_runner.RunnerTests.test_fatal_assessment_does_not_reenter_failed_parser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_fatal_transports_and_truncation_never_retry (test_runner.RunnerTests.test_fatal_transports_and_truncation_never_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_first_acceptance_counts_and_exact_byte_source_deduplication (test_runner.RunnerTests.test_first_acceptance_counts_and_exact_byte_source_deduplication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_fixture_cannot_enter_live_execution (test_runner.RunnerTests.test_fixture_cannot_enter_live_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_historical_dependency_drift_prevents_initialization (test_runner.RunnerTests.test_historical_dependency_drift_prevents_initialization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_impossible_reasoning_count_is_invalid_usage (test_runner.RunnerTests.test_impossible_reasoning_count_is_invalid_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_initial_prompts_are_only_original_task_with_three_rule_limit_edits (test_runner.RunnerTests.test_initial_prompts_are_only_original_task_with_three_rule_limit_edits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_malformed_provider_json_stops_without_retry (test_runner.RunnerTests.test_malformed_provider_json_stops_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_old_run_inventories_and_dependencies_are_frozen_before_calls (test_runner.RunnerTests.test_old_run_inventories_and_dependencies_are_frozen_before_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_oversized_repair_stops_after_all_six_initials_without_post (test_runner.RunnerTests.test_oversized_repair_stops_after_all_six_initials_without_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint (test_runner.RunnerTests.test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_post_redacts_credential_echo_and_exception_messages (test_runner.RunnerTests.test_post_redacts_credential_echo_and_exception_messages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_repair_feedback_and_program_cycles_use_only_same_chain (test_runner.RunnerTests.test_repair_feedback_and_program_cycles_use_only_same_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+[Historical test heading unavailable after maintenance; original traceback retained.]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+[Historical test heading unavailable after maintenance; original traceback retained.]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+FAIL: test_invalid_usage_stops_batch (test_runner.RunnerTests.test_invalid_usage_stops_batch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+======================================================================
+[Historical test heading unavailable after maintenance; original traceback retained.]
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_runner.py", line 28, in setUp
+    self.assertTrue(self.runner_exists, 'fresh-context replication runner not implemented')
+AssertionError: False is not true : fresh-context replication runner not implemented
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.003s
+
+FAILED (failures=23)

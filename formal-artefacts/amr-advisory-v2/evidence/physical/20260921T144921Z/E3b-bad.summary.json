@@ -1,0 +1,68 @@
+{
+  "gap": "apply",
+  "constructed_fault": "cached_apply_permission",
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "reference_violations": [
+    {
+      "kind": "protocol",
+      "time": 0.1,
+      "before": {
+        "req_a": false,
+        "req_b": true,
+        "owner": "A",
+        "blocked": true,
+        "fresh": true,
+        "pending": null,
+        "command": "A"
+      },
+      "input": [
+        "Apply"
+      ],
+      "after": {
+        "req_a": false,
+        "req_b": true,
+        "owner": "A",
+        "blocked": true,
+        "fresh": true,
+        "pending": null,
+        "command": null
+      },
+      "events": [
+        [
+          "Proceed",
+          "A"
+        ]
+      ],
+      "reference_accepted": false,
+      "permission_version": 1,
+      "reservation_generation": 1,
+      "actual_pose": [
+        4.0,
+        -2.0,
+        0.0
+      ],
+      "actual_speed": 0.0
+    }
+  ],
+  "grant_order": [
+    "A"
+  ],
+  "final_pose": [
+    4.0024999999999995,
+    -2.0,
+    0.0
+  ],
+  "final_speed": 0.049999999999999996,
+  "final_intent": "Proceed",
+  "overlaps_zone": false,
+  "termination": "bounded_witness",
+  "collision_pairs": [],
+  "unresolved_pairs": [],
+  "continuous_intervals_checked": 180,
+  "early_releases": [],
+  "completed_robots": [],
+  "run_id": "E3b-bad",
+  "trace": "E3b-bad.jsonl.gz",
+  "trace_sha256": "790844ec7005086f1a64b8e66b00d0e9fd1c71693c7429e95034d68907ce17a5",
+  "expected_outcome_observed": true
+}

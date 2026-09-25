@@ -1,0 +1,4 @@
+session AMR_Extraction_Faithfulness = HOL +
+  options [document=false, threads=2, timeout=300]
+  theories AMR_Extraction AMR_Artifacts
+  export_files (in "export") "*:proof-audit.txt" "*:artifact-audit.txt"

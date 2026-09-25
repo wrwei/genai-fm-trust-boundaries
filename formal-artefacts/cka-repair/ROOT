@@ -1,0 +1,5 @@
+session Bridge_Algebra_Repair = HOL +
+  options [document = false, threads = 2, timeout = 180]
+  theories
+    Bridge_Algebra_Repair
+    Bridge_Trace_Repair

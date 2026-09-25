@@ -1,0 +1,22 @@
+{
+  "scope": "Archived exploratory draft-spec failure; not an LLM failure",
+  "archived_code": {
+    "assurance.py": "eae445d9f25fd1f3b077da930c5e5abf26d5b46a83c6f1b053327013667f2e39",
+    "closed_loop.py": "4edaef688e500b61a5759046b1a6ddfc638e72c2cb08b45a4ae47fb198dd6f3a",
+    "language.py": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569",
+    "model.py": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78",
+    "reproduce.py": "01298762cd3c5d447e924dd35a7aaa41b506dc6f94ad4e4239c731d39690ec9b"
+  },
+  "source_sha256": "59252a17409a30f1bbaf7e22a4a16379684d46b3d76a4e9e8ccdba91853d6d68",
+  "baseline_code": {
+    "controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+  },
+  "outputs": {
+    "result.json": "88676fb077ddaf774810db51be63398ccf0a8bcac2a39d9877466521676d326d",
+    "trace.jsonl.gz": "25c5051fd6838301103f640b927cc5439abc50b0d70785fd08c476956d5f7693"
+  }
+}

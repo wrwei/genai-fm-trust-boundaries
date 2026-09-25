@@ -1,0 +1,28 @@
+[
+  {
+    "id": "2410.23299",
+    "title": "FVEval",
+    "previous_class": "C_LLM_AS_ORACLE",
+    "class": "A_GEN_CHECKED",
+    "checker": "model_checker",
+    "tool": "Cadence Jasper",
+    "source": "https://arxiv.org/html/2410.23299v1",
+    "location": "Section 3.2, Evaluation",
+    "reason": "Generated assertions are evaluated by formal logical equivalence and implication checks; the benchmark is not solely model judgement or lexical agreement.",
+    "audit_date": "2026-09-09",
+    "audit_method": "AI-assisted targeted primary-source inspection; not independent human coding"
+  },
+  {
+    "id": "2406.18627",
+    "title": "AssertionBench",
+    "previous_class": "C_LLM_AS_ORACLE",
+    "class": "A_GEN_CHECKED",
+    "checker": "model_checker",
+    "tool": "Cadence JasperGold",
+    "source": "https://arxiv.org/html/2406.18627v2",
+    "location": "Section 3, Pre-trained Models and Verification Tool",
+    "reason": "The experimental setup explicitly verifies generated test-design assertions with JasperGold, independently of the language model.",
+    "audit_date": "2026-09-09",
+    "audit_method": "AI-assisted targeted primary-source inspection; not independent human coding"
+  }
+]

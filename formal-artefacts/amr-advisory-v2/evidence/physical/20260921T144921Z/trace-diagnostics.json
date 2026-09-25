@@ -1,0 +1,104 @@
+{
+  "identical_prefix_records": 6223,
+  "first_difference_time": 25.85,
+  "center_release_replay": [
+    {
+      "run": "E2-center.jsonl.gz",
+      "time": 25.85,
+      "robot": "A",
+      "occupied": true
+    },
+    {
+      "run": "E2-center.jsonl.gz",
+      "time": 50.25,
+      "robot": "B",
+      "occupied": true
+    }
+  ],
+  "finish_actual_snapshots": [
+    {
+      "run": "B2-temporary.jsonl.gz",
+      "time": 40.1,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "B2-temporary.jsonl.gz",
+      "time": 66.1,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E2-center.jsonl.gz",
+      "time": 32.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E2-center.jsonl.gz",
+      "time": 57.3,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E2-whole.jsonl.gz",
+      "time": 32.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E2-whole.jsonl.gz",
+      "time": 58.9,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E4-fifo.jsonl.gz",
+      "time": 32.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "E4-fifo.jsonl.gz",
+      "time": 58.9,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-A.jsonl.gz",
+      "time": 32.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-A.jsonl.gz",
+      "time": 58.9,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-B.jsonl.gz",
+      "time": 32.9,
+      "robot": "B",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-B.jsonl.gz",
+      "time": 58.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-none.jsonl.gz",
+      "time": 32.9,
+      "robot": "A",
+      "actual_speed": 0.0
+    },
+    {
+      "run": "P-none.jsonl.gz",
+      "time": 58.9,
+      "robot": "B",
+      "actual_speed": 0.0
+    }
+  ]
+}

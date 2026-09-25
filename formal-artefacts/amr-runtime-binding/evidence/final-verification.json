@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-09-22T11:35:43.153570+00:00",
+  "passed": true,
+  "proof_source_hashes": 6,
+  "pre_run_dependency_hashes": 37,
+  "finite_rows": 77760,
+  "parser_cases": 24,
+  "physical_runs": 4,
+  "mechanism_witnesses": 11,
+  "tests_observed": {
+    "new_suite": 12,
+    "existing_mailbox": 4,
+    "note": "Executed before this hash-closure check; no test or physical reruns performed by this script."
+  },
+  "api_requests": 0,
+  "scope": "Current snapshot identity closure; original pre-run manifest retained separately."
+}

@@ -1,0 +1,157 @@
+{
+  "schema": "amr-record-maintenance/v2-verification/v1",
+  "verified_at_utc": "2026-09-22T02:16:56.191711+00:00",
+  "status": "complete",
+  "provider_calls": 0,
+  "real_credential_reads": 0,
+  "physical_mission_simulations": 0,
+  "advice_audit": {
+    "passed": true,
+    "matches_recorded_audit": true,
+    "totals": {
+      "requests": 6,
+      "successful_http_200": 6,
+      "accepted_strict_B": 6,
+      "source_select_B": 6,
+      "owner_B": 6,
+      "input_tokens": 644,
+      "output_tokens": 42
+    },
+    "scope": "Offline audit of six retained responses, fixed staging-path reconstruction and deadline decisions; no physical mission run."
+  },
+  "advice_tests": {
+    "passed": true,
+    "tests_run": 9,
+    "seconds": 1.996,
+    "scope": "Temporary offline fixtures, including synthetic invalid-key validation; no real credentials or network."
+  },
+  "final_conformance_input_hashes": {
+    "passed": true,
+    "files": 5
+  },
+  "archived_physical_bindings": {
+    "passed": true,
+    "trace_files": 15,
+    "simulations_rerun": false
+  },
+  "protected_artifacts": {
+    "unchanged_during_verification": true,
+    "files": 70,
+    "identity_inventory_sha256": "bd432f39e014bea99715164925bc45b08466b21b765f69709aaf2b88f93d3c8b"
+  },
+  "historical_conformance_note": {
+    "files": [
+      "evidence/conformance.json",
+      "evidence/conformance-review.json"
+    ],
+    "recorded_theory_sha256": "709366eeb94ffb80e8cfd67857ec452154d02cdceaf3cd6f91fb43d4b0871ab2",
+    "current_and_final_theory_sha256": "47f8ee71c4cdddfa6946588169be8f3df738740838c6bfb492c30797ece3dcf5",
+    "disposition": "Retained earlier verification records; final conformance input hashes match current theory. No historical scientific result or theory modified."
+  },
+  "restored_prompt_copies": {
+    "formal-artefacts/amr-advisory-v2/evidence/advice/001/prompt.txt": "d06708c3597b20b3bbc0a59fe1cc9a049dd27a8b26b61cae8eb81e3b9faff4d5",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/002/prompt.txt": "03a737291b86bbb6c2f4f90b3537f544f3c73671cefaa4f4de11eb6e3c25b442",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/003/prompt.txt": "c63bcba6b8825a6cce31fc6aaca7ade46951fc1c74a3cba945a95018631edc92",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/004/prompt.txt": "d06708c3597b20b3bbc0a59fe1cc9a049dd27a8b26b61cae8eb81e3b9faff4d5",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/005/prompt.txt": "03a737291b86bbb6c2f4f90b3537f544f3c73671cefaa4f4de11eb6e3c25b442",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/006/prompt.txt": "c63bcba6b8825a6cce31fc6aaca7ade46951fc1c74a3cba945a95018631edc92"
+  },
+  "final_manifest": {
+    "status": "complete",
+    "passed": true,
+    "files": 205,
+    "total_bytes": 7897762,
+    "all_paths_resolve_within_repository": true,
+    "no_duplicate_resolved_paths": true,
+    "all_sizes_match": true,
+    "all_sha256_match": true,
+    "manifest_sha256": "4cf8d87c5ff500735eb20ecc25f7fb1c8783456559cf3115d94fc4731e44053c",
+    "contains_self_or_maintenance_directory": false,
+    "upstream_stability_confirmed_by": "root",
+    "verified_at_utc": "2026-09-22T02:24:15.659448+00:00"
+  },
+  "binding_changes": [
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/001/prompt.txt",
+      "before": {
+        "bytes": 354,
+        "sha256": "a5023f76d086e4f50c56ba7e95a861e590d78f018834344b8a914daf28fd077d"
+      },
+      "after": {
+        "bytes": 352,
+        "sha256": "d06708c3597b20b3bbc0a59fe1cc9a049dd27a8b26b61cae8eb81e3b9faff4d5"
+      }
+    },
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/002/prompt.txt",
+      "before": {
+        "bytes": 379,
+        "sha256": "4b3d9240db4639af746d96f94daf30f191a400b00da2f36898832ea10826e79f"
+      },
+      "after": {
+        "bytes": 377,
+        "sha256": "03a737291b86bbb6c2f4f90b3537f544f3c73671cefaa4f4de11eb6e3c25b442"
+      }
+    },
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/003/prompt.txt",
+      "before": {
+        "bytes": 352,
+        "sha256": "d9287a3efab87fec12ebce2cf9e3c210afdc4ce3e4e878704da46c538c062cb4"
+      },
+      "after": {
+        "bytes": 350,
+        "sha256": "c63bcba6b8825a6cce31fc6aaca7ade46951fc1c74a3cba945a95018631edc92"
+      }
+    },
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/004/prompt.txt",
+      "before": {
+        "bytes": 354,
+        "sha256": "a5023f76d086e4f50c56ba7e95a861e590d78f018834344b8a914daf28fd077d"
+      },
+      "after": {
+        "bytes": 352,
+        "sha256": "d06708c3597b20b3bbc0a59fe1cc9a049dd27a8b26b61cae8eb81e3b9faff4d5"
+      }
+    },
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/005/prompt.txt",
+      "before": {
+        "bytes": 379,
+        "sha256": "4b3d9240db4639af746d96f94daf30f191a400b00da2f36898832ea10826e79f"
+      },
+      "after": {
+        "bytes": 377,
+        "sha256": "03a737291b86bbb6c2f4f90b3537f544f3c73671cefaa4f4de11eb6e3c25b442"
+      }
+    },
+    {
+      "path": "formal-artefacts/amr-advisory-v2/evidence/advice/006/prompt.txt",
+      "before": {
+        "bytes": 352,
+        "sha256": "d9287a3efab87fec12ebce2cf9e3c210afdc4ce3e4e878704da46c538c062cb4"
+      },
+      "after": {
+        "bytes": 350,
+        "sha256": "c63bcba6b8825a6cce31fc6aaca7ade46951fc1c74a3cba945a95018631edc92"
+      }
+    },
+    {
+      "path": "literature/scholar_search_2026-09-10/followup/research_amr_v2_execution_2026-09-21.md",
+      "before": {
+        "bytes": 10315,
+        "sha256": "47a79ac22a8d497924b75484b797114d39f09530a3fb3ac91f8f8971bdcd3216"
+      },
+      "after": {
+        "bytes": 10417,
+        "sha256": "6083c678935bbabad4ce8010cb23f8f06df5f55fd9ffd3ad12ccf1136c04f619"
+      }
+    }
+  ],
+  "removed_topic_scan": {
+    "json_files": 70,
+    "residual_matches": 0
+  },
+  "finalized_at_utc": "2026-09-22T02:24:15.659448+00:00"
+}

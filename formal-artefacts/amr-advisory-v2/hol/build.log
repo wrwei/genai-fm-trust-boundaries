@@ -1,0 +1,26 @@
+Started at Mon Sep 21 22:51:21 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/AMR_Advisory_V2
+Running AMR_Advisory_V2 ...
+AMR_Advisory_V2: theory AMR_Advisory_V2.AMR_Protocol
+AMR_Advisory_V2: theory AMR_Advisory_V2.AMR_Protocol 100% (9.604s cumulated time)
+Timing AMR_Advisory_V2 (2 threads, 6.404s elapsed time, 10.062s cpu time, 0.391s GC time, factor 1.57)
+Finished AMR_Advisory_V2 (0:00:07 elapsed time)
+Exporting AMR_Advisory_V2 ...
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-advisory-v2/hol/export/AMR_Advisory_V2.AMR_Protocol/core-transitions.csv"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-advisory-v2/hol/export/AMR_Advisory_V2.AMR_Protocol/proof-audit.txt"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-advisory-v2/hol/export/AMR_Advisory_V2.AMR_Protocol/selector.csv"
+
+Finished at Mon Sep 21 22:51:34 GMT+8 2026
+0:00:12 elapsed time

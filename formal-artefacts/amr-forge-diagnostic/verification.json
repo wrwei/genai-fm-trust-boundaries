@@ -1,0 +1,15 @@
+{
+  "diagnostic_tests": 42,
+  "supervisor_regression_tests": 34,
+  "physics_adapter_tests": 8,
+  "preflight_test_log": "offline-preflight-tests.txt",
+  "credential_pattern_scan_files": 128,
+  "credential_pattern_findings": 0,
+  "frozen_dependencies_unchanged": true,
+  "old_pilot_unchanged": true,
+  "model_calls": 7,
+  "all_four_conditions_terminal": true,
+  "new_physical_episodes": 0,
+  "bytes_in_diagnostic_tree": 4219486,
+  "scan_scope": "credential-shaped token scan only; no credential file read; word boundary excludes task-* filenames"
+}

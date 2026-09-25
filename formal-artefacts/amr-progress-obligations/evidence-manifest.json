@@ -1,0 +1,222 @@
+{
+  "created_utc": "2026-09-22T12:35:43.880529+00:00",
+  "kind": "post-verification package snapshot; retained pre-run inputs remain separately identified",
+  "files": {
+    "evidence/nominal-obligations.json": {
+      "bytes": 4499,
+      "sha256": "9c5fa1b39fc777d37325e53f20359e7027d3d6b531b2be52d9e5af7f51e8426e"
+    },
+    "evidence/profiles.json": {
+      "bytes": 96907,
+      "sha256": "a1e1d156ca25ae7138aa3968ec1f3427798e945b10a0bea356f6a10ad2fecd0a"
+    },
+    "evidence/stationary-2026-09-22/audit.json": {
+      "bytes": 1333,
+      "sha256": "bef48be6b9d05793875e5e6100f1ae4570429fe4d30197b2e968ea9ae9617f9a"
+    },
+    "evidence/stationary-2026-09-22/effective-parameters.json": {
+      "bytes": 3934,
+      "sha256": "85e282aa4aa920cbc700d148f97a1a15f46a698870d28c85f20fb3067ad8fc01"
+    },
+    "evidence/stationary-2026-09-22/input-snapshot.json": {
+      "bytes": 6705,
+      "sha256": "3164821bd7b30d5fbb651b6cce7550fb5a8af564ef5e45eff91e52d323aa0d20"
+    },
+    "evidence/stationary-2026-09-22/inputs/docs/superpowers/plans/2026-09-22-amr-progress-obligations.md": {
+      "bytes": 1604,
+      "sha256": "c954646f667679f1947af92dea6be8b821bcf130ec0b0917b5f0617d99b016e8"
+    },
+    "evidence/stationary-2026-09-22/inputs/docs/superpowers/specs/2026-09-22-amr-progress-obligations-design.md": {
+      "bytes": 4019,
+      "sha256": "a807caded595573facca484a9b735deecfbbb18174bf1c5a40ea16a7fc778709"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-advisory-v2/advice_mailbox.py": {
+      "bytes": 1636,
+      "sha256": "aba2efa0731cedcc4a6d7c5cf8f61cf950ac32b3f05d3aff6b6a53fad75fddda"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-advisory-v2/conformance.py": {
+      "bytes": 4289,
+      "sha256": "3dff343ff14e9543734ee1caecd0f5f55d7a567ab8928e0898aaca3e32b3443d"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-advisory-v2/physical.py": {
+      "bytes": 18556,
+      "sha256": "6cd2b6a8fb2eeb307c495ad880d70c0eafad6ffca13452e8276ff90c4a7772cd"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-advisory-v2/protocol.py": {
+      "bytes": 6130,
+      "sha256": "f35566d6a94b4f09e914c8781f7ff6ad54b29db49be9c0d01a42264d82c5a2cd"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-advisory-v2/source_check.py": {
+      "bytes": 7352,
+      "sha256": "bee8ab0031b0228dd5d140ccbf4fd4e8cb7e83eb5d5045253bec04d5ec6aafde"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-corridor/controller.py": {
+      "bytes": 4385,
+      "sha256": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-corridor/oracle.py": {
+      "bytes": 6113,
+      "sha256": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-corridor/plant.py": {
+      "bytes": 6157,
+      "sha256": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-corridor/simulation.py": {
+      "bytes": 17635,
+      "sha256": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-forge-diagnostic/profiles/__init__.py": {
+      "bytes": 84,
+      "sha256": "62fce7b366546e395a9e8c164616ff2f0365537cc30bd2f8b4757df329e956ec"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-forge-diagnostic/profiles/rules12/__init__.py": {
+      "bytes": 67,
+      "sha256": "566bdcf2c48440ef2d382fec07c0e8a5e98d5792bc2a8735dbe403985d48d86a"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-forge-diagnostic/profiles/rules12/assurance.py": {
+      "bytes": 6773,
+      "sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-forge-diagnostic/profiles/rules12/language.py": {
+      "bytes": 6514,
+      "sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-forge-diagnostic/profiles/rules12/model.py": {
+      "bytes": 4953,
+      "sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-progress-obligations/experiments.py": {
+      "bytes": 11111,
+      "sha256": "59d7cd6a23bb92293eb229d1f1dd2670aeaa2646cd1d1eb570be2e907cb0f9af"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-progress-obligations/profiles.py": {
+      "bytes": 2476,
+      "sha256": "7caa926aa254eaef622af03e661acc2fa8f9e5e8e662ae6df961335b1857d1cc"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-progress-obligations/trace_obligations.py": {
+      "bytes": 6376,
+      "sha256": "0529fa97e45a6819dc822104ed44bbdb36d1ce7e0a7db243b3d0b4186430bba7"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-runtime-binding/binding.py": {
+      "bytes": 3539,
+      "sha256": "8425fd19ee0583df265250d9b375af2c287b9995432dbcbfbcb100904c2c987f"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-runtime-binding/binding_conformance.py": {
+      "bytes": 5925,
+      "sha256": "6a613e77352182b75dd4bebed4f4aa8230ddd8885ceada64d8c47ed762654278"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-runtime-binding/physical_binding.py": {
+      "bytes": 11331,
+      "sha256": "8fd490901322114766b68eb7390481810d5faf62fe6c7dc996e174758b763211"
+    },
+    "evidence/stationary-2026-09-22/inputs/formal-artefacts/amr-runtime-binding/source_link_audit.py": {
+      "bytes": 7955,
+      "sha256": "8b51e1d86c2f4bcb7795ef49f972d35e1e8e751f28f829f5c7ffa371b19d41a2"
+    },
+    "evidence/stationary-2026-09-22/inputs/literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json": {
+      "bytes": 2692,
+      "sha256": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6"
+    },
+    "evidence/stationary-2026-09-22/pre-run.json": {
+      "bytes": 3810,
+      "sha256": "08ea7efcc71fc78fdb08c89eb6669971601a541651f0dc60d13d9933d7ecdf81"
+    },
+    "evidence/stationary-2026-09-22/summary.json": {
+      "bytes": 1052,
+      "sha256": "c4ad4997df547ab9812e120683f0507bed8691a5ebdd362520009d282569973c"
+    },
+    "evidence/stationary-2026-09-22/trace.jsonl.gz": {
+      "bytes": 176648,
+      "sha256": "4d85bc2d2752c0d5529769f0373fd4024bd3fb4ef354bf914e210fbcca5e85b0"
+    },
+    "evidence/tests.log": {
+      "bytes": 1757,
+      "sha256": "41c41c7479099d3ade2ca9b3f6c01729e4ec3999d5744331141492514fd84bd2"
+    },
+    "evidence/verification.json": {
+      "bytes": 2117,
+      "sha256": "b11f0353a6ef03d496e69d501d6966db62179e25bd130f62e47e3a9f7fe1b185"
+    },
+    "experiments.py": {
+      "bytes": 11111,
+      "sha256": "59d7cd6a23bb92293eb229d1f1dd2670aeaa2646cd1d1eb570be2e907cb0f9af"
+    },
+    "hol/AMR_Progress.thy": {
+      "bytes": 5109,
+      "sha256": "f6d0b0a84629559c27c7327c4e33e1be6544b0e68198d771068bf69eab81f07f"
+    },
+    "hol/build-attempts/20260922T121750173471Z.log": {
+      "bytes": 1421,
+      "sha256": "0a365e0856b61811154dde0d731a18c2f65155fd0df9029412d7baa4b20f88f0"
+    },
+    "hol/build-attempts/20260922T121856009713Z.log": {
+      "bytes": 1897,
+      "sha256": "3e13d394ad34236d2e5a603ca745bf59dcc249e9c119e93ea550521d88a0e700"
+    },
+    "hol/build-attempts/20260922T122044340277Z.log": {
+      "bytes": 1979,
+      "sha256": "9d8078c1a6513ff0660ac81336b49f144e5e328178e1955600f8c8c983ac76d8"
+    },
+    "hol/build-attempts/20260922T122409653375Z.log": {
+      "bytes": 2863,
+      "sha256": "edb29fd34d561d652582318cee28b6a983c15615f5937fb331227a9e1b5ed1f3"
+    },
+    "hol/build-attempts/20260922T122518180165Z.log": {
+      "bytes": 1907,
+      "sha256": "055a805cd358cf4ba7e990772c9b6c57bab0869be0eab703f310eba5db8a798c"
+    },
+    "hol/build-attempts/20260922T122740479526Z.log": {
+      "bytes": 1174,
+      "sha256": "4065a8acfe2a5581852add6225cfb2ec1eb21706966df37a44f1853c72953d80"
+    },
+    "hol/build.log": {
+      "bytes": 1174,
+      "sha256": "4065a8acfe2a5581852add6225cfb2ec1eb21706966df37a44f1853c72953d80"
+    },
+    "hol/build.py": {
+      "bytes": 1559,
+      "sha256": "71ce05fb043ece28ea2829830c3391c8ef9e02c0bff89afdf44f0d3460258b5f"
+    },
+    "hol/export/AMR_Progress_Obligations.AMR_Progress/progress-audit.txt": {
+      "bytes": 541,
+      "sha256": "e06ced685da0753517b34eb2c53c045e46aa8868f8a48434292c0357e71d8571"
+    },
+    "hol/ROOT": {
+      "bytes": 168,
+      "sha256": "95a6f59eabfe33f0f40e5330e9fca56b9fdfb80c5efbb30067cc3b2ee1a81728"
+    },
+    "hol/source-hashes.json": {
+      "bytes": 396,
+      "sha256": "aab17389414093fdc2e810b6b18b45f80d205f8a5e23fbd34f8b3c9b93a8e1ff"
+    },
+    "profiles.py": {
+      "bytes": 2476,
+      "sha256": "7caa926aa254eaef622af03e661acc2fa8f9e5e8e662ae6df961335b1857d1cc"
+    },
+    "README.md": {
+      "bytes": 6913,
+      "sha256": "9274e78913553bd59f45e0ccf5eaaa56feb5c391ff69848b64be31d9aa71ce43"
+    },
+    "review.md": {
+      "bytes": 6266,
+      "sha256": "771a38c279319fe9a3c151eb75df9bfd9bf521365406b12ee995d86c97b4e7a4"
+    },
+    "tests/test_obligations.py": {
+      "bytes": 3259,
+      "sha256": "65fc830a466707eaca9117ae16ae30aecc86202257e629f0aec69aaedc22fa32"
+    },
+    "tests/test_progress.py": {
+      "bytes": 2364,
+      "sha256": "a54b17ce020191db3d617658e67159ef63d8286a2ef991aafb8126077ca8365b"
+    },
+    "trace_obligations.py": {
+      "bytes": 6784,
+      "sha256": "dc11ac21bfe662d57edd8a647648109bd3bb2e62473ce654b301062d33d6d827"
+    },
+    "verify.py": {
+      "bytes": 4884,
+      "sha256": "c0a2946f239ce1612ad81586ad8d00b4a605a46720e6f2290f6a07e016349bc7"
+    }
+  }
+}

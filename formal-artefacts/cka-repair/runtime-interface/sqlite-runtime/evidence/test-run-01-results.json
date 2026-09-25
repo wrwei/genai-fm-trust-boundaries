@@ -1,0 +1,842 @@
+{
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 1,
+  "observations": {
+    "crash_recovery": [
+      {
+        "point": "before_begin",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_read",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_effect",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_state",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_commit",
+        "exit": 73,
+        "recovered_stage": "Completed",
+        "recovered_balance": 7,
+        "after_retry_balance": 7
+      }
+    ],
+    "model_table": [
+      {
+        "state": 0,
+        "command": 0,
+        "target": 4,
+        "event": 10
+      },
+      {
+        "state": 0,
+        "command": 1,
+        "target": 0,
+        "event": 11
+      },
+      {
+        "state": 0,
+        "command": 2,
+        "target": 0,
+        "event": 2
+      },
+      {
+        "state": 0,
+        "command": 3,
+        "target": 2,
+        "event": 3
+      },
+      {
+        "state": 0,
+        "command": 4,
+        "target": 0,
+        "event": 14
+      },
+      {
+        "state": 0,
+        "command": 5,
+        "target": 1,
+        "event": 15
+      },
+      {
+        "state": 0,
+        "command": 6,
+        "target": 0,
+        "event": 16
+      },
+      {
+        "state": 0,
+        "command": 7,
+        "target": 0,
+        "event": 17
+      },
+      {
+        "state": 1,
+        "command": 0,
+        "target": 5,
+        "event": 10
+      },
+      {
+        "state": 1,
+        "command": 1,
+        "target": 1,
+        "event": 11
+      },
+      {
+        "state": 1,
+        "command": 2,
+        "target": 1,
+        "event": 2
+      },
+      {
+        "state": 1,
+        "command": 3,
+        "target": 3,
+        "event": 3
+      },
+      {
+        "state": 1,
+        "command": 4,
+        "target": 0,
+        "event": 14
+      },
+      {
+        "state": 1,
+        "command": 5,
+        "target": 1,
+        "event": 15
+      },
+      {
+        "state": 1,
+        "command": 6,
+        "target": 1,
+        "event": 16
+      },
+      {
+        "state": 1,
+        "command": 7,
+        "target": 1,
+        "event": 17
+      },
+      {
+        "state": 2,
+        "command": 0,
+        "target": 6,
+        "event": 10
+      },
+      {
+        "state": 2,
+        "command": 1,
+        "target": 2,
+        "event": 11
+      },
+      {
+        "state": 2,
+        "command": 2,
+        "target": 0,
+        "event": 2
+      },
+      {
+        "state": 2,
+        "command": 3,
+        "target": 2,
+        "event": 3
+      },
+      {
+        "state": 2,
+        "command": 4,
+        "target": 2,
+        "event": 14
+      },
+      {
+        "state": 2,
+        "command": 5,
+        "target": 3,
+        "event": 15
+      },
+      {
+        "state": 2,
+        "command": 6,
+        "target": 2,
+        "event": 16
+      },
+      {
+        "state": 2,
+        "command": 7,
+        "target": 2,
+        "event": 17
+      },
+      {
+        "state": 3,
+        "command": 0,
+        "target": 7,
+        "event": 10
+      },
+      {
+        "state": 3,
+        "command": 1,
+        "target": 3,
+        "event": 11
+      },
+      {
+        "state": 3,
+        "command": 2,
+        "target": 1,
+        "event": 2
+      },
+      {
+        "state": 3,
+        "command": 3,
+        "target": 3,
+        "event": 3
+      },
+      {
+        "state": 3,
+        "command": 4,
+        "target": 2,
+        "event": 14
+      },
+      {
+        "state": 3,
+        "command": 5,
+        "target": 3,
+        "event": 15
+      },
+      {
+        "state": 3,
+        "command": 6,
+        "target": 3,
+        "event": 16
+      },
+      {
+        "state": 3,
+        "command": 7,
+        "target": 3,
+        "event": 17
+      },
+      {
+        "state": 4,
+        "command": 0,
+        "target": 4,
+        "event": 10
+      },
+      {
+        "state": 4,
+        "command": 1,
+        "target": 4,
+        "event": 11
+      },
+      {
+        "state": 4,
+        "command": 2,
+        "target": 4,
+        "event": 2
+      },
+      {
+        "state": 4,
+        "command": 3,
+        "target": 6,
+        "event": 3
+      },
+      {
+        "state": 4,
+        "command": 4,
+        "target": 4,
+        "event": 14
+      },
+      {
+        "state": 4,
+        "command": 5,
+        "target": 5,
+        "event": 15
+      },
+      {
+        "state": 4,
+        "command": 6,
+        "target": 4,
+        "event": 16
+      },
+      {
+        "state": 4,
+        "command": 7,
+        "target": 4,
+        "event": 17
+      },
+      {
+        "state": 5,
+        "command": 0,
+        "target": 5,
+        "event": 10
+      },
+      {
+        "state": 5,
+        "command": 1,
+        "target": 5,
+        "event": 11
+      },
+      {
+        "state": 5,
+        "command": 2,
+        "target": 5,
+        "event": 2
+      },
+      {
+        "state": 5,
+        "command": 3,
+        "target": 7,
+        "event": 3
+      },
+      {
+        "state": 5,
+        "command": 4,
+        "target": 4,
+        "event": 14
+      },
+      {
+        "state": 5,
+        "command": 5,
+        "target": 5,
+        "event": 15
+      },
+      {
+        "state": 5,
+        "command": 6,
+        "target": 5,
+        "event": 16
+      },
+      {
+        "state": 5,
+        "command": 7,
+        "target": 5,
+        "event": 17
+      },
+      {
+        "state": 6,
+        "command": 0,
+        "target": 6,
+        "event": 10
+      },
+      {
+        "state": 6,
+        "command": 1,
+        "target": 10,
+        "event": 11
+      },
+      {
+        "state": 6,
+        "command": 2,
+        "target": 4,
+        "event": 2
+      },
+      {
+        "state": 6,
+        "command": 3,
+        "target": 6,
+        "event": 3
+      },
+      {
+        "state": 6,
+        "command": 4,
+        "target": 6,
+        "event": 14
+      },
+      {
+        "state": 6,
+        "command": 5,
+        "target": 7,
+        "event": 15
+      },
+      {
+        "state": 6,
+        "command": 6,
+        "target": 6,
+        "event": 16
+      },
+      {
+        "state": 6,
+        "command": 7,
+        "target": 6,
+        "event": 17
+      },
+      {
+        "state": 7,
+        "command": 0,
+        "target": 7,
+        "event": 10
+      },
+      {
+        "state": 7,
+        "command": 1,
+        "target": 11,
+        "event": 11
+      },
+      {
+        "state": 7,
+        "command": 2,
+        "target": 5,
+        "event": 2
+      },
+      {
+        "state": 7,
+        "command": 3,
+        "target": 7,
+        "event": 3
+      },
+      {
+        "state": 7,
+        "command": 4,
+        "target": 6,
+        "event": 14
+      },
+      {
+        "state": 7,
+        "command": 5,
+        "target": 7,
+        "event": 15
+      },
+      {
+        "state": 7,
+        "command": 6,
+        "target": 7,
+        "event": 16
+      },
+      {
+        "state": 7,
+        "command": 7,
+        "target": 7,
+        "event": 17
+      },
+      {
+        "state": 8,
+        "command": 0,
+        "target": 8,
+        "event": 10
+      },
+      {
+        "state": 8,
+        "command": 1,
+        "target": 8,
+        "event": 11
+      },
+      {
+        "state": 8,
+        "command": 2,
+        "target": 8,
+        "event": 2
+      },
+      {
+        "state": 8,
+        "command": 3,
+        "target": 10,
+        "event": 3
+      },
+      {
+        "state": 8,
+        "command": 4,
+        "target": 8,
+        "event": 14
+      },
+      {
+        "state": 8,
+        "command": 5,
+        "target": 9,
+        "event": 15
+      },
+      {
+        "state": 8,
+        "command": 6,
+        "target": 8,
+        "event": 16
+      },
+      {
+        "state": 8,
+        "command": 7,
+        "target": 8,
+        "event": 17
+      },
+      {
+        "state": 9,
+        "command": 0,
+        "target": 9,
+        "event": 10
+      },
+      {
+        "state": 9,
+        "command": 1,
+        "target": 9,
+        "event": 11
+      },
+      {
+        "state": 9,
+        "command": 2,
+        "target": 9,
+        "event": 2
+      },
+      {
+        "state": 9,
+        "command": 3,
+        "target": 11,
+        "event": 3
+      },
+      {
+        "state": 9,
+        "command": 4,
+        "target": 8,
+        "event": 14
+      },
+      {
+        "state": 9,
+        "command": 5,
+        "target": 9,
+        "event": 15
+      },
+      {
+        "state": 9,
+        "command": 6,
+        "target": 9,
+        "event": 16
+      },
+      {
+        "state": 9,
+        "command": 7,
+        "target": 9,
+        "event": 17
+      },
+      {
+        "state": 10,
+        "command": 0,
+        "target": 10,
+        "event": 10
+      },
+      {
+        "state": 10,
+        "command": 1,
+        "target": 14,
+        "event": 1
+      },
+      {
+        "state": 10,
+        "command": 2,
+        "target": 8,
+        "event": 2
+      },
+      {
+        "state": 10,
+        "command": 3,
+        "target": 10,
+        "event": 3
+      },
+      {
+        "state": 10,
+        "command": 4,
+        "target": 10,
+        "event": 14
+      },
+      {
+        "state": 10,
+        "command": 5,
+        "target": 11,
+        "event": 15
+      },
+      {
+        "state": 10,
+        "command": 6,
+        "target": 10,
+        "event": 16
+      },
+      {
+        "state": 10,
+        "command": 7,
+        "target": 10,
+        "event": 17
+      },
+      {
+        "state": 11,
+        "command": 0,
+        "target": 11,
+        "event": 10
+      },
+      {
+        "state": 11,
+        "command": 1,
+        "target": 15,
+        "event": 1
+      },
+      {
+        "state": 11,
+        "command": 2,
+        "target": 9,
+        "event": 2
+      },
+      {
+        "state": 11,
+        "command": 3,
+        "target": 11,
+        "event": 3
+      },
+      {
+        "state": 11,
+        "command": 4,
+        "target": 10,
+        "event": 14
+      },
+      {
+        "state": 11,
+        "command": 5,
+        "target": 11,
+        "event": 15
+      },
+      {
+        "state": 11,
+        "command": 6,
+        "target": 11,
+        "event": 16
+      },
+      {
+        "state": 11,
+        "command": 7,
+        "target": 11,
+        "event": 17
+      },
+      {
+        "state": 12,
+        "command": 0,
+        "target": 12,
+        "event": 10
+      },
+      {
+        "state": 12,
+        "command": 1,
+        "target": 12,
+        "event": 11
+      },
+      {
+        "state": 12,
+        "command": 2,
+        "target": 12,
+        "event": 2
+      },
+      {
+        "state": 12,
+        "command": 3,
+        "target": 14,
+        "event": 3
+      },
+      {
+        "state": 12,
+        "command": 4,
+        "target": 12,
+        "event": 14
+      },
+      {
+        "state": 12,
+        "command": 5,
+        "target": 13,
+        "event": 15
+      },
+      {
+        "state": 12,
+        "command": 6,
+        "target": 12,
+        "event": 16
+      },
+      {
+        "state": 12,
+        "command": 7,
+        "target": 12,
+        "event": 17
+      },
+      {
+        "state": 13,
+        "command": 0,
+        "target": 13,
+        "event": 10
+      },
+      {
+        "state": 13,
+        "command": 1,
+        "target": 13,
+        "event": 11
+      },
+      {
+        "state": 13,
+        "command": 2,
+        "target": 13,
+        "event": 2
+      },
+      {
+        "state": 13,
+        "command": 3,
+        "target": 15,
+        "event": 3
+      },
+      {
+        "state": 13,
+        "command": 4,
+        "target": 12,
+        "event": 14
+      },
+      {
+        "state": 13,
+        "command": 5,
+        "target": 13,
+        "event": 15
+      },
+      {
+        "state": 13,
+        "command": 6,
+        "target": 13,
+        "event": 16
+      },
+      {
+        "state": 13,
+        "command": 7,
+        "target": 13,
+        "event": 17
+      },
+      {
+        "state": 14,
+        "command": 0,
+        "target": 14,
+        "event": 10
+      },
+      {
+        "state": 14,
+        "command": 1,
+        "target": 14,
+        "event": 11
+      },
+      {
+        "state": 14,
+        "command": 2,
+        "target": 12,
+        "event": 2
+      },
+      {
+        "state": 14,
+        "command": 3,
+        "target": 14,
+        "event": 3
+      },
+      {
+        "state": 14,
+        "command": 4,
+        "target": 14,
+        "event": 14
+      },
+      {
+        "state": 14,
+        "command": 5,
+        "target": 15,
+        "event": 15
+      },
+      {
+        "state": 14,
+        "command": 6,
+        "target": 14,
+        "event": 16
+      },
+      {
+        "state": 14,
+        "command": 7,
+        "target": 14,
+        "event": 17
+      },
+      {
+        "state": 15,
+        "command": 0,
+        "target": 15,
+        "event": 10
+      },
+      {
+        "state": 15,
+        "command": 1,
+        "target": 15,
+        "event": 11
+      },
+      {
+        "state": 15,
+        "command": 2,
+        "target": 13,
+        "event": 2
+      },
+      {
+        "state": 15,
+        "command": 3,
+        "target": 15,
+        "event": 3
+      },
+      {
+        "state": 15,
+        "command": 4,
+        "target": 14,
+        "event": 14
+      },
+      {
+        "state": 15,
+        "command": 5,
+        "target": 15,
+        "event": 15
+      },
+      {
+        "state": 15,
+        "command": 6,
+        "target": 15,
+        "event": 16
+      },
+      {
+        "state": 15,
+        "command": 7,
+        "target": 15,
+        "event": 17
+      }
+    ],
+    "http": {
+      "transport": "loopback HTTP",
+      "unknown_token": 401,
+      "advice_control_attempts": [
+        403,
+        403,
+        403,
+        403
+      ],
+      "role_field_injection": 400,
+      "advice_message": 200,
+      "authorized_effect": 7
+    },
+    "serialized_revoke": {
+      "last_events": [
+        1,
+        2
+      ],
+      "final_permission": 0
+    },
+    "concurrent_submit": {
+      "return_codes": [
+        0,
+        0
+      ],
+      "balance": 7,
+      "effects": 1
+    }
+  }
+}

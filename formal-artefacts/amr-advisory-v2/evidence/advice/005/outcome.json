@@ -1,0 +1,61 @@
+{
+  "sample": "W2-R2",
+  "result": {
+    "content": "{\"prefer\": \"B\"}",
+    "arrival_seconds": 1.1869999999980791,
+    "fatal": null,
+    "usage_summary": {
+      "input_tokens": 108,
+      "output_tokens": 7,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 108
+    },
+    "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 7,
+      "total_tokens": 115,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 108
+    },
+    "provider_model": "deepseek-flash",
+    "request_id": "b9d14f25-b816-4aca-abed-7eb4ff13fda7",
+    "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  },
+  "decision": {
+    "adoption": "accepted",
+    "latch": {
+      "decision_id": 1,
+      "advice": "B",
+      "request_id": "request-1",
+      "context_id": "fixed-tasks-A0-B1",
+      "reason": "valid_advice"
+    },
+    "source": {
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": true,
+        "RequestB": true,
+        "PreferA": false,
+        "PreferB": true
+      },
+      "raw_action": "SelectB",
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+    },
+    "owner": "B",
+    "events": [
+      [
+        "Grant",
+        "B"
+      ]
+    ],
+    "cutoff_seconds": 3.63,
+    "scope": "source-driven staged authorization; not complete transport"
+  },
+  "decision_wall_seconds": 3.7339999999967404,
+  "max_pacing_lag_seconds": 0.01299999999901047,
+  "planned_window_seconds": 3.63,
+  "actual_source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+}

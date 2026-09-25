@@ -1,0 +1,198 @@
+{
+  "spec_id": "amr-supervisor-obligations/v1.1",
+  "source_sha256": "f13a6d6d6f57a05d286a989b544c1aa78045dbb75ee2508f19e3db79b1cbed75",
+  "translator_fault": null,
+  "parse_pass": true,
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "select_inputs": 32,
+  "step_inputs": 1792,
+  "source_violation_inputs": 28,
+  "model_violation_inputs": 28,
+  "correspondence_mismatches": 0,
+  "source_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Finish",
+        "Done"
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Finish",
+        "Done"
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Finish",
+        "Done"
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Finish",
+        "Done"
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    }
+  ],
+  "model_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Finish",
+          "Done"
+        ]
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Finish",
+          "Done"
+        ]
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Finish",
+          "Done"
+        ]
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": true,
+        "Released": true,
+        "BodyClearOfZ": true,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "responses": [
+        [
+          "Finish",
+          "Done"
+        ]
+      ],
+      "violations": [
+        "brake_at_released_goal_until_halted"
+      ]
+    }
+  ],
+  "correspondence_witnesses": [],
+  "source_policy_pass": false,
+  "model_policy_pass": false,
+  "correspondence_pass": true,
+  "accepted": false
+}

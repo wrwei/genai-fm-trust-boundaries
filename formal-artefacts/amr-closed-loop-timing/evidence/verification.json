@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checked_utc": "2026-09-22T13:45:40.219508+00:00",
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "source_milestones": 8,
+  "hol_timing_rows": 5,
+  "checked_ticks": 1001,
+  "checked_start_cases": 201402,
+  "retained_runs": 4,
+  "tests": 15,
+  "proof_facts": 16,
+  "proof_input_hashes": 3,
+  "predecessor_manifests": {
+    "amr-runtime-binding": 36,
+    "amr-extraction-faithfulness": 20,
+    "amr-progress-obligations": 54
+  },
+  "two_task_bound_ticks": 6884,
+  "two_task_bound_seconds": 68.84,
+  "observed_maxima_ticks": {
+    "start": 155.0,
+    "release": 8.069420084764545,
+    "travel": 2978.1854249492644,
+    "finish": 151.81457505073547
+  },
+  "api_calls": 0,
+  "report_links": 35,
+  "statement": "stable conditional timing composition; whole-Python, arbitrary-environment and hardware refinement remain open"
+}

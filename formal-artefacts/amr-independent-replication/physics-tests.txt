@@ -1,0 +1,38 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+{"sample_id": "P1-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P1-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+test_altered_source_fails_before_deployment (test_simulate.ReplicationPhysicsTests.test_altered_source_fails_before_deployment) ... ok
+{"sample_id": "P1-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P1-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+test_duplicates_reuse_physics_but_keep_all_six_samples (test_simulate.ReplicationPhysicsTests.test_duplicates_reuse_physics_but_keep_all_six_samples) ... ok
+test_fixed_physical_oracle_and_profile_are_reused (test_simulate.ReplicationPhysicsTests.test_fixed_physical_oracle_and_profile_are_reused) ... ok
+test_live_protocol_uses_serialized_sample_list_before_evidence_gate (test_simulate.ReplicationPhysicsTests.test_live_protocol_uses_serialized_sample_list_before_evidence_gate) ... ok
+{"sample_id": "P1-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P1-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+test_missing_or_reordered_source_mapping_rejected (test_simulate.ReplicationPhysicsTests.test_missing_or_reordered_source_mapping_rejected) ... ok
+test_partial_or_fatal_batch_never_selects_physics (test_simulate.ReplicationPhysicsTests.test_partial_or_fatal_batch_never_selects_physics) ... ok
+{"sample_id": "P1-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P1-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+test_two_byte_distinct_sources_have_fifteen_episodes (test_simulate.ReplicationPhysicsTests.test_two_byte_distinct_sources_have_fifteen_episodes) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 33.122s
+
+OK

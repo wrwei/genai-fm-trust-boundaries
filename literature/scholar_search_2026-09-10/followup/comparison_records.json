@@ -1,0 +1,4149 @@
+{
+  "date": "2026-09-11",
+  "scope_note": "82条目的定向比较与正文角色章节引文核验；不是82篇新增纳入，也不替代330条候选筛选。",
+  "record_count": 82,
+  "records": [
+    {
+      "id": "C01",
+      "short_name": "Forge",
+      "bibliography": {
+        "title": "Formal-Method-Guided Vibe Coding: Closing the Verification Loop on AI-Generated Safety-Critical Software Through Model-Driven Engineering",
+        "authors": [
+          "Ran Wei",
+          "Le Zhu",
+          "Haochi Wang",
+          "Jim Woodcock",
+          "Fang Yan",
+          "Simon Foster",
+          "Xiangyang Ji"
+        ],
+        "year": 2026,
+        "venue": "arXiv（预印本）",
+        "doi": "10.48550/arXiv.2606.22413",
+        "metadata_source": "../bibliography/catalogue.json#B040",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B040",
+      "roles": [
+        "A"
+      ],
+      "scope": "生成式工作；作者相关工作，不能作独立外部验证",
+      "version_read": "arXiv:2606.22413v2，2026-06-23",
+      "generated": "受限Java控制器；转换链产生Dafny/CSP/Z-Machine制品",
+      "verification_object": "生成源代码所提取/转换的模型与验证义务",
+      "checking_authority": "Dafny/Z3、FDR4、Isabelle/HOL",
+      "checking_time": "开发时生成—验证—修复循环",
+      "runtime_operation": "研究评价未展示在线动作门禁",
+      "established_claim": "作者报告不同后端检查契约、不变量、死锁/发散等各自义务",
+      "trust_boundary": "源到模型语义保持仍是待建立论证；可复现及覆盖率不替代语义忠实性。结构化GSN/SACM集成在该版本列为后续工作。",
+      "review_depth": "本次核对全文关键章节；未重跑工具/审计全部变换代码",
+      "locators": [
+        "§3.1–3.4",
+        "§4.6–4.7，Tables 6–7",
+        "§5.1、5.5–5.7、§6"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2606.22413v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C02",
+      "short_name": "FVEval",
+      "bibliography": {
+        "title": "FVEval: Understanding Language Model Capabilities in Formal Verification of Digital Hardware",
+        "authors": [
+          "Minwoo Kang",
+          "Mingjie Liu",
+          "Ghaith Bany Hamad",
+          "Syed Suhaib",
+          "Haoxing Ren"
+        ],
+        "year": 2024,
+        "venue": "arXiv（本次按所读预印本记录；原库会议标签未在此轮独立核实）",
+        "doi": "10.48550/arXiv.2410.23299",
+        "metadata_source": "../../corpus_labelled.json#2410.23299v1；所读arXiv题名页/摘要页",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": "2410.23299v1",
+      "roles": [
+        "A",
+        "C（数据构造中的模型评价）"
+      ],
+      "scope": "生成式工作；原库已有纠正记录",
+      "version_read": "arXiv:2410.23299v1",
+      "generated": "SystemVerilog Assertions；部分数据构造用LLM生成和评价描述",
+      "verification_object": "候选SVA相对参考断言或RTL/testbench",
+      "checking_authority": "Cadence Jasper；数据构造另有LLM critic与人工检查",
+      "checking_time": "离线基准评价；不是硬件部署门禁",
+      "runtime_operation": "所读任务未展示运行时检查机制",
+      "established_claim": "NL2SVA评价逻辑等价/蕴涵；Design2SVA检查设计上的断言",
+      "trust_boundary": "参考断言和环境约束的适当性仍在外部；单向蕴涵指标不能写成严格等价。不能因benchmark或LLM critic而忽略最终形式检查。",
+      "review_depth": "本次深化已有标签纠正，核对方法/评价章节",
+      "locators": [
+        "§3.2 Evaluation",
+        "§3.3 Dataset/Evaluation",
+        "§3.4 Evaluation"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2410.23299v1",
+        "https://arxiv.org/abs/2410.23299"
+      ],
+      "prior_evidence": [
+        "../../label_corrections.json"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C03",
+      "short_name": "Draft, Sketch, and Prove",
+      "bibliography": {
+        "title": "Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs",
+        "authors": [
+          "Albert Q. Jiang",
+          "Sean Welleck",
+          "Jin Peng Zhou",
+          "Wenda Li",
+          "Jiacheng Liu",
+          "Mateja Jamnik",
+          "Timothée Lacroix",
+          "Yuhuai Wu",
+          "Guillaume Lample"
+        ],
+        "year": 2023,
+        "venue": "ICLR 2023；初始预印本2022",
+        "doi": "10.48550/arXiv.2210.12283",
+        "metadata_source": "所读PDF题名页；DOI为arXiv预印本标识，不冒充会议DOI",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": null,
+      "roles": [
+        "B"
+      ],
+      "scope": "生成式背景候选；本次定向选取，不计入原Scholar命中",
+      "version_read": "arXiv:2210.12283v3；PDF标ICLR 2023",
+      "generated": "非形式证明草稿、Isabelle证明骨架，ATP补齐子目标",
+      "verification_object": "给定形式化命题的完整证明",
+      "checking_authority": "Sledgehammer等搜索；最终Isabelle检查",
+      "checking_time": "离线证明构造/检查；不等同软件设计验证任务",
+      "runtime_operation": "未涉及部署后动作检查",
+      "established_claim": "对给定形式化命题验收证明，排除sorry/oops未完成证明",
+      "trust_boundary": "形式命题与自然语言目标的对应仍须确认；搜索成功率不是翻译忠实性指标。",
+      "review_depth": "本次读PDF方法、验收标准及证明器说明；未重跑",
+      "locators": [
+        "§3",
+        "§4.1、4.3",
+        "Appendix B"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/pdf/2210.12283v3",
+        "https://arxiv.org/abs/2210.12283"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C04",
+      "short_name": "Code Repair / REx",
+      "bibliography": {
+        "title": "Code Repair with LLMs gives an Exploration-Exploitation Tradeoff",
+        "authors": [
+          "Hao Tang",
+          "Keya Hu",
+          "Jin Peng Zhou",
+          "Sicheng Zhong",
+          "Wei-Long Zheng",
+          "Xujie Si",
+          "Kevin Ellis"
+        ],
+        "year": 2024,
+        "venue": "arXiv（本次按所读预印本记录；原库会议标签未在此轮独立核实）",
+        "doi": "10.48550/arXiv.2405.17503",
+        "metadata_source": "../../corpus_labelled.json#2405.17503v3；所读arXiv题名页/摘要页",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": "2405.17503v3",
+      "roles": [
+        "A（循环不变量任务）",
+        "C（测试评价任务）"
+      ],
+      "scope": "生成式工作；原库主标签保留，内容层面拆分",
+      "version_read": "arXiv:2405.17503v3",
+      "generated": "程序修复候选或循环不变量",
+      "verification_object": "APPS/ARC输出与测试样例；循环不变量的VC",
+      "checking_authority": "测试执行；循环不变量任务用Z3及Houdini筛除",
+      "checking_time": "离线合成与实验评价",
+      "runtime_operation": "所读任务未展示部署后门禁",
+      "established_claim": "不变量任务检查初始化、归纳保持和后置条件；其他任务按测试判断",
+      "trust_boundary": "必须按任务区分证据，不能整篇概括为仅测试或仅形式证明；正确VC、规格和测试oracle仍需确认。",
+      "review_depth": "本次核对全文任务和实现说明；未重跑",
+      "locators": [
+        "§5 Experimental Results",
+        "Appendix A.3，A.6.1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2405.17503v3",
+        "https://arxiv.org/abs/2405.17503"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C05",
+      "short_name": "SynCode",
+      "bibliography": {
+        "title": "SynCode: LLM Generation with Grammar Augmentation",
+        "authors": [
+          "Shubham Ugare",
+          "Tarun Suresh",
+          "Hangoo Kang",
+          "Sasa Misailovic",
+          "Gagandeep Singh"
+        ],
+        "year": 2024,
+        "venue": "arXiv（本次所读版本）",
+        "doi": "10.48550/arXiv.2403.01632",
+        "metadata_source": "arXiv摘要页完整署名、版本和DOI",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": null,
+      "roles": [
+        "D"
+      ],
+      "scope": "生成式背景候选；本次定向选取，不计入原Scholar命中",
+      "version_read": "arXiv:2403.01632v4，2024-11-06",
+      "generated": "受语法mask约束的输出token",
+      "verification_object": "语法可扩展前缀和token集合",
+      "checking_authority": "增量parser、DFA mask；文中定理分析算法",
+      "checking_time": "定理离线；mask store预计算；约束在推理解码时执行",
+      "runtime_operation": "解码器筛选token，尚不是部署程序动作的安全门禁",
+      "established_claim": "§4.4给出两个方向的条件性前缀性质",
+      "trust_boundary": "按原文命名：soundness保留有效token；completeness在足够长accept sequences下排除无效token。实现长度1/2可不完备；不保证完整输出、终止或程序语义。",
+      "review_depth": "本次核对定理陈述和实现条件；未逐行审计附录证明/代码",
+      "locators": [
+        "§4.3–4.5",
+        "Theorems 1–2，Algorithm 3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2403.01632v4",
+        "https://arxiv.org/abs/2403.01632"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C06",
+      "short_name": "ToolGate",
+      "bibliography": {
+        "title": "ToolGate: Contract-Grounded and Verified Tool Execution for LLMs",
+        "authors": [
+          "Yanming Liu",
+          "Xinyue Peng",
+          "Jiannan Cao",
+          "Xinyi Wang",
+          "Songhang Deng",
+          "Jintao Chen",
+          "Jianwei Yin",
+          "Xuhong Zhang"
+        ],
+        "year": 2026,
+        "venue": "arXiv（本次按所读预印本记录；原库会议标签未在此轮独立核实）",
+        "doi": "10.48550/arXiv.2601.04688",
+        "metadata_source": "../../corpus_labelled.json#2601.04688v1；所读arXiv题名页/摘要页",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": "2601.04688v1",
+      "roles": [
+        "E"
+      ],
+      "scope": "生成式工作",
+      "version_read": "arXiv:2601.04688v1，2026-01-08",
+      "generated": "工具选择/参数及待接受的工具返回",
+      "verification_object": "调用前的符号状态；调用后的结果与符号状态更新",
+      "checking_authority": "前置条件过滤器、后置条件验证函数",
+      "checking_time": "在线逐次调用检查；附录给出离线证明草图",
+      "runtime_operation": "调用前过滤，执行后按契约决定是否提交结果到符号状态",
+      "established_claim": "在契约/更新满足相应义务等前提下维护符号状态性质",
+      "trust_boundary": "拒收返回发生在工具执行之后，不能由此推导已撤销外部副作用；还需符号状态对应真实环境。证明草图不等于机器检查。",
+      "review_depth": "本次核对方法、执行伪码和附录保证边界；未审计实现",
+      "locators": [
+        "§3.2、3.4，Eqs.11–12",
+        "Appendix E，Execute先于Verify",
+        "Appendix G.2–G.5"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2601.04688v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C07",
+      "short_name": "VeriGuard",
+      "bibliography": {
+        "title": "VeriGuard: Enhancing LLM Agent Safety via Verified Code Generation",
+        "authors": [
+          "Lesly Miculicich",
+          "Mihir Parmar",
+          "Hamid Palangi",
+          "Krishnamurthy Dj Dvijotham",
+          "Mirko Montanari",
+          "Tomas Pfister",
+          "Long T. Le"
+        ],
+        "year": 2025,
+        "venue": "arXiv（本次按所读预印本记录；原库会议标签未在此轮独立核实）",
+        "doi": "10.48550/arXiv.2510.05156",
+        "metadata_source": "../../corpus_labelled.json#2510.05156v1；所读arXiv题名页/摘要页",
+        "doi_status": "arXiv预印本DOI；不冒充会议/期刊DOI"
+      },
+      "existing_record": "2510.05156v1",
+      "roles": [
+        "A",
+        "E"
+      ],
+      "scope": "生成式工作；跨开发和运行阶段",
+      "version_read": "arXiv:2510.05156v1，2025-10-03",
+      "generated": "Python策略函数、契约；运行时另由LLM提取策略参数",
+      "verification_object": "离线策略相对契约；在线动作数据经提取后的参数",
+      "checking_authority": "PyTest、Nagini/Viper；在线策略函数/拦截器",
+      "checking_time": "部署前静态验证；部署后逐动作策略评价",
+      "runtime_operation": "在拦截点终止、阻止或触发重规划",
+      "established_claim": "静态检查对象是策略与形式契约的关系",
+      "trust_boundary": "§3.3.1参数映射f由LLM实现，未随策略证明自动获证；自然语言要求、生成约束、动作覆盖与执行时机仍需保证。",
+      "review_depth": "本次核对全文方法和运行接口；实验仅按作者报告",
+      "locators": [
+        "§3.2.1–3.2.2，Verification",
+        "§3.3.1–3.3.2",
+        "§4–5"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2510.05156v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C08",
+      "short_name": "已验证MFOTL monitor",
+      "bibliography": {
+        "title": "A Formally Verified Monitor for Metric First-Order Temporal Logic",
+        "authors": [
+          "Joshua Schneider",
+          "David Basin",
+          "Srđan Krstić",
+          "Dmitriy Traytel"
+        ],
+        "year": 2019,
+        "venue": "Runtime Verification (RV 2019), LNCS 11757, pp.310–328",
+        "doi": "10.1007/978-3-030-32079-9_18",
+        "metadata_source": "Springer正式章节页面；AFP条目作者仅Schneider/Traytel，不与四人论文署名混用",
+        "doi_status": "出版社正式页面已核"
+      },
+      "existing_record": null,
+      "roles": [
+        "E（方法背景）"
+      ],
+      "scope": "非生成式方法背景；不计入生成式样本",
+      "version_read": "RV 2019；关联AFP条目始于2019-07-04，当前入口访问2026-09-11",
+      "generated": "无LLM生成；从形式化导出可执行监测算法",
+      "verification_object": "监测算法相对MFOTL事件流语义",
+      "checking_authority": "Isabelle/HOL证明；部署后可执行monitor",
+      "checking_time": "算法正确性预先证明；事件流监测在线执行",
+      "runtime_operation": "对带时间戳事件流计算公式的满足/违反结果",
+      "established_claim": "作者给出监测器正确性及可执行算法提取",
+      "trust_boundary": "是观察/判定，未因此建立动作强制；事件采集、规格适当性、集成与部署链仍须单独核对。",
+      "review_depth": "本次核出版社摘要与AFP说明；代码HTML抓取失败，未审核理论/运行工具",
+      "locators": [
+        "出版社Abstract",
+        "AFP条目Abstract、Session MFOTL_Monitor"
+      ],
+      "primary_urls": [
+        "https://doi.org/10.1007/978-3-030-32079-9_18",
+        "https://isa-afp.org/entries/MFOTL_Monitor.html"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C09",
+      "short_name": "Concurrent Kleene Algebra",
+      "bibliography": {
+        "title": "Concurrent Kleene Algebra",
+        "authors": [
+          "C. A. R. Hoare",
+          "Bernhard Möller",
+          "Georg Struth",
+          "Ian Wehrman"
+        ],
+        "year": 2009,
+        "venue": "CONCUR 2009 – Concurrency Theory, pp.399–414",
+        "doi": "10.1007/978-3-642-04081-8_27",
+        "metadata_source": "作者稿题名/署名；场所与DOI沿用references.bib hoare2009cka，本次DOI入口抓取失败",
+        "doi_status": "已有主参考文献所列；本次作者稿身份已核，DOI页面抓取失败，未重新核注册记录"
+      },
+      "existing_record": null,
+      "roles": [
+        "E（组合语义背景）"
+      ],
+      "scope": "非生成式理论背景；不计入生成式样本",
+      "version_read": "CONCUR 2009作者稿",
+      "generated": "无LLM生成；并发/顺序行为的代数表示",
+      "verification_object": "顺序与并发组合、exchange及推理规则",
+      "checking_authority": "代数推导；原文报告Prover9重构纯代数证明",
+      "checking_time": "预先建立/检查代数定理；没有由名称决定的部署阶段",
+      "runtime_operation": "代数本身不是逐动作执行部件",
+      "established_claim": "给出具体trace模型、抽象公理以及Hoare/rely-guarantee规则",
+      "trust_boundary": "应用需实例化算子、测试、投影与实际系统语义；不能把原文定理直接当作本项目guard定理。",
+      "review_depth": "本次读作者稿关键部分；未复跑原证明",
+      "locators": [
+        "§1–4",
+        "§5、§8的规则用途；本次未逐条复核证明"
+      ],
+      "primary_urls": [
+        "https://www.cs.princeton.edu/~zkincaid/pub/concur09.pdf"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C10",
+      "short_name": "Trusta",
+      "bibliography": {
+        "title": "Trusta: Reasoning about assurance cases with formal methods and large language models",
+        "authors": [
+          "Zezhong Chen",
+          "Yuxin Deng",
+          "Wenjie Du"
+        ],
+        "year": 2025,
+        "venue": "Science of Computer Programming",
+        "doi": "10.1016/j.scico.2025.103288",
+        "metadata_source": "../bibliography/catalogue.json#B299",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B299",
+      "roles": [
+        "F",
+        "A"
+      ],
+      "scope": "含LLM辅助的论证工作",
+      "version_read": "方法按2023预印本；期刊2025元数据已核，非逐页版本对齐",
+      "generated": "TDT论证与自然语言约束的形式化建议",
+      "verification_object": "编码后的支持/推理关系",
+      "checking_authority": "人工修订；Prolog、Z3、MONA",
+      "checking_time": "论证构建/形式化检查",
+      "runtime_operation": "既有核验未确认逐动作门禁",
+      "established_claim": "检查编码后的局部推理义务",
+      "trust_boundary": "形式化忠实性、叶子证据的真实与适用性仍须确认。",
+      "review_depth": "复用U01及版本核验；本次统一字段，无新增实验",
+      "locators": [
+        "预印本§3.2"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/pdf/2309.12941",
+        "https://doi.org/10.1016/j.scico.2025.103288"
+      ],
+      "prior_evidence": [
+        "records.json#U01",
+        "../verification/version_resolution.md"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C11",
+      "short_name": "ACCESS",
+      "bibliography": {
+        "title": "ACCESS: Assurance Case Centric Engineering of Safety–critical Systems",
+        "authors": [
+          "Ran Wei",
+          "Simon Foster",
+          "Haitao Mei",
+          "Fang Yan",
+          "Ruizhe Yang",
+          "Ibrahim Habli",
+          "Colin O’Halloran",
+          "Nick Tudor",
+          "Tim Kelly",
+          "Yakoub Nemouchi"
+        ],
+        "year": 2024,
+        "venue": "Journal of Systems and Software",
+        "doi": "10.1016/j.jss.2024.112034",
+        "metadata_source": "../bibliography/catalogue.json#B038",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B038",
+      "roles": [
+        "F",
+        "E（动态评价）"
+      ],
+      "scope": "非生成式系统/方法背景",
+      "version_read": "JSS 213:112034 (2024)；方法依据arXiv v1",
+      "generated": "ACME/SACM论证、工程制品关联及动态论证片段",
+      "verification_object": "设计模型/理论义务；运行数据支持的论证节点",
+      "checking_authority": "模型查询、Isabelle服务、DSMS周期评价",
+      "checking_time": "设计阶段检查；运行阶段评价论证状态",
+      "runtime_operation": "non-invasive DSMS报告状态，由被保障系统决定响应",
+      "established_claim": "连接异构证据与论证；案例进行数据范围检查",
+      "trust_boundary": "动态评价不等于执行阻断；输入同步/正确性与阈值适当性仍在外部。",
+      "review_depth": "复用N03；AUV运行数据为仿真同步，未复跑",
+      "locators": [
+        "§3.4–3.7",
+        "§5.6.1–5.7，Listing 3",
+        "§6"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2403.15236v1",
+        "https://doi.org/10.1016/j.jss.2024.112034"
+      ],
+      "prior_evidence": [
+        "records.json#N03"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C12",
+      "short_name": "Inspection Rover",
+      "bibliography": {
+        "title": "Integrating Formal Verification and Assurance: An Inspection Rover Case Study",
+        "authors": [
+          "Hamza Bourbouh",
+          "Marie Farrell",
+          "Anastasia Mavridou",
+          "Irfan Sljivo",
+          "Guillaume Brat",
+          "Louise A. Dennis",
+          "Michael Fisher"
+        ],
+        "year": 2021,
+        "venue": "Lecture Notes in Computer Science; NASA Formal Methods",
+        "doi": "10.1007/978-3-030-76384-8_4",
+        "metadata_source": "../bibliography/catalogue.json#L001",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "L001",
+      "roles": [
+        "F"
+      ],
+      "scope": "非生成式系统/方法背景",
+      "version_read": "NFM 2021作者稿及正式元数据",
+      "generated": "多种建模/验证产物及AdvoCATE论证",
+      "verification_object": "各工具负责的组件/系统义务及证据关联",
+      "checking_authority": "FRET、CoCoSim/Kind2、Event-B/Rodin，assurance case集成",
+      "checking_time": "开发阶段",
+      "runtime_operation": "本次所读案例未建立在线干预机制",
+      "established_claim": "以论证组织异构验证证据",
+      "trust_boundary": "整合不等于工具间全面数学翻译；需求、模型与接口仍须确认。",
+      "review_depth": "复用N13；专家构造案例，未复跑",
+      "locators": [
+        "§1–3"
+      ],
+      "primary_urls": [
+        "https://research.manchester.ac.uk/en/publications/integrating-formal-verification-and-assurance-an-inspection-rover/",
+        "https://personalpages.manchester.ac.uk/staff/louise.dennis/pubs/RoverForNFM2020%283%29.pdf"
+      ],
+      "prior_evidence": [
+        "records.json#N13"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C13",
+      "short_name": "MCSafe-GSN-HOL",
+      "bibliography": {
+        "title": "MCSafe-GSN-HOL: A Formal Assurance Framework for Machine-Checkable Safety Cases of Deployed LLM Agents",
+        "authors": [
+          "Aakash Abhay Yadav",
+          "Shashank Shelat",
+          "Bhakti Hinduja",
+          "Tushar Badlani",
+          "Divyakumar Deepak Savla"
+        ],
+        "year": 2026,
+        "venue": "2026 9th International Conference on Circuit, Power & Computing Technologies (ICCPCT)",
+        "doi": "10.1109/iccpct70290.2026.11654768",
+        "metadata_source": "../bibliography/catalogue.json#B105",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B105",
+      "roles": [
+        "F"
+      ],
+      "scope": "保障LLM agent的论证；不据此认定评价了LLM自动生成论证",
+      "version_read": "ICCPCT 2026，pp.1892–1897",
+      "generated": "GSN转换成Isabelle/HOL义务",
+      "verification_object": "论证支持、证据连接、假设、defeater和无环性",
+      "checking_authority": "作者报告Isabelle/HOL检查",
+      "checking_time": "论证形成和变更后重验",
+      "runtime_operation": "沿依赖追溯并重验；不是逐动作强制",
+      "established_claim": "编码的论证性质可检查",
+      "trust_boundary": "底层agent行为、证据有效性和hazard/control语义仍须建立；截图不能审计全部公理/admission。",
+      "review_depth": "复用N01及全文/表值核验；未取得完整公共理论包",
+      "locators": [
+        "§IV–V；Algorithm 2",
+        "§VII–VIII"
+      ],
+      "primary_urls": [
+        "https://ieeexplore.ieee.org/abstract/document/11654768"
+      ],
+      "prior_evidence": [
+        "records.json#N01",
+        "../verification/closest_work_audit.md"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C14",
+      "short_name": "CAF",
+      "bibliography": {
+        "title": "Composable Assurance for AI Alignment: A Framework for Propagating Formal Safety Properties Through MLOps",
+        "authors": [
+          "Xiaofei Zhao"
+        ],
+        "year": 2026,
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "doi": "10.1609/aaai.v40i44.41151",
+        "metadata_source": "../bibliography/catalogue.json#B325",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B325",
+      "roles": [
+        "F",
+        "E（门控/反馈）"
+      ],
+      "scope": "AI/MLOps保障工作；不以生成式模型产出论证为必要条件",
+      "version_read": "AAAI 2026，40(44)，38129–38136",
+      "generated": "FSA属性/证据记录、DAG及传播结果",
+      "verification_object": "断言、上下文和规则下的策略满足",
+      "checking_authority": "策略计算与部署门禁",
+      "checking_time": "流水线/部署检查及在线反馈",
+      "runtime_operation": "论文描述失效传播、告警及回退",
+      "established_claim": "提供证据绑定和策略门控机制",
+      "trust_boundary": "指标聚合的语义健全性需附加条件；hash或结构本身不保证证据真值。",
+      "review_depth": "复用N02及全文/反例核验；未取得原型包重跑",
+      "locators": [
+        "pp.38131–38135；Composition Calculus；RAG case"
+      ],
+      "primary_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/41151",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/41151/45112"
+      ],
+      "prior_evidence": [
+        "records.json#N02",
+        "../verification/closest_work_audit.md"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C15",
+      "short_name": "CLARISSA语义分析",
+      "bibliography": {
+        "title": "Automating Semantic Analysis of System Assurance Cases Using Goal-Directed ASP",
+        "authors": [
+          "ANITHA MURUGESAN",
+          "ISAAC WONG",
+          "JOAQUÍN ARIAS",
+          "ROBERT STROUD",
+          "SRIVATSAN VARADARAJAN",
+          "ELMER SALAZAR",
+          "GOPAL GUPTA",
+          "ROBIN BLOOMFIELD",
+          "JOHN RUSHBY"
+        ],
+        "year": 2024,
+        "venue": "Theory and Practice of Logic Programming",
+        "doi": "10.1017/s1471068424000425",
+        "metadata_source": "../bibliography/catalogue.json#L003",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "L003",
+      "roles": [
+        "F",
+        "A"
+      ],
+      "scope": "含LLM辅助；与C16共享基础，不当作独立重复验证",
+      "version_read": "TPLP 24(4):805–824，卷期2024；online 2025-01-15；方法读arXiv v1",
+      "generated": "LLM辅助提取对象/属性/环境并转ASP",
+      "verification_object": "语义表示后的assurance case关系",
+      "checking_authority": "goal-directed ASP分析",
+      "checking_time": "论证语义提取和分析阶段",
+      "runtime_operation": "所读证据未建立逐动作干预",
+      "established_claim": "对编码后的论证进行语义分析",
+      "trust_boundary": "LLM提取与原论证的忠实性仍须确认；ASP结论不直接等同实际系统安全。",
+      "review_depth": "复用CASCON P12关键章节核验",
+      "locators": [
+        "§5.1–5.4"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2408.11699v1",
+        "https://doi.org/10.1017/S1471068424000425"
+      ],
+      "prior_evidence": [
+        "../verification/cascon_crosswalk.md#每项核验深度与处理"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C16",
+      "short_name": "CLARISSA持续保障",
+      "bibliography": {
+        "title": "Enabling Theory-Based Continuous Assurance: A Coherent Approach with Semantics and Automated Synthesis",
+        "authors": [
+          "Srivatsan Varadarajan",
+          "Robin Bloomfield",
+          "John Rushby",
+          "Gopal Gupta",
+          "Anitha Murugesan",
+          "Robert Stroud",
+          "Kateryna Netkachova",
+          "Isaac Hong Wong",
+          "Joaquín Arias"
+        ],
+        "year": 2024,
+        "venue": "Lecture Notes in Computer Science; Computer Safety, Reliability, and Security. SAFECOMP 2024 Workshops",
+        "doi": "10.1007/978-3-031-68738-9_13",
+        "metadata_source": "../bibliography/catalogue.json#B326",
+        "doi_status": "复用已核基本书目；未扩大或修改原总表"
+      },
+      "existing_record": "B326",
+      "roles": [
+        "F"
+      ],
+      "scope": "含LLM辅助的集成；与C15共享CLARISSA基础",
+      "version_read": "SAFECOMP 2024 Workshops / SASSUR，pp.173–187作者稿",
+      "generated": "语义表示、综合制品与证据依赖",
+      "verification_object": "语义/证据变化及受影响分析任务",
+      "checking_authority": "语义分析工具与ETB2集成编排",
+      "checking_time": "初始分析与变更触发的重新分析",
+      "runtime_operation": "依赖变化传播、证据/属性失效及下游工具重跑",
+      "established_claim": "已有持续维护和集成先例",
+      "trust_boundary": "持续保障不自动成为逐动作强制；共享语义/依赖的适当性与执行系统对应仍需说明。",
+      "review_depth": "复用CASCON P13作者稿核验",
+      "locators": [
+        "§3.1",
+        "持续保障与ETB2集成部分"
+      ],
+      "primary_urls": [
+        "https://www.csl.sri.com/~rushby/papers/sassur24.pdf"
+      ],
+      "prior_evidence": [
+        "../verification/cascon_crosswalk.md#每项核验深度与处理"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false
+    },
+    {
+      "id": "C17",
+      "short_name": "Safe LLM-Controlled Robots / reachability",
+      "roles": [
+        "E"
+      ],
+      "scope": "生成式机器人控制",
+      "version_read": "arXiv:2503.03911v1",
+      "generated": "LLM控制计划",
+      "verification_object": "候选计划的可达集与障碍物；闭环安全",
+      "checking_authority": "可达集过近似、碰撞检查与计划优化；原文Theorem 1",
+      "checking_time": "离线数据建模及算法论证；在线重规划/回退",
+      "runtime_operation": "调整计划并重查；失败时执行先前安全计划的剩余部分及制动",
+      "established_claim": "作者给出条件性避碰定理并报告仿真/实机评价",
+      "trust_boundary": "依赖动力学正则性、噪声/建模误差界、有效过近似、初始安全、静态障碍感知和有限步可停；不是无条件安全或目标可达证明。",
+      "review_depth": "定向核对模型假设、算法、定理及实验设置；未复核全部外引定理或实现",
+      "locators": [
+        "§II-C",
+        "§III-A–C，Algorithm 1、Theorem 1",
+        "§IV"
+      ],
+      "manuscript_action": "§8将该方法与AESOP的多备用方案MPC分开描述。",
+      "bibliography": {
+        "title": "Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis",
+        "authors": [
+          "Ahmad Hafez",
+          "Alireza Naderi Akhormeh",
+          "Amr Hegazy",
+          "Amr Alanwar"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2503.03911",
+        "metadata_source": "https://arxiv.org/abs/2503.03911",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2503.03911v1",
+      "original_bibkey": "hafez2025safe",
+      "original_label_unchanged": "E_RUNTIME",
+      "primary_urls": [
+        "https://arxiv.org/html/2503.03911v1",
+        "https://arxiv.org/abs/2503.03911"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C18",
+      "short_name": "AESOP",
+      "roles": [
+        "E"
+      ],
+      "scope": "生成式异常推理结合机器人控制",
+      "version_read": "arXiv:2407.08735v1",
+      "generated": "慢速LLM对异常的解释与恢复方案选择",
+      "verification_object": "多备用方案MPC的可行性、状态/输入约束及恢复集可达性",
+      "checking_authority": "在线MPC优化；Theorem 1及Appendix H证明",
+      "checking_time": "离线设定恢复集/论证算法；在线检测、选择及控制",
+      "runtime_operation": "快速异常检测触发慢推理；等待期间保留恢复选项",
+      "established_claim": "初始可行和时延等条件下维持约束，保留恢复方案并按选择到达恢复集",
+      "trust_boundary": "给定模型与控制不变恢复集、求解可行及慢推理延迟上界；控制性质不证明异常分类或恢复选择的语义正确。",
+      "review_depth": "定向核对问题定义、控制定理与附录证明前提；未复跑",
+      "locators": [
+        "§III",
+        "§IV-A–B，Theorem 1",
+        "Appendix H"
+      ],
+      "manuscript_action": "§8不再与Hafez共同概括为检查可达性包络。",
+      "bibliography": {
+        "title": "Real-Time Anomaly Detection and Reactive Planning with Large Language Models",
+        "authors": [
+          "Rohan Sinha",
+          "Amine Elhafsi",
+          "Christopher Agia",
+          "Matthew Foutter",
+          "Edward Schmerling",
+          "Marco Pavone"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2407.08735",
+        "metadata_source": "https://arxiv.org/abs/2407.08735",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2407.08735v1",
+      "original_bibkey": "sinha2024real",
+      "original_label_unchanged": "E_RUNTIME",
+      "primary_urls": [
+        "https://arxiv.org/html/2407.08735v1",
+        "https://arxiv.org/abs/2407.08735"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C19",
+      "short_name": "RoboGuard",
+      "roles": [
+        "D",
+        "E"
+      ],
+      "scope": "生成式安全规格与机器人计划约束",
+      "version_read": "arXiv:2503.07885v2，2026-03-03；初始预印本2025",
+      "generated": "计划及由独立上下文模块生成的LTL安全规格",
+      "verification_object": "编码后的计划相对于生成规格的满足关系",
+      "checking_authority": "Spot自动机/控制合成；作者Theorem III.2",
+      "checking_time": "离线设规则/API；在线规格生成与计划处理；定理预先论证",
+      "runtime_operation": "检查候选计划并选择符合规格的结果",
+      "established_claim": "作者声明相对生成规格的安全性，并报告机器人实验",
+      "trust_boundary": "LLM规格落地、世界模型及动作映射需可信；所读论证依赖co-safe/有限词处理，本轮未审计该限制及代码，不扩为任意LTL或物理安全保证。",
+      "review_depth": "核对§III算法和定理、Spot实现说明及局限；未独立复核完整合成正确性",
+      "locators": [
+        "§III-A–B，Algorithm 1、Theorem III.2",
+        "§IV Guardrail instantiation",
+        "§V Limitations"
+      ],
+      "manuscript_action": "§7/8交叉引用；保留规格忠实性及所用逻辑片段条件。",
+      "bibliography": {
+        "title": "Safety Guardrails for LLM-Enabled Robots",
+        "authors": [
+          "Zachary Ravichandran",
+          "Alexander Robey",
+          "Vijay Kumar",
+          "George J. Pappas",
+          "Hamed Hassani"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2503.07885",
+        "metadata_source": "https://arxiv.org/abs/2503.07885",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2503.07885v2",
+      "original_bibkey": "ravichandran2025safety",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "primary_urls": [
+        "https://arxiv.org/html/2503.07885v2",
+        "https://arxiv.org/abs/2503.07885"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C20",
+      "short_name": "SafePlan",
+      "roles": [
+        "D",
+        "C"
+      ],
+      "scope": "逻辑结构化提示与LLM评价；不是独立形式检查的实证",
+      "version_read": "arXiv:2503.06892v1",
+      "generated": "不变量/前后条件描述和机器人任务代码",
+      "verification_object": "LLM推理器所评价的计划/代码对规则的符合程度",
+      "checking_authority": "Invariant-based Reasoner（LLM/CoT）；仿真测试",
+      "checking_time": "执行前生成—模型评价—修复",
+      "runtime_operation": "检查迭代通过后执行；多轮失败则阻止执行",
+      "established_claim": "作者报告安全评价指标改善；未据方法建立独立求解器验收",
+      "trust_boundary": "§IV-A将逻辑框架落实为system prompt；逻辑符号及不变量名称不能使LLM判断自动成为证明。",
+      "review_depth": "核对架构、提示实现及实验流程；未重跑AI2Thor",
+      "locators": [
+        "§III",
+        "§IV-A–B",
+        "§V-A"
+      ],
+      "manuscript_action": "§7说明检查者是LLM，并与C类模型评价交叉比较。",
+      "bibliography": {
+        "title": "SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning",
+        "authors": [
+          "Ike Obi",
+          "Vishnunandan L. N. Venkatesh",
+          "Weizheng Wang",
+          "Ruiqi Wang",
+          "Dayoon Suh",
+          "Temitope I. Amosa",
+          "Wonse Jo",
+          "Byung-Cheol Min"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2503.06892",
+        "metadata_source": "https://arxiv.org/abs/2503.06892",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2503.06892v1",
+      "original_bibkey": "obi2025safeplan",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "primary_urls": [
+        "https://arxiv.org/html/2503.06892v1",
+        "https://arxiv.org/abs/2503.06892"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C21",
+      "short_name": "GraSP",
+      "roles": [
+        "D",
+        "E（流程执行/检查）"
+      ],
+      "scope": "生成式技能图及运行期局部修复；形式保证强度未判定",
+      "version_read": "arXiv:2604.17870v1",
+      "generated": "带类型和依赖关系的技能DAG",
+      "verification_object": "参数绑定、图约束、技能前置条件与后置验证谓词",
+      "checking_authority": "编译验证与每节点ν验证接口；具体后端及健全性未在所读部分落实",
+      "checking_time": "执行前编译；节点执行前后检查并修复",
+      "runtime_operation": "按图执行，失败后局部修复、重规划或退回ReAct",
+      "established_claim": "作者报告结构化执行和修复的经验收益",
+      "trust_boundary": "明确存在验证接口；不能由ν符号、typed DAG或verified用语推断已获独立形式证明。具体谓词实现/保证需制品核验。",
+      "review_depth": "核对§2、Appendix B伪码及C/D实验说明；未审计实现",
+      "locators": [
+        "§2.3–2.5",
+        "Appendix B Algorithms 1–4",
+        "Appendix C–D"
+      ],
+      "manuscript_action": "§7避免只写执行前约束；独立checker状态保留未判定。",
+      "bibliography": {
+        "title": "GraSP: Graph-Structured Skill Compositions for LLM Agents",
+        "authors": [
+          "Tianle Xia",
+          "Lingxiang Hu",
+          "Yiding Sun",
+          "Ming Xu",
+          "Lan Xu",
+          "Siying Wang",
+          "Wei Xu",
+          "Jie Jiang"
+        ],
+        "year": 2026,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2604.17870",
+        "metadata_source": "https://arxiv.org/abs/2604.17870",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2604.17870v1",
+      "original_bibkey": "xia2026grasp",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "primary_urls": [
+        "https://arxiv.org/html/2604.17870v1",
+        "https://arxiv.org/abs/2604.17870"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C22",
+      "short_name": "LeanProgress",
+      "roles": [
+        "D",
+        "B"
+      ],
+      "scope": "证明搜索辅助与形式证明验收",
+      "version_read": "arXiv:2502.17925v3，2026-01-18；初始预印本2025",
+      "generated": "剩余证明步数预测；搜索中生成tactic",
+      "verification_object": "给定Lean命题的证明搜索结果；预测误差另行评价",
+      "checking_authority": "Lean交互环境，经LeanDojo运行搜索；预测分数不是验收器",
+      "checking_time": "离线训练预测器；证明搜索期间检查",
+      "runtime_operation": "没有部署动作门禁；搜索运行不等于系统运行期验证",
+      "established_claim": "作者报告步数预测及限定搜索预算内的求解改善",
+      "trust_boundary": "预测准确率不等于证明正确率；给定形式命题和Lean环境的可信前提独立于搜索启发式。",
+      "review_depth": "核对数据生成、预测器与搜索评价；未审计LeanDojo或证明制品",
+      "locators": [
+        "§3",
+        "§4.1",
+        "§4.3.1–4.3.3"
+      ],
+      "manuscript_action": "§7保留为proof-search例子，同时明确B/D重叠。",
+      "bibliography": {
+        "title": "LeanProgress: Guiding Search for Neural Theorem Proving via Proof Progress Prediction",
+        "authors": [
+          "Robert Joseph George",
+          "Suozhi Huang",
+          "Peiyang Song",
+          "Anima Anandkumar"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2502.17925",
+        "metadata_source": "https://arxiv.org/abs/2502.17925",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2502.17925v3",
+      "original_bibkey": "george2025leanprogress",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "primary_urls": [
+        "https://arxiv.org/html/2502.17925v3",
+        "https://arxiv.org/abs/2502.17925"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C23",
+      "short_name": "RvLLM",
+      "roles": [
+        "E",
+        "C（感知/查询辅助）"
+      ],
+      "scope": "生成式输出的领域规则一致性诊断",
+      "version_read": "arXiv:2505.18585v3，2025-11-28",
+      "generated": "目标回答；感知agent提取对象/谓词，后续生成查询",
+      "verification_object": "ESL规则、提取命题、推导结果及LLM查询回答的一致性",
+      "checking_authority": "规则变换和forward chaining；输入解释及追加问答依赖LLM",
+      "checking_time": "取得上下文/输出后进行运行期诊断",
+      "runtime_operation": "推导新命题并检测冲突；不是每个token的语法门禁",
+      "established_claim": "作者报告规则约束下的不一致检测",
+      "trust_boundary": "依赖专家规则及感知提取忠实性；未发现冲突不是领域真值、完备一致性或未来输出正确的证明。",
+      "review_depth": "核对ESL、四个方法环节及局限；未重跑",
+      "locators": [
+        "§2",
+        "§3.1–3.4及Clarification",
+        "§4；Appendix G"
+      ],
+      "manuscript_action": "§8写清逻辑推导与LLM接口，避免只说监测输出流。",
+      "bibliography": {
+        "title": "RvLLM: LLM Runtime Verification with Domain Knowledge",
+        "authors": [
+          "Yedi Zhang",
+          "Sun Yi Emma",
+          "Annabelle Lee Jia En",
+          "Jin Song Dong"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2505.18585",
+        "metadata_source": "https://arxiv.org/abs/2505.18585",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2505.18585v3",
+      "original_bibkey": "zhang2025rvllm",
+      "original_label_unchanged": "E_RUNTIME",
+      "primary_urls": [
+        "https://arxiv.org/html/2505.18585v3",
+        "https://arxiv.org/abs/2505.18585"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C24",
+      "short_name": "RoMA / statistical runtime verification",
+      "roles": [
+        "E（统计监测背景）"
+      ],
+      "scope": "非生成式模型实验；作为方法背景，不作生成式部署直接证据",
+      "version_read": "arXiv:2504.17723v2，2025-07-24",
+      "generated": "语言实验中为BERT分类标签，不是生成式序列",
+      "verification_object": "指定输入扰动下的概率局部鲁棒性/分类稳定性",
+      "checking_authority": "扰动采样、置信分数分布拟合及统计估计",
+      "checking_time": "输入附近采样评价；所读实验未展示逐动作门禁",
+      "runtime_operation": "估计稳定性；未建立生成式输出流规则监测机制",
+      "established_claim": "作者报告RoMA估计及BERT/SST-2实验",
+      "trust_boundary": "依赖扰动模型与分布拟合；标签稳定不保证标签正确。§6把decoder-only扩展列为未来工作。",
+      "review_depth": "核对性质定义、估计过程、语言实验和结论；未复跑",
+      "locators": [
+        "§2",
+        "§4",
+        "§5.2–5.4",
+        "§6"
+      ],
+      "manuscript_action": "从§8领域规格输出流的引文组移出，按统计方法背景说明。",
+      "bibliography": {
+        "title": "Statistical Runtime Verification for LLMs via Robustness Estimation",
+        "authors": [
+          "Natan Levy",
+          "Adiel Ashrov",
+          "Guy Katz"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2504.17723",
+        "metadata_source": "https://arxiv.org/abs/2504.17723",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2504.17723v2",
+      "original_bibkey": "levy2025statistical",
+      "original_label_unchanged": "E_RUNTIME",
+      "primary_urls": [
+        "https://arxiv.org/html/2504.17723v2",
+        "https://arxiv.org/abs/2504.17723"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C25",
+      "short_name": "Verified Tool Calls / verify-before-retry",
+      "roles": [
+        "E"
+      ],
+      "scope": "工具副作用核验及故障恢复；经验性协议研究",
+      "version_read": "arXiv:2608.02645v1",
+      "generated": "多步任务中的工具调用",
+      "verification_object": "歧义响应后的外部状态是否满足任务后置条件",
+      "checking_authority": "手工后置谓词/状态读取与wrapper；通用描述也允许LLM解释",
+      "checking_time": "已派发调用的歧义响应后、重试之前",
+      "runtime_operation": "三值核验、等待/重试、同逻辑操作复用幂等键",
+      "established_claim": "作者在模拟故障任务中报告可靠性改善；没有本轮独立证明",
+      "trust_boundary": "依赖状态可见性、谓词和服务端幂等；Algorithm 1明确SUCCESS时直接返回，并非所有响应都重验。无幂等支持仍有并发重复窗口。",
+      "review_depth": "核对方法、Algorithm 1与受控实验设置；未审计代码/外部API",
+      "locators": [
+        "§4.1–4.7，Algorithm 1",
+        "§5.1–5.2"
+      ],
+      "manuscript_action": "§8区分调用前契约与事后效果核验；作为状态一致性候选方向的已有先例。",
+      "bibliography": {
+        "title": "Verified Tool Calls Improve LLM Agent Reliability Under Non-Atomic Failures",
+        "authors": [
+          "Isham Kalappurackal Mansoor",
+          "Abhishek Phadke",
+          "Pratip Rana"
+        ],
+        "year": 2026,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2608.02645",
+        "metadata_source": "https://arxiv.org/abs/2608.02645",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2608.02645v1",
+      "original_bibkey": "mansoor2026verified",
+      "original_label_unchanged": "E_RUNTIME",
+      "primary_urls": [
+        "https://arxiv.org/html/2608.02645v1",
+        "https://arxiv.org/abs/2608.02645"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C26",
+      "short_name": "Teaching Temporal Logics",
+      "roles": [
+        "A（语义评价）",
+        "D"
+      ],
+      "scope": "神经生成逻辑解；不是自然语言到逻辑翻译",
+      "version_read": "arXiv:2003.04218v3，2021-02-18；初始预印本2020",
+      "generated": "LTL公式的最终周期轨迹；命题逻辑的赋值",
+      "verification_object": "生成解是否满足给定公式；另计参考解字符串一致",
+      "checking_authority": "正文按逻辑满足关系评价；数据生成用Spot/Glucose；评价后端实现未独立核实",
+      "checking_time": "数据构造及离线预测评价",
+      "runtime_operation": "未展示系统部署监测",
+      "established_claim": "作者报告语义正确率与字符串匹配率的区别",
+      "trust_boundary": "参考生成器、评价接受关系和部署控制是三件事；不能沿用C标签推断由LLM自评，也不能未经代码核验把数据生成器直接写成评价后端。",
+      "review_depth": "核对任务、数据生成、评价定义和结果；未检查评价代码",
+      "locators": [
+        "§3.1–3.2",
+        "§4",
+        "§5.1–5.2"
+      ],
+      "manuscript_action": "§6将抽象级未知补成已知的语义评价，并保留实现未审计边界。",
+      "bibliography": {
+        "title": "Teaching Temporal Logics to Neural Networks",
+        "authors": [
+          "Christopher Hahn",
+          "Frederik Schmitt",
+          "Jens U. Kreber",
+          "Markus N. Rabe",
+          "Bernd Finkbeiner"
+        ],
+        "year": 2020,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2003.04218",
+        "metadata_source": "https://arxiv.org/abs/2003.04218",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2003.04218v3",
+      "original_bibkey": "hahn2020teaching",
+      "original_label_unchanged": "C_LLM_AS_ORACLE",
+      "primary_urls": [
+        "https://arxiv.org/html/2003.04218v3",
+        "https://arxiv.org/abs/2003.04218"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C27",
+      "short_name": "PLC test-case generation",
+      "roles": [
+        "C（测试与oracle）"
+      ],
+      "scope": "LLM生成PLC测试的经验评价",
+      "version_read": "arXiv:2405.01874v1",
+      "generated": "CSV测试输入、状态及预期输出，再转ST测试程序",
+      "verification_object": "执行输出对生成断言；另测语句覆盖",
+      "checking_authority": "MATIEC→C、GCC执行/GCOV；工程师检查报告与修订错误断言",
+      "checking_time": "开发时测试执行及人工评价",
+      "runtime_operation": "测试用soft-PLC循环，不等于部署后安全门禁",
+      "established_claim": "作者报告生成测试的覆盖和断言成功情况",
+      "trust_boundary": "生成的预期值仍可能错误；覆盖率/测试执行不能证明oracle正确或程序满足全部要求。",
+      "review_depth": "核对生成链、实现、指标和局限；未重跑",
+      "locators": [
+        "§III-B–C",
+        "§IV",
+        "§V–VI"
+      ],
+      "manuscript_action": "§6明确实际执行与生成oracle的双重边界。",
+      "bibliography": {
+        "title": "Automated Control Logic Test Case Generation using Large Language Models",
+        "authors": [
+          "Heiko Koziolek",
+          "Virendra Ashiwal",
+          "Soumyadip Bandyopadhyay",
+          "Chandrika K R"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2405.01874",
+        "metadata_source": "https://arxiv.org/abs/2405.01874",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2405.01874v1",
+      "original_bibkey": "koziolek2024automated",
+      "original_label_unchanged": "C_LLM_AS_ORACLE",
+      "primary_urls": [
+        "https://arxiv.org/html/2405.01874v1",
+        "https://arxiv.org/abs/2405.01874"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C28",
+      "short_name": "Math Agents",
+      "roles": [
+        "背景候选；不支撑proof-search实例"
+      ],
+      "scope": "数学嵌入/基础设施及前景讨论；具体引文用途需撤回",
+      "version_read": "arXiv:2307.02502v1，PDF",
+      "generated": "方程的LaTeX/SymPy表示及嵌入",
+      "verification_object": "所述实现为数学数据处理/嵌入；证明基础设施主要是前景",
+      "checking_authority": "文中以GPT辅助校验输出；未在所读实现找到证明搜索验收链",
+      "checking_time": "离线处理；更广泛proof基础设施为展望",
+      "runtime_operation": "未据原文建立运行时验证应用",
+      "established_claim": "报告数学嵌入工作流，讨论未来证明基础设施",
+      "trust_boundary": "数学表示、嵌入与区块链记录不自行构成证明；所读内容不足以支撑正文“steer proof search”的实例归属。",
+      "review_depth": "定向读PDF方法/结果及证明相关前景；不是全篇学科结论评价",
+      "locators": [
+        "PDF pp.7–9，Mathematical Embedding Workflow/Results",
+        "PDF pp.19–20，证明基础设施前景"
+      ],
+      "manuscript_action": "从§7 proof-search引文组撤下；全局纳入资格另行筛选。",
+      "bibliography": {
+        "title": "Math Agents: Computational Infrastructure, Mathematical Embedding, and Genomics",
+        "authors": [
+          "Melanie Swan",
+          "Takashi Kido",
+          "Eric Roland",
+          "Renato P. dos Santos"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订年见version_read）",
+        "doi": "10.48550/arXiv.2307.02502",
+        "metadata_source": "https://arxiv.org/abs/2307.02502",
+        "doi_status": "已核arXiv题名页的DataCite DOI；本批未重新确认正式出版元数据"
+      },
+      "existing_record": "2307.02502v1",
+      "original_bibkey": "swan2023math",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2307.02502v1",
+        "https://arxiv.org/abs/2307.02502"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B2"
+    },
+    {
+      "id": "C29",
+      "short_name": "MARVEL",
+      "existing_record": "2505.11963v3",
+      "roles": [
+        "D/A/C"
+      ],
+      "scope": "多agent RTL分析；形式检查是其中一个分支",
+      "generated": "SVA、测试及漏洞报告",
+      "verification_object": "断言分支的SVA对RTL；最终报告另行汇总",
+      "checking_authority": "Synopsys FPV；其他分支含lint/Verilator，supervisor由LLM作汇总判断",
+      "checking_time": "离线漏洞分析与迭代",
+      "runtime_operation": "无部署后动作门禁；仿真测试不等于在线保障",
+      "established_claim": "报告工具辅助漏洞发现；FPV检查特定断言",
+      "trust_boundary": "形式分支结果不自动认证最终LLM报告；断言、环境约束及报告解释仍需审查。",
+      "review_depth": "核对agent分工、FPV分支及评价；未审计脚本或复跑",
+      "locators": [
+        "§2.2–2.4",
+        "§2.8",
+        "§3.1、§4.1"
+      ],
+      "manuscript_action": "§7区分形式分支与最终报告的接受者。",
+      "original_bibkey": "collini2025marvel",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "version_read": "arXiv:2505.11963v3，2026-02-23",
+      "bibliography": {
+        "title": "MARVEL: Multi-Agent RTL Vulnerability Extraction using Large Language Models",
+        "authors": [
+          "Luca Collini",
+          "Baleegh Ahmad",
+          "Joey Ah-kiow",
+          "Ramesh Karri"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2505.11963",
+        "metadata_source": "https://arxiv.org/abs/2505.11963v3",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2505.11963v3",
+        "https://arxiv.org/abs/2505.11963v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C30",
+      "short_name": "AVRE / CAL NextG modeling",
+      "existing_record": "2312.17353v2",
+      "roles": [
+        "D相邻建模；分类/实验反馈"
+      ],
+      "scope": "文档关系预测及验证建模辅助；生成式资格按具体环节判定",
+      "generated": "依赖图及辅助测试脚本；主要量化对象为关系分类",
+      "verification_object": "预测依赖关系对标签及HyFuzz实验反馈",
+      "checking_authority": "GPT-2特征与attention分类器、标签比较及HyFuzz；图转ProVerif作为后续建模路径",
+      "checking_time": "建模阶段训练、预测和实验验证",
+      "runtime_operation": "协议实验平台反馈；未据所读评价建立部署保障",
+      "established_claim": "评价关系预测和依赖图构造，不是完整协议安全证明",
+      "trust_boundary": "图节点有人工作业，误边需审查；分类准确率不能替代形式模型忠实性或协议验证结论。",
+      "review_depth": "核对架构、CAL分类器、图构造和实验；未复跑或审计ProVerif模型",
+      "locators": [
+        "§II–III",
+        "§IV-A",
+        "§V-B–D"
+      ],
+      "manuscript_action": "§7收紧为关系预测/实验反馈辅助建模，不宣称已获协议证明。",
+      "original_bibkey": "yang2023auto",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "version_read": "arXiv:2312.17353v2，2024-01-02",
+      "bibliography": {
+        "title": "Towards Auto-Modeling of Formal Verification for NextG Protocols: A Multimodal cross- and self-attention Large Language Model Approach",
+        "authors": [
+          "Jingda Yang",
+          "Ying Wang"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2312.17353",
+        "metadata_source": "https://arxiv.org/abs/2312.17353v2",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2312.17353v2",
+        "https://arxiv.org/abs/2312.17353v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C31",
+      "short_name": "Vulnerability Detection overview",
+      "existing_record": "2503.10784v1",
+      "roles": [
+        "二级综述背景"
+      ],
+      "scope": "综述；不是独立方法实验",
+      "generated": "归纳已有检测方法；无本篇独立生成—验收流程",
+      "verification_object": "已有形式、学习及混合方法的文献比较",
+      "checking_authority": "本篇为综述性归纳，不提供自己的统一验证器",
+      "checking_time": "文献分析",
+      "runtime_operation": "无本篇实现的监测机制可据此建立",
+      "established_claim": "提供漏洞检测方法背景",
+      "trust_boundary": "所引实验属于其他研究；不能当成本篇的独立比较实验或生成式方法证据。",
+      "review_depth": "核对章节性质和方法/评价归属；不以其转述代替原研究核验",
+      "locators": [
+        "§2–5"
+      ],
+      "manuscript_action": "§7改为背景引用；正式筛选时明确二级文献身份。",
+      "original_bibkey": "tihanyi2025vulnerability",
+      "original_label_unchanged": "D_FORMAL_HELPS_LLM",
+      "version_read": "arXiv:2503.10784v1，2025-03-13",
+      "bibliography": {
+        "title": "Vulnerability Detection: From Formal Verification to Large Language Models and Hybrid Approaches: A Comprehensive Overview",
+        "authors": [
+          "Norbert Tihanyi",
+          "Tamas Bisztray",
+          "Mohamed Amine Ferrag",
+          "Bilel Cherif",
+          "Richard A. Dubniczky",
+          "Ridhi Jain",
+          "Lucas C. Cordeiro"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2503.10784",
+        "metadata_source": "https://arxiv.org/abs/2503.10784v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2503.10784v1",
+        "https://arxiv.org/abs/2503.10784v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C32",
+      "short_name": "BRT-Align",
+      "existing_record": "2509.21528v1",
+      "roles": [
+        "D/E"
+      ],
+      "scope": "潜在状态可达性建模及学习近似的检测/干预",
+      "generated": "LLM token与经干预的潜在状态",
+      "verification_object": "有限时域内到达失败集合的风险；实现使用学习的value近似",
+      "checking_authority": "可达性数学建模；神经value和失败分类器参与实际判断",
+      "checking_time": "离线学习value；生成过程中评价并干预",
+      "runtime_operation": "阈值检测/终止或扰动潜在状态进行steering",
+      "established_claim": "给出可达性表述并报告检测和引导效果",
+      "trust_boundary": "最后token表征是完整KV状态的抽象，另有greedy假设；尚未由所读内容建立抽象充分性、分类器/近似误差及干预闭环的整链认证。",
+      "review_depth": "核对状态抽象、value学习、干预及局限；未审计实现或复现",
+      "locators": [
+        "§3",
+        "§4.1–4.4",
+        "§5、§8"
+      ],
+      "manuscript_action": "§8写明可达性思想及实际steering，区分理想模型与学习实现保证。",
+      "original_bibkey": "karnik2025preemptive",
+      "original_label_unchanged": "E_RUNTIME",
+      "version_read": "arXiv:2509.21528v1，2025-09-25",
+      "bibliography": {
+        "title": "Preemptive Detection and Steering of LLM Misalignment via Latent Reachability",
+        "authors": [
+          "Sathwik Karnik",
+          "Somil Bansal"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2509.21528",
+        "metadata_source": "https://arxiv.org/abs/2509.21528v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2509.21528v1",
+        "https://arxiv.org/abs/2509.21528v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C33",
+      "short_name": "RSP-M / RSV monitor",
+      "existing_record": "2512.14448v1",
+      "roles": [
+        "E经验监测"
+      ],
+      "scope": "生成文本轨迹的风格漂移监测",
+      "generated": "agent思考/行动文本；监测器提取RSV分量",
+      "verification_object": "轨迹冗余、措辞与命名实体分布等可观测指标",
+      "checking_authority": "文本嵌入、词表和统计阈值；以实验标签评价",
+      "checking_time": "运行轨迹上计算指标并检测漂移",
+      "runtime_operation": "报告异常；未核到获证的执行阻断协议",
+      "established_claim": "在给定任务/攻击设置中报告经验检测效果",
+      "trust_boundary": "RSV来自输出文本，A分量不是网络attention权重；检测分数不证明内在推理或任务安全。",
+      "review_depth": "核对指标定义、实验、监测与局限；未复算原始数据",
+      "locators": [
+        "§4，Eq.5",
+        "§5",
+        "§6.4–6.5、§9"
+      ],
+      "quality_note": "Eq.5的S是非负计数比，§6.4却描述其降至0以下；所读文本未明确额外变换，指标与结果口径待解释，不据此否定全文。",
+      "manuscript_action": "§8明确是文本轨迹信号，不笼统写成内部表征。",
+      "original_bibkey": "zhou2025reasoning",
+      "original_label_unchanged": "E_RUNTIME",
+      "version_read": "arXiv:2512.14448v1，2025-12-16",
+      "bibliography": {
+        "title": "Reasoning-Style Poisoning of LLM Agents via Stealthy Style Transfer: Process-Level Attacks and Runtime Monitoring in RSV Space",
+        "authors": [
+          "Xingfu Zhou",
+          "Pengfei Wang"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2512.14448",
+        "metadata_source": "https://arxiv.org/abs/2512.14448v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2512.14448v1",
+        "https://arxiv.org/abs/2512.14448v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C34",
+      "short_name": "Rethinking Autonomy / SAFE-AI",
+      "existing_record": "2508.11824v1",
+      "roles": [
+        "E相关框架；D/C经验检查"
+      ],
+      "scope": "软件agent治理/保障框架并报告实验",
+      "generated": "代码和agent动作；与约束/恢复机制联合评价",
+      "verification_object": "危险模式、AST/API异常及仿真动作违规",
+      "checking_authority": "模式匹配和AST/知识库检查；部分评分后端在所读描述中未明确",
+      "checking_time": "生成后代码检查及agent仿真",
+      "runtime_operation": "发现危险模式后重生成，仿真中评价约束/恢复",
+      "established_claim": "报告多模型代码和agent仿真实验，不只是概念展望",
+      "trust_boundary": "模式覆盖和知识库正确性仍是前提；不能把整体框架当成已验证的内部信号监测器。",
+      "review_depth": "核对SAFE-AI与§IX–X实验机制；未审计数据/具体评分工具",
+      "locators": [
+        "§VI",
+        "§IX-C–F",
+        "§X"
+      ],
+      "manuscript_action": "§8作为模式/AST检查和治理框架另述，不与潜在状态检测混称。",
+      "original_bibkey": "navneet2025rethinking",
+      "original_label_unchanged": "E_RUNTIME",
+      "version_read": "arXiv:2508.11824v1，2025-08-15",
+      "bibliography": {
+        "title": "Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering",
+        "authors": [
+          "Satyam Kumar Navneet",
+          "Joydeep Chandra"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2508.11824",
+        "metadata_source": "https://arxiv.org/abs/2508.11824v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2508.11824v1",
+        "https://arxiv.org/abs/2508.11824v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C35",
+      "short_name": "Clover",
+      "existing_record": "2310.17807v4",
+      "roles": [
+        "A/C"
+      ],
+      "scope": "代码、规格与文档的一致性检查链",
+      "generated": "代码、Dafny注解及docstring；重建各制品",
+      "verification_object": "六项一致性检查，全部通过才接受",
+      "checking_authority": "Dafny检查代码/注解及逻辑等价；代码等价用输入输出测试，文档等价用GPT-4",
+      "checking_time": "开发时生成—重建—检查",
+      "runtime_operation": "测试执行；无部署动作门禁",
+      "established_claim": "相对规格的形式检查、经验整链评价，以及附录单条重建边的条件概率分析",
+      "trust_boundary": "附录假设理想等价检查、语义对齐与分布集中，不分析完整六边联合；测试和LLM评价误差不能由Dafny通过消除。",
+      "review_depth": "核对§3–4及附录分析范围/假设；未逐步复证附录证明或复跑",
+      "locators": [
+        "§3.1–3.2，Algorithm 1",
+        "§4",
+        "Appendix 0.A.1，Theorem 0.A.3及其后范围说明"
+      ],
+      "manuscript_action": "§4分别说明检查环节，撤回生成规格忠实性只属于规格生成一类的说法。",
+      "original_bibkey": "sun2023clover",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2310.17807v4，2024-11-16",
+      "bibliography": {
+        "title": "Clover: Closed-Loop Verifiable Code Generation",
+        "authors": [
+          "Chuyue Sun",
+          "Ying Sheng",
+          "Oded Padon",
+          "Clark Barrett"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2310.17807",
+        "metadata_source": "https://arxiv.org/abs/2310.17807v4",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2310.17807v4",
+        "https://arxiv.org/abs/2310.17807v4"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C36",
+      "short_name": "WhiteFox",
+      "existing_record": "2310.15991v3",
+      "roles": [
+        "A/C测试"
+      ],
+      "scope": "LLM辅助编译器差分fuzzing",
+      "generated": "优化触发条件描述及测试输入",
+      "verification_object": "同一输入的优化/未优化或低优化执行结果差异、崩溃",
+      "checking_authority": "差分测试关系与执行反馈；被测编译器参与运行",
+      "checking_time": "离线测试生成与执行",
+      "runtime_operation": "运行测试，未涉及部署门禁",
+      "established_claim": "报告优化覆盖与缺陷发现的经验结果",
+      "trust_boundary": "依赖有效输入和参照执行语义；编译器本身不能简单称为真值oracle，有限测试不证明无缺陷。",
+      "review_depth": "核对agent分工、反馈和差分oracle；未重跑缺陷",
+      "locators": [
+        "§3.1–3.4，尤其§3.4"
+      ],
+      "manuscript_action": "§4将compiler supplies oracle改成明确的差分测试判据。",
+      "original_bibkey": "yang2023whitefox",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2310.15991v3，2024-09-04",
+      "bibliography": {
+        "title": "WhiteFox: White-Box Compiler Fuzzing Empowered by Large Language Models",
+        "authors": [
+          "Chenyuan Yang",
+          "Yinlin Deng",
+          "Runyu Lu",
+          "Jiayi Yao",
+          "Jiawei Liu",
+          "Reyhaneh Jabbarvand",
+          "Lingming Zhang"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2310.15991",
+        "metadata_source": "https://arxiv.org/abs/2310.15991v3",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验",
+        "related_doi_on_arxiv": "10.1145/3689736"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2310.15991v3",
+        "https://arxiv.org/abs/2310.15991v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C37",
+      "short_name": "Don’t Trust: Verify / DTV",
+      "existing_record": "2403.18120v1",
+      "roles": [
+        "A/B/C"
+      ],
+      "scope": "量化问答的命题形式化、证明及答案筛选",
+      "generated": "问题/候选答案的形式命题与证明草稿",
+      "verification_object": "Isabelle命题可证明性；另做空真过滤和LLM自评",
+      "checking_authority": "Isabelle/PISA与自动证明；最终按已验证候选投票，无通过者时回退到未验证候选投票",
+      "checking_time": "问答候选生成后的形式检查与筛选",
+      "runtime_operation": "推理过程中选答案，不是外部动作门禁",
+      "established_claim": "对形式化命题给出已通过检查的证明，并报告最终问答准确率",
+      "trust_boundary": "自然语言到命题的忠实性仍需确认；无通过者时的回退输出不带同等证明保证，未证出也不等于数学上为假。",
+      "review_depth": "核对形式化、证明、过滤和最终回退；未重跑",
+      "locators": [
+        "§3.1–3.3",
+        "§4.1"
+      ],
+      "manuscript_action": "§4把代码执行核验改为Isabelle命题/证明检查，并说明回退。",
+      "original_bibkey": "zhou2024trust",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2403.18120v1，2024-03-26",
+      "bibliography": {
+        "title": "Don't Trust: Verify -- Grounding LLM Quantitative Reasoning with Autoformalization",
+        "authors": [
+          "Jin Peng Zhou",
+          "Charles Staats",
+          "Wenda Li",
+          "Christian Szegedy",
+          "Kilian Q. Weinberger",
+          "Yuhuai Wu"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2403.18120",
+        "metadata_source": "https://arxiv.org/abs/2403.18120v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2403.18120v1",
+        "https://arxiv.org/abs/2403.18120v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C38",
+      "short_name": "Autoformalization (Wu et al.)",
+      "existing_record": "2205.12615v1",
+      "roles": [
+        "A/B；翻译质量有人审"
+      ],
+      "scope": "自然语言数学到形式命题，结合证明器训练",
+      "generated": "Isabelle形式命题及搜索得到的证明",
+      "verification_object": "翻译忠实性与候选命题的证明分别评价",
+      "checking_authority": "翻译有人审/文本指标；Thor搜索并保留Isabelle接受的证明",
+      "checking_time": "离线翻译评价与expert iteration训练",
+      "runtime_operation": "无部署动作检查",
+      "established_claim": "报告命题翻译和使用自动形式化数据的证明训练效果",
+      "trust_boundary": "命题可证明不保证翻译忠实；单篇实验不建立整个模式的历史首创地位。",
+      "review_depth": "核对翻译人评、expert iteration及结果；未复核全部样例或训练",
+      "locators": [
+        "§4",
+        "§5"
+      ],
+      "manuscript_action": "§5改为结合命题生成和已检验证明的例子，取消无依据的历史优先断言。",
+      "original_bibkey": "wu2022autoformalization",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "version_read": "arXiv:2205.12615v1，2022-05-25",
+      "bibliography": {
+        "title": "Autoformalization with Large Language Models",
+        "authors": [
+          "Yuhuai Wu",
+          "Albert Q. Jiang",
+          "Wenda Li",
+          "Markus N. Rabe",
+          "Charles Staats",
+          "Mateja Jamnik",
+          "Christian Szegedy"
+        ],
+        "year": 2022,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2205.12615",
+        "metadata_source": "https://arxiv.org/abs/2205.12615v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2205.12615v1",
+        "https://arxiv.org/abs/2205.12615v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C39",
+      "short_name": "RagVerus / RVBench",
+      "existing_record": "2509.25197v1",
+      "original_bibkey": "zhong2025towards",
+      "roles": [
+        "A/B"
+      ],
+      "scope": "仓库上下文中的程序证明补全",
+      "generated": "给定exec/spec下被遮蔽的证明注解",
+      "verification_object": "补回仓库的候选证明及原代码/规格保持",
+      "checking_authority": "Verus→SMT（如Z3）；Lynette检查exec/spec未变；成功需两项通过",
+      "checking_time": "开发时检索上下文、补证明和静态验证",
+      "runtime_operation": "proof/spec注解静态使用；没有在线门禁",
+      "established_claim": "评价仓库上下文下单个目标补全，区分verifier通过与任务完整性",
+      "trust_boundary": "依赖代码预填且已验证；联合生成相互依赖证明仍是后续工作。未独立审计全部逃逸机制/可信依赖。",
+      "review_depth": "核对任务构造、成功指标、后端、检索及未来工作；未审计代码或复现",
+      "locators": [
+        "§2.1",
+        "§3.2–3.4",
+        "§4",
+        "§7"
+      ],
+      "manuscript_action": "§4/5限定repository级的实际任务范围；SMT程序验证与proof-assistant kernel分开。",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "version_read": "arXiv:2509.25197v1，2025-08-31",
+      "bibliography": {
+        "title": "Towards Repository-Level Program Verification with Large Language Models",
+        "authors": [
+          "Si Cheng Zhong",
+          "Xujie Si"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2509.25197",
+        "metadata_source": "https://arxiv.org/abs/2509.25197v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验",
+        "related_doi_on_arxiv": "10.1145/3759425.3763382"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2509.25197v1",
+        "https://arxiv.org/abs/2509.25197v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C40",
+      "short_name": "SubgoalXL",
+      "existing_record": "2408.11172v1",
+      "original_bibkey": "zhao2024subgoalxl",
+      "roles": [
+        "B/D"
+      ],
+      "scope": "子目标指导的证明生成与expert learning",
+      "generated": "形式命题、子目标解释和候选证明",
+      "verification_object": "提交Isabelle的完整证明；禁用sorry/oops的评价要求",
+      "checking_authority": "Isabelle检查；Sledgehammer调用外部ATP后在Isabelle中重建",
+      "checking_time": "离线训练及证明搜索/验收",
+      "runtime_operation": "无部署动作门禁",
+      "established_claim": "报告在所给版本和搜索预算下的证明成功率",
+      "trust_boundary": "最终形式框架内组合不意味着搜索中没有逻辑翻译；仍需声明目标、允许公理和预算，不能外推为跨工具保障论证已解决。",
+      "review_depth": "核对框架、Sledgehammer路径及成功标准；未审计全部公理或复跑",
+      "locators": [
+        "§3",
+        "§4.1–4.2",
+        "§4.4（Isabelle 2021/2022）"
+      ],
+      "manuscript_action": "§5限定同一形式框架组合的意义，撤回没有任何翻译困难的绝对说法。",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "version_read": "arXiv:2408.11172v1，2024-08-20",
+      "bibliography": {
+        "title": "SubgoalXL: Subgoal-based Expert Learning for Theorem Proving",
+        "authors": [
+          "Xueliang Zhao",
+          "Lin Zheng",
+          "Haige Bo",
+          "Changran Hu",
+          "Urmish Thakker",
+          "Lingpeng Kong"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读预印本；年份为初始存档年，修订日期另列）",
+        "doi": "10.48550/arXiv.2408.11172",
+        "metadata_source": "https://arxiv.org/abs/2408.11172v1",
+        "doi_status": "已核固定版本摘要页署名、日期及DataCite DOI；不替代正式出版元数据核验"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2408.11172v1",
+        "https://arxiv.org/abs/2408.11172v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B3"
+    },
+    {
+      "id": "C41",
+      "short_name": "User-Intent Formalization / Lahiri",
+      "existing_record": "2406.09757v2",
+      "original_bibkey": "lahiri2024evaluating",
+      "roles": [
+        "A相关规格评价"
+      ],
+      "scope": "评价已有生成规格；不是完整意图自动判定算法",
+      "generated": "根据给定测试及变异输出构造Dafny检查程序",
+      "verification_object": "候选后置条件对具体输入输出的一致性及变异区分能力",
+      "checking_authority": "Dafny/SMT符号检查，另与既有人类标签比较",
+      "checking_time": "离线规格评价",
+      "runtime_operation": "不执行原目标程序；无部署门禁",
+      "established_claim": "提出相对测试集的correctness和变异分数completeness；报告原型评价",
+      "trust_boundary": "有限测试/变异及其正确性限制指标；把验证失败计作变异被拒依赖作者的启发性推测，unknown不等于反例。",
+      "review_depth": "核对指标定义、实现、例子和局限；未重跑脚本或审核全部人工标签",
+      "locators": [
+        "§I-C1–2及其Note",
+        "§II-A–C"
+      ],
+      "manuscript_action": "§4具体说明忠实性评价的参照与指标边界；不把completeness当成完整意图证明。",
+      "evaluation_scope": "所读版报告对153项中的64项完成该原型检查；其余解析/递归展开/量词问题仍列局限。",
+      "access_note": "最初未带版本HTML解析为v2，随后用固定v2页面复核。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2406.09757v2，2024-10-15",
+      "bibliography": {
+        "title": "Evaluating LLM-driven User-Intent Formalization for Verification-Aware Languages",
+        "authors": [
+          "Shuvendu K. Lahiri"
+        ],
+        "year": 2024,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2406.09757",
+        "metadata_source": "https://arxiv.org/abs/2406.09757v2",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI",
+        "related_doi_on_arxiv": "10.34727/2024/isbn.978-3-85448-065-5_19"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2406.09757v2",
+        "https://arxiv.org/abs/2406.09757v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C42",
+      "short_name": "AutoSpec",
+      "existing_record": "2404.00762v2",
+      "original_bibkey": "wen2024enchanting",
+      "roles": [
+        "A/B证明注解"
+      ],
+      "scope": "给定C程序及待证性质，补充足以完成证明的规格",
+      "generated": "ACSL前后条件、循环不变量和assigns等注解",
+      "verification_object": "候选注解相对代码的有效性，以及既定目标断言",
+      "checking_authority": "Frama-C/WP；本次未独立核准更底层求解器配置",
+      "checking_time": "开发时分解、生成、验证和简化",
+      "runtime_operation": "静态验证，无在线动作门禁",
+      "established_claim": "在给定程序/目标条件下，生成并检查足以完成目标验证的辅助规格",
+      "trust_boundary": "adequate指足以证明既定目标，不证明目标忠实表达用户意图；求解失败/迭代耗尽也不证明程序或规格为假。",
+      "review_depth": "核对任务输入、验证流程和实验设置；未复跑或审计全部依赖/入口假设",
+      "locators": [
+        "§2 User Scenario",
+        "§3.1–3.3",
+        "§4.1"
+      ],
+      "manuscript_action": "§4区分目标规格的意图形式化与证明所需辅助注解的合成。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2404.00762v2，2024-04-02",
+      "bibliography": {
+        "title": "Enchanting Program Specification Synthesis by Large Language Models using Static Analysis and Program Verification",
+        "authors": [
+          "Cheng Wen",
+          "Jialun Cao",
+          "Jie Su",
+          "Zhiwu Xu",
+          "Shengchao Qin",
+          "Mengda He",
+          "Haokun Li",
+          "Shing-Chi Cheung",
+          "Cong Tian"
+        ],
+        "year": 2024,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2404.00762",
+        "metadata_source": "https://arxiv.org/abs/2404.00762v2",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2404.00762v2",
+        "https://arxiv.org/abs/2404.00762v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C43",
+      "short_name": "Loopy / Inductive Loop Invariants",
+      "existing_record": "2311.07948v1",
+      "original_bibkey": "kamath2023finding",
+      "roles": [
+        "A/B证明注解"
+      ],
+      "scope": "针对程序内已有断言合成归纳不变量",
+      "generated": "候选不变量合取项，Houdini筛选及LLM修复",
+      "verification_object": "初始化/保持及退出后足以推出目标断言",
+      "checking_authority": "Frama-C/WP，配置Z3、Alt-Ergo、CVC4；Houdini组合/筛除候选",
+      "checking_time": "离线生成与验证循环",
+      "runtime_operation": "无在线执行保障",
+      "established_claim": "成功时既检查归纳性，也检查对既定断言的充分性",
+      "trust_boundary": "归纳性单独不保证目标性质；正文实验集中于469个单循环单方法正例，不能作任意C程序或漏洞检出率结论。",
+      "review_depth": "核对任务、Houdini/repair、oracle和实验子集；未审计实现/重跑",
+      "locators": [
+        "§1三项义务",
+        "§2",
+        "§3.1–3.3，Algorithms 1–3",
+        "§4 Experimental setup、§4.5"
+      ],
+      "manuscript_action": "§4将泛称SMT测试展开为归纳性与目标充分性的独立义务。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2311.07948v1，2023-11-14",
+      "bibliography": {
+        "title": "Finding Inductive Loop Invariants using Large Language Models",
+        "authors": [
+          "Adharsh Kamath",
+          "Aditya Senthilnathan",
+          "Saikat Chakraborty",
+          "Pantazis Deligiannis",
+          "Shuvendu K. Lahiri",
+          "Akash Lal",
+          "Aseem Rastogi",
+          "Subhajit Roy",
+          "Rahul Sharma"
+        ],
+        "year": 2023,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2311.07948",
+        "metadata_source": "https://arxiv.org/abs/2311.07948v1",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2311.07948v1",
+        "https://arxiv.org/abs/2311.07948v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C44",
+      "short_name": "dafny-annotator / DafnySynth",
+      "existing_record": "2411.15143v1",
+      "original_bibkey": "poesia2024dafnyannotator",
+      "roles": [
+        "A/B；训练数据另有生成"
+      ],
+      "scope": "主任务为给定代码/规格补注解；DafnySynth另合成训练程序",
+      "generated": "assert、invariant、decreases；合成数据流程另生成/编辑程序",
+      "verification_object": "注解后的既定方法满足其给定后置条件；另检查合成训练程序",
+      "checking_authority": "Dafny的静态验证；LLM提候选、搜索选插入位置",
+      "checking_time": "开发时注解搜索；训练数据离线生成",
+      "runtime_operation": "无在线门禁",
+      "established_claim": "报告证明注解补全及合成数据辅助训练的效果",
+      "trust_boundary": "主任务输入已有实现/规格；DafnySynth可从整体规格尚未证明的程序抽取已接受注解，不能把全部合成程序当作完整已验证程序，也不自动证明自然语言意图。",
+      "review_depth": "核对§2三个流程及实验任务说明；未复训或审计跳过验证机制",
+      "locators": [
+        "§1任务说明",
+        "§2.1–2.3",
+        "§3"
+      ],
+      "manuscript_action": "§4把主任务与Misu的代码/规格联合生成分开描述。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2411.15143v1，2024-11-05",
+      "bibliography": {
+        "title": "dafny-annotator: AI-Assisted Verification of Dafny Programs",
+        "authors": [
+          "Gabriel Poesia",
+          "Chloe Loughridge",
+          "Nada Amin"
+        ],
+        "year": 2024,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2411.15143",
+        "metadata_source": "https://arxiv.org/abs/2411.15143v1",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2411.15143v1",
+        "https://arxiv.org/abs/2411.15143v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4",
+      "evaluation_scope": "主测试为移除注解后不能直接验证的83项；DafnySynth的699个可编译程序中46个整体已验证，其余仅部分注解通过，并从中提取训练注解。数字为作者报告，未复算。"
+    },
+    {
+      "id": "C45",
+      "short_name": "Verified Dafny Methods / Misu et al.",
+      "existing_record": "2402.00247v2",
+      "original_bibkey": "misu2024assisted",
+      "roles": [
+        "A；人工评价规格质量"
+      ],
+      "scope": "自然语言任务到Dafny方法和规格的联合合成",
+      "generated": "方法实现、前后条件、不变量及辅助定义",
+      "verification_object": "生成方法满足生成规格；另人工判断规格Strong/Weak/Wrong",
+      "checking_authority": "Dafny验证；人审意图对应及规格强度",
+      "checking_time": "离线生成、验证和人工定性分析",
+      "runtime_operation": "所述分析未调用生成方法；无部署保证",
+      "established_claim": "报告verify@k与人工规格质量标签，明确已验证方法仍可含弱或错误意图规格",
+      "trust_boundary": "验证率与符合意图的比例不同；人审是额外证据而非Dafny自动保证，标签仍可能需复核。",
+      "review_depth": "核对生成方式、量化与人工定性评价、错误分析；未独立复标样例",
+      "locators": [
+        "§3方法",
+        "§4.1",
+        "§4.2.1–4.2.3，Tables 2–4",
+        "§4.3"
+      ],
+      "manuscript_action": "§4明确其同时生成实现/规格，并保留人工忠实性评价已有先例。",
+      "study_relation": "C41复用本研究MBPP-DFY中的规格/标签，不是全新独立数据集验证。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2402.00247v2，2024-06-10",
+      "bibliography": {
+        "title": "Towards AI-Assisted Synthesis of Verified Dafny Methods",
+        "authors": [
+          "Md Rakib Hossain Misu",
+          "Cristina V. Lopes",
+          "Iris Ma",
+          "James Noble"
+        ],
+        "year": 2024,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2402.00247",
+        "metadata_source": "https://arxiv.org/abs/2402.00247v2",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI",
+        "related_doi_on_arxiv": "10.1145/3643763"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2402.00247v2",
+        "https://arxiv.org/abs/2402.00247v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C46",
+      "short_name": "Laurel / DafnyGym",
+      "existing_record": "2405.16792v2",
+      "original_bibkey": "mugnier2024laurel",
+      "roles": [
+        "A/B/D证明辅助"
+      ],
+      "scope": "已有Dafny证明中的局部assertion补全",
+      "generated": "缺失的内联断言及插入位置",
+      "verification_object": "补入断言后原有lemma能否验证",
+      "checking_authority": "Dafny 4.3.0；错误定位/证明相似性选择提示，最终仍由验证器接受",
+      "checking_time": "离线修复失败证明",
+      "runtime_operation": "无在线门禁",
+      "established_claim": "在移除必要断言的DafnyGym任务上报告恢复验证的能力",
+      "trust_boundary": "补的是既有lemma中的断言提示，不等于合成完整缺失lemma或新的功能规格；未审计实现是否覆盖全部任务完整性条件。",
+      "review_depth": "核对缺失断言任务、提示方法、数据构造及成功标准；未重跑",
+      "locators": [
+        "§1–2",
+        "§5 Assertions and Lemmas",
+        "§6.1–6.2"
+      ],
+      "quality_note": "所读v2引言报告82/145，§5–6.1写143项任务；分母口径未解释，本比较不引用该总体成功率。",
+      "manuscript_action": "§4将missing lemma改为existing proof中的missing assertion hint。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2405.16792v2，2025-03-03",
+      "bibliography": {
+        "title": "Laurel: Unblocking Automated Verification with Large Language Models",
+        "authors": [
+          "Eric Mugnier",
+          "Emmanuel Anaya Gonzalez",
+          "Ranjit Jhala",
+          "Nadia Polikarpova",
+          "Yuanyuan Zhou"
+        ],
+        "year": 2024,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2405.16792",
+        "metadata_source": "https://arxiv.org/abs/2405.16792v2",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2405.16792v2",
+        "https://arxiv.org/abs/2405.16792v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C47",
+      "short_name": "Preguss / A Tale of 1001 LoC",
+      "existing_record": "2512.24594v2",
+      "original_bibkey": "wang2025a",
+      "roles": [
+        "A/B静态验证"
+      ],
+      "scope": "潜在运行错误驱动的静态跨过程规格合成",
+      "generated": "ACSL辅助规格；输出已验证性质V及残余假设H",
+      "verification_object": "RTE断言、调用点前置条件及辅助规格",
+      "checking_authority": "Frama-C/Rte或Eva产生目标；Frama-C/WP验证，未解除H留待人工/辅助工具",
+      "checking_time": "开发时分析和规格迭代；论文预先给出条件性定理",
+      "runtime_operation": "标题runtime error指待排除错误类型；不是部署中的monitor或动作guard",
+      "established_claim": "Theorem 8是相对H的RTE-freeness；H被解除且分析器等满足假设时方能扩展结论",
+      "trust_boundary": "当前实现要求无环调用图；目标断言覆盖、调用者条件、H与分析器/验证器假设都不能省略；不等于完整功能正确性。",
+      "review_depth": "核对定义、定理陈述、方法和实验设置；未逐步复证Appendix A或复跑实现",
+      "locators": [
+        "§4，Definitions 1 / Theorem 2",
+        "§5.1–5.3，Algorithm 1 / Theorem 8",
+        "§6.1"
+      ],
+      "manuscript_action": "§4写出残余假设和调用点检查；不把guard assertions误读为运行时执行门禁。",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "version_read": "arXiv:2512.24594v2，2026-03-10",
+      "bibliography": {
+        "title": "A Tale of 1001 LoC: Potential Runtime Error-Guided Specification Synthesis for Verifying Large-Scale Programs",
+        "authors": [
+          "Zhongyi Wang",
+          "Tengjie Lin",
+          "Mingshuai Chen",
+          "Haokun Li",
+          "Mingqi Yang",
+          "Xiao Yi",
+          "Shengchao Qin",
+          "Yixing Luo",
+          "Xiaofeng Li",
+          "Bin Gu",
+          "Liqiang Lu",
+          "Jianwei Yin"
+        ],
+        "year": 2025,
+        "venue": "arXiv（按所读预印本；初始存档年与修订日期分列）",
+        "doi": "10.48550/arXiv.2512.24594",
+        "metadata_source": "https://arxiv.org/abs/2512.24594v2",
+        "doi_status": "固定版本摘要页已核署名、日期和DataCite DOI；不冒充正式出版DOI",
+        "related_doi_on_arxiv": "10.1145/3798268"
+      },
+      "primary_urls": [
+        "https://arxiv.org/html/2512.24594v2",
+        "https://arxiv.org/abs/2512.24594v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4"
+    },
+    {
+      "id": "C48",
+      "short_name": "AssertionBench",
+      "existing_record": "2406.18627v2",
+      "original_bibkey": "pulavarthi2024assertionbench",
+      "roles": [
+        "A；已有标签纠正得到支持"
+      ],
+      "scope": "硬件断言生成基准；深化既有纠正",
+      "generated": "SVA断言，后经GPT-3.5语法修复",
+      "verification_object": "修复后断言在给定Verilog设计中的有效性",
+      "checking_authority": "Cadence JasperGold 2022.06p002；GoldMine/HARM用于示例断言构造",
+      "checking_time": "离线基准生成、修复和FPV评价",
+      "runtime_operation": "无硬件部署监测",
+      "established_claim": "Pass/Fail/Error评价修复后断言的形式有效性、反例或语法错误",
+      "trust_boundary": "不是对原始输出的纯生成评分；未报告断言覆盖度，形式成立不保证覆盖全部意图或故障。",
+      "review_depth": "核对正式PDF §§2–4及书目；深化原标签纠正，未审计脚本/环境约束或复跑",
+      "locators": [
+        "PDF pp.8074–8076，§2–3",
+        "§3 Evaluation Protocol / Metrics",
+        "§4"
+      ],
+      "manuscript_action": "§6保留形式检查的既有判断，补充语法修复与未评价覆盖度的边界。",
+      "original_label_unchanged": "C_LLM_AS_ORACLE",
+      "version_read": "Findings of NAACL 2025正式PDF，pp.8073–8080；原语料关联2406.18627v2，不另计研究",
+      "bibliography": {
+        "title": "AssertionBench: A Benchmark to Evaluate Large-Language Models for Assertion Generation",
+        "authors": [
+          "Vaishnavi Pulavarthi",
+          "Deeksha Nandal",
+          "Soham Dan",
+          "Debjit Pal"
+        ],
+        "year": 2025,
+        "venue": "Findings of the Association for Computational Linguistics: NAACL 2025，pp.8073–8080",
+        "doi": "10.18653/v1/2025.findings-naacl.449",
+        "metadata_source": "https://aclanthology.org/2025.findings-naacl.449/",
+        "doi_status": "ACL正式出版页及PDF核对；不是以arXiv存档年代替出版年",
+        "pdf_title": "AssertionBench: A Benchmark to Evaluate Large-Language Models for Assertion Generation for Hardware Design",
+        "title_note": "ACL元数据/原语料使用较短题名，正式PDF题名多出for Hardware Design；两者在同一记录列明。"
+      },
+      "primary_urls": [
+        "https://aclanthology.org/2025.findings-naacl.449.pdf",
+        "https://aclanthology.org/2025.findings-naacl.449/"
+      ],
+      "prior_evidence": [
+        "../../label_corrections.json"
+      ],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B4",
+      "effective_prior_correction": "A_GEN_CHECKED，2026-09-09；本次支持原纠正，不重复修改或计数。"
+    },
+    {
+      "id": "C49",
+      "short_name": "TR2MTL",
+      "existing_record": "2406.05709v1",
+      "original_bibkey": "manas2024tr2mtl",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2406.05709v1",
+      "bibliography": {
+        "title": "TR2MTL: LLM based framework for Metric Temporal Logic Formalization of Traffic Rules",
+        "authors": [
+          "Kumar Manas",
+          "Stefan Zwicklbauer",
+          "Adrian Paschke"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2406.05709",
+        "metadata_source": "https://arxiv.org/html/2406.05709v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "交通规则的MTL公式",
+      "verification_object": "交通规则的MTL公式",
+      "checking_authority": "py-metric-temporal-logic解析；与参照公式的语义评价及五次多数选择",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "模板与解析提高可解析性；翻译正确性按参照意义评价，非已报告的自动语义等价证明。",
+      "trust_boundary": "预处理将模糊规则具体化；假设感知/地图正确。模型检查用于扩展评价是建议，不能写成全部公式已证明忠实。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§IV-A–B",
+        "§V结果与分析"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2406.05709v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "保留需求形式化实例，区分语法过滤和参照评价。"
+    },
+    {
+      "id": "C50",
+      "short_name": "KGST / STL-DivEn",
+      "existing_record": "2505.20658v2",
+      "original_bibkey": "fang2025enhancing",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2505.20658v2",
+      "bibliography": {
+        "title": "Enhancing Transformation from Natural Language to Signal Temporal Logic Using LLMs with Diverse External Knowledge",
+        "authors": [
+          "Yue Fang",
+          "Zhi Jin",
+          "Jie An",
+          "Hongshen Chen",
+          "Xiaohong Chen",
+          "Naijun Zhan"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2505.20658",
+        "metadata_source": "https://arxiv.org/html/2505.20658v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "STL公式及基于外部知识的修订",
+      "verification_object": "STL公式及基于外部知识的修订",
+      "checking_authority": "公式/模板准确率、BLEU及五名标注者的语义评价；GPT-4负责refinement",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "数据和生成—修订流程的经验评价；没有据已读章节确认独立证明器接受每条翻译。",
+      "trust_boundary": "语法、模板、词面指标不等于语义证明；人工检查明确评估意图一致性。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§4方法",
+        "§5.1–5.2评价"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2505.20658v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "不能把LLM自修订归为形式化检查；保留人工忠实性评价。"
+    },
+    {
+      "id": "C51",
+      "short_name": "Req2LTL / OnionL",
+      "existing_record": "2512.17334v1",
+      "original_bibkey": "ma2025bridging",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2512.17334v1",
+      "bibliography": {
+        "title": "Bridging Natural Language and Formal Specification--Automated Translation of Software Requirements to LTL via Hierarchical Semantics Decomposition Using LLMs",
+        "authors": [
+          "Zhi Ma",
+          "Cheng Wen",
+          "Zhexin Su",
+          "Xiao Liang",
+          "Cong Tian",
+          "Shengchao Qin",
+          "Mengfei Yang"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2512.17334",
+        "metadata_source": "https://arxiv.org/html/2512.17334v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "OnionL JSON语义树，经规则翻译为LTL",
+      "verification_object": "OnionL JSON语义树，经规则翻译为LTL",
+      "checking_authority": "树结构校验和Spot解析；评价中的两专家对照；可选人工中间表示修订",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "规则翻译相对正确OnionL的条件性对应；不是自然语言到公式端到端证明。",
+      "trust_boundary": "实验关闭可选人审环节，但参考构造和指标仍用专家；Spot句法接受不能推出意图忠实。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§IV–V",
+        "§VI-A.1、VI-A.3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2512.17334v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "作为可解释中间表示、条件性翻译与语义评价的先例。"
+    },
+    {
+      "id": "C52",
+      "short_name": "Agentic architecture properties",
+      "existing_record": "2510.14133v2",
+      "original_bibkey": "allegrini2025formalizing",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "架构性质规范/研究议程背景"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2510.14133v2",
+      "bibliography": {
+        "title": "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems",
+        "authors": [
+          "Edoardo Allegrini",
+          "Ananth Shreekumar",
+          "Z. Berkay Celik"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2510.14133",
+        "metadata_source": "https://arxiv.org/html/2510.14133v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "研究者提出Host Agent/任务生命周期模型及30项时序性质；未建立LLM需求翻译实验",
+      "verification_object": "研究者提出Host Agent/任务生命周期模型及30项时序性质；未建立LLM需求翻译实验",
+      "checking_authority": "论文定义CTL式性质；所读正文未给实际检查器结果，自动模型提取/检查列为未来工作",
+      "checking_time": "架构规范设计；自动提取模型及检查为未来工作",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "架构及性质规范方案；不能写成完成的模型检查或实现安全保证。",
+      "trust_boundary": "§5假设Validation Module正确；规范中写入安全/进展条件不等于证明系统满足。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§4–5及性质表",
+        "§6案例",
+        "§8未来工作"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2510.14133v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "从§4 LTL翻译实例移到架构/研究议程背景；逻辑为CTL，不是所称LTL。"
+    },
+    {
+      "id": "C53",
+      "short_name": "LLM plan verification",
+      "existing_record": "2510.03469v2",
+      "original_bibkey": "ramani2025bridging",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2510.03469v2",
+      "bibliography": {
+        "title": "Bridging LLM Planning Agents and Formal Methods: A Case Study in Plan Verification",
+        "authors": [
+          "Keshav Ramani",
+          "Vali Tawosi",
+          "Salwa Alamir",
+          "Daniel Borrajo"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2510.03469",
+        "metadata_source": "https://arxiv.org/html/2510.03469v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "NuSMV Kripke模型及LTL目标",
+      "verification_object": "NuSMV Kripke模型及LTL目标",
+      "checking_authority": "NuSMV；与简化PlanBench标签比较",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "模型—性质对的检查及计划有效性分类实验；未展示线上执行门控。",
+      "trust_boundary": "模型和性质均由LLM近似；unknown从主要指标排除。§III-B反例SAT与§IV valid(SAT)标签表述不一致，未审代码不能确认真实判定映射。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§III-A–B",
+        "§IV–VI及Table I"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2510.03469v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "改写为离线模型检查实验，保留忠实性、unknown和判定口径限制。"
+    },
+    {
+      "id": "C54",
+      "short_name": "CryptoFormalEval",
+      "existing_record": "2411.13627v1",
+      "original_bibkey": "curaba2024cryptoformaleval",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2411.13627v1",
+      "bibliography": {
+        "title": "CryptoFormalEval: Integrating LLMs and Formal Verification for Automated Cryptographic Protocol Vulnerability Detection",
+        "authors": [
+          "Cristian Curaba",
+          "Denis D'Ambrosi",
+          "Alessandro Minisini",
+          "Natalia Pérez-Campanero Antolín"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2411.13627",
+        "metadata_source": "https://arxiv.org/html/2411.13627v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Tamarin模型、辅助引理/攻击轨迹",
+      "verification_object": "Tamarin模型、辅助引理/攻击轨迹",
+      "checking_authority": "Tamarin攻击搜索；回译后的攻击在针对原协议的Dolev–Yao符号沙箱重验",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "发现攻击相对协议/攻击模型成立；沙箱补查原协议对应。",
+      "trust_boundary": "沙箱属于符号模型非真实密码实现；查不到攻击及不终止均不等于安全。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2.3",
+        "§3.1–3.2"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2411.13627v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "保留攻击验证实例，补上最终原协议沙箱，不能只写Tamarin。"
+    },
+    {
+      "id": "C55",
+      "short_name": "ReFormAI",
+      "existing_record": "2403.16750v1",
+      "original_bibkey": "gadde2024all",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2403.16750v1",
+      "bibliography": {
+        "title": "All Artificial, Less Intelligence: GenAI through the Lens of Formal Verification",
+        "authors": [
+          "Deepak Narayan Gadde",
+          "Aman Kumar",
+          "Thomas Nalapat",
+          "Evgenii Rezunov",
+          "Fabio Cappellini"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2403.16750",
+        "metadata_source": "https://arxiv.org/html/2403.16750v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "SystemVerilog硬件设计",
+      "verification_object": "SystemVerilog硬件设计",
+      "checking_authority": "Cadence Jasper，专家准备SVA与设计约束",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "针对10项CWE相关性质的形式化评估；非仅测试或模型自评。",
+      "trust_boundary": "性质/环境约束及形式覆盖决定结论范围；原文亦警告错误性质可能产生误导性通过。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§II-C",
+        "§III-A"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2403.16750v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "写清被查设计和给定SVA；修正硬件段语病。"
+    },
+    {
+      "id": "C56",
+      "short_name": "TerraFormer",
+      "existing_record": "2601.08734v1",
+      "original_bibkey": "jana2026terraformer",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2601.08734v1",
+      "bibliography": {
+        "title": "TerraFormer: Automated Infrastructure-as-Code with LLMs Fine-Tuned via Policy-Guided Verifier Feedback",
+        "authors": [
+          "Prithwish Jana",
+          "Sam Davidson",
+          "Bhavana Bhasker",
+          "Andrey Kan",
+          "Anoop Deoras",
+          "Laurent Callot"
+        ],
+        "year": 2026,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2601.08734",
+        "metadata_source": "https://arxiv.org/html/2601.08734v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识",
+        "related_publication_doi": "10.1145/3786583.3786898",
+        "publication_note": "关联正式版DOI与所读arXiv版本分别记录；未将不同年份或版本混为同一实验。"
+      },
+      "generated": "Terraform配置、修订及训练用NL/策略",
+      "verification_object": "Terraform配置、修订及训练用NL/策略",
+      "checking_authority": "terraform validate、terraform plan、OPA eval/Rego策略",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "结构检查、计划可构造与计划图的策略求值；反馈用于数据修复和RL。",
+      "trust_boundary": "OPA在给定计划上求值不等于所有运行轨迹的证明；策略也由生成流程产生；训练集仅83%有策略。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3三类oracle",
+        "§4及Table 1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2601.08734v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "避免把所有oracle统称同等形式验证；明确并非真实云部署成功。"
+    },
+    {
+      "id": "C57",
+      "short_name": "LLM–SMT CEGIS",
+      "existing_record": "2309.16436v1",
+      "original_bibkey": "jha2023neuro",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2309.16436v1",
+      "bibliography": {
+        "title": "Neuro Symbolic Reasoning for Planning: Counterexample Guided Inductive Synthesis using Large Language Models and Satisfiability Solving",
+        "authors": [
+          "Sumit Kumar Jha",
+          "Susmit Jha",
+          "Patrick Lincoln",
+          "Nathaniel D. Bastian",
+          "Alvaro Velasquez",
+          "Rickard Ewetz",
+          "Sandeep Neema"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2309.16436",
+        "metadata_source": "https://arxiv.org/html/2309.16436v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "BlocksWorld计划及形式约束/查询",
+      "verification_object": "BlocksWorld计划及形式约束/查询",
+      "checking_authority": "Z3为迭代计划验证提供反例",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "相对编码规格接受计划，LLM作为CEGIS候选生成者。",
+      "trust_boundary": "规格/验证查询也可由LLM生成；CEGIS图式不自动保证这些编码忠实，LLM循环也无一般终止保证。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3",
+        "§4示例"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2309.16436v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "保留CEGIS，补查询生成这条信任边界。"
+    },
+    {
+      "id": "C58",
+      "short_name": "Practical assertion generation / AssertionLLM",
+      "existing_record": "2502.20633v1",
+      "original_bibkey": "pulavarthi2025are",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2502.20633v1",
+      "bibliography": {
+        "title": "Are LLMs Ready for Practical Adoption for Assertion Generation?",
+        "authors": [
+          "Vaishnavi Pulavarthi",
+          "Deeksha Nandal",
+          "Soham Dan",
+          "Debjit Pal"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2502.20633",
+        "metadata_source": "https://arxiv.org/html/2502.20633v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "SVA及微调AssertionLLM候选",
+      "verification_object": "SVA及微调AssertionLLM候选",
+      "checking_authority": "GPT-3.5语法修复后Cadence JasperGold 2022.06p002；Pass/Fail/Error",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "断言相对既有设计成立；Pass明确包含vacuous。",
+      "trust_boundary": "空真、设计错误及性质覆盖未因通过而消失；沿用AssertionBench数据/评价，不能另算独立数据集。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§III–IV",
+        "§V"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2502.20633v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "与C48关联，区分新模型贡献、共享基准和非空真有效性。",
+      "study_relation": "共享C48 AssertionBench及评价流程；新增AssertionLLM研究内容，不独立计数据集"
+    },
+    {
+      "id": "C59",
+      "short_name": "Veritas",
+      "existing_record": "2506.00005v1",
+      "original_bibkey": "roy2025veritas",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2506.00005v1",
+      "bibliography": {
+        "title": "Veritas: Deterministic Verilog Code Synthesis from LLM-Generated Conjunctive Normal Form",
+        "authors": [
+          "Prithwish Basu Roy",
+          "Akashdeep Saha",
+          "Manaar Alam",
+          "Johann Knechtel",
+          "Michail Maniatakos",
+          "Ozgur Sinanoglu",
+          "Ramesh Karri"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2506.00005",
+        "metadata_source": "https://arxiv.org/html/2506.00005v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "实际主要生成PLF，以CNF作等价检查表示；转换为Verilog",
+      "verification_object": "实际主要生成PLF，以CNF作等价检查表示；转换为Verilog",
+      "checking_authority": "参照逻辑的自定义等价比较；ABC及确定性bench/RTL脚本",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "给定忠实可处理的逻辑表示，按该表示综合；经验案例支持特定电路范围。",
+      "trust_boundary": "CNF可满足不保证意图正确或函数唯一；确定性转换不保证任意LLM输出可解析，未独立审转换程序。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2.3",
+        "§4.1–4.2",
+        "§5.1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2506.00005v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "删去模板总能解析的推断，保留有条件的正确构造和中间表示。"
+    },
+    {
+      "id": "C60",
+      "short_name": "FormAI",
+      "existing_record": "2307.02192v3",
+      "original_bibkey": "tihanyi2023formai",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2307.02192v3",
+      "bibliography": {
+        "title": "The FormAI Dataset: Generative AI in Software Security Through the Lens of Formal Verification",
+        "authors": [
+          "Norbert Tihanyi",
+          "Tamas Bisztray",
+          "Ridhi Jain",
+          "Mohamed Amine Ferrag",
+          "Lucas C. Cordeiro",
+          "Vasileios Mavroeidis"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2307.02192",
+        "metadata_source": "https://arxiv.org/html/2307.02192v3",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识",
+        "related_publication_doi": "10.1145/3617555.3617874",
+        "publication_note": "关联正式版DOI与所读arXiv版本分别记录；未将不同年份或版本混为同一实验。"
+      },
+      "generated": "可编译C程序数据集",
+      "verification_object": "可编译C程序数据集",
+      "checking_authority": "GCC编译、ESBMC有界性质检查",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "检测既定安全属性的反例；未发现反例只覆盖搜索界限。",
+      "trust_boundary": "没有一般功能规格正确性评价；相对模型的反例不能无条件写成现实零误报。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§1方法及限制",
+        "§2研究目标"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2307.02192v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "保留原FormAI有界范围，勿与FormAI-v2无界设置混淆。"
+    },
+    {
+      "id": "C61",
+      "short_name": "ESBMC-AI self-healing",
+      "existing_record": "2305.14752v2",
+      "original_bibkey": "tihanyi2023software",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2305.14752v2",
+      "bibliography": {
+        "title": "A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification",
+        "authors": [
+          "Norbert Tihanyi",
+          "Ridhi Jain",
+          "Yiannis Charalambous",
+          "Mohamed Amine Ferrag",
+          "Youcheng Sun",
+          "Lucas C. Cordeiro"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2305.14752",
+        "metadata_source": "https://arxiv.org/html/2305.14752v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识",
+        "related_publication_doi": "10.1109/AST66626.2025.00020",
+        "publication_note": "关联正式版DOI与所读arXiv版本分别记录；未将不同年份或版本混为同一实验。"
+      },
+      "generated": "根据反例修复C代码",
+      "verification_object": "根据反例修复C代码",
+      "checking_authority": "ESBMC重验相同目标；专家查看补丁并比较复杂度",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "反例指导的离线自动修复，不是部署中无条件自愈。",
+      "trust_boundary": "重验不自动证明功能保持；人工与复杂度检查是补充经验依据。v2摘要50,000与贡献段逾1,000口径不同，不直接复述统一样本量。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§I流程和贡献"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2305.14752v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "修正“self-healing”容易暗示的在线保障，出版版年份另核。"
+    },
+    {
+      "id": "C62",
+      "short_name": "FormAI-v2",
+      "existing_record": "2404.18353v2",
+      "original_bibkey": "tihanyi2024secure",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "A/混合检查流程"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2404.18353v2",
+      "bibliography": {
+        "title": "How secure is AI-generated Code: A Large-Scale Comparison of Large Language Models",
+        "authors": [
+          "Norbert Tihanyi",
+          "Tamas Bisztray",
+          "Mohamed Amine Ferrag",
+          "Ridhi Jain",
+          "Lucas C. Cordeiro"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2404.18353",
+        "metadata_source": "https://arxiv.org/html/2404.18353v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识",
+        "related_publication_doi": "10.1007/s10664-024-10590-1",
+        "publication_note": "关联正式版DOI与所读arXiv版本分别记录；未将不同年份或版本混为同一实验。"
+      },
+      "generated": "多LLM生成C程序集合",
+      "verification_object": "多LLM生成C程序集合",
+      "checking_authority": "ESBMC采用无界验证设置；编译及克隆处理",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "相较FormAI扩大模型/样本和验证设置，不应统一称固定深度BMC结果。",
+      "trust_boundary": "无界验证模式仍有资源与支持语义范围，未完成任务不能当通过；结果是该样本的所查漏洞率。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§1贡献与方法",
+        "§4验证"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2404.18353v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B5",
+      "manuscript_action": "区分C60与扩展研究的样本和检查设置；不外推全部AI代码。",
+      "study_relation": "C60 FormAI的扩展研究；样本与验证设置改变，不合并实验数字"
+    },
+    {
+      "id": "C63",
+      "short_name": "Prover Agent",
+      "existing_record": "2506.19923v5",
+      "original_bibkey": "baba2025prover",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2506.19923v5",
+      "bibliography": {
+        "title": "Prover Agent: An Agent-Based Framework for Formal Mathematical Proofs",
+        "authors": [
+          "Kaito Baba",
+          "Chaoran Liu",
+          "Shuhei Kurita",
+          "Akiyoshi Sannai"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2506.19923",
+        "metadata_source": "https://arxiv.org/html/2506.19923v5",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "辅助引理、形式陈述和最终Lean证明",
+      "verification_object": "辅助引理、形式陈述和最终Lean证明",
+      "checking_authority": "Lean先检陈述，再证引理并合成最终目标",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "引理辅助搜索及最终形式证明；另有§4关于搜索收益的条件性概率分析。",
+      "trust_boundary": "子目标独立、已证引理改善组合概率等假设不自动适用于所有模型；附录证明未独立审计。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1–3.3",
+        "§4.1假设4.1–4.2"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2506.19923v5"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "作为辅助引理和已有理论分析先例，不能声称该方向仅有经验工作。"
+    },
+    {
+      "id": "C64",
+      "short_name": "Ax-Prover",
+      "existing_record": "2510.12787v4",
+      "original_bibkey": "breen2025axprover",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2510.12787v4",
+      "bibliography": {
+        "title": "Ax-Prover: A Deep Reasoning Agentic Framework for Theorem Proving in Mathematics and Quantum Physics",
+        "authors": [
+          "Benjamin Breen",
+          "Marco Del Tredici",
+          "Jacob McCarran",
+          "Javier Aspuru Mijares",
+          "Weichen Winston Yin",
+          "Kfir Sulimany",
+          "Jacob M. Taylor",
+          "Frank H. L. Koppens",
+          "Dirk Englund"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2510.12787",
+        "metadata_source": "https://arxiv.org/html/2510.12787v4",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Lean草图、have子目标及补全证明",
+      "verification_object": "Lean草图、have子目标及补全证明",
+      "checking_authority": "Lean诊断工具；独立Verifier角色据诊断及无sorry/admit作最终判定",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "工具驱动的证明构造及研究案例，最终判据明确拒绝未完成证明。",
+      "trust_boundary": "Verifier是流程角色，形式权威来自Lean；未审查整个文件的允许公理/目标不变性配置。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1.2–3.1.3",
+        "§3.2"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2510.12787v4"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "替代泛泛agent名称罗列，记录接受条件及工具信任。"
+    },
+    {
+      "id": "C65",
+      "short_name": "Herald",
+      "existing_record": "2410.10878v2",
+      "original_bibkey": "gao2024herald",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2410.10878v2",
+      "bibliography": {
+        "title": "Herald: A Natural Language Annotated Lean 4 Dataset",
+        "authors": [
+          "Guoxiong Gao",
+          "Yutong Wang",
+          "Jiedong Jiang",
+          "Qi Gao",
+          "Zihan Qin",
+          "Tianyi Xu",
+          "Bin Dong"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2410.10878",
+        "metadata_source": "https://arxiv.org/html/2410.10878v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Mathlib4的自然语言注释、增强数据和回译Lean陈述",
+      "verification_object": "Mathlib4的自然语言注释、增强数据和回译Lean陈述",
+      "checking_authority": "Lean陈述编译；回译+LLM NLI对齐评价；人审验证错误",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "数据构造/陈述翻译，非每条NL注释都被Lean证明忠实。",
+      "trust_boundary": "Appendix D明确NLI有误判；Table 4中151个Herald验证通过项仅101个人工正确。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§4.1.2",
+        "Appendix D及Table 4"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2410.10878v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "从统一证明基准描述拆出；这是对齐误差的直接先例。"
+    },
+    {
+      "id": "C66",
+      "short_name": "MUSTARD",
+      "existing_record": "2402.08957v3",
+      "original_bibkey": "huang2024mustard",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2402.08957v3",
+      "bibliography": {
+        "title": "MUSTARD: Mastering Uniform Synthesis of Theorem and Proof Data",
+        "authors": [
+          "Yinya Huang",
+          "Xiaohan Lin",
+          "Zhengying Liu",
+          "Qingxing Cao",
+          "Huajian Xin",
+          "Haiming Wang",
+          "Zhenguo Li",
+          "Linqi Song",
+          "Xiaodan Liang"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2402.08957",
+        "metadata_source": "https://arxiv.org/html/2402.08957v3",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "数学问题、自然语言解答、Lean 3证明",
+      "verification_object": "数学问题、自然语言解答、Lean 3证明",
+      "checking_authority": "Lean Prover错误反馈和修复过滤；另有数据人工评价",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "形式侧可检的合成训练数据；正文流程以无错误消息采集有效项。",
+      "trust_boundary": "NL题目/解释与形式侧对应不由Lean自动检查；未审计实现中的admission检测。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1–3.3",
+        "§4.1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2402.08957v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "区分合成数据、Lean版本及自然语言质量评价。"
+    },
+    {
+      "id": "C67",
+      "short_name": "Leanabell-Prover-V2",
+      "existing_record": "2507.08649v1",
+      "original_bibkey": "ji2025leanabellproverv2",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2507.08649v1",
+      "bibliography": {
+        "title": "Leanabell-Prover-V2: Verifier-integrated Reasoning for Formal Theorem Proving via Reinforcement Learning",
+        "authors": [
+          "Xingguang Ji",
+          "Yahui Liu",
+          "Qi Wang",
+          "Jingyuan Zhang",
+          "Yang Yue",
+          "Rui Shi",
+          "Chenxi Sun",
+          "Fuzheng Zhang",
+          "Guorui Zhou",
+          "Kun Gai"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2507.08649",
+        "metadata_source": "https://arxiv.org/html/2507.08649v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "带多轮Lean反馈的证明推理轨迹",
+      "verification_object": "带多轮Lean反馈的证明推理轨迹",
+      "checking_authority": "Lean 4即时执行/验证；格式和最终编译状态组成RL奖励",
+      "checking_time": "RL训练及推理过程多轮Lean反馈",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "奖励与推理中检查改善指定证明任务的经验表现。",
+      "trust_boundary": "格式奖励不等于证明；复杂AST奖励未获预期收益，不能写成已证训练方法普遍提升。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "方法与Reward Design",
+        "Appendix B"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2507.08649v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "说明训练反馈与推理时验证并存，不归为只有离线训练。"
+    },
+    {
+      "id": "C68",
+      "short_name": "PALM",
+      "existing_record": "2409.14274v1",
+      "original_bibkey": "lu2024proof",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2409.14274v1",
+      "bibliography": {
+        "title": "Proof Automation with Large Language Models",
+        "authors": [
+          "Minghai Lu",
+          "Benjamin Delaware",
+          "Tianyi Zhang"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2409.14274",
+        "metadata_source": "https://arxiv.org/html/2409.14274v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Coq初始证明；符号修复及回溯后的证明",
+      "verification_object": "Coq初始证明；符号修复及回溯后的证明",
+      "checking_authority": "Coq执行/最终闭合；CoqHammer辅助修复",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "给定定理与环境的generate-then-repair证明自动化。",
+      "trust_boundary": "无剩余目标与最终检查决定成功；未独立运行全体CoqGym或审计全部可用假设。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3形成性研究",
+        "§4.1 Algorithm 1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2409.14274v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "应放证明修复机制段，不能仅当协作基准引用。"
+    },
+    {
+      "id": "C69",
+      "short_name": "LeanEuclid",
+      "existing_record": "2405.17216v1",
+      "original_bibkey": "murphy2024autoformalizing",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2405.17216v1",
+      "bibliography": {
+        "title": "Autoformalizing Euclidean Geometry",
+        "authors": [
+          "Logan Murphy",
+          "Kaiyu Yang",
+          "Jialiang Sun",
+          "Zhaoyu Li",
+          "Anima Anandkumar",
+          "Xujie Si"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2405.17216",
+        "metadata_source": "https://arxiv.org/pdf/2405.17216v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "几何陈述/证明及隐含图示关系的形式化",
+      "verification_object": "几何陈述/证明及隐含图示关系的形式化",
+      "checking_authority": "Lean框架与E³ SMT符号推理；等价检查、矛盾检查和近似比较",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "几何域中检查对照形式陈述，并补充隐含图示推理。",
+      "trust_boundary": "p.3脚注明言SMT结果尚不能完全由Lean认证；E公理/变体和域假设仍在信任边界。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1脚注1",
+        "§3.3",
+        "§4.1及Appendix A"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/pdf/2405.17216v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "不能写所有此类结果都只信任小内核；保留领域语义对齐检查先例。"
+    },
+    {
+      "id": "C70",
+      "short_name": "APOLLO (proof repair)",
+      "existing_record": "2505.05758v5",
+      "original_bibkey": "ospanov2025apollo",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2505.05758v5",
+      "bibliography": {
+        "title": "APOLLO: Automated LLM and Lean Collaboration for Advanced Formal Reasoning",
+        "authors": [
+          "Azim Ospanov",
+          "Farzan Farnia",
+          "Roozbeh Yousefzadeh"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2505.05758",
+        "metadata_source": "https://arxiv.org/html/2505.05758v5",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "草图、修复块及重组Lean证明",
+      "verification_object": "草图、修复块及重组Lean证明",
+      "checking_authority": "Lean REPL；Proof Assembler重验并要求无sorry/admit",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "中间可用占位符标记任务，最终应解除后才接受。",
+      "trust_boundary": "“编译无错误”在中间Sorrifier阶段仍有sorry；这不是最终证明成功。与assurance-case同名Apollo不同。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1–3.5",
+        "§4实验"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2505.05758v5"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "列为具体证明修复方法；明确中间与最终接受差异。"
+    },
+    {
+      "id": "C71",
+      "short_name": "DeepSeek-Prover-V2",
+      "existing_record": "2504.21801v2",
+      "original_bibkey": "ren2025deepseek",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2504.21801v2",
+      "bibliography": {
+        "title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition",
+        "authors": [
+          "Z. Z. Ren",
+          "Zhihong Shao",
+          "Junxiao Song",
+          "Huajian Xin",
+          "Haocheng Wang",
+          "Wanjia Zhao",
+          "Liyue Zhang",
+          "Zhe Fu",
+          "Qihao Zhu",
+          "Dejian Yang",
+          "Z. F. Wu",
+          "Zhibin Gou",
+          "Shirong Ma",
+          "Hongxuan Tang",
+          "Yuxuan Liu",
+          "Wenjun Gao",
+          "Daya Guo",
+          "Chong Ruan"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2504.21801",
+        "metadata_source": "https://arxiv.org/html/2504.21801v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "子目标分解、Lean完整证明和训练数据",
+      "verification_object": "子目标分解、Lean完整证明和训练数据",
+      "checking_authority": "Lean 4；最终证明奖励及早期结构一致性奖励",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "组合子目标后证明原目标；证明质量与自然语言CoT一致性另分。",
+      "trust_boundary": "修订版§3.2承认Lean 4.9.0 apply?接口未正确暴露sorry导致误计；另排除错误题目。不是发现Lean内核逻辑不健全。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2.1–2.3",
+        "§3.2 Reward Hacking",
+        "§3.3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2504.21801v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "加入接受接口失效的直接证据，固定版本/任务口径，不能只写小内核即充分。"
+    },
+    {
+      "id": "C72",
+      "short_name": "COPRA",
+      "existing_record": "2310.04353v5",
+      "original_bibkey": "thakur2023context",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2310.04353v5",
+      "bibliography": {
+        "title": "An In-Context Learning Agent for Formal Theorem-Proving",
+        "authors": [
+          "Amitayush Thakur",
+          "George Tsoukalas",
+          "Yeming Wen",
+          "Jimmy Xin",
+          "Swarat Chaudhuri"
+        ],
+        "year": 2023,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2310.04353",
+        "metadata_source": "https://arxiv.org/html/2310.04353v5",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "状态搜索中的Lean/Coq tactic序列",
+      "verification_object": "状态搜索中的Lean/Coq tactic序列",
+      "checking_authority": "目标证明环境执行并返回错误/子目标；状态回溯与检索",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "给定形式目标的证明搜索，多环境实现不表示跨逻辑结果互认。",
+      "trust_boundary": "搜索史和LLM置信度用于选动作，最终接受仍依赖各证明环境和可用前提。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2问题定义",
+        "§3 COPRA"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2310.04353v5"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "保留搜索实例，区分探索策略和裁决者。"
+    },
+    {
+      "id": "C73",
+      "short_name": "Rango / CoqStoq",
+      "existing_record": "2412.14063v3",
+      "original_bibkey": "thompson2024rango",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2412.14063v3",
+      "bibliography": {
+        "title": "Rango: Adaptive Retrieval-Augmented Proving for Automated Software Verification",
+        "authors": [
+          "Kyle Thompson",
+          "Nuno Saavedra",
+          "Pedro Carrott",
+          "Kevin Fisher",
+          "Alex Sanchez-Stern",
+          "Yuriy Brun",
+          "João F. Ferreira",
+          "Sorin Lerner",
+          "Emily First"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2412.14063",
+        "metadata_source": "https://arxiv.org/html/2412.14063v3",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "检索证明及premise辅助的Coq tactic",
+      "verification_object": "检索证明及premise辅助的Coq tactic",
+      "checking_authority": "Coq/CoqPyt环境；检查生成的完整证明",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "逐步项目内检索与rollout搜索；不是整项目由零开始共同验证。",
+      "trust_boundary": "主配置rollout，best-first是消融比较；既有环境/依赖的正确性不由检索相似度建立。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§III方法",
+        "§V-F搜索比较"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2412.14063v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "保留项目内检索实例；进一步比较时注明主配置rollout，best-first为消融。"
+    },
+    {
+      "id": "C74",
+      "short_name": "Hilbert",
+      "existing_record": "2509.22819v2",
+      "original_bibkey": "varambally2025hilbert",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2509.22819v2",
+      "bibliography": {
+        "title": "Hilbert: Recursively Building Formal Proofs with Informal Reasoning",
+        "authors": [
+          "Sumanth Varambally",
+          "Thomas Voice",
+          "Yanchao Sun",
+          "Zhifeng Chen",
+          "Rose Yu",
+          "Ke Ye"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2509.22819",
+        "metadata_source": "https://arxiv.org/html/2509.22819v2",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "非形式推理引导的Lean子目标及递归证明",
+      "verification_object": "非形式推理引导的Lean子目标及递归证明",
+      "checking_authority": "Kimina Lean Server，Lean/Mathlib v4.15.0；分解阶段检查结构，子目标证明后组合",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "给定形式问题的证明构造与基准经验提升。",
+      "trust_boundary": "分解启发式不保证存在可证分解或终止；已读算法不等于已重建全部最终证明。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1–3.2",
+        "Figure 1"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2509.22819v2"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "保留递归分解代表，不引申为系统运行时保障。"
+    },
+    {
+      "id": "C75",
+      "short_name": "Kimina-Prover Preview",
+      "existing_record": "2504.11354v1",
+      "original_bibkey": "wang2025kimina",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2504.11354v1",
+      "bibliography": {
+        "title": "Kimina-Prover Preview: Towards Large Formal Reasoning Models with Reinforcement Learning",
+        "authors": [
+          "Haiming Wang",
+          "Mert Unsal",
+          "Xiaohan Lin",
+          "Mantas Baksys",
+          "Junqi Liu",
+          "Marco Dos Santos",
+          "Flood Sung",
+          "Marina Vinyes",
+          "Zhenzhe Ying",
+          "Zekai Zhu",
+          "Jianqiao Lu",
+          "Hugues de Saxcé",
+          "Bolton Bailey",
+          "Chendong Song",
+          "Chenjun Xiao",
+          "Dehao Zhang",
+          "Ebony Zhang",
+          "Frederick Pu",
+          "Han Zhu",
+          "Jiawei Liu",
+          "Jonas Bayer",
+          "Julien Michel",
+          "Longhui Yu",
+          "Léo Dreyfus-Schmidt",
+          "Lewis Tunstall",
+          "Luigi Pagani",
+          "Moreira Machado",
+          "Pauline Bourigault",
+          "Ran Wang",
+          "Stanislas Polu",
+          "Thibaut Barroyer",
+          "Wen-Ding Li",
+          "Yazhe Niu",
+          "Yann Fleureau",
+          "Yangyang Hu",
+          "Zhouliang Yu",
+          "Zihan Wang",
+          "Zhilin Yang",
+          "Zhengying Liu",
+          "Jia Li"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2504.11354",
+        "metadata_source": "https://arxiv.org/html/2504.11354v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Lean证明与形式/非形式交错推理；训练用形式陈述",
+      "verification_object": "Lean证明与形式/非形式交错推理；训练用形式陈述",
+      "checking_authority": "Lean验证证明；形式化问题质量另用LLM评审",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "RL引导证明生成；不能把问题翻译质量归给同一二元证明奖励。",
+      "trust_boundary": "§2.1明确NL到形式陈述缺自动正确性oracle；CoT结构对齐不证明每句自然语言推理。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2.1–2.3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2504.11354v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "明确训练和输出接受两层，不借基准成绩推断自然语言忠实性。"
+    },
+    {
+      "id": "C76",
+      "short_name": "DeepSeek-Prover (initial)",
+      "existing_record": "2405.14333v1",
+      "original_bibkey": "xin2024deepseek",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2405.14333v1",
+      "bibliography": {
+        "title": "DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data",
+        "authors": [
+          "Huajian Xin",
+          "Daya Guo",
+          "Zhihong Shao",
+          "Zhizhou Ren",
+          "Qihao Zhu",
+          "Bo Liu",
+          "Chong Ruan",
+          "Wenda Li",
+          "Xiaodan Liang"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2405.14333",
+        "metadata_source": "https://arxiv.org/html/2405.14333v1",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "合成形式定理/证明对",
+      "verification_object": "合成形式定理/证明对",
+      "checking_authority": "Lean 4验证；LLM质量评分及尝试证明False以排除矛盾前提",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "形式有效训练数据与对空真的主动过滤机制。",
+      "trust_boundary": "未能找到False证明不等于前提一致性已证；评分/原题对应仍属不同评价。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§3.1–3.3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2405.14333v1"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "加入已有空真处理先例，避免把忠实性问题写成完全无人处理。"
+    },
+    {
+      "id": "C77",
+      "short_name": "BFS-Prover",
+      "existing_record": "2502.03438v3",
+      "original_bibkey": "xin2025prover",
+      "original_label_unchanged": "B_GEN_PROOF",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2502.03438v3",
+      "bibliography": {
+        "title": "BFS-Prover: Scalable Best-First Tree Search for LLM-based Automatic Theorem Proving",
+        "authors": [
+          "Ran Xin",
+          "Chenguang Xi",
+          "Jie Yang",
+          "Feng Chen",
+          "Hang Wu",
+          "Xia Xiao",
+          "Yifan Sun",
+          "Shen Zheng",
+          "Kai Shen"
+        ],
+        "year": 2025,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2502.03438",
+        "metadata_source": "https://arxiv.org/html/2502.03438v3",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "Lean 4搜索tactic与训练偏好对",
+      "verification_object": "Lean 4搜索tactic与训练偏好对",
+      "checking_authority": "LeanDojo执行Lean tactic；成功路径和编译错误形成SFT/DPO信号",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "BFS此处是Best-First Tree Search，含训练与搜索反馈。",
+      "trust_boundary": "概率分值安排搜索，不能代替完成目标的验证；负样本是编译失败而非所有语义无用动作。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2.1–2.3"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2502.03438v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "保留best-first代表，写清缩写与Rango主配置区别。"
+    },
+    {
+      "id": "C78",
+      "short_name": "Lean Workbook",
+      "existing_record": "2406.03847v3",
+      "original_bibkey": "ying2024lean",
+      "original_label_unchanged": "A_GEN_CHECKED",
+      "roles": [
+        "B/数据与评价"
+      ],
+      "scope": "正文既有引文定向核验",
+      "version_read": "arXiv:2406.03847v3",
+      "bibliography": {
+        "title": "Lean Workbook: A large-scale Lean problem set formalized from natural language math problems",
+        "authors": [
+          "Huaiyuan Ying",
+          "Zijian Wu",
+          "Yihan Geng",
+          "Zheng Yuan",
+          "Dahua Lin",
+          "Kai Chen"
+        ],
+        "year": 2024,
+        "venue": "arXiv（所读固定版本；不以存档年替代正式出版年）",
+        "doi": "10.48550/arXiv.2406.03847",
+        "metadata_source": "https://arxiv.org/html/2406.03847v3",
+        "doi_status": "原文/作者或机构页面；arXiv DOI为存档标识"
+      },
+      "generated": "NL–Lean 4陈述对与部分搜索到的证明",
+      "verification_object": "NL–Lean 4陈述对与部分搜索到的证明",
+      "checking_authority": "Lean编译、回译NLI和人工抽样/纠正；证明另搜另检",
+      "checking_time": "部署前构造/训练/评价或证明搜索；不据此推断系统部署后的在线执行",
+      "runtime_operation": "所读工作不据此建立已部署的动作门控",
+      "established_claim": "57,231对通过NLI的陈述，报告另证4,898；不是57K完整证明。",
+      "trust_boundary": "人工正确率是抽样；编译和NLI通过不等于全量忠实。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§4",
+        "§5.1–5.2"
+      ],
+      "primary_urls": [
+        "https://arxiv.org/html/2406.03847v3"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B6",
+      "manuscript_action": "将数据集性质与证明基准拆开，不能统一称所有条目kernel-checked proofs。"
+    },
+    {
+      "id": "C79",
+      "short_name": "CKA foundations (2011)",
+      "existing_record": null,
+      "original_bibkey": "hoare2011cka",
+      "original_label_unchanged": null,
+      "roles": [
+        "背景"
+      ],
+      "scope": "正文非生成式理论背景核验",
+      "version_read": "原期刊研究的作者/机构版本，详见来源",
+      "bibliography": {
+        "title": "Concurrent Kleene Algebra and its Foundations",
+        "authors": [
+          "Tony Hoare",
+          "Bernhard Möller",
+          "Georg Struth",
+          "Ian Wehrman"
+        ],
+        "year": 2011,
+        "venue": "Journal of Logic and Algebraic Programming 80, 266–296",
+        "doi": "10.1016/j.jlap.2011.04.005",
+        "metadata_source": "https://www.cs.cornell.edu/courses/cs6861/2024sp/Papers/Hoare2.pdf",
+        "doi_status": "原文及作者/机构书目信息"
+      },
+      "generated": "不涉及生成式模型；定义并发代数及迹模型",
+      "verification_object": "不涉及生成式模型；定义并发代数及迹模型",
+      "checking_authority": "代数推导、模型构造；部分小引理使用自动定理工具",
+      "checking_time": "方法论/语义背景；证明及应用时机需另定",
+      "runtime_operation": "背景文献；无LLM在线门控实例",
+      "established_claim": "弱交换律和有条件的rely/guarantee推理；§8还讨论omega扩展。",
+      "trust_boundary": "代数结构不是在线检查器；模型、公理和所证性质必须固定。不能由迹包含直接得到进展，也不能说此代数研究完全不能处理无限行为。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§1–2弱交换律与语义",
+        "§8 Definitions 8.1–8.2",
+        "§9 Hoare三元组相关段落"
+      ],
+      "primary_urls": [
+        "https://www.cs.cornell.edu/courses/cs6861/2024sp/Papers/Hoare2.pdf"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B7",
+      "manuscript_action": "支撑§8/bridge组合语义，修正对CKA适用阶段及进展能力的绝对化。"
+    },
+    {
+      "id": "C80",
+      "short_name": "CKA developments (2016)",
+      "existing_record": null,
+      "original_bibkey": "hoare2016cka",
+      "original_label_unchanged": null,
+      "roles": [
+        "背景"
+      ],
+      "scope": "正文非生成式理论背景核验",
+      "version_read": "原期刊研究的作者/机构版本，详见来源",
+      "bibliography": {
+        "title": "Developments in concurrent Kleene algebra",
+        "authors": [
+          "Tony Hoare",
+          "Stephan van Staden",
+          "Bernhard Möller",
+          "Georg Struth",
+          "Huibiao Zhu"
+        ],
+        "year": 2016,
+        "venue": "Journal of Logical and Algebraic Methods in Programming 85(4), 617–636",
+        "doi": "10.1016/j.jlamp.2015.09.012",
+        "metadata_source": "https://opus.bibliothek.uni-augsburg.de/opus4/files/68900/68900.pdf",
+        "doi_status": "原文及作者/机构书目信息"
+      },
+      "generated": "不涉及生成式模型；迹、程序、规格三个层次的代数",
+      "verification_object": "不涉及生成式模型；迹、程序、规格三个层次的代数",
+      "checking_authority": "代数律及模型论证；未提供通用线上runtime checker",
+      "checking_time": "方法论/语义背景；证明及应用时机需另定",
+      "runtime_operation": "背景文献；无LLM在线门控实例",
+      "established_claim": "将包含关系解释为精化并用于软件设计推理。",
+      "trust_boundary": "顶层含不可计算操作；抽象精化不自动成为可执行监测算法。2014同名会议稿作者数不同，不能混作所读2016期刊版。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "Abstract",
+        "§1.1",
+        "三层模型概述"
+      ],
+      "primary_urls": [
+        "https://opus.bibliothek.uni-augsburg.de/opus4/files/68900/68900.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S2352220815000942"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B7",
+      "manuscript_action": "保留CKA理论背景，分开精化、监测综合和在线执行。"
+    },
+    {
+      "id": "C81",
+      "short_name": "Kleene algebra with tests",
+      "existing_record": null,
+      "original_bibkey": "kozen1997kat",
+      "original_label_unchanged": null,
+      "roles": [
+        "背景"
+      ],
+      "scope": "正文非生成式理论背景核验",
+      "version_read": "原期刊研究的作者/机构版本，详见来源",
+      "bibliography": {
+        "title": "Kleene algebra with tests",
+        "authors": [
+          "Dexter Kozen"
+        ],
+        "year": 1997,
+        "venue": "ACM TOPLAS 19(3), 427–443",
+        "doi": "10.1145/256167.256195",
+        "metadata_source": "https://www.cs.cornell.edu/~kozen/Papers/kat.pdf",
+        "doi_status": "原文及作者/机构书目信息"
+      },
+      "generated": "不涉及生成式模型；程序及布尔tests的等式系统",
+      "verification_object": "不涉及生成式模型；程序及布尔tests的等式系统",
+      "checking_authority": "KAT代数推理；本文非在线门控实现",
+      "checking_time": "方法论/语义背景；证明及应用时机需另定",
+      "runtime_operation": "背景文献；无LLM在线门控实例",
+      "established_claim": "用tests刻画条件/while，并证明程序变换等价。",
+      "trust_boundary": "test是语义谓词/子恒等关系，不能由其存在推断实际软件采样、权限检查或阻断机制已实现。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§1引言",
+        "作者KAT项目介绍"
+      ],
+      "primary_urls": [
+        "https://www.cs.cornell.edu/~kozen/Papers/kat.pdf",
+        "https://www.cs.cornell.edu/projects/KAT/"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B7",
+      "manuscript_action": "以理论背景保留，勿把tests翻译成已部署的安全检查。"
+    },
+    {
+      "id": "C82",
+      "short_name": "Runtime verification overview",
+      "existing_record": null,
+      "original_bibkey": "leucker2009runtime",
+      "original_label_unchanged": null,
+      "roles": [
+        "背景"
+      ],
+      "scope": "正文非生成式理论背景核验",
+      "version_read": "原期刊研究的作者/机构版本，详见来源",
+      "bibliography": {
+        "title": "A Brief Account of Runtime Verification",
+        "authors": [
+          "Martin Leucker",
+          "Christian Schallhart"
+        ],
+        "year": 2009,
+        "venue": "Journal of Logic and Algebraic Programming 78(5), 293–303",
+        "doi": "10.1016/j.jlap.2008.08.004",
+        "metadata_source": "https://christian.schallhart.net/publications/2009--jlap--a-brief-account-of-runtime-verification.pdf",
+        "doi_status": "原文及作者/机构书目信息"
+      },
+      "generated": "不涉及生成式模型；运行观测相对性质的监测",
+      "verification_object": "不涉及生成式模型；运行观测相对性质的监测",
+      "checking_authority": "由规格产生或实现的monitor；具体语义决定判定",
+      "checking_time": "方法论/语义背景；证明及应用时机需另定",
+      "runtime_operation": "背景文献；无LLM在线门控实例",
+      "established_claim": "RV分析一条运行；与改变执行的扩展分别讨论。",
+      "trust_boundary": "有限前缀对某些未来性质只能给不确定判定；检测不自动阻止违规。",
+      "review_depth": "定向核对所列原文章节中的机制、接受条件及相关限制；未做全部证明/实现审计或独立复现",
+      "locators": [
+        "§2定义与§2.1",
+        "§3有限前缀/多值语义",
+        "§5概述"
+      ],
+      "primary_urls": [
+        "https://christian.schallhart.net/publications/2009--jlap--a-brief-account-of-runtime-verification.pdf",
+        "https://www.isp.uni-luebeck.de/research/publications/brief-account-runtime-verification"
+      ],
+      "prior_evidence": [],
+      "review_date": "2026-09-11",
+      "independently_reproduced": false,
+      "batch": "B7",
+      "manuscript_action": "给§8运行时检查/强制区分补上直接来源。"
+    }
+  ],
+  "batches": [
+    {
+      "id": "B1",
+      "date": "2026-09-11",
+      "ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "note": "9条定向核对/深化、7条复用核验"
+    },
+    {
+      "id": "B2",
+      "date": "2026-09-11",
+      "ids": [
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28"
+      ],
+      "note": "原正文引文12篇；方法、保证边界及引文用途定向核对；未复跑"
+    },
+    {
+      "id": "B3",
+      "date": "2026-09-11",
+      "ids": [
+        "C29",
+        "C30",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40"
+      ],
+      "note": "原正文12篇：§7分析例子、§8信号方法及§4/5关键论断；核方法/边界/固定版本元数据，未复现"
+    },
+    {
+      "id": "B4",
+      "date": "2026-09-11",
+      "ids": [
+        "C41",
+        "C42",
+        "C43",
+        "C44",
+        "C45",
+        "C46",
+        "C47",
+        "C48"
+      ],
+      "note": "规格小节7个已有引用键全部建立内容记录；另读AssertionBench正式版深化既有纠正。8篇均来自原语料/正文，未复现。"
+    },
+    {
+      "id": "B5",
+      "date": "2026-09-11",
+      "ids": [
+        "C49",
+        "C50",
+        "C51",
+        "C52",
+        "C53",
+        "C54",
+        "C55",
+        "C56",
+        "C57",
+        "C58",
+        "C59",
+        "C60",
+        "C61",
+        "C62"
+      ],
+      "note": "§4余下14项：需求时序、硬件与代码安全；全部所标章节定向核验。"
+    },
+    {
+      "id": "B6",
+      "date": "2026-09-11",
+      "ids": [
+        "C63",
+        "C64",
+        "C65",
+        "C66",
+        "C67",
+        "C68",
+        "C69",
+        "C70",
+        "C71",
+        "C72",
+        "C73",
+        "C74",
+        "C75",
+        "C76",
+        "C77",
+        "C78"
+      ],
+      "note": "§5余下16项：训练、搜索、分解及数据；核查语义对齐与真实接受条件。"
+    },
+    {
+      "id": "B7",
+      "date": "2026-09-11",
+      "ids": [
+        "C79",
+        "C80",
+        "C81",
+        "C82"
+      ],
+      "note": "§8余下4项经典背景：CKA、KAT及RV；不计生成式研究。"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "amr-forge-diagnostic/v1",
+  "mode": "live",
+  "created_at_utc": "2026-09-17T06:03:06.677132+00:00",
+  "conditions": [
+    [
+      "D8-O",
+      8,
+      "original"
+    ],
+    [
+      "D12-O",
+      12,
+      "original"
+    ],
+    [
+      "D8-F",
+      8,
+      "enhanced"
+    ],
+    [
+      "D12-F",
+      12,
+      "enhanced"
+    ]
+  ],
+  "max_repairs": 4,
+  "max_calls": 16,
+  "max_retries": 0,
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "model_config": {
+    "record_mode": "live",
+    "provider": "deepseek",
+    "model_id": "deepseek-flash",
+    "model_revision": "provider-not-exposed",
+    "decoding": {
+      "temperature": 0,
+      "thinking": {
+        "type": "disabled"
+      },
+      "stream": false
+    },
+    "max_output_tokens": 2048,
+    "transport": "direct-https-chat-completions-single-post"
+  },
+  "source_spec": "amr-supervisor-obligations/v1.1",
+  "seed": {
+    "sample_id": "P2-R1",
+    "old_sequence": 4,
+    "sha256": "7b263c1eabf5a5ea02fc1e45f01217b629d538a8f667bd28b16a31a36374894c"
+  },
+  "maximum_payload_bytes": 65536,
+  "physics_selection": "first accepted condition in D8-O,D12-O,D8-F,D12-F order, first accepted repair; exploratory only",
+  "physics_cases": [
+    "normal_A",
+    "normal_B",
+    "temporary",
+    "blackout",
+    "permanent"
+  ]
+}

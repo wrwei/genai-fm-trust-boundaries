@@ -1,0 +1,31 @@
+{
+  "condition": "D12-O",
+  "repair": 2,
+  "started_at_utc": "2026-09-17T06:03:22.473934+00:00",
+  "finished_at_utc": "2026-09-17T06:03:24.858252+00:00",
+  "usage_summary": {
+    "input_tokens": 1935,
+    "output_tokens": 241,
+    "cache_hit_tokens": 1024,
+    "cache_miss_tokens": 911
+  },
+  "fatal": null,
+  "accepted": false,
+  "provider_model": "deepseek-flash",
+  "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "provider_request_id": "629861c3-7b5b-4486-8639-6357d3ffefc2",
+  "files_sha256": {
+    "assessment.json.gz": "a62dc242ddf136f067910e8b6ca16498588bdf90e62965c6529f312bc2334f8f",
+    "dispatch-intent.json": "0bf3c74ff1ed2d59c16826359268991e2afcab7bc8b9b9766990a250d9a0e2ef",
+    "dispatch.json": "d8cfa1e1650a72a8a77fb0d5bd228e53d91e9ffcc62e98169f54a3c13cfb45cc",
+    "feedback.json": "4fb2ab1a60fec9bc71366832ecaee3c02b09fa45cdcf2e1245bf0bed6010782f",
+    "http-body.bin": "3eaffb8f2e7e58c0175a3680952e990c526bc2e345db90b93085dfc28778843b",
+    "http-request.json": "4ee738a50184f021978a7e1ac2be5ab1bb03b97c6d44aa3916ecb78277287613",
+    "preflight.json": "40d1406c26efe5e76bfcd29328901d4f0b5a5dc127657150c72fe6844672c328",
+    "prompt.txt": "80f09aec4928fb0355fefed7e03dde8cfbd27f3b44b0685a9359b72f0582d0ac",
+    "request.json": "4f2f1b7567304f74da7dc429c5a36deefc3ba27b8328fe03761494e5786be14d",
+    "response.bin": "dfe475a7dc75a684b3f4f6bc05a34e2eb34dabc61e328f3fc613664ff247f311",
+    "transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "worker-claim.json": "110b0d224df0f8248326219371c85ab82aa9ac032475104f0a92907cbd9470c1"
+  }
+}

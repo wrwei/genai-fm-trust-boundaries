@@ -1,0 +1,4 @@
+session Runtime_Interface = Bridge_Algebra_Repair +
+  options [document = false, threads = 2, timeout = 180]
+  theories
+    Runtime_Interface

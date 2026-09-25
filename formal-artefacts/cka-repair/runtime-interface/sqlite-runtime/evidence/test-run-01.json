@@ -1,0 +1,18 @@
+{
+  "command_argv": [
+    "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/sqlite-runtime/test_runtime.py"
+  ],
+  "return_code": 1,
+  "started_utc": "2026-09-13T09:28:12.846191+00:00",
+  "finished_utc": "2026-09-13T09:28:18.176867+00:00",
+  "source_sha256": {
+    "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+    "ingress.py": "e54e247cf553db70d7296bfb2482a4d703f148748b32ccff7709b46e7b762cb8",
+    "ledger.py": "e73ccaf15bfad705d6b4654b1ccb93bc35de350698bc8086054fdadfbdab2c36",
+    "test_runtime.py": "4df20f1e9bb4b7b1eeb04281a5bbc21b7d19856e31d85887fd97fee4413a05a4"
+  }
+}

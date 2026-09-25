@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+# written by `python literature/lit_search.py --cached`
+literature/corpus_core.json

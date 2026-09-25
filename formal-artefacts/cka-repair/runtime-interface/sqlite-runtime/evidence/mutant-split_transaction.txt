@@ -1,0 +1,24 @@
+test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) ... 
+  test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) (point='after_effect') ... FAIL
+  test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) (point='after_state') ... FAIL
+
+======================================================================
+FAIL: test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) (point='after_effect')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Temp\runtime-mutant-amxolcoz\test_runtime.py", line 126, in test_crash_recovery
+    self.assertEqual(before["balance"], 7 if committed else 0)
+AssertionError: 7 != 0
+
+======================================================================
+FAIL: test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) (point='after_state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Temp\runtime-mutant-amxolcoz\test_runtime.py", line 126, in test_crash_recovery
+    self.assertEqual(before["balance"], 7 if committed else 0)
+AssertionError: 7 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 1.243s
+
+FAILED (failures=2)

@@ -1,0 +1,5 @@
+session AMR_Advisory_V2 = Bridge_Algebra_Repair +
+ options [document=false, threads=2, timeout=300]
+ theories AMR_Protocol
+
+ export_files (in "export") "*:core-transitions.csv" "*:selector.csv" "*:proof-audit.txt"

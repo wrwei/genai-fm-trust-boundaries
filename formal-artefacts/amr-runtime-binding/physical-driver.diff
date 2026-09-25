@@ -1,0 +1,86 @@
+--- v2/run_episode
++++ binding/run_episode
+@@ -1,21 +1,28 @@
+-def run_episode(*,advice=None,center_clear=False,wait_advice=False,pedestrian='none',horizon=120.,emit=None):
++def run_episode(*,advice_events=(),pedestrian='none',horizon=120.,emit=None):
+     p=effective_parameters(); source=SourceController.from_selected(); stats=empty_stats()
+     robots={r:RobotPlant(p['map']['route_'+r][1:]) for r in 'AB'}
+     goals={r:tuple(p['map']['route_'+r][-1]) for r in 'AB'}
+     intent={r:'Brake' for r in 'AB'}; since={r:0. for r in 'AB'}; last={r:None for r in 'AB'}
+     modes={r:'Idle' for r in 'AB'}; obs={r:None for r in 'AB'}
+     sensor={}; commands={}; released=set(); completed=set(); stopped=set()
+-    s=Core(fresh=False); generation=0; permission_version=0; trigger=None; seq=0
+-    mailbox=AdviceMailbox('physical-request','fixed-A-B-v1')
+-    if advice is not None: mailbox.receive('physical-request','fixed-A-B-v1',json.dumps({'prefer':advice}))
+-    latched=mailbox.latch()
++    runtime=Runtime('req','ctx',source=source)
++    s=runtime.core; generation=0; permission_version=0; trigger=None; seq=0
++    deliveries={}
++    for at,req,ctx,payload in advice_events:
++        if at < 0 or abs(at/.01-round(at/.01)) > 1e-7:
++            raise ValueError('advice times must be nonnegative 10ms ticks')
++        deliveries.setdefault(round(at/.01),[]).append((req,ctx,payload))
+     def record(kind,t,**data):
+         if emit: emit(dict(kind=kind,time=round(t,10),**data))
+     def transition(inp,t):
+         nonlocal s,generation
+-        before=s; s,events=step(s,inp)
++        before=s; bound=runtime.local(inp); s=runtime.core; events=bound['events']
++        record('adapter',t,**bound)
++        actual_input=bound['event'][1]
++        if bound['source'] is not None:
++            record('source_select',t,**bound['source'],mailbox=bound['source']['latch'])
+         accepted=reference_accepts(before,events)
+-        row=dict(before=asdict(before),input=inp,after=asdict(s),events=events,reference_accepted=accepted,
++        row=dict(before=asdict(before),input=actual_input,after=asdict(s),events=events,reference_accepted=accepted,
+                  permission_version=permission_version,reservation_generation=generation)
+         if not accepted:stats['reference_violations'].append(dict(time=t,**row))
+         for event in events:
+@@ -23,13 +30,16 @@
+                 generation+=1; stats['grant_order'].append(event[1])
+         record('protocol',t,**row)
+         return events
++    transition(('RequestAdvice',),0)
++    transition(('Observe',False,False),0)
+     for r in 'AB':transition(('Register',r),0)
+-    record('mailbox',0,**latched)
+     halt_bound=(1+.05+.5*.27)/.8
+     def present(t):return trigger is not None and t>=trigger and (pedestrian=='permanent' or t<trigger+7)
+     stats.update(pedestrian_trigger=None,pedestrian_brakes=0,resumes_after_pedestrian=0,pedestrian_brake_evidence=[])
+     for tick in range(round(horizon/.01)+1):
+         t=round(tick*.01,10)
++        for req,ctx,payload in deliveries.pop(tick,[]):
++            record('adapter',t,**runtime.receive(req,ctx,payload))
+         if pedestrian!='none' and trigger is None and s.owner:
+             r=s.owner; x,y,h=robots[r].pose
+             aligned=abs(math.atan2(math.sin(h-(0 if r=='A' else math.pi)),math.cos(h-(0 if r=='A' else math.pi))))<1e-9
+@@ -69,7 +79,7 @@
+             for r in 'AB':
+                 if r in completed:continue
+                 o=obs[r]; fresh=usable(o,r,t,p)
+-                clear=(fresh and (o.pose[0]>18 if r=='A' else o.pose[0]<6)) if center_clear else body_clear(o,r,t,p)
++                clear=body_clear(o,r,t,p)
+                 facts=dict(ObservationUsable=fresh,PedestrianBlocked=bool(o.blocked) if fresh else False,
+                            OwnReservation=s.owner==r,Released=r in released,BodyClearOfZ=bool(clear),
+                            Halted=intent[r]=='Brake' and t-since[r]>=halt_bound,
+@@ -111,11 +121,8 @@
+                                      permission_version=permission_version)
+                         commands.setdefault(tick+10,[]).append(command); last[r]=movement
+                         record('command_issued',t,command=command)
+-            if s.owner is None and not (wait_advice and latched['advice'] is None):
+-                selected,decision=source.select(s,latched['advice'])
+-                record('source_select',t,**decision,mailbox=latched)
+-                transition(('Validate',selected),t);transition(('Commit',),t)
+-            elif wait_advice and s.owner is None:record('wait_advice',t,source_select_called=False,current_state=asdict(s))
++            if s.owner is None:
++                transition(('Validate',),t);transition(('Commit',),t)
+         if len(completed)==2 or tick==round(horizon/.01):break
+         pieces={r:robots[r].advance(.01,intent[r]) for r in 'AB'}
+         assess_interval(t,.01,pieces,'none',stats)
+@@ -140,5 +147,5 @@
+     score=score_completion(completed,{r:(robots[r].pose,robots[r].speed) for r in 'AB'},goals)
+     stats.update(**score,termination='complete' if len(score['completed_robots'])==2 else 'horizon',time=t,
+                  final_poses={r:robots[r].pose for r in 'AB'},final_speeds={r:robots[r].speed for r in 'AB'},source_id=source.identity,
+-                 config=dict(advice=advice,center_clear=center_clear,wait_advice=wait_advice,pedestrian=pedestrian,horizon=horizon))
++                 config=dict(advice_events=advice_events,pedestrian=pedestrian,horizon=horizon))
+     return stats

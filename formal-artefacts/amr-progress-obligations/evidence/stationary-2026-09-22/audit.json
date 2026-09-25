@@ -1,0 +1,57 @@
+{
+  "expected_outcome_observed": true,
+  "counts": {
+    "adapter": 2410,
+    "protocol": 2410,
+    "observation_sample": 4802,
+    "source_step": 4802,
+    "command_issued": 3,
+    "source_select": 2,
+    "motion": 12000,
+    "observation_received": 4800,
+    "command_applied": 3
+  },
+  "zero_motion_intervals": 24000,
+  "applied_proceed": [
+    {
+      "robot": "A",
+      "time": 1.6
+    }
+  ],
+  "first_exact_plant_refinement_failure": {
+    "time": 1.6,
+    "robot": "A",
+    "intent": "Proceed",
+    "exact_reference_pieces": [
+      {
+        "duration": 0.01,
+        "start_pose": [
+          4.0,
+          -2.0,
+          0.0
+        ],
+        "initial_speed": 0.0,
+        "acceleration": 0.5,
+        "angular_velocity": 0.0,
+        "point_speed_bound": 0.005
+      }
+    ],
+    "actual_stationary_pieces": [
+      {
+        "duration": 0.01,
+        "start_pose": [
+          4.0,
+          -2.0,
+          0.0
+        ],
+        "initial_speed": 0.0,
+        "acceleration": 0.0,
+        "angular_velocity": 0.0,
+        "point_speed_bound": 0.0
+      }
+    ]
+  },
+  "upper_speed_acceleration_envelope": true,
+  "completed_robots": [],
+  "scope": "constructed stationary mutation; HOL adapter/source-link checks pass; exact reference plant replay rejects"
+}

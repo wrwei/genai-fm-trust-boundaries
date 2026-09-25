@@ -1,0 +1,3969 @@
+{
+  "passed": true,
+  "straight_cases": [
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 0.05547001962252291,
+            "cruise_distance": 0.0,
+            "up_time": 0.22188007849009164,
+            "cruise_time": 0.0,
+            "down_time": 0.13867504905630726,
+            "duration": 0.3605551275463989,
+            "upper_bound": 1.645,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.3605551275463989,
+        "upper_bound": 1.645,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.3605551275463989,
+      "actual_distance": 0.01,
+      "actual_terminal_pose": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.22188007849009164,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.05547001962252291
+        },
+        {
+          "duration": 0.13867504905630726,
+          "start_pose": [
+            0.006153846153846154,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.05547001962252291,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.05547001962252291
+        },
+        {
+          "duration": 1.534444872453601,
+          "start_pose": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 0.05547001962252291,
+            "cruise_distance": 0.0,
+            "up_time": 0.22188007849009164,
+            "cruise_time": 0.0,
+            "down_time": 0.13867504905630726,
+            "duration": 0.3605551275463989,
+            "upper_bound": 3.26,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.3605551275463989,
+        "upper_bound": 3.26,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.3605551275463989,
+      "actual_distance": 0.01,
+      "actual_terminal_pose": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.22188007849009164,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.05547001962252291
+        },
+        {
+          "duration": 0.13867504905630726,
+          "start_pose": [
+            0.006153846153846154,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.05547001962252291,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.05547001962252291
+        },
+        {
+          "duration": 3.149444872453601,
+          "start_pose": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 0.06172133998483676,
+            "cruise_distance": 0.0,
+            "up_time": 0.24688535993934704,
+            "cruise_time": 0.0,
+            "down_time": 0.07715167498104594,
+            "duration": 0.324037034920393,
+            "upper_bound": 1.3325,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.324037034920393,
+        "upper_bound": 1.3325,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.324037034920393,
+      "actual_distance": 0.009999999999999998,
+      "actual_terminal_pose": [
+        0.009999999999999998,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.24688535993934704,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06172133998483676
+        },
+        {
+          "duration": 0.07715167498104594,
+          "start_pose": [
+            0.007619047619047618,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.06172133998483676,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06172133998483676
+        },
+        {
+          "duration": 1.258462965079607,
+          "start_pose": [
+            0.009999999999999998,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 0.06172133998483676,
+            "cruise_distance": 0.0,
+            "up_time": 0.24688535993934704,
+            "cruise_time": 0.0,
+            "down_time": 0.07715167498104594,
+            "duration": 0.324037034920393,
+            "upper_bound": 2.635,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.324037034920393,
+        "upper_bound": 2.635,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.324037034920393,
+      "actual_distance": 0.009999999999999998,
+      "actual_terminal_pose": [
+        0.009999999999999998,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.24688535993934704,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06172133998483676
+        },
+        {
+          "duration": 0.07715167498104594,
+          "start_pose": [
+            0.007619047619047618,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.06172133998483676,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06172133998483676
+        },
+        {
+          "duration": 2.560962965079607,
+          "start_pose": [
+            0.009999999999999998,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 0.06666666666666667,
+            "cruise_distance": 0.0,
+            "up_time": 0.13333333333333333,
+            "cruise_time": 0.0,
+            "down_time": 0.16666666666666666,
+            "duration": 0.3,
+            "upper_bound": 1.145,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.3,
+        "upper_bound": 1.145,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.3,
+      "actual_distance": 0.009999999999999998,
+      "actual_terminal_pose": [
+        0.009999999999999998,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.13333333333333333,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06666666666666667
+        },
+        {
+          "duration": 0.16666666666666666,
+          "start_pose": [
+            0.0044444444444444444,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.06666666666666667,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06666666666666667
+        },
+        {
+          "duration": 1.095,
+          "start_pose": [
+            0.009999999999999998,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 0.06666666666666667,
+            "cruise_distance": 0.0,
+            "up_time": 0.13333333333333333,
+            "cruise_time": 0.0,
+            "down_time": 0.16666666666666666,
+            "duration": 0.3,
+            "upper_bound": 2.26,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.3,
+        "upper_bound": 2.26,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.3,
+      "actual_distance": 0.009999999999999998,
+      "actual_terminal_pose": [
+        0.009999999999999998,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.13333333333333333,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06666666666666667
+        },
+        {
+          "duration": 0.16666666666666666,
+          "start_pose": [
+            0.0044444444444444444,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.06666666666666667,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.06666666666666667
+        },
+        {
+          "duration": 2.21,
+          "start_pose": [
+            0.009999999999999998,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 0.07844645405527362,
+            "cruise_distance": 0.0,
+            "up_time": 0.15689290811054724,
+            "cruise_time": 0.0,
+            "down_time": 0.09805806756909202,
+            "duration": 0.25495097567963926,
+            "upper_bound": 0.8325,
+            "integrated_distance": 0.010000000000000002
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.25495097567963926,
+        "upper_bound": 0.8325,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.25495097567963926,
+      "actual_distance": 0.010000000000000002,
+      "actual_terminal_pose": [
+        0.010000000000000002,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.15689290811054724,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07844645405527362
+        },
+        {
+          "duration": 0.09805806756909202,
+          "start_pose": [
+            0.006153846153846155,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.07844645405527362,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07844645405527362
+        },
+        {
+          "duration": 0.8275490243203607,
+          "start_pose": [
+            0.010000000000000002,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 0.07844645405527362,
+            "cruise_distance": 0.0,
+            "up_time": 0.15689290811054724,
+            "cruise_time": 0.0,
+            "down_time": 0.09805806756909202,
+            "duration": 0.25495097567963926,
+            "upper_bound": 1.635,
+            "integrated_distance": 0.010000000000000002
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.25495097567963926,
+        "upper_bound": 1.635,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.25495097567963926,
+      "actual_distance": 0.010000000000000002,
+      "actual_terminal_pose": [
+        0.010000000000000002,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.15689290811054724,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07844645405527362
+        },
+        {
+          "duration": 0.09805806756909202,
+          "start_pose": [
+            0.006153846153846155,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.07844645405527362,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07844645405527362
+        },
+        {
+          "duration": 1.6300490243203607,
+          "start_pose": [
+            0.010000000000000002,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 0.07559289460184544,
+            "cruise_distance": 0.0,
+            "up_time": 0.07559289460184544,
+            "cruise_time": 0.0,
+            "down_time": 0.1889822365046136,
+            "duration": 0.264575131106459,
+            "upper_bound": 0.895,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.264575131106459,
+        "upper_bound": 0.895,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.2645751311064591,
+      "actual_distance": 0.010000000000000002,
+      "actual_terminal_pose": [
+        0.010000000000000002,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.07559289460184546,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07559289460184546
+        },
+        {
+          "duration": 0.18898223650461363,
+          "start_pose": [
+            0.002857142857142858,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.07559289460184546,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07559289460184546
+        },
+        {
+          "duration": 0.880424868893541,
+          "start_pose": [
+            0.010000000000000002,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 0.07559289460184544,
+            "cruise_distance": 0.0,
+            "up_time": 0.07559289460184544,
+            "cruise_time": 0.0,
+            "down_time": 0.1889822365046136,
+            "duration": 0.264575131106459,
+            "upper_bound": 1.76,
+            "integrated_distance": 0.009999999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.264575131106459,
+        "upper_bound": 1.76,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.2645751311064591,
+      "actual_distance": 0.010000000000000002,
+      "actual_terminal_pose": [
+        0.010000000000000002,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.07559289460184546,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07559289460184546
+        },
+        {
+          "duration": 0.18898223650461363,
+          "start_pose": [
+            0.002857142857142858,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.07559289460184546,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.07559289460184546
+        },
+        {
+          "duration": 1.7454248688935408,
+          "start_pose": [
+            0.010000000000000002,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 0.09428090415820634,
+            "cruise_distance": 0.0,
+            "up_time": 0.09428090415820634,
+            "cruise_time": 0.0,
+            "down_time": 0.11785113019775792,
+            "duration": 0.21213203435596426,
+            "upper_bound": 0.5825,
+            "integrated_distance": 0.01
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.21213203435596426,
+        "upper_bound": 0.5825,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.21213203435596426,
+      "actual_distance": 0.01,
+      "actual_terminal_pose": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.09428090415820634,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.09428090415820634
+        },
+        {
+          "duration": 0.11785113019775792,
+          "start_pose": [
+            0.0044444444444444444,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.09428090415820634,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.09428090415820634
+        },
+        {
+          "duration": 0.6203679656440357,
+          "start_pose": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 0.01,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 0.09428090415820634,
+            "cruise_distance": 0.0,
+            "up_time": 0.09428090415820634,
+            "cruise_time": 0.0,
+            "down_time": 0.11785113019775792,
+            "duration": 0.21213203435596426,
+            "upper_bound": 1.135,
+            "integrated_distance": 0.01
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 0.21213203435596426,
+        "upper_bound": 1.135,
+        "total_length": 0.01
+      },
+      "actual_moving_duration": 0.21213203435596426,
+      "actual_distance": 0.01,
+      "actual_terminal_pose": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.09428090415820634,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.09428090415820634
+        },
+        {
+          "duration": 0.11785113019775792,
+          "start_pose": [
+            0.0044444444444444444,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.09428090415820634,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.09428090415820634
+        },
+        {
+          "duration": 1.172867965644036,
+          "start_pose": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 0.5,
+            "cruise_distance": 0.8125,
+            "up_time": 2.0,
+            "cruise_time": 1.625,
+            "down_time": 1.25,
+            "duration": 4.875,
+            "upper_bound": 4.875,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.875,
+        "upper_bound": 4.875,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.875,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.625,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            1.3125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 0.7071067811865476,
+            "cruise_distance": 0.0,
+            "up_time": 2.8284271247461903,
+            "cruise_time": 0.0,
+            "down_time": 1.7677669529663689,
+            "duration": 4.596194077712559,
+            "upper_bound": 4.875,
+            "integrated_distance": 1.6250000000000004
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.596194077712559,
+        "upper_bound": 4.875,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.596194077712559,
+      "actual_distance": 1.6250000000000004,
+      "actual_terminal_pose": [
+        1.6250000000000004,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.8284271247461903,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.7071067811865476
+        },
+        {
+          "duration": 1.7677669529663689,
+          "start_pose": [
+            1.0000000000000002,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.7071067811865476,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.7071067811865476
+        },
+        {
+          "duration": 0.5288059222874408,
+          "start_pose": [
+            1.6250000000000004,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 0.5,
+            "cruise_distance": 0.96875,
+            "up_time": 2.0,
+            "cruise_time": 1.9375,
+            "down_time": 0.625,
+            "duration": 4.5625,
+            "upper_bound": 4.5625,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.5625,
+        "upper_bound": 4.5625,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.5625,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.9375,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            1.46875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 0.7867957924694432,
+            "cruise_distance": 0.0,
+            "up_time": 3.147183169877773,
+            "cruise_time": 0.0,
+            "down_time": 0.983494740586804,
+            "duration": 4.130677910464577,
+            "upper_bound": 4.25,
+            "integrated_distance": 1.6250000000000004
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.130677910464577,
+        "upper_bound": 4.25,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.130677910464577,
+      "actual_distance": 1.6250000000000004,
+      "actual_terminal_pose": [
+        1.6250000000000004,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 3.147183169877773,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.7867957924694432
+        },
+        {
+          "duration": 0.983494740586804,
+          "start_pose": [
+            1.2380952380952384,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.7867957924694432,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.7867957924694432
+        },
+        {
+          "duration": 0.3693220895354232,
+          "start_pose": [
+            1.6250000000000004,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 0.5,
+            "cruise_distance": 1.0625,
+            "up_time": 1.0,
+            "cruise_time": 2.125,
+            "down_time": 1.25,
+            "duration": 4.375,
+            "upper_bound": 4.375,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.375,
+        "upper_bound": 4.375,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.375,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 2.125,
+          "start_pose": [
+            0.25,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            1.3125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 0.8498365855987975,
+            "cruise_distance": 0.0,
+            "up_time": 1.699673171197595,
+            "cruise_time": 0.0,
+            "down_time": 2.1245914639969934,
+            "duration": 3.8242646351945884,
+            "upper_bound": 3.875,
+            "integrated_distance": 1.6249999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 3.8242646351945884,
+        "upper_bound": 3.875,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 3.8242646351945884,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.699673171197595,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.8498365855987975
+        },
+        {
+          "duration": 2.1245914639969934,
+          "start_pose": [
+            0.7222222222222222,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.8498365855987975,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.8498365855987975
+        },
+        {
+          "duration": 0.30073536480541163,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 0.5,
+            "cruise_distance": 1.21875,
+            "up_time": 1.0,
+            "cruise_time": 2.4375,
+            "down_time": 0.625,
+            "duration": 4.0625,
+            "upper_bound": 4.0625,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.0625,
+        "upper_bound": 4.0625,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.0625,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 2.4375,
+          "start_pose": [
+            0.25,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            1.46875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 0.0,
+            "up_time": 2.0,
+            "cruise_time": 0.0,
+            "down_time": 1.25,
+            "duration": 3.25,
+            "upper_bound": 3.25,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 3.25,
+        "upper_bound": 3.25,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 3.25,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 0.5,
+            "cruise_distance": 1.1875,
+            "up_time": 0.5,
+            "cruise_time": 2.375,
+            "down_time": 1.25,
+            "duration": 4.125,
+            "upper_bound": 4.125,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 4.125,
+        "upper_bound": 4.125,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 4.125,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.5,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 2.375,
+          "start_pose": [
+            0.125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            1.3125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 0.9636241116594315,
+            "cruise_distance": 0.0,
+            "up_time": 0.9636241116594315,
+            "cruise_time": 0.0,
+            "down_time": 2.4090602791485787,
+            "duration": 3.3726843908080104,
+            "upper_bound": 3.375,
+            "integrated_distance": 1.6249999999999998
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 3.3726843908080104,
+        "upper_bound": 3.375,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 3.372684390808011,
+      "actual_distance": 1.6250000000000004,
+      "actual_terminal_pose": [
+        1.6250000000000004,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.9636241116594316,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.9636241116594316
+        },
+        {
+          "duration": 2.409060279148579,
+          "start_pose": [
+            0.46428571428571436,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.9636241116594316,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.9636241116594316
+        },
+        {
+          "duration": 0.25231560919198914,
+          "start_pose": [
+            1.6250000000000004,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 0.5,
+            "cruise_distance": 1.34375,
+            "up_time": 0.5,
+            "cruise_time": 2.6875,
+            "down_time": 0.625,
+            "duration": 3.8125,
+            "upper_bound": 3.8125,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 3.8125,
+        "upper_bound": 3.8125,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 3.8125,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.5,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 2.6875,
+          "start_pose": [
+            0.125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            1.46875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            1.625,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 1.625,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 1.0,
+            "cruise_distance": 0.5,
+            "up_time": 1.0,
+            "cruise_time": 0.5,
+            "down_time": 1.25,
+            "duration": 2.75,
+            "upper_bound": 2.75,
+            "integrated_distance": 1.625
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 2.75,
+        "upper_bound": 2.75,
+        "total_length": 1.625
+      },
+      "actual_moving_duration": 2.75,
+      "actual_distance": 1.625,
+      "actual_terminal_pose": [
+        1.625,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            1.625,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 0.5,
+            "cruise_distance": 3.1875,
+            "up_time": 2.0,
+            "cruise_time": 6.375,
+            "down_time": 1.25,
+            "duration": 9.625,
+            "upper_bound": 9.625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 9.625,
+        "upper_bound": 9.625,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 9.625,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 6.375,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.6875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.4,
+            "k": 3.25,
+            "peak": 1.0,
+            "cruise_distance": 0.75,
+            "up_time": 4.0,
+            "cruise_time": 0.75,
+            "down_time": 2.5,
+            "duration": 7.25,
+            "upper_bound": 7.25,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 7.25,
+        "upper_bound": 7.25,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 7.25,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 4.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.75,
+          "start_pose": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.5,
+          "start_pose": [
+            2.75,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 0.5,
+            "cruise_distance": 3.34375,
+            "up_time": 2.0,
+            "cruise_time": 6.6875,
+            "down_time": 0.625,
+            "duration": 9.3125,
+            "upper_bound": 9.3125,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 9.3125,
+        "upper_bound": 9.3125,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 9.3125,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 6.6875,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            3.84375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.25,
+            "brake": 0.8,
+            "k": 2.625,
+            "peak": 1.0,
+            "cruise_distance": 1.375,
+            "up_time": 4.0,
+            "cruise_time": 1.375,
+            "down_time": 1.25,
+            "duration": 6.625,
+            "upper_bound": 6.625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 6.625,
+        "upper_bound": 6.625,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 6.625,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 4.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.25,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.375,
+          "start_pose": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 0.5,
+            "cruise_distance": 3.4375,
+            "up_time": 1.0,
+            "cruise_time": 6.875,
+            "down_time": 1.25,
+            "duration": 9.125,
+            "upper_bound": 9.125,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 9.125,
+        "upper_bound": 9.125,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 9.125,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 6.875,
+          "start_pose": [
+            0.25,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.6875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.4,
+            "k": 2.25,
+            "peak": 1.0,
+            "cruise_distance": 1.75,
+            "up_time": 2.0,
+            "cruise_time": 1.75,
+            "down_time": 2.5,
+            "duration": 6.25,
+            "upper_bound": 6.25,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 6.25,
+        "upper_bound": 6.25,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 6.25,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.75,
+          "start_pose": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.5,
+          "start_pose": [
+            2.75,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 0.5,
+            "cruise_distance": 3.59375,
+            "up_time": 1.0,
+            "cruise_time": 7.1875,
+            "down_time": 0.625,
+            "duration": 8.8125,
+            "upper_bound": 8.8125,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 8.8125,
+        "upper_bound": 8.8125,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 8.8125,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 7.1875,
+          "start_pose": [
+            0.25,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            3.84375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 2.375,
+            "up_time": 2.0,
+            "cruise_time": 2.375,
+            "down_time": 1.25,
+            "duration": 5.625,
+            "upper_bound": 5.625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 5.625,
+        "upper_bound": 5.625,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 5.625,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.375,
+          "start_pose": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 0.5,
+            "cruise_distance": 3.5625,
+            "up_time": 0.5,
+            "cruise_time": 7.125,
+            "down_time": 1.25,
+            "duration": 8.875,
+            "upper_bound": 8.875,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 8.875,
+        "upper_bound": 8.875,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 8.875,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.5,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 7.125,
+          "start_pose": [
+            0.125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.6875,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.4,
+            "k": 1.75,
+            "peak": 1.0,
+            "cruise_distance": 2.25,
+            "up_time": 1.0,
+            "cruise_time": 2.25,
+            "down_time": 2.5,
+            "duration": 5.75,
+            "upper_bound": 5.75,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 5.75,
+        "upper_bound": 5.75,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 5.75,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.25,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.5,
+          "start_pose": [
+            2.75,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.4,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 0.5,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 0.5,
+            "cruise_distance": 3.71875,
+            "up_time": 0.5,
+            "cruise_time": 7.4375,
+            "down_time": 0.625,
+            "duration": 8.5625,
+            "upper_bound": 8.5625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 8.5625,
+        "upper_bound": 8.5625,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 8.5625,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 0.5,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 7.4375,
+          "start_pose": [
+            0.125,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.625,
+          "start_pose": [
+            3.84375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.5,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.5
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "predicted": {
+        "route": [
+          [
+            0,
+            0
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "segments": [
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 1.0,
+            "brake": 0.8,
+            "k": 1.125,
+            "peak": 1.0,
+            "cruise_distance": 2.875,
+            "up_time": 1.0,
+            "cruise_time": 2.875,
+            "down_time": 1.25,
+            "duration": 5.125,
+            "upper_bound": 5.125,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [],
+        "turn_time": 0,
+        "duration": 5.125,
+        "upper_bound": 5.125,
+        "total_length": 4.0
+      },
+      "actual_moving_duration": 5.125,
+      "actual_distance": 4.0,
+      "actual_terminal_pose": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 1.0,
+          "start_pose": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 1.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.875,
+          "start_pose": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            3.375,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.25,
+          "start_pose": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "nominal_routes": {
+    "A": {
+      "predicted": {
+        "route": [
+          [
+            4,
+            -2
+          ],
+          [
+            6,
+            -2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            18,
+            -2
+          ],
+          [
+            22,
+            -2
+          ]
+        ],
+        "segments": [
+          {
+            "length": 2.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 0.375,
+            "up_time": 2.0,
+            "cruise_time": 0.375,
+            "down_time": 1.25,
+            "duration": 3.625,
+            "upper_bound": 3.625,
+            "integrated_distance": 2.0
+          },
+          {
+            "length": 2.8284271247461903,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 1.2034271247461903,
+            "up_time": 2.0,
+            "cruise_time": 1.2034271247461903,
+            "down_time": 1.25,
+            "duration": 4.45342712474619,
+            "upper_bound": 4.45342712474619,
+            "integrated_distance": 2.8284271247461903
+          },
+          {
+            "length": 8.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 6.375,
+            "up_time": 2.0,
+            "cruise_time": 6.375,
+            "down_time": 1.25,
+            "duration": 9.625,
+            "upper_bound": 9.625,
+            "integrated_distance": 8.0
+          },
+          {
+            "length": 2.8284271247461903,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 1.2034271247461903,
+            "up_time": 2.0,
+            "cruise_time": 1.2034271247461903,
+            "down_time": 1.25,
+            "duration": 4.45342712474619,
+            "upper_bound": 4.45342712474619,
+            "integrated_distance": 2.8284271247461903
+          },
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 2.375,
+            "up_time": 2.0,
+            "cruise_time": 2.375,
+            "down_time": 1.25,
+            "duration": 5.625,
+            "upper_bound": 5.625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "turn_time": 2.0,
+        "duration": 29.78185424949238,
+        "upper_bound": 29.78185424949238,
+        "total_length": 19.65685424949238
+      },
+      "actual_moving_duration": 29.78185424949238,
+      "actual_distance": 19.65685424949238,
+      "actual_terminal_pose": [
+        22.0,
+        -2.0,
+        0.0
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            4.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.375,
+          "start_pose": [
+            5.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            5.375,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            6.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            6.0,
+            -2.0,
+            0.7853981633974483
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.2034271247461903,
+          "start_pose": [
+            6.707106781186548,
+            -1.2928932188134525,
+            0.7853981633974483
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            7.558058261758409,
+            -0.4419417382415921,
+            0.7853981633974483
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            8.0,
+            1.1102230246251565e-16,
+            0.7853981633974483
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": -1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            8.0,
+            1.1102230246251565e-16,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 6.375,
+          "start_pose": [
+            9.0,
+            1.1102230246251565e-16,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            15.375,
+            1.1102230246251565e-16,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            16.0,
+            1.1102230246251565e-16,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": -1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            16.0,
+            1.1102230246251565e-16,
+            -0.7853981633974483
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.2034271247461903,
+          "start_pose": [
+            16.707106781186546,
+            -0.7071067811865475,
+            -0.7853981633974483
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            17.558058261758408,
+            -1.5580582617584078,
+            -0.7853981633974483
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            18.0,
+            -2.0,
+            -0.7853981633974483
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            18.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.375,
+          "start_pose": [
+            19.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            21.375,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.24999999999999822,
+          "start_pose": [
+            22.0,
+            -2.0,
+            0.0
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    },
+    "B": {
+      "predicted": {
+        "route": [
+          [
+            20,
+            2
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "segments": [
+          {
+            "length": 2.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 0.375,
+            "up_time": 2.0,
+            "cruise_time": 0.375,
+            "down_time": 1.25,
+            "duration": 3.625,
+            "upper_bound": 3.625,
+            "integrated_distance": 2.0
+          },
+          {
+            "length": 2.8284271247461903,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 1.2034271247461903,
+            "up_time": 2.0,
+            "cruise_time": 1.2034271247461903,
+            "down_time": 1.25,
+            "duration": 4.45342712474619,
+            "upper_bound": 4.45342712474619,
+            "integrated_distance": 2.8284271247461903
+          },
+          {
+            "length": 8.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 6.375,
+            "up_time": 2.0,
+            "cruise_time": 6.375,
+            "down_time": 1.25,
+            "duration": 9.625,
+            "upper_bound": 9.625,
+            "integrated_distance": 8.0
+          },
+          {
+            "length": 2.8284271247461903,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 1.2034271247461903,
+            "up_time": 2.0,
+            "cruise_time": 1.2034271247461903,
+            "down_time": 1.25,
+            "duration": 4.45342712474619,
+            "upper_bound": 4.45342712474619,
+            "integrated_distance": 2.8284271247461903
+          },
+          {
+            "length": 4.0,
+            "speed": 1.0,
+            "accel": 0.5,
+            "brake": 0.8,
+            "k": 1.625,
+            "peak": 1.0,
+            "cruise_distance": 2.375,
+            "up_time": 2.0,
+            "cruise_time": 2.375,
+            "down_time": 1.25,
+            "duration": 5.625,
+            "upper_bound": 5.625,
+            "integrated_distance": 4.0
+          }
+        ],
+        "turns": [
+          0.5,
+          0.5000000000000006,
+          0.5,
+          0.5
+        ],
+        "turn_time": 2.0000000000000004,
+        "duration": 29.78185424949238,
+        "upper_bound": 29.78185424949238,
+        "total_length": 19.65685424949238
+      },
+      "actual_moving_duration": 29.78185424949238,
+      "actual_distance": 19.65685424949238,
+      "actual_terminal_pose": [
+        2.0,
+        2.0000000000000004,
+        3.141592653589793
+      ],
+      "actual_terminal_speed": 0.0,
+      "pieces": [
+        {
+          "duration": 2.0,
+          "start_pose": [
+            20.0,
+            2.0,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.375,
+          "start_pose": [
+            19.0,
+            2.0,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            18.625,
+            2.0,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            18.0,
+            2.0,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            18.0,
+            2.0,
+            3.9269908169872414
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.2034271247461903,
+          "start_pose": [
+            17.292893218813454,
+            1.2928932188134525,
+            3.9269908169872414
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            16.441941738241592,
+            0.4419417382415922,
+            3.9269908169872414
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.5,
+          "start_pose": [
+            16.0,
+            5.551115123125783e-17,
+            3.9269908169872414
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": -1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            16.0,
+            5.551115123125783e-17,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 6.375,
+          "start_pose": [
+            15.0,
+            1.7797583114599315e-16,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            8.625,
+            9.586881656024307e-16,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.4999999999999997,
+          "start_pose": [
+            8.0,
+            1.0352285905491404e-15,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": -1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            8.0,
+            1.0352285905491404e-15,
+            2.3561944901923453
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.2034271247461894,
+          "start_pose": [
+            7.292893218813452,
+            0.7071067811865482,
+            2.3561944901923453
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            6.441941738241592,
+            1.5580582617584078,
+            2.3561944901923453
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.4999999999999997,
+          "start_pose": [
+            6.0,
+            1.9999999999999998,
+            2.3561944901923453
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 1.5707963267948966,
+          "point_speed_bound": 0.7853981633974483
+        },
+        {
+          "duration": 2.0,
+          "start_pose": [
+            6.0,
+            1.9999999999999998,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.5,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 2.375,
+          "start_pose": [
+            5.0,
+            2.0,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 1.25,
+          "start_pose": [
+            2.625,
+            2.0000000000000004,
+            3.141592653589793
+          ],
+          "initial_speed": 1.0,
+          "acceleration": -0.8,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 1.0
+        },
+        {
+          "duration": 0.24999999999999822,
+          "start_pose": [
+            2.0,
+            2.0000000000000004,
+            3.141592653589793
+          ],
+          "initial_speed": 0.0,
+          "acceleration": 0.0,
+          "angular_velocity": 0.0,
+          "point_speed_bound": 0.0
+        }
+      ],
+      "passed": true
+    }
+  },
+  "comparisons": 38,
+  "exact_reference_defaults": {
+    "speed_limit": 1.0,
+    "accel": 0.5,
+    "brake": 0.8,
+    "turn_rate": 1.5707963267948966
+  },
+  "rational_route_ceiling": 30.125,
+  "diagnostic_route_budget": 31.0,
+  "warning": "accel is exact reference acceleration; an upper bound alone is insufficient"
+}

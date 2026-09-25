@@ -1,0 +1,184 @@
+{
+ "n_plan_traces": 65,
+ "sigma_ctrl": [
+  "enterA",
+  "enterB",
+  "exitA",
+  "exitB",
+  "grantA",
+  "grantB",
+  "requestA",
+  "requestB"
+ ],
+ "sigma_adv": [
+  "hmi",
+  "log",
+  "v2x"
+ ],
+ "dev": {
+  "C0": {
+   "traces": 65,
+   "contract": true,
+   "refinement": true,
+   "progress": true,
+   "fairness": true,
+   "contract_witness": null,
+   "stuck": [],
+   "preempt_witness": null
+  },
+  "C1": {
+   "traces": 113,
+   "contract": false,
+   "refinement": false,
+   "progress": false,
+   "fairness": true,
+   "contract_witness": "grantB enabled in ('C', 'R', 'A', None) with bridge occupied",
+   "stuck": [
+    [
+     "C",
+     "D",
+     "None",
+     "None"
+    ],
+    [
+     "D",
+     "C",
+     "None",
+     "None"
+    ]
+   ],
+   "preempt_witness": null
+  },
+  "C2": {
+   "traces": 207,
+   "contract": false,
+   "refinement": false,
+   "progress": false,
+   "fairness": true,
+   "contract_witness": "enterB enabled in ('C', 'R', 'A', 'A') without grant",
+   "stuck": [
+    [
+     "C",
+     "D",
+     "None",
+     "A"
+    ],
+    [
+     "C",
+     "D",
+     "None",
+     "B"
+    ]
+   ],
+   "preempt_witness": null
+  },
+  "C3": {
+   "traces": 35,
+   "contract": true,
+   "refinement": true,
+   "progress": false,
+   "fairness": true,
+   "contract_witness": null,
+   "stuck": [
+    [
+     "D",
+     "R",
+     "None",
+     "A"
+    ],
+    [
+     "R",
+     "D",
+     "None",
+     "B"
+    ]
+   ],
+   "preempt_witness": null
+  },
+  "C4": {
+   "traces": 4423,
+   "contract": true,
+   "refinement": true,
+   "progress": true,
+   "fairness": false,
+   "contract_witness": null,
+   "stuck": [],
+   "preempt_witness": [
+    "requestA",
+    "grantA",
+    "requestB",
+    "grantB"
+   ]
+  }
+ },
+ "runtime": {
+  "permissive/advice_up": {
+   "n_proj": 65,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": true,
+   "progress_any": true,
+   "control_live": true
+  },
+  "permissive/advice_down": {
+   "n_proj": 65,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": true,
+   "progress_any": true,
+   "control_live": true
+  },
+  "control_gating/advice_up": {
+   "n_proj": 65,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": true,
+   "progress_any": true,
+   "control_live": false
+  },
+  "control_gating/advice_down": {
+   "n_proj": 13,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": false,
+   "progress_any": false,
+   "control_live": false
+  },
+  "block_all/advice_up": {
+   "n_proj": 1,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": false,
+   "progress_any": false,
+   "control_live": false
+  },
+  "block_all/advice_down": {
+   "n_proj": 1,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": false,
+   "progress_any": false,
+   "control_live": false
+  },
+  "advisory_only/advice_up": {
+   "n_proj": 65,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": true,
+   "progress_any": true,
+   "control_live": true,
+   "attached": [
+    "wellformed_summary"
+   ]
+  },
+  "advisory_only/advice_down": {
+   "n_proj": 65,
+   "cka_holds": true,
+   "safety": true,
+   "progress_both": true,
+   "progress_any": true,
+   "control_live": true,
+   "attached": []
+  }
+ }
+}

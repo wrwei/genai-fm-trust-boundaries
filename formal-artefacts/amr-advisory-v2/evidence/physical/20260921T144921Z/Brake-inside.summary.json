@@ -1,0 +1,36 @@
+{
+  "inside": true,
+  "condition": true,
+  "bound": 1.3341000000000003,
+  "observed_front_distance": 1.3441000000000003,
+  "observation_age": 0.05,
+  "delivery_delay": 0.1,
+  "total_actual_observation_to_brake": 0.15,
+  "heading": 0.0,
+  "observed_pose": [
+    9.755899999999999,
+    0.0,
+    0.0
+  ],
+  "actual_brake": 0.8,
+  "standstill_margin": 0.5691000000000045,
+  "min_trajectory_margin": 0.5691000000000042,
+  "crossed_boundary": false,
+  "final_speed": 0.0,
+  "final_pose": [
+    10.530899999999995,
+    0.0,
+    0.0
+  ],
+  "halted_time": 1.4,
+  "collision_pairs": [],
+  "unresolved_pairs": [],
+  "reference_violations": [],
+  "early_releases": [],
+  "completed_robots": [],
+  "termination": "standstill",
+  "run_id": "Brake-inside",
+  "trace": "Brake-inside.jsonl.gz",
+  "trace_sha256": "1f63c2e21e93a5720a081baaedae61a8f9da475f4237b58bad7f8c55decefa0d",
+  "expected_outcome_observed": true
+}

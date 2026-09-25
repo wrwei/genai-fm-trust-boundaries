@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-13",
+  "base": "442ec0e",
+  "body_sections_bibliographies_and_historical_json_unchanged": true,
+  "snapshot_363_objects_match_baf93da": true,
+  "collection_records": 365,
+  "screening_records": 330,
+  "screening_status_counts": {
+    "background": 125,
+    "exclude_scope": 27,
+    "retain_relevant": 169,
+    "unresolved_access": 2,
+    "duplicate_record": 7
+  },
+  "comparison_records": 82,
+  "candidate_bibtex_entries": 6,
+  "candidate_citation_keys": 18,
+  "missing_or_colliding_citation_keys": [],
+  "local_markdown_links_checked": 80,
+  "broken_local_links": [],
+  "proof_source_and_evidence_hashes_match": true,
+  "new_proof_admission_or_axiomatization_commands": 0,
+  "legacy_admitted_steps": {
+    "Progress": 6,
+    "CKA": 4
+  },
+  "git_diff_check": "passed",
+  "new_artifact_trailing_whitespace_check": "passed",
+  "scope": "No LaTeX/PDF build; independent Markdown/LaTeX snippets only. No new external study replication."
+}

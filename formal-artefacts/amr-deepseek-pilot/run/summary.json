@@ -1,0 +1,72 @@
+{
+  "schema": "amr-deepseek-continuation/v1",
+  "started_at_utc": "2026-09-17T05:11:21.598712+00:00",
+  "finished_at_utc": "2026-09-17T05:11:53.435938+00:00",
+  "trial_summary": {
+    "schema": "amr-llm-trial-summary/v1",
+    "record_mode": "live",
+    "provenance": "provider/model identity supplied by operator; transport not independently authenticated",
+    "planned_initial_candidates": 6,
+    "initial_responses_recorded": 6,
+    "attempted_samples": 6,
+    "pending_samples": 0,
+    "unattempted_samples": 0,
+    "total_recorded_attempts": 18,
+    "initial_accepted": 0,
+    "eventually_accepted": 0,
+    "repairs_recorded": 12,
+    "infrastructure_failures": 0,
+    "output_token_cap_violations": 0,
+    "invalid_utf8": 0,
+    "per_sample": {
+      "P1-R1": {
+        "state": "exhausted",
+        "attempts": 3
+      },
+      "P2-R1": {
+        "state": "exhausted",
+        "attempts": 3
+      },
+      "P3-R1": {
+        "state": "exhausted",
+        "attempts": 3
+      },
+      "P1-R2": {
+        "state": "exhausted",
+        "attempts": 3
+      },
+      "P2-R2": {
+        "state": "exhausted",
+        "attempts": 3
+      },
+      "P3-R2": {
+        "state": "exhausted",
+        "attempts": 3
+      }
+    },
+    "input_tokens_sum": 30744,
+    "missing_input_token_count": 0,
+    "output_tokens_sum": 4558,
+    "missing_output_token_count": 0,
+    "initial_accepted_ratio": {
+      "numerator": 0,
+      "denominator": 6
+    },
+    "eventually_accepted_ratio": {
+      "numerator": 0,
+      "denominator": 6
+    },
+    "complete": true,
+    "selected_candidate": null,
+    "live_model_samples": 6
+  },
+  "calls": {
+    "inherited": 1,
+    "new": 17,
+    "total": 18,
+    "new_dispatch_markers": 17
+  },
+  "original_smoke_unchanged": true,
+  "stopped": "protocol_complete",
+  "error_type": null
+}

@@ -1,0 +1,35 @@
+test_expired_wrong_robot_and_old_revision_cannot_execute (test_controller.ControllerTests.test_expired_wrong_robot_and_old_revision_cannot_execute) ... ok
+test_front_out_does_not_release_tail (test_controller.ControllerTests.test_front_out_does_not_release_tail) ... ok
+test_late_old_proceed_cannot_overwrite_new_brake (test_controller.ControllerTests.test_late_old_proceed_cannot_overwrite_new_brake) ... ok
+test_stopping_bound_includes_old_observation_and_delivery (test_controller.ControllerTests.test_stopping_bound_includes_old_observation_and_delivery) ... ok
+test_timeout_cannot_reassign_occupied_reservation (test_controller.ControllerTests.test_timeout_cannot_reassign_occupied_reservation) ... ok
+test_wrong_object_stale_or_wrong_exit_does_not_clear (test_controller.ControllerTests.test_wrong_object_stale_or_wrong_exit_does_not_clear) ... ok
+test_exact_contact_and_zero_duration (test_oracle.OracleTests.test_exact_contact_and_zero_duration) ... ok
+test_frame_endpoints_clear_but_midpoint_crosses (test_oracle.OracleTests.test_frame_endpoints_clear_but_midpoint_crosses) ... ok
+test_invalid_inputs_are_rejected (test_oracle.OracleTests.test_invalid_inputs_are_rejected) ... ok
+test_polygon_analytic_distances_overlap_and_contact (test_oracle.OracleTests.test_polygon_analytic_distances_overlap_and_contact) ... ok
+test_rectangle_rotation (test_oracle.OracleTests.test_rectangle_rotation) ... ok
+test_rotation_sweep_hits_between_clear_endpoints (test_oracle.OracleTests.test_rotation_sweep_hits_between_clear_endpoints) ... ok
+test_static_clear_has_conservative_distance (test_oracle.OracleTests.test_static_clear_has_conservative_distance) ... ok
+test_subdivision_finds_off_midpoint_collision (test_oracle.OracleTests.test_subdivision_finds_off_midpoint_collision) ... ok
+test_unresolved_budget_never_reports_clear (test_oracle.OracleTests.test_unresolved_budget_never_reports_clear) ... ok
+test_changed_robot_width_is_rejected_instead_of_ignored (test_parameters.ParameterTests.test_changed_robot_width_is_rejected_instead_of_ignored) ... ok
+test_analytic_braking_and_hold (test_plant.PlantTests.test_analytic_braking_and_hold) ... ok
+test_brake_resume_and_rotation_freeze (test_plant.PlantTests.test_brake_resume_and_rotation_freeze) ... ok
+test_dt_partition_independence (test_plant.PlantTests.test_dt_partition_independence) ... ok
+test_invalid_inputs (test_plant.PlantTests.test_invalid_inputs) ... ok
+test_serialized_pieces_continuity_and_bounds (test_plant.PlantTests.test_serialized_pieces_continuity_and_bounds) ... ok
+test_turn_has_duration_and_zero_translation (test_plant.PlantTests.test_turn_has_duration_and_zero_translation) ... ok
+test_always_stop_is_safe_but_not_successful (test_simulation.SimulationTests.test_always_stop_is_safe_but_not_successful) ... ok
+test_goal_completion_waits_for_fresh_observation_after_blackout (test_simulation.SimulationTests.test_goal_completion_waits_for_fresh_observation_after_blackout) ... ok
+test_lost_observations_stop_owner_without_regranting_occupied_zone (test_simulation.SimulationTests.test_lost_observations_stop_owner_without_regranting_occupied_zone) ... ok
+test_omitting_reaction_loses_required_margin_from_same_initial_state (test_simulation.SimulationTests.test_omitting_reaction_loses_required_margin_from_same_initial_state) ... ok
+test_physical_completion_rejects_done_at_wrong_goal_or_in_motion (test_simulation.SimulationTests.test_physical_completion_rejects_done_at_wrong_goal_or_in_motion) ... ok
+test_reference_completes_both_tasks_and_advice_changes_order (test_simulation.SimulationTests.test_reference_completes_both_tasks_and_advice_changes_order) ... ok
+test_release_mutation_is_visible_to_independent_geometry (test_simulation.SimulationTests.test_release_mutation_is_visible_to_independent_geometry) ... ok
+test_temporary_blockage_recovers_but_permanent_blockage_does_not (test_simulation.SimulationTests.test_temporary_blockage_recovers_but_permanent_blockage_does_not) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 39.303s
+
+OK

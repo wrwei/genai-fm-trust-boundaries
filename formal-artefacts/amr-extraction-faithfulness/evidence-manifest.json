@@ -1,0 +1,86 @@
+{
+  "created_utc": "2026-09-22T11:57:35.994752+00:00",
+  "scope": "post-verification package snapshot; separate from original raw-source and proof-input bindings",
+  "files": {
+    "evidence/snapshot.json": {
+      "bytes": 214121,
+      "sha256": "73ce7b148de5495339a09100e70139f75e7752ef7001ced5025adb77e10e97e2"
+    },
+    "evidence/verification.json": {
+      "bytes": 939,
+      "sha256": "4a462a718cb25e9befea4ea24765e9fdb4fc67551d1b0b73570070b8a510c217"
+    },
+    "hol/AMR_Artifacts.thy": {
+      "bytes": 35906,
+      "sha256": "1c00caa30023d7e7f4949278c1d85e15fafc50d0d9a1d77a1d180e403bad81b6"
+    },
+    "hol/AMR_Extraction.thy": {
+      "bytes": 7817,
+      "sha256": "b6a9f64cd57c9faac26407a34af30f0e660cff4ebcbfad163f2dead7356e03bc"
+    },
+    "hol/build-attempts/20260922T114406147997Z.log": {
+      "bytes": 1887,
+      "sha256": "beb23272876a8d93e413e865aae339fcb6d4e7f0b9161364deea6d6aaa988885"
+    },
+    "hol/build-attempts/20260922T114548892614Z.log": {
+      "bytes": 2346,
+      "sha256": "f48286e5a410db81adcb6905c56492762e8830f9a31fcb7bd7fec16dec5129a3"
+    },
+    "hol/build-attempts/20260922T114710773007Z.log": {
+      "bytes": 1210,
+      "sha256": "631d849e95db7830ad5e36858ed78577d33875a800b863957612a262a4fd6be6"
+    },
+    "hol/build-attempts/20260922T114953441605Z.log": {
+      "bytes": 1568,
+      "sha256": "b5425e275937d3b26783ef3996e13ac4ded9effed23395052c8722966e143458"
+    },
+    "hol/build-attempts/20260922T115143801270Z.log": {
+      "bytes": 1568,
+      "sha256": "a6294ccee54ab5fe9ebf97650ac2d4baaeda526bbcb2f47483a6a495d34d14cd"
+    },
+    "hol/build.log": {
+      "bytes": 1568,
+      "sha256": "a6294ccee54ab5fe9ebf97650ac2d4baaeda526bbcb2f47483a6a495d34d14cd"
+    },
+    "hol/build.py": {
+      "bytes": 1566,
+      "sha256": "95eed9b816923946851beeff22214b75bd054fd2240fb2ed7eb88b7e41f1ec84"
+    },
+    "hol/export/AMR_Extraction_Faithfulness.AMR_Artifacts/artifact-audit.txt": {
+      "bytes": 3079,
+      "sha256": "f1d81e682f676d20ef70c4a1758433cd711e00f252583733fa10171b7f261416"
+    },
+    "hol/export/AMR_Extraction_Faithfulness.AMR_Extraction/proof-audit.txt": {
+      "bytes": 589,
+      "sha256": "43b3da1241532124a85c6498d3335b2e6b0b954d20b105dce8354b20f2fb726d"
+    },
+    "hol/ROOT": {
+      "bytes": 207,
+      "sha256": "455052a5ecd4815f36e399c2dbf2eac558e5f33e82bcee7d3d25559cf963d221"
+    },
+    "hol/source-hashes.json": {
+      "bytes": 548,
+      "sha256": "7bb705b87f88a8088a377b3f5ad603cfdd70e736c680dbcfd228186d099c9fd5"
+    },
+    "README.md": {
+      "bytes": 5769,
+      "sha256": "434b76b53593680c5d5ad0da71d12a96b3beb4fda21db8db0c3b1830d95d2a61"
+    },
+    "review.md": {
+      "bytes": 7967,
+      "sha256": "d864eb43c37684da858c28609bab655d5bf1bf713089dd97bb76fa75a190a557"
+    },
+    "snapshot.py": {
+      "bytes": 10473,
+      "sha256": "e5a382815644bfba976718f83eb7ae30e29a76bd39ee00312a69854f00a63518"
+    },
+    "tests/test_snapshot.py": {
+      "bytes": 2587,
+      "sha256": "450bc4149bee6115edf0a1529e197279550ced1e5f6da948424bf45f26189d14"
+    },
+    "verify_snapshot.py": {
+      "bytes": 2929,
+      "sha256": "aa8c922df40f70022c353801454ee0caadd5f0bb0b71b16965b69d27033263fb"
+    }
+  }
+}

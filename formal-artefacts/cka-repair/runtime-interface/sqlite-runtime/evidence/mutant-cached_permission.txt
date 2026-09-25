@@ -1,0 +1,14 @@
+test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit) ... FAIL
+
+======================================================================
+FAIL: test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Temp\runtime-mutant-yfnrritd\test_runtime.py", line 59, in test_revocation_at_commit
+    self.assertNotEqual(self.ledger.apply("Service")["event"], 1)
+AssertionError: 1 == 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.039s
+
+FAILED (failures=1)

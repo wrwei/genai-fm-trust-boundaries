@@ -1,0 +1,66 @@
+{"sample_id": "P1-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R1", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P1-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P2-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{"sample_id": "P3-R2", "attempt": 0, "phase": "initial", "source_bad": 0, "accepted": true, "fatal": null}
+{
+  "protocol_id": "amr-independent-replication/v1",
+  "mode": "live",
+  "new_calls": 6,
+  "network_dispatches": 6,
+  "stop": "protocol_complete",
+  "initial_accepted_count": 6,
+  "eventually_accepted_count": 6,
+  "selected_sources": [
+    {
+      "sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+      "response_path": "attempts/001/response.bin",
+      "representative_sample": "P1-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R1"
+      ]
+    },
+    {
+      "sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+      "response_path": "attempts/002/response.bin",
+      "representative_sample": "P2-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R1",
+        "P3-R2"
+      ]
+    },
+    {
+      "sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "response_path": "attempts/003/response.bin",
+      "representative_sample": "P3-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P3-R1"
+      ]
+    },
+    {
+      "sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+      "response_path": "attempts/004/response.bin",
+      "representative_sample": "P1-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R2"
+      ]
+    },
+    {
+      "sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+      "response_path": "attempts/005/response.bin",
+      "representative_sample": "P2-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R2"
+      ]
+    }
+  ],
+  "old_run_unchanged": true,
+  "finished_at_utc": "2026-09-21T13:22:37.922245+00:00",
+  "scope": "six fresh requests for three wordings of one task; not independent industrial tasks"
+}

@@ -1,0 +1,100 @@
+{
+  "scope": "one-call smoke; six-candidate protocol incomplete",
+  "started_at_utc": "2026-09-17T04:57:39.214032+00:00",
+  "finished_at_utc": "2026-09-17T04:57:40.852458+00:00",
+  "transport": {
+    "status": "received",
+    "http_status": 200,
+    "credential_echo_redacted": false,
+    "body_limit_exceeded": false
+  },
+  "response_status": "ok",
+  "provider_reported_model": "deepseek-flash",
+  "provider_system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "usage_summary": {
+    "input_tokens": 1102,
+    "output_tokens": 274,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 1102
+  },
+  "accepted": false,
+  "assessment": {
+    "accepted": false,
+    "checked_inputs": 0,
+    "correspondence_mismatches": 0,
+    "correspondence_pass": false,
+    "correspondence_witnesses": [],
+    "model_policy_pass": false,
+    "model_violation_inputs": 0,
+    "model_witnesses": [],
+    "parse_error": "each function must contain a list of at most 8 rules",
+    "parse_pass": false,
+    "select_inputs": 0,
+    "source_policy_pass": false,
+    "source_sha256": "b6c76846efd3e094b6b4fcedb521d78613d4542f42f25fedee4e96dbf9546c69",
+    "source_violation_inputs": 0,
+    "source_witnesses": [],
+    "spec_id": "amr-supervisor-obligations/v1.1",
+    "step_inputs": 0,
+    "translator_fault": null
+  },
+  "trial_summary": {
+    "schema": "amr-llm-trial-summary/v1",
+    "record_mode": "live",
+    "provenance": "provider/model identity supplied by operator; transport not independently authenticated",
+    "planned_initial_candidates": 6,
+    "initial_responses_recorded": 1,
+    "attempted_samples": 1,
+    "pending_samples": 1,
+    "unattempted_samples": 5,
+    "total_recorded_attempts": 1,
+    "initial_accepted": 0,
+    "eventually_accepted": 0,
+    "repairs_recorded": 0,
+    "infrastructure_failures": 0,
+    "output_token_cap_violations": 0,
+    "invalid_utf8": 0,
+    "per_sample": {
+      "P1-R1": {
+        "state": "rejected",
+        "attempts": 1
+      },
+      "P2-R1": {
+        "state": "unattempted",
+        "attempts": 0
+      },
+      "P3-R1": {
+        "state": "unattempted",
+        "attempts": 0
+      },
+      "P1-R2": {
+        "state": "unattempted",
+        "attempts": 0
+      },
+      "P2-R2": {
+        "state": "unattempted",
+        "attempts": 0
+      },
+      "P3-R2": {
+        "state": "unattempted",
+        "attempts": 0
+      }
+    },
+    "input_tokens_sum": 1102,
+    "missing_input_token_count": 0,
+    "output_tokens_sum": 274,
+    "missing_output_token_count": 0,
+    "initial_accepted_ratio": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "eventually_accepted_ratio": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "complete": false,
+    "selected_candidate": null,
+    "live_model_samples": 1
+  },
+  "stopped": "one-call scope completed; no further dispatch"
+}

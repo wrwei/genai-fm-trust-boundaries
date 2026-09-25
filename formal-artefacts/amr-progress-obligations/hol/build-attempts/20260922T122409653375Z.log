@@ -1,0 +1,59 @@
+Started at Tue Sep 22 20:24:01 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Progress_Obligations
+Running AMR_Progress_Obligations ...
+AMR_Progress_Obligations: theory AMR_Progress_Obligations.AMR_Progress
+AMR_Progress_Obligations FAILED (see also "isabelle build_log -H Error AMR_Progress_Obligations")
+*** Failed to finish proof (line 84 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy"):
+*** goal (2 subgoals):
+***  1. 0 �� 0
+***  2. ?x xs y ys.
+***        ?x �� y; list_all2 (��) xs ys; sum_list xs �� sum_list ys?
+***        ? x + sum_list xs
+***           �� y +
+***             sum_list
+***              ys
+*** At command "by" (line 84 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy")
+*** 
+*** At command "ML" (line 112 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy")
+*** Failed to apply initial proof method (line 110 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy"):
+*** using this:
+***     0 �� A
+***     0 �� V
+***     x0 �� goal
+*** goal (1 subgoal):
+***  1. ?x v a.
+***        x 0 = x0 ��
+***        (?t. (x has_real_derivative v t) (at t) ��
+***             (v has_real_derivative a t) (at t) ��
+***             0 �� v t ��
+***             v t �� V ��
+***             0 �� a t ��
+***             a t �� A ��
+***             x t ��
+***             goal)
+*** At command "by" (line 110 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy")
+*** Failed to finish proof (line 84 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy"):
+*** goal (2 subgoals):
+***  1. 0 �� 0
+***  2. ?x xs y ys.
+***        ?x �� y; list_all2 (��) xs ys; sum_list xs �� sum_list ys?
+***        ? x + sum_list xs
+***           �� y +
+***             sum_list
+***              ys
+*** At command "by" (line 84 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-progress-obligations/hol/AMR_Progress.thy")
+Unfinished session(s): AMR_Progress_Obligations
+
+Finished at Tue Sep 22 20:24:09 GMT+8 2026
+0:00:07 elapsed time

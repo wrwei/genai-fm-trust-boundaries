@@ -1,0 +1,101 @@
+{
+  "started_utc": "2026-09-22T11:22:12.517583+00:00",
+  "maximum_runs": 4,
+  "horizon_seconds": 120,
+  "maximum_api_requests": 0,
+  "cases": [
+    [
+      "none",
+      [],
+      "A"
+    ],
+    [
+      "retained-B",
+      [
+        [
+          0.0,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "B"
+    ],
+    [
+      "invalid-then-B",
+      [
+        [
+          0.0,
+          "old",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ],
+        [
+          0.0,
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\",\"grant\":true}"
+        ],
+        [
+          0.01,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "B"
+    ],
+    [
+      "late-B",
+      [
+        [
+          0.06,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "A"
+    ]
+  ],
+  "scope": "offline retained-content replay on serial simulation time; no new samples or wall-clock timing claim",
+  "identities": {
+    "formal-artefacts/amr-advisory-v2/advice-audit.py": "ba6b719cce412cb4c45bb50bee01058276c1d2836c0c1a0627c44429cc31cc91",
+    "formal-artefacts/amr-advisory-v2/advice_mailbox.py": "aba2efa0731cedcc4a6d7c5cf8f61cf950ac32b3f05d3aff6b6a53fad75fddda",
+    "formal-artefacts/amr-advisory-v2/advice_trial.py": "2cef70057e9cdb7e407dda1a54499b324870193393741a54df93951f4adb8821",
+    "formal-artefacts/amr-advisory-v2/conformance.py": "3dff343ff14e9543734ee1caecd0f5f55d7a567ab8928e0898aaca3e32b3443d",
+    "formal-artefacts/amr-advisory-v2/evidence/advice/001/response.bin": "b8916a6ab599f11e499f7de317662f9e0f139b2be4f610cfb65624df74b9453f",
+    "formal-artefacts/amr-advisory-v2/evidence/source/sources/9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd.json": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "formal-artefacts/amr-advisory-v2/evidence/source/summary.json": "e53b5ffcb4036a6757fe9b8bdb3d0924f215e3f94bf5b48d11e1b3ca16d7651c",
+    "formal-artefacts/amr-advisory-v2/physical-audit.py": "2093843161731677836ea2fbe8ae86e45f13f52ef87d70d7180eb883df4708c2",
+    "formal-artefacts/amr-advisory-v2/physical.py": "6cd2b6a8fb2eeb307c495ad880d70c0eafad6ffca13452e8276ff90c4a7772cd",
+    "formal-artefacts/amr-advisory-v2/protocol.py": "f35566d6a94b4f09e914c8781f7ff6ad54b29db49be9c0d01a42264d82c5a2cd",
+    "formal-artefacts/amr-advisory-v2/run_mechanisms.py": "19e6ef367e6c873a0980d84ae7b3857c5aee42652e4c7ffc6acc2f9e2c47ef05",
+    "formal-artefacts/amr-advisory-v2/run_physical.py": "a893a8f9802cf401e5399199e2306b9e1cc8b9705556b400ba60e53268d16b56",
+    "formal-artefacts/amr-advisory-v2/source_check.py": "bee8ab0031b0228dd5d140ccbf4fd4e8cb7e83eb5d5045253bec04d5ec6aafde",
+    "formal-artefacts/amr-corridor/controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "formal-artefacts/amr-corridor/oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "formal-artefacts/amr-corridor/plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "formal-artefacts/amr-corridor/run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "formal-artefacts/amr-corridor/simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58",
+    "formal-artefacts/amr-forge-diagnostic/diagnostics.py": "6566bb2a05bd241d08e3b8722593e5e633291a58e04738c07c66f00d3a273b81",
+    "formal-artefacts/amr-forge-diagnostic/profiles/__init__.py": "62fce7b366546e395a9e8c164616ff2f0365537cc30bd2f8b4757df329e956ec",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/__init__.py": "566bdcf2c48440ef2d382fec07c0e8a5e98d5792bc2a8735dbe403985d48d86a",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/language.py": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules12/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/__init__.py": "e9cc2b25ee29ab3f87eed58f62cd595fee7f60d58d0562d98564228c65f02714",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/language.py": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569",
+    "formal-artefacts/amr-forge-diagnostic/profiles/rules8/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "formal-artefacts/amr-runtime-binding/binding.py": "8425fd19ee0583df265250d9b375af2c287b9995432dbcbfbcb100904c2c987f",
+    "formal-artefacts/amr-runtime-binding/binding_conformance.py": "6a613e77352182b75dd4bebed4f4aa8230ddd8885ceada64d8c47ed762654278",
+    "formal-artefacts/amr-runtime-binding/derive_physical_driver.py": "5c7272da153240082aadd3731dd1b17622dab6daeefeda9ac720e091050d152f",
+    "formal-artefacts/amr-runtime-binding/hol/AMR_Runtime_Binding.thy": "f7aa40646f47705bd0b9bc521ff04eeb0778537415982be0cb5645e87d32ad48",
+    "formal-artefacts/amr-runtime-binding/hol/export/AMR_Runtime_Binding.AMR_Runtime_Binding/binding.csv": "7c29cb63bfe723d854b83ced8aa753ff5bcf1e29cf2f91b0d9dd97da9fb41ab4",
+    "formal-artefacts/amr-runtime-binding/hol/ROOT": "f7ee7569e012f61acf5359ab3bd2d12a3068fd0f5006a584f8b62f4d8c5f065b",
+    "formal-artefacts/amr-runtime-binding/physical_binding.py": "8fd490901322114766b68eb7390481810d5faf62fe6c7dc996e174758b763211",
+    "formal-artefacts/amr-runtime-binding/run_experiments.py": "2f9faa0b7c4c423230ecfb3b57dde4dd9c4549b11ee9d63b6166507f8b3f3f6e",
+    "literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6"
+  }
+}

@@ -1,0 +1,626 @@
+{
+  "protocol_id": "amr-independent-replication/v1",
+  "mode": "live",
+  "new_calls": 6,
+  "network_dispatches": 6,
+  "stop": "protocol_complete",
+  "samples": {
+    "P1-R1": {
+      "sample_id": "P1-R1",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/001/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 3,
+            "step": 9,
+            "total": 12
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/001/response.bin",
+          "program_key": "ast-sha256:8fbf69016f05a69e7330d8018132d012729052b724c0eb87696bcd66f0ab58a6",
+          "usage_summary": {
+            "input_tokens": 1128,
+            "output_tokens": 7200,
+            "cache_hit_tokens": 0,
+            "cache_miss_tokens": 1128
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    },
+    "P2-R1": {
+      "sample_id": "P2-R1",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/002/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 3,
+            "step": 9,
+            "total": 12
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/002/response.bin",
+          "program_key": "ast-sha256:eed9372a96439fea675121027216923745e7b48a12e0b1b3fee145d8fc28b7db",
+          "usage_summary": {
+            "input_tokens": 1167,
+            "output_tokens": 10497,
+            "cache_hit_tokens": 640,
+            "cache_miss_tokens": 527
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    },
+    "P3-R1": {
+      "sample_id": "P3-R1",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/003/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 7,
+            "step": 9,
+            "total": 16
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/003/response.bin",
+          "program_key": "ast-sha256:ed25674b826715a1c369980f6421f8d5bc6900136bf34d09c6be45c3e590df54",
+          "usage_summary": {
+            "input_tokens": 1146,
+            "output_tokens": 13527,
+            "cache_hit_tokens": 640,
+            "cache_miss_tokens": 506
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    },
+    "P1-R2": {
+      "sample_id": "P1-R2",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/004/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 4,
+            "step": 9,
+            "total": 13
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/004/response.bin",
+          "program_key": "ast-sha256:910a1873f845f8238bf68f66848c5b74ceab7129f1009a5cc9f2bfa38aef09c4",
+          "usage_summary": {
+            "input_tokens": 1128,
+            "output_tokens": 7972,
+            "cache_hit_tokens": 896,
+            "cache_miss_tokens": 232
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    },
+    "P2-R2": {
+      "sample_id": "P2-R2",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/005/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 3,
+            "step": 9,
+            "total": 12
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/005/response.bin",
+          "program_key": "ast-sha256:cc6a7bc051b83b6a8cb3ebb4b58624cbcc87fc504d4a17fa0a53b28e37c1cecb",
+          "usage_summary": {
+            "input_tokens": 1167,
+            "output_tokens": 9667,
+            "cache_hit_tokens": 1024,
+            "cache_miss_tokens": 143
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    },
+    "P3-R2": {
+      "sample_id": "P3-R2",
+      "limit": 12,
+      "feedback_kind": "enhanced",
+      "calls": 1,
+      "repairs": 0,
+      "stop": "accepted",
+      "first_accepted_attempt": 0,
+      "accepted_response": "attempts/006/response.bin",
+      "trajectory": [
+        {
+          "spec_id": "amr-supervisor-obligations/v1.1",
+          "source_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+          "translator_fault": null,
+          "parse_pass": true,
+          "parse_error": null,
+          "checked_inputs": 1824,
+          "select_inputs": 32,
+          "step_inputs": 1792,
+          "source_violation_inputs": 0,
+          "model_violation_inputs": 0,
+          "correspondence_mismatches": 0,
+          "source_witnesses": [],
+          "model_witnesses": [],
+          "correspondence_witnesses": [],
+          "source_policy_pass": true,
+          "model_policy_pass": true,
+          "correspondence_pass": true,
+          "accepted": true,
+          "profile_id": "amr-forge-diagnostic-rules12/v1",
+          "profile_config": {
+            "files": {
+              "assurance.py": {
+                "changes": [
+                  "relative language import for isolated package",
+                  "relative model import for isolated package"
+                ],
+                "profile_sha256": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+                "source_path": "formal-artefacts/amr-supervisor/assurance.py",
+                "source_sha256": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11"
+              },
+              "language.py": {
+                "changes": [
+                  "raise function rule-list limit and corresponding error text from 8 to 12"
+                ],
+                "profile_sha256": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+                "source_path": "formal-artefacts/amr-supervisor/language.py",
+                "source_sha256": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569"
+              },
+              "model.py": {
+                "changes": [
+                  "relative language import for isolated package"
+                ],
+                "profile_sha256": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+                "source_path": "formal-artefacts/amr-supervisor/model.py",
+                "source_sha256": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78"
+              }
+            },
+            "max_ast_nodes": 64,
+            "max_expr_depth": 8,
+            "max_expr_length": 512,
+            "max_text_bytes": 204800,
+            "max_total_branches": 32,
+            "profile_id": "amr-forge-diagnostic-rules12/v1",
+            "rules_per_function": 12
+          },
+          "rule_counts": {
+            "select": 3,
+            "step": 9,
+            "total": 12
+          },
+          "failure_input_ids": [],
+          "source_failure_input_ids": [],
+          "model_failure_input_ids": [],
+          "correspondence_failure_input_ids": [],
+          "attempt": 0,
+          "phase": "initial",
+          "response_path": "attempts/006/response.bin",
+          "program_key": "ast-sha256:eed9372a96439fea675121027216923745e7b48a12e0b1b3fee145d8fc28b7db",
+          "usage_summary": {
+            "input_tokens": 1146,
+            "output_tokens": 10229,
+            "cache_hit_tokens": 896,
+            "cache_miss_tokens": 250
+          },
+          "assessment_accepted": true,
+          "fatal": null,
+          "failure_delta_comparable": false,
+          "repaired_input_ids": null,
+          "newly_bad_input_ids": null
+        }
+      ],
+      "initial_accepted": true
+    }
+  },
+  "initial_accepted_count": 6,
+  "eventually_accepted_count": 6,
+  "selected_sources": [
+    {
+      "sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+      "response_path": "attempts/001/response.bin",
+      "representative_sample": "P1-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R1"
+      ]
+    },
+    {
+      "sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+      "response_path": "attempts/002/response.bin",
+      "representative_sample": "P2-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R1",
+        "P3-R2"
+      ]
+    },
+    {
+      "sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "response_path": "attempts/003/response.bin",
+      "representative_sample": "P3-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P3-R1"
+      ]
+    },
+    {
+      "sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+      "response_path": "attempts/004/response.bin",
+      "representative_sample": "P1-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R2"
+      ]
+    },
+    {
+      "sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+      "response_path": "attempts/005/response.bin",
+      "representative_sample": "P2-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R2"
+      ]
+    }
+  ],
+  "old_run_unchanged": true,
+  "finished_at_utc": "2026-09-21T13:22:37.922245+00:00",
+  "scope": "six fresh requests for three wordings of one task; not independent industrial tasks"
+}

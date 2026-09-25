@@ -1,0 +1,227 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_acceptance_is_terminal_and_selects_first_arm (test_runner.RunnerTests.test_acceptance_is_terminal_and_selects_first_arm) ... FAIL
+test_both_first_prompts_match_frozen_previous_enhanced_prompt (test_runner.RunnerTests.test_both_first_prompts_match_frozen_previous_enhanced_prompt) ... FAIL
+test_changed_previous_frozen_source_is_rejected_before_initialization (test_runner.RunnerTests.test_changed_previous_frozen_source_is_rejected_before_initialization) ... FAIL
+test_child_wall_deadline_is_660_seconds (test_runner.RunnerTests.test_child_wall_deadline_is_660_seconds) ... FAIL
+test_cycle_stops_each_condition_and_run_cannot_be_reused (test_runner.RunnerTests.test_cycle_stops_each_condition_and_run_cannot_be_reused) ... FAIL
+test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts (test_runner.RunnerTests.test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts) ... FAIL
+test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content (test_runner.RunnerTests.test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content) ... FAIL
+test_falsey_nontext_content_and_deep_json_are_fatal (test_runner.RunnerTests.test_falsey_nontext_content_and_deep_json_are_fatal) ... FAIL
+test_fatal_assessment_does_not_reenter_failed_parser (test_runner.RunnerTests.test_fatal_assessment_does_not_reenter_failed_parser) ... FAIL
+test_fatal_transports_and_truncation_never_retry (test_runner.RunnerTests.test_fatal_transports_and_truncation_never_retry) ... FAIL
+test_fixture_cannot_enter_live_execution (test_runner.RunnerTests.test_fixture_cannot_enter_live_execution) ... FAIL
+test_frozen_dependency_drift_prevents_worker_before_post (test_runner.RunnerTests.test_frozen_dependency_drift_prevents_worker_before_post) ... FAIL
+test_impossible_reasoning_count_is_invalid_usage (test_runner.RunnerTests.test_impossible_reasoning_count_is_invalid_usage) ... FAIL
+test_malformed_provider_json_stops_without_retry (test_runner.RunnerTests.test_malformed_provider_json_stops_without_retry) ... FAIL
+test_oversized_followup_stops_with_final_evidence_without_post (test_runner.RunnerTests.test_oversized_followup_stops_with_final_evidence_without_post) ... FAIL
+test_payload_arms_have_equal_limits_and_correct_thinking_controls (test_runner.RunnerTests.test_payload_arms_have_equal_limits_and_correct_thinking_controls) ... FAIL
+test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint (test_runner.RunnerTests.test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint) ... FAIL
+test_post_redacts_credential_echo_and_exception_messages (test_runner.RunnerTests.test_post_redacts_credential_echo_and_exception_messages) ... FAIL
+test_previous_stage_evidence_drift_stops_worker_before_post (test_runner.RunnerTests.test_previous_stage_evidence_drift_stops_worker_before_post) ... FAIL
+test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence (test_runner.RunnerTests.test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence) ... FAIL
+[Legacy-only test entry omitted during record maintenance.]
+test_total_completion_tokens_include_reasoning_in_usage_and_cap (test_runner.RunnerTests.test_total_completion_tokens_include_reasoning_in_usage_and_cap) ... FAIL
+test_invalid_usage_stops_all_conditions (test_runner.RunnerTests.test_invalid_usage_stops_all_conditions) ... FAIL
+test_worker_exclusive_claim_allows_only_one_post (test_runner.RunnerTests.test_worker_exclusive_claim_allows_only_one_post) ... FAIL
+test_worker_rejects_payload_prompt_and_preflight_tampering (test_runner.RunnerTests.test_worker_rejects_payload_prompt_and_preflight_tampering) ... FAIL
+
+======================================================================
+FAIL: test_acceptance_is_terminal_and_selects_first_arm (test_runner.RunnerTests.test_acceptance_is_terminal_and_selects_first_arm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_both_first_prompts_match_frozen_previous_enhanced_prompt (test_runner.RunnerTests.test_both_first_prompts_match_frozen_previous_enhanced_prompt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_changed_previous_frozen_source_is_rejected_before_initialization (test_runner.RunnerTests.test_changed_previous_frozen_source_is_rejected_before_initialization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_child_wall_deadline_is_660_seconds (test_runner.RunnerTests.test_child_wall_deadline_is_660_seconds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_cycle_stops_each_condition_and_run_cannot_be_reused (test_runner.RunnerTests.test_cycle_stops_each_condition_and_run_cannot_be_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts (test_runner.RunnerTests.test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content (test_runner.RunnerTests.test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_falsey_nontext_content_and_deep_json_are_fatal (test_runner.RunnerTests.test_falsey_nontext_content_and_deep_json_are_fatal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_fatal_assessment_does_not_reenter_failed_parser (test_runner.RunnerTests.test_fatal_assessment_does_not_reenter_failed_parser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_fatal_transports_and_truncation_never_retry (test_runner.RunnerTests.test_fatal_transports_and_truncation_never_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_fixture_cannot_enter_live_execution (test_runner.RunnerTests.test_fixture_cannot_enter_live_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_frozen_dependency_drift_prevents_worker_before_post (test_runner.RunnerTests.test_frozen_dependency_drift_prevents_worker_before_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_impossible_reasoning_count_is_invalid_usage (test_runner.RunnerTests.test_impossible_reasoning_count_is_invalid_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_malformed_provider_json_stops_without_retry (test_runner.RunnerTests.test_malformed_provider_json_stops_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_oversized_followup_stops_with_final_evidence_without_post (test_runner.RunnerTests.test_oversized_followup_stops_with_final_evidence_without_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_payload_arms_have_equal_limits_and_correct_thinking_controls (test_runner.RunnerTests.test_payload_arms_have_equal_limits_and_correct_thinking_controls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint (test_runner.RunnerTests.test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_post_redacts_credential_echo_and_exception_messages (test_runner.RunnerTests.test_post_redacts_credential_echo_and_exception_messages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_previous_stage_evidence_drift_stops_worker_before_post (test_runner.RunnerTests.test_previous_stage_evidence_drift_stops_worker_before_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence (test_runner.RunnerTests.test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+[Legacy-only test detail omitted during record maintenance.]
+
+======================================================================
+FAIL: test_total_completion_tokens_include_reasoning_in_usage_and_cap (test_runner.RunnerTests.test_total_completion_tokens_include_reasoning_in_usage_and_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_invalid_usage_stops_all_conditions (test_runner.RunnerTests.test_invalid_usage_stops_all_conditions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_worker_exclusive_claim_allows_only_one_post (test_runner.RunnerTests.test_worker_exclusive_claim_allows_only_one_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+======================================================================
+FAIL: test_worker_rejects_payload_prompt_and_preflight_tampering (test_runner.RunnerTests.test_worker_rejects_payload_prompt_and_preflight_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_runner.py", line 27, in setUp
+    self.assertTrue(self.runner_exists, 'bounded extended runner not implemented')
+AssertionError: False is not true : bounded extended runner not implemented
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.007s
+
+FAILED (failures=25)

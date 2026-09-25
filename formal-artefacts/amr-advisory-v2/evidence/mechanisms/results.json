@@ -1,0 +1,1157 @@
+{
+  "E3a": {
+    "correct": {
+      "trace": [
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "B"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "B"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Validate",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Observe",
+            true,
+            true
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [
+            [
+              "Observed",
+              true,
+              true
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Commit"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        }
+      ],
+      "violations": 0
+    },
+    "faulty": {
+      "trace": [
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "B"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "B"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Validate",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Observe",
+            true,
+            true
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [
+            [
+              "Observed",
+              true,
+              true
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Commit"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "reference_accepted": false
+        }
+      ],
+      "violations": 1
+    }
+  },
+  "E3b": {
+    "correct": {
+      "trace": [
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Validate",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Commit"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Issue",
+            "A"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "events": [
+            [
+              "Issued",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "input": [
+            "Observe",
+            true,
+            true
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "events": [
+            [
+              "Observed",
+              true,
+              true
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "input": [
+            "Apply"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        }
+      ],
+      "violations": 0
+    },
+    "faulty": {
+      "trace": [
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Register",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Registered",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Validate",
+            "A"
+          ],
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": true,
+            "req_b": false,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Commit"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "input": [
+            "Issue",
+            "A"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "events": [
+            [
+              "Issued",
+              "A"
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "input": [
+            "Observe",
+            true,
+            true
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "events": [
+            [
+              "Observed",
+              true,
+              true
+            ]
+          ],
+          "reference_accepted": true
+        },
+        {
+          "before": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "input": [
+            "Apply"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": false,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Proceed",
+              "A"
+            ]
+          ],
+          "reference_accepted": false
+        }
+      ],
+      "violations": 1
+    }
+  },
+  "E4": {
+    "correct": {
+      "owner": "A",
+      "services": 2,
+      "trace": [
+        {
+          "service": 0,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "source_called": true,
+          "source": {
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "raw_action": "SelectA",
+            "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+          },
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "one-request",
+            "context_id": "one-task-set",
+            "reason": "no_valid_advice"
+          }
+        },
+        {
+          "service": 1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "source_called": false,
+          "source": null,
+          "latch": null
+        }
+      ],
+      "repeated_complete_state": false,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "scope": "finite witness; permanent blocking additionally requires the HOL loop theorem"
+    },
+    "faulty": {
+      "owner": null,
+      "services": 6,
+      "trace": [
+        {
+          "service": 0,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        },
+        {
+          "service": 1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        },
+        {
+          "service": 2,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        },
+        {
+          "service": 3,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        },
+        {
+          "service": 4,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        },
+        {
+          "service": 5,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [],
+          "source_called": false,
+          "reason": "constructed_wait_for_advice"
+        }
+      ],
+      "repeated_complete_state": true,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "scope": "finite witness; permanent blocking additionally requires the HOL loop theorem"
+    }
+  },
+  "positive": {
+    "A": {
+      "owner": "A",
+      "services": 2,
+      "trace": [
+        {
+          "service": 0,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "source_called": true,
+          "source": {
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "raw_action": "SelectA",
+            "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+          },
+          "latch": {
+            "decision_id": 1,
+            "advice": "A",
+            "request_id": "one-request",
+            "context_id": "one-task-set",
+            "reason": "valid_advice"
+          }
+        },
+        {
+          "service": 1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "source_called": false,
+          "source": null,
+          "latch": null
+        }
+      ],
+      "repeated_complete_state": false,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "scope": "finite witness; permanent blocking additionally requires the HOL loop theorem"
+    },
+    "B": {
+      "owner": "B",
+      "services": 2,
+      "trace": [
+        {
+          "service": 0,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "events": [],
+          "source_called": true,
+          "source": {
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "raw_action": "SelectB",
+            "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+          },
+          "latch": {
+            "decision_id": 1,
+            "advice": "B",
+            "request_id": "one-request",
+            "context_id": "one-task-set",
+            "reason": "valid_advice"
+          }
+        },
+        {
+          "service": 1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "B",
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": false,
+            "owner": "B",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "B"
+            ]
+          ],
+          "source_called": false,
+          "source": null,
+          "latch": null
+        }
+      ],
+      "repeated_complete_state": false,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "scope": "finite witness; permanent blocking additionally requires the HOL loop theorem"
+    },
+    "none": {
+      "owner": "A",
+      "services": 2,
+      "trace": [
+        {
+          "service": 0,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "after": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "events": [],
+          "source_called": true,
+          "source": {
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "raw_action": "SelectA",
+            "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd"
+          },
+          "latch": {
+            "decision_id": 1,
+            "advice": null,
+            "request_id": "one-request",
+            "context_id": "one-task-set",
+            "reason": "no_valid_advice"
+          }
+        },
+        {
+          "service": 1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": false,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": false,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "source_called": false,
+          "source": null,
+          "latch": null
+        }
+      ],
+      "repeated_complete_state": false,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "scope": "finite witness; permanent blocking additionally requires the HOL loop theorem"
+    }
+  }
+}

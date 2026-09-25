@@ -1,0 +1,13 @@
+{
+  "scope": "user-authorized one-initial-response smoke experiment",
+  "date": "2026-09-17",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "model": "deepseek-flash",
+  "max_network_posts": 1,
+  "max_repairs": 0,
+  "max_retries": 0,
+  "output_cap": 2048,
+  "client_wall_deadline_seconds": 90,
+  "historical_preparation_inputs_verified": 47,
+  "six_candidate_protocol_complete": false
+}

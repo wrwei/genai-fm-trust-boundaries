@@ -1,0 +1,36 @@
+{
+  "schema": "amr-advisory-v2/final-verification/v1",
+  "checked_at_utc": "2026-09-21T15:10:51.753996+00:00",
+  "base_commit": "8259f424d991183e1239677fb6b0de34e29cd923",
+  "tests": {
+    "command": "python -B -m unittest discover -s formal-artefacts/amr-advisory-v2/tests -v",
+    "exit_code": 0,
+    "tests_run": 30,
+    "duration_seconds": 61.113,
+    "evidence": "Primary-agent command session15092 completed exit0; includes physical/source/core/mailbox/advice behavior and corrupted-input checks",
+    "network_calls": 0
+  },
+  "checks": {
+    "proof_source_hashes": 8,
+    "headline_audit_entries": 31,
+    "recorded_build": "successful 2026-09-21 22:51:34 GMT+8; current hashes match",
+    "finite_core_rows": 11664,
+    "finite_selector_rows": 1296,
+    "historical_samples": 6,
+    "distinct_raw_sources": 5,
+    "physical_expected_outcomes": 15,
+    "physical_trace_hashes_verified": 15,
+    "advice_postflight_reexecution_equal": true,
+    "local_links_checked": 134,
+    "git_diff_check_exit_code": 0,
+    "postflight_inventory_files": 205
+  },
+  "scope": "Final current snapshot checks plus previously executed independent physical replay and recorded Isabelle build; no whole implementation or physical refinement claim",
+  "closure_review": "PASS; no Critical/Important findings; inherited controlled-advice witness documentation resolved; see ../closure-review.md",
+  "passed": true,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "isabelle": "2025-2"
+  }
+}

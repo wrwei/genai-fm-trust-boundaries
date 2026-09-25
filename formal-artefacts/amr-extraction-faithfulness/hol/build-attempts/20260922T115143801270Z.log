@@ -1,0 +1,26 @@
+Started at Tue Sep 22 19:51:30 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Extraction_Faithfulness
+Running AMR_Extraction_Faithfulness ...
+AMR_Extraction_Faithfulness: theory AMR_Extraction_Faithfulness.AMR_Extraction
+AMR_Extraction_Faithfulness: theory AMR_Extraction_Faithfulness.AMR_Artifacts
+AMR_Extraction_Faithfulness: theory AMR_Extraction_Faithfulness.AMR_Extraction 100% (1.785s cumulated time)
+AMR_Extraction_Faithfulness: theory AMR_Extraction_Faithfulness.AMR_Artifacts 100% (9.912s cumulated time)
+Timing AMR_Extraction_Faithfulness (2 threads, 6.310s elapsed time, 8.750s cpu time, 0.219s GC time, factor 1.39)
+Finished AMR_Extraction_Faithfulness (0:00:07 elapsed time)
+Exporting AMR_Extraction_Faithfulness ...
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/export/AMR_Extraction_Faithfulness.AMR_Artifacts/artifact-audit.txt"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-extraction-faithfulness/hol/export/AMR_Extraction_Faithfulness.AMR_Extraction/proof-audit.txt"
+
+Finished at Tue Sep 22 19:51:43 GMT+8 2026
+0:00:13 elapsed time

@@ -1,0 +1,100 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+[Legacy-only test entry omitted during record maintenance.]
+[Legacy-only test entry omitted during record maintenance.]
+test_combined_resource_and_transport_failures_remain_independent (tests.test_trial.TrialTests.test_combined_resource_and_transport_failures_remain_independent) ... ERROR
+test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) ... 
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='attempt-bool') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='attempt-float') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='cap-float') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='cap-bool') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='decode-bool') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='decode-float') ... FAIL
+  test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='status-list') ... ERROR
+
+======================================================================
+ERROR: test_combined_resource_and_transport_failures_remain_independent (tests.test_trial.TrialTests.test_combined_resource_and_transport_failures_remain_independent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 282, in test_combined_resource_and_transport_failures_remain_independent
+    self.assertEqual(set(rec["violation_flags"]), {
+                         ~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'violation_flags'
+
+======================================================================
+ERROR: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='status-list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 314, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    record_response(run, GOOD, metadata)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 420, in record_response
+    _validate_metadata(metadata, request, config, records)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 374, in _validate_metadata
+    if metadata["status"] not in STATUSES:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+======================================================================
+[Legacy-only test detail omitted during record maintenance.]
+
+======================================================================
+[Legacy-only test detail omitted during record maintenance.]
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='attempt-bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='attempt-float')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='cap-float')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='cap-bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='decode-bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (tests.test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) (label='decode-float')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 313, in test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.726s
+
+FAILED (failures=8, errors=2)

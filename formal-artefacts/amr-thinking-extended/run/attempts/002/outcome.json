@@ -1,0 +1,39 @@
+{
+  "condition": "T64-F",
+  "repair": 1,
+  "started_at_utc": "2026-09-17T06:45:28.543210+00:00",
+  "finished_at_utc": "2026-09-17T06:46:11.233386+00:00",
+  "usage_summary": {
+    "input_tokens": 2826,
+    "output_tokens": 9291,
+    "cache_hit_tokens": 2688,
+    "cache_miss_tokens": 138
+  },
+  "fatal": null,
+  "accepted": true,
+  "provider_model": "deepseek-flash",
+  "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "provider_request_id": "9f5e874a-61d3-4ced-bd04-c3bb9013652c",
+  "thinking": {
+    "requested_mode": "enabled",
+    "requested_reasoning_effort": "high",
+    "reasoning_content_present": true,
+    "reasoning_content_bytes": 39076,
+    "reasoning_tokens": 9032,
+    "mode_evidence": "reasoning_observed"
+  },
+  "files_sha256": {
+    "assessment.json.gz": "bac431b73d2524cec1f2b0575b6727329397a46c01fb246c05d4a56b4b53d0b3",
+    "dispatch-intent.json": "e609a7bdced579629f1472836f8899d7f22835c2744dd81b30b17a0af3848fac",
+    "dispatch.json": "bb3785b9ff790cc6dc542671138947d813294154c5141325c324ead4668b9f34",
+    "feedback.json": "c17ba59d158d3902980ecb01c5cbe127fa518b32be1d11c8f275163c93d4a9cf",
+    "http-body.bin": "74d28944ac3d28e12ba19ca0cca5f04b2b908f851cbb6eaaf507792ce4685ea7",
+    "http-request.json": "02a0e6b932d71521bdbebdc6492620dd5e42b7ff40fd45338f7224196cdb0032",
+    "preflight.json": "e98c73d5f85a2f94b3a74e5d71d85597acb07abf97bfb9e7499c8fbdb99cc70a",
+    "prompt.txt": "77a084b1728c058798a2b1b941cd89a5e5f3808d4e1072b9e80dea2677528695",
+    "request.json": "b5e31016cba69fba062d9fbce6c896391bf96e7cb1b12207499703b979288d75",
+    "response.bin": "ccaf1b8c973b72cd27bccabe008fb8d6ae5c2f8b186bacad359facc3fec3df24",
+    "transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "worker-claim.json": "02688c0889be64c72b4c9c6668f002eb481036594107c929a48b178200f08c0b"
+  }
+}

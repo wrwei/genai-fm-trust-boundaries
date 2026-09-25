@@ -1,0 +1,10 @@
+{
+  "sample_id": "P2-R1",
+  "attempt_index": 2,
+  "request_record_sha256": "3cae2b02da3f96dea87b8a7acc087d6418079e1e31e996dba7804211c05b6b79",
+  "http_request_sha256": "d84612375e6d33c0354a91f9647c8a156fd3935b5047dc7b96dfd8aa62513c87",
+  "authorization_sha256": "4e623bcc42c9b1ed5a9a82fc7603ef30c8c94845947cd1be7d7850e41a3c50a7",
+  "ledger_attempt_number": 6,
+  "maximum_posts": 1,
+  "retries": 0
+}

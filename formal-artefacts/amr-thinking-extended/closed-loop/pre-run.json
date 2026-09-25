@@ -1,0 +1,182 @@
+{
+  "input_sha256": {
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-corridor/controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-corridor/oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-corridor/plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-corridor/run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-corridor/simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-deepseek-pilot/run/records/004/response.bin": "7b263c1eabf5a5ea02fc1e45f01217b629d538a8f667bd28b16a31a36374894c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-deepseek-smoke/smoke.py": "4cd7aeb114588967ba5168ef2201d9dfc549da98ebfddfc75f4770f37e5b09c7",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/diagnostics.py": "6566bb2a05bd241d08e3b8722593e5e633291a58e04738c07c66f00d3a273b81",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/__init__.py": "62fce7b366546e395a9e8c164616ff2f0365537cc30bd2f8b4757df329e956ec",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules12/__init__.py": "566bdcf2c48440ef2d382fec07c0e8a5e98d5792bc2a8735dbe403985d48d86a",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules12/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules12/language.py": "dc9bc3f26d568f19d24353027bb6e3a79303812bbd98d0e1a341ce3a2cf94e4d",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules12/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules8/__init__.py": "e9cc2b25ee29ab3f87eed58f62cd595fee7f60d58d0562d98564228c65f02714",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules8/assurance.py": "22c19ac4ff9abf4efed0d12b314b651bb44bcb0ff2d67a1c4a9aa93d4d787309",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules8/language.py": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/rules8/model.py": "97a1cf851f29ed00bba3b294aa8ed4c0fd5dd0b0180e731e8d364e3b3f06cf9f",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/profiles/snapshot.json": "6a6349f4e2e5a395b55cc0d544a24da99e1f65576b43ef7d5a7e21de02ce4595",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/runner.py": "85d641a795de8b6bbbbfe82c6413cd61bc3cf72c5f1e6257b85a7f6ee8ef6f52",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-forge-diagnostic/simulate.py": "fedfbb6682b455dda4b2259d983b7c0692de818d215cb0af9227c8e87ac9d7f6",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/fixture-config.json": "449f4b86a92ca43fa9f77d638b66b2cd6cf2307317be0372b7b8ee1479d9769b",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/interface.md": "02ff917b754cac421d0602f0312b7247fe8bc681f3b6d2d37be7a6d3388291b4",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/policy_P1.md": "cd2d09bb1a69b318ef9c3ba409d380162a990f5f711147884aac6a1fda2d457c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/policy_P2.md": "043797ca77337cf226b597e963e45cddb387594aa191d8cfe26f5b126c49373c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/policy_P3.md": "6f7c6163ee4cb0e97c61fe673c3309b74fd9f693ba31ede3e2487927b9c8baef",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P1-R1.txt": "0fa4e0239a81efadc40bb34316650a3aa8ae9b14954cc1bbcec1b23859071936",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P1-R2.txt": "0fa4e0239a81efadc40bb34316650a3aa8ae9b14954cc1bbcec1b23859071936",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P2-R1.txt": "0386fd078eee97973364adf8a26af90f08b824f7803d2dcf53b4d0f2d896d257",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P2-R2.txt": "0386fd078eee97973364adf8a26af90f08b824f7803d2dcf53b4d0f2d896d257",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P3-R1.txt": "f9799391755d295dbb40fff70f6741954f323dbbd5c01fc3241ee7ccdb28cdc4",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/prepared/P3-R2.txt": "f9799391755d295dbb40fff70f6741954f323dbbd5c01fc3241ee7ccdb28cdc4",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/prompts/repair.md": "b98dabe30f01d383f8aa1c6b36af1d806aee0eaa8aae47de65bea77b66ddea6a",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/protocol-review-package.diff": "50135f449ebf8bc18fc0190eee40ee320153d9ab685690f5da558e73c696d889",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/protocol-review.md": "d580b67319b1556576f5df3ab425591530177fe4d872e3cd9a582e5b556cabec",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/protocol.json": "8da4470ad8239fe2c3914156dde7eb948ce8e396cf7b99d346c6e71384901b12",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/README.md": "0080a5bfb1ddc8ebbce5516d151fd427d2b0eb81124e61585a712f8414cfa986",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/recorder-fix-review.diff": "8fd78647d3b6345f8b7ceb12e17b812e77a7ed65d150458a7cc393ccfaedae4a",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/recorder-review-package.diff": "70d0e926099ab3e816c8f6b4c3e72401c37b1f2bd15ab4282c0938b885e31764",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/recorder-review.md": "d204a02d1622e33296c9d1e25aa222df6430899688644262a231d203b6e99a32",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/rehearsal-red.log": "e62bede95cd56f4f1f24e996993550ad05dd951d634100d41e6dccb51d920b91",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/rehearse.py": "8f78ca989b5f244644826188fcb5ca8bf9862443d993ea43b174cacc8a3b6754",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-brief.md": "3852c2ddc4255476dec8ce58d548982813c6bb1166140b2562ed4d102027d82d",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-fix-brief.md": "ebdf8a5935332ef5d353aea0abc0b91a839dcb34b0e87ecd6665fa2974165aec",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-fix-round1-attempted-red.log": "ed5f2d682190959f9366cefe449914e2527ca93022be6b5460bbdeeac5eaa65e",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-fix-round1-green.log": "422091a0c544e68ae6f7366c5664310f806a6457ba419e77eda6ede26200c441",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-fix-round1-red.log": "aa627ec44d4ef3ef9a2aa0b2e8dc1dffd875e4630ac651859feab636082da792",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-green.log": "389b8b5ade840e4549514c7bf3c04262b5356380e8a59ca7409f8070895ed0c7",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-red-clarifications.log": "4dcdd2c60033228a820865552214bdf514771fe84d8c2be1b1ecdd9bf43d4aee",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-red.log": "45f242f5bb4dd69ac5962ea1f68561908934e5562426ca7bc1df59592fa1dbfc",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/task-1-report.md": "b15daa1eee35d4c67bed137b7b413f345c435ada63793826abd54036432c30d6",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_rehearsal.py": "451097044c665ad82145691639b099191c2b84e01aaae80a1a262450e90bc908",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py": "d7832902521695248e7fa8cdd2a9e37ac9a3f6ad9f64fb0df227c31587adb3e5",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests-final.log": "088f1d441696f81ada023a6e27b106b263bc58d59c9eefe56b343609b431bf2c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py": "741fab8db555c96b55772625c152379b04529b7d6f08519d28066d715bf76161",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-supervisor/assurance.py": "1c7eb759a4cf4eea5d590c223eeb040e3367b9b93db0e89e876962e1cc4b9b11",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-supervisor/closed_loop.py": "c021f20b22e0798ae13371c368b7500b5b8edc951b1d1d69f4e53b0634f2bd75",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-supervisor/language.py": "bcb3186549c9a8bde69172e4d93233df412e89c7cda4694f0c509dc321348569",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-supervisor/model.py": "45b9bea7bd461f4b9035d1a204b22a37f2c2ea0f9ee09117ecd266fff80f9a78",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-supervisor/run_supervisor_suite.py": "7eb652f26259739505a06f49ef89c9ae37793bd8c6f2af702afcce1fdd348845",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-diagnostic/README.md": "152f9be783b80cff4a58fa007a2356384db42d06fb4902fe3902fe56883d0b9e",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-diagnostic/runner.py": "96e4ab31cf682b24e2ff5226d9b92936fc5463ecb9996e86b38206fe7f749f3d",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/README.md": "6a6183bba98e70fa815a0c56ea02858c10d8bfd706d40b13915f5c1f186d983c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/assessment.json.gz": "f5d760951046b6111ea37ff43693a9050d14192142eb2df953c9ea37c4995b50",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/dispatch-intent.json": "2ed5cd7aa14c474ed1fa6e25190cc5bb36c0aa3aa2669b0a5d2d27883c8a5121",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/dispatch.json": "3121a6e44a2513acb3ed8a2f703a077cb64087f576bb9f3e02fa06993c558429",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/feedback.json": "c17ba59d158d3902980ecb01c5cbe127fa518b32be1d11c8f275163c93d4a9cf",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/http-body.bin": "fa818238c93367c61006c2894ac6cf7b44e4dcedfaf1dc9430302da6aa8ad608",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/http-request.json": "1d8d983d8883c959d872010b2ea3677cf57b0f66b240e4cb394d36ccf6a89d4e",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/outcome.json": "111dc4b73f56d2c4eb92de4dc7d207b591caa5a1e93d8fb5ee4fc4b4de3523be",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/preflight.json": "57062ed58424782157410d4113c5539d49e5aac640c9386594a74764ade2c503",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/prompt.txt": "77a084b1728c058798a2b1b941cd89a5e5f3808d4e1072b9e80dea2677528695",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/request.json": "aee25e85f651c6f441e2eca31f08e1cd778e4b2931de72e4fd822af461987dc2",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/response.bin": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/001/worker-claim.json": "818152db87db0369823956790a30264bb5830383771274bf740e9945e266a573",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/assessment.json.gz": "bac431b73d2524cec1f2b0575b6727329397a46c01fb246c05d4a56b4b53d0b3",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/dispatch-intent.json": "e609a7bdced579629f1472836f8899d7f22835c2744dd81b30b17a0af3848fac",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/dispatch.json": "bb3785b9ff790cc6dc542671138947d813294154c5141325c324ead4668b9f34",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/feedback.json": "c17ba59d158d3902980ecb01c5cbe127fa518b32be1d11c8f275163c93d4a9cf",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/http-body.bin": "74d28944ac3d28e12ba19ca0cca5f04b2b908f851cbb6eaaf507792ce4685ea7",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/http-request.json": "02a0e6b932d71521bdbebdc6492620dd5e42b7ff40fd45338f7224196cdb0032",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/outcome.json": "7b8d233b728507dd9833c07e3d35552f30b2f54a80de8cb95f164c66420d9737",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/preflight.json": "e98c73d5f85a2f94b3a74e5d71d85597acb07abf97bfb9e7499c8fbdb99cc70a",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/prompt.txt": "77a084b1728c058798a2b1b941cd89a5e5f3808d4e1072b9e80dea2677528695",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/request.json": "b5e31016cba69fba062d9fbce6c896391bf96e7cb1b12207499703b979288d75",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/response.bin": "ccaf1b8c973b72cd27bccabe008fb8d6ae5c2f8b186bacad359facc3fec3df24",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/002/worker-claim.json": "02688c0889be64c72b4c9c6668f002eb481036594107c929a48b178200f08c0b",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/assessment.json.gz": "f5d760951046b6111ea37ff43693a9050d14192142eb2df953c9ea37c4995b50",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/dispatch-intent.json": "331e5ddab40fdaca869f59ed1ac04176e95f32db60904908d9181c73078d66a9",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/dispatch.json": "2b934bca6646309287505a4cdc24af42027f5336c8b93a0d9d2cbc3d8eaf39ea",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/feedback.json": "06c41dfa7c9fd796baba8894b386fdb2b8c80bc8473503ea9006342112374ae5",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/http-body.bin": "c4742e6af7ffbe98472fa7954fde49e6a967f181da585dc38f03b7db0e0a0824",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/http-request.json": "c263f44cf1398a3297e46d8aa29278070504471c92f8cb721c70d9dcc8e1b0a0",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/outcome.json": "63954516ee143f00aaff41725cb52a3a2970b7acf4a94ee5560bc513aec8e8a3",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/preflight.json": "d1e1ce47046ae3c12afb27997c5b4ba1b000f054d13043aed3e5c34a3e07822b",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/prompt.txt": "1b4fef4dda1988031e22fff252124226f7202067dcb280764664bafbfb2b9a65",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/request.json": "6bd0d8302b032705ff4ab65ce9929dfe953c0f067183eb1fbe88d764ce0e166c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/response.bin": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/attempts/003/worker-claim.json": "9b6a247eab2207f77d502a77b69cf345f705e07eda36294281e5ac13e92feb34",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/evidence-sha256.json": "46e72cbbf0f1a0dbd746607709c4d8898f36880eb0fc923e8b2a9ec52ad7d012",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/forge-inventory.json": "3a8757a60fca0e2f632f53559322c2a0d4f3492a2b22f0628179fb3c73c87227",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/frozen-inputs.json": "f0a595c1d7252d6921c064a029c61c92f8ed8f545994f4876599d28b229db6f0",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/prior-inventory.json": "a3956d4462d47e6c509f0d30b75f444fa0cb7aecf0b0ae30870aeb33b3b05c77",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/protocol.json": "535ba4948d205a185cb3be7b9ddb2f0d1f2250ff422c29baca1b8db5e3350d32",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/result.json": "deba95182ae025de9be25d7a61dc75c2ae2cae180df9cee012cd45406b29f6b4",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/setup-sha256.json": "e91e356fee438c1dfdd0c6eb3a846eb5cc0659d16d3370458983de9fbe9a9c37",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/starting-response.bin": "7b263c1eabf5a5ea02fc1e45f01217b629d538a8f667bd28b16a31a36374894c",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/thinking-frozen-inputs.json": "d765ed2b217fd0c56bc60a0661cbca773de06776b5d28996553e2b7d90d1361e",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/run/thinking-inventory.json": "fbd34cc4bf24003fc6aab920b9cced5a71ce45a62dcf98088880e9b71ee234b8",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/runner.py": "1eae182511db9c256a5567db8bca8f65200d5136303db809c2701c3182ba9277",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/simulate.py": "0c1406482d0504bf4dbc9cdf2ecbccfa45e6f03b3b0fbc50b7b94f86462818f0",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_extended_protocol_2026-09-17.md": "f11a47175e95e0d64779528e11e60e00dc349da23cf881d56f4cc9a5a80f33ea",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_llm_preparation_plan_2026-09-15.md": "6664a0c66cc1d5cde642f1af34fbb9b34c1921bfee8c0f2dc137dcc19a2444f8",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_llm_preparation_results_2026-09-15.md": "ff26199003413fc970c1fb095fce2c2cb6ff0395d868160a9934b2c04a1a8044",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_llm_protocol_2026-09-15.md": "7f7cb757000f87e464105cc3110c20f9e739fa6b0ebafb845cf41f21a96e7967",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6",
+    "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_thinking_protocol_2026-09-17.md": "907b5a68a61edacdce5b519fd08ea0edaee961edc0fbca0314569e93119b484d"
+  },
+  "adaptation": {
+    "adaptation": "only language and assurance imports made package-relative",
+    "original_path": "formal-artefacts/amr-supervisor/closed_loop.py",
+    "original_sha256": "c021f20b22e0798ae13371c368b7500b5b8edc951b1d1d69f4e53b0634f2bd75",
+    "adapted_sha256": "ad75db4b38903e1d1fe348aaac59f8a1154d2202932f747557d35e64f56efc4d",
+    "package": "_amr_forge_diagnostic_profiles.rules12",
+    "rule_limit": 12,
+    "unchanged": "all physical equations, schedules and independent collision oracle",
+    "imports": [
+      [
+        "from language import parse_program, eval_select, eval_step",
+        "from .language import parse_program, eval_select, eval_step"
+      ],
+      [
+        "from assurance import assess_source, selection_violations, step_violations, obligation",
+        "from .assurance import assess_source, selection_violations, step_violations, obligation"
+      ]
+    ]
+  },
+  "cases": [
+    [
+      "normal_A",
+      {}
+    ],
+    [
+      "normal_B",
+      {
+        "preference": "B"
+      }
+    ],
+    [
+      "temporary",
+      {
+        "pedestrian": "temporary"
+      }
+    ],
+    [
+      "blackout",
+      {
+        "sensor_blackout": [
+          10.0,
+          15.0
+        ]
+      }
+    ],
+    [
+      "permanent",
+      {
+        "pedestrian": "permanent"
+      }
+    ]
+  ],
+  "dt": 0.01,
+  "horizon": 120.0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "created_at_utc": "2026-09-17T06:47:16.009783+00:00",
+  "new_model_calls": 0,
+  "scope": "exploratory physical demonstration of one repaired source from two configurations of one observed failed candidate; not an independent task evaluation or safety theorem"
+}

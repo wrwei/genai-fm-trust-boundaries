@@ -1,0 +1,194 @@
+{
+  "protocol_id": "amr-thinking-extended/v1",
+  "calls": [
+    {
+      "attempt": "001",
+      "condition": "N64-F",
+      "repair": 1,
+      "finish_reason": "stop",
+      "fatal": null,
+      "accepted": false,
+      "source_sha256": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+      "response_bytes": 990,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 784,
+      "model_violation_inputs": 784,
+      "correspondence_mismatches": 0,
+      "repaired_previous_inputs": 55,
+      "new_bad_inputs": 0,
+      "rule_counts": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "thinking": {
+        "requested_mode": "disabled",
+        "requested_reasoning_effort": null,
+        "reasoning_content_present": false,
+        "reasoning_content_bytes": null,
+        "reasoning_tokens": null,
+        "mode_evidence": "unconfirmed"
+      },
+      "usage_summary": {
+        "input_tokens": 2800,
+        "output_tokens": 270,
+        "cache_hit_tokens": 2560,
+        "cache_miss_tokens": 240
+      },
+      "usage": {
+        "prompt_tokens": 2800,
+        "completion_tokens": 270,
+        "total_tokens": 3070,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 240
+      },
+      "provider_model": "deepseek-flash",
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 2.277625,
+      "byte_identical_prior_sources": [
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/002/response.bin",
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/004/response.bin",
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/006/response.bin",
+        "formal-artefacts/amr-thinking-diagnostic/run/attempts/001/response.bin"
+      ]
+    },
+    {
+      "attempt": "002",
+      "condition": "T64-F",
+      "repair": 1,
+      "finish_reason": "stop",
+      "fatal": null,
+      "accepted": true,
+      "source_sha256": "ccaf1b8c973b72cd27bccabe008fb8d6ae5c2f8b186bacad359facc3fec3df24",
+      "response_bytes": 937,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "repaired_previous_inputs": 839,
+      "new_bad_inputs": 0,
+      "rule_counts": {
+        "select": 3,
+        "step": 9,
+        "total": 12
+      },
+      "thinking": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 39076,
+        "reasoning_tokens": 9032,
+        "mode_evidence": "reasoning_observed"
+      },
+      "usage_summary": {
+        "input_tokens": 2826,
+        "output_tokens": 9291,
+        "cache_hit_tokens": 2688,
+        "cache_miss_tokens": 138
+      },
+      "usage": {
+        "prompt_tokens": 2826,
+        "completion_tokens": 9291,
+        "total_tokens": 12117,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 9032
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 138
+      },
+      "provider_model": "deepseek-flash",
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 42.690176,
+      "byte_identical_prior_sources": []
+    },
+    {
+      "attempt": "003",
+      "condition": "N64-F",
+      "repair": 2,
+      "finish_reason": "stop",
+      "fatal": null,
+      "accepted": false,
+      "source_sha256": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+      "response_bytes": 990,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 784,
+      "model_violation_inputs": 784,
+      "correspondence_mismatches": 0,
+      "repaired_previous_inputs": 0,
+      "new_bad_inputs": 0,
+      "rule_counts": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "thinking": {
+        "requested_mode": "disabled",
+        "requested_reasoning_effort": null,
+        "reasoning_content_present": false,
+        "reasoning_content_bytes": null,
+        "reasoning_tokens": null,
+        "mode_evidence": "unconfirmed"
+      },
+      "usage_summary": {
+        "input_tokens": 2889,
+        "output_tokens": 270,
+        "cache_hit_tokens": 2688,
+        "cache_miss_tokens": 201
+      },
+      "usage": {
+        "prompt_tokens": 2889,
+        "completion_tokens": 270,
+        "total_tokens": 3159,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 201
+      },
+      "provider_model": "deepseek-flash",
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 2.59531,
+      "byte_identical_prior_sources": [
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/002/response.bin",
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/004/response.bin",
+        "formal-artefacts/amr-forge-diagnostic/run/attempts/006/response.bin",
+        "formal-artefacts/amr-thinking-diagnostic/run/attempts/001/response.bin"
+      ]
+    }
+  ],
+  "stop": "protocol_complete",
+  "conditions": {
+    "N64-F": {
+      "repairs": 2,
+      "stop": "cycle",
+      "first_accepted_repair": null,
+      "accepted_response": null
+    },
+    "T64-F": {
+      "repairs": 1,
+      "stop": "accepted",
+      "first_accepted_repair": 1,
+      "accepted_response": "attempts/002/response.bin"
+    }
+  },
+  "selected_source": {
+    "condition": "T64-F",
+    "limit": 12,
+    "response_path": "attempts/002/response.bin",
+    "repair": 1,
+    "sha256": "ccaf1b8c973b72cd27bccabe008fb8d6ae5c2f8b186bacad359facc3fec3df24"
+  },
+  "total_input_tokens": 8515,
+  "total_completion_tokens": 9831,
+  "cumulative_live_calls": 30,
+  "scope": "Related repair trajectories from one observed failure; not independent task samples."
+}

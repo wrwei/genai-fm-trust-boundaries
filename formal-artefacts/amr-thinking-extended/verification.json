@@ -1,0 +1,20 @@
+{
+  "run_manifest_files": 48,
+  "frozen_generation_inputs": 66,
+  "exact_run_inventory": true,
+  "historical_and_frozen_inputs_unchanged": true,
+  "provider_content_and_usage_match": true,
+  "prompts_feedback_order_and_states_match": true,
+  "fees_recomputed": true,
+  "credential_shaped_values_absent": true,
+  "independent_full_assessment_audit": "result-audit.md",
+  "physics": {
+    "exact_inventory": true,
+    "manifest_files": 26,
+    "inputs_unchanged": true,
+    "exact_source_identity": true,
+    "episode_count": 10,
+    "new_model_calls": 0,
+    "independent_trace_audit": "result-audit.md"
+  }
+}

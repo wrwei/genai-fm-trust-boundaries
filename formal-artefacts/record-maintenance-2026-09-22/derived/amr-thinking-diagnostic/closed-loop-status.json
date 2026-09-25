@@ -1,0 +1,8 @@
+{
+  "entered": false,
+  "episodes": 0,
+  "reason": "batch stopped on T12-F truncation; neither condition has an accepted controller",
+  "source_selection": null,
+  "manual_replacement": false,
+  "new_model_calls": 0
+}

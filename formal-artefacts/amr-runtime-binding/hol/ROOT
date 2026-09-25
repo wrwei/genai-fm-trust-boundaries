@@ -1,0 +1,4 @@
+session AMR_Runtime_Binding = AMR_Advisory_V2 +
+  options [document=false, threads=2, timeout=300]
+  theories AMR_Runtime_Binding
+  export_files (in "export") "*:binding.csv" "*:binding-proof-audit.txt"

@@ -1,0 +1,72 @@
+{
+  "recorded_at_utc": "2026-09-13T09:35:00.633016+00:00",
+  "access_method": "web open/find, official primary documentation",
+  "new_google_scholar_queries": 0,
+  "new_screening_candidates": 0,
+  "purpose": "Technical checks for the SQLite implementation experiment; not a new literature-search batch",
+  "sources": [
+    {
+      "url": "https://sqlite.org/lang_transaction.html",
+      "title": "Transaction",
+      "sections_read": [
+        "2.1 Read transactions versus write transactions",
+        "2.2 DEFERRED, IMMEDIATE, and EXCLUSIVE transactions",
+        "2.3 Implicit versus explicit transactions",
+        "3 Response To Errors Within A Transaction"
+      ],
+      "finding": "Only one simultaneous writer; BEGIN IMMEDIATE acquires a write transaction or fails busy. Errors require explicit rollback handling.",
+      "use": "Read permission only after BEGIN IMMEDIATE; update permission and effects through the same write discipline; no fairness claim."
+    },
+    {
+      "url": "https://sqlite.org/atomiccommit.html",
+      "title": "Atomic Commit In SQLite",
+      "sections_read": [
+        "1 Introduction",
+        "2 Hardware Assumptions",
+        "3.4 Obtaining A Reserved Lock",
+        "3.5 Creating A Rollback Journal File",
+        "3.7 Flushing The Rollback Journal",
+        "3.9 Writing Changes",
+        "3.10 Flushing Changes",
+        "3.11 Deleting The Rollback Journal"
+      ],
+      "finding": "Rollback-mode atomic commit uses journaling and synchronization and depends on storage, locking and OS behavior.",
+      "use": "Justifies a same-database transaction boundary conditionally; process-exit tests do not verify the database engine or power-loss durability."
+    },
+    {
+      "url": "https://sqlite.org/pragma.html#pragma_synchronous",
+      "title": "PRAGMA synchronous",
+      "sections_read": [
+        "EXTRA (3)",
+        "FULL (2)",
+        "NORMAL (1)",
+        "mode/durability comparison"
+      ],
+      "finding": "EXTRA adds directory synchronization after deleting the rollback journal; FULL alone has filesystem-dependent rollback-mode durability.",
+      "use": "Each connection sets synchronous=EXTRA; actual bundled SQLite reports 3. This is configuration evidence, not a tested power-failure result."
+    },
+    {
+      "url": "https://docs.python.org/3.11/library/sqlite3.html",
+      "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "sections_read": [
+        "connect and isolation_level",
+        "Transaction control",
+        "How to use the connection context manager"
+      ],
+      "documentation_version": "3.11.16 documentation page; experiment runs 3.11.9",
+      "finding": "isolation_level=None permits explicit transaction control. A connection context manager commits or rolls back but does not close the connection.",
+      "use": "Explicit SQL BEGIN/COMMIT/ROLLBACK; test-fixture connection cleanup corrected after a Windows file-lock failure."
+    },
+    {
+      "url": "https://docs.python.org/3.11/library/http.server.html",
+      "title": "http.server — HTTP servers",
+      "sections_read": [
+        "module scope and production-use warning",
+        "HTTPServer and ThreadingHTTPServer",
+        "BaseHTTPRequestHandler interface"
+      ],
+      "finding": "The standard-library HTTP server is intended for limited use and is not recommended for production.",
+      "use": "Ephemeral loopback testing only; server-side token role mapping is our implementation, not a Python-provided authorization theorem."
+    }
+  ]
+}

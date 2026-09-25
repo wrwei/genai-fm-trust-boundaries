@@ -1,0 +1,68 @@
+{
+  "scope": "Mechanism tests; no model success-rate denominator",
+  "candidates": [
+    {
+      "id": "authored_reference",
+      "file": "authored_reference.json",
+      "sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "reference or equivalent syntax"
+    },
+    {
+      "id": "authored_demorgan",
+      "file": "authored_demorgan.json",
+      "sha256": "5a88bf224303d2aa36eea64b7b41994fd91d0a39aaffd737ee2912d1c5e38484",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "reference or equivalent syntax"
+    },
+    {
+      "id": "ignore_pedestrian",
+      "file": "ignore_pedestrian.json",
+      "sha256": "5b922b5a81e1b9beb9092732d30b50080b5abf28fc1d06fbb56552a440da84b2",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "always_brake",
+      "file": "always_brake.json",
+      "sha256": "51af10ddbf3a1c51993a11c5f26fbcd5f34439ad29056e88c6feb36a448030a7",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "early_release",
+      "file": "early_release.json",
+      "sha256": "2d4c3442a4653a31ba946677b10900f699442a1ff866f8c4cf63fee0f1ff04d3",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "finish_unhalted",
+      "file": "finish_unhalted.json",
+      "sha256": "f13a6d6d6f57a05d286a989b544c1aa78045dbb75ee2508f19e3db79b1cbed75",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "reversed_observation",
+      "file": "reversed_observation.json",
+      "sha256": "493a0a2e8b2e1333db69a0e67d9b0f10abd6a05265db388f083362d66c39a452",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "external_call",
+      "file": "external_call.json",
+      "sha256": "0e194108a5757b44fbfccc0ee46f2928857012b686c7876d88e91292048c914b",
+      "provenance": "assistant-authored deterministic fixture; not an independent LLM-service sample",
+      "role": "explicit fault injection"
+    },
+    {
+      "id": "goal_stop_gap",
+      "file": "goal_stop_gap.json",
+      "sha256": "59252a17409a30f1bbaf7e22a4a16379684d46b3d76a4e9e8ccdba91853d6d68",
+      "provenance": "exact preserved v1 assistant-authored reference; exposed by integration completion failure",
+      "role": "historical specification gap; rejected under obligations v1.1"
+    }
+  ]
+}

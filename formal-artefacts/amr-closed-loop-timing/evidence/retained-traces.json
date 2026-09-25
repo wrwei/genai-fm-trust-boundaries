@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "name": "none",
+      "trace_sha256": "6f115bb0e5d29f9ec639d8d41b0a0e971d41e2c2993c9b2b675c812d52e3d909",
+      "passed": true,
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "robots": {
+        "A": {
+          "grant": 0.05,
+          "start": 1.6,
+          "clear_crossing": 27.369305799152382,
+          "release": 27.45,
+          "arrival": 31.381854249492644,
+          "brake_applied": 31.4,
+          "finish": 32.9,
+          "start_ticks": 155.0,
+          "release_ticks": 8.069420084761703,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.81457505073547,
+          "halt_ticks": 150.0
+        },
+        "B": {
+          "grant": 27.45,
+          "start": 27.6,
+          "clear_crossing": 53.36930579915236,
+          "release": 53.45,
+          "arrival": 57.38185424949265,
+          "brake_applied": 57.4,
+          "finish": 58.9,
+          "start_ticks": 15.000000000000213,
+          "release_ticks": 8.069420084764545,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.8145750507351,
+          "halt_ticks": 150.0
+        }
+      },
+      "maxima_ticks": {
+        "start": 155.0,
+        "release": 8.069420084764545,
+        "travel": 2978.1854249492644,
+        "finish": 151.81457505073547
+      },
+      "last_finish": 58.9
+    },
+    {
+      "name": "retained-B",
+      "trace_sha256": "4d3ba44fe86a90e430b829e3441cc509a251e945dcd78e3e2f89dcacda0848a7",
+      "passed": true,
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "robots": {
+        "A": {
+          "grant": 27.45,
+          "start": 27.6,
+          "clear_crossing": 53.369305799152386,
+          "release": 53.45,
+          "arrival": 57.38185424949265,
+          "brake_applied": 57.4,
+          "finish": 58.9,
+          "start_ticks": 15.000000000000213,
+          "release_ticks": 8.069420084761703,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.8145750507351,
+          "halt_ticks": 150.0
+        },
+        "B": {
+          "grant": 0.05,
+          "start": 1.6,
+          "clear_crossing": 27.369305799152357,
+          "release": 27.45,
+          "arrival": 31.381854249492644,
+          "brake_applied": 31.4,
+          "finish": 32.9,
+          "start_ticks": 155.0,
+          "release_ticks": 8.06942008476419,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.81457505073547,
+          "halt_ticks": 150.0
+        }
+      },
+      "maxima_ticks": {
+        "start": 155.0,
+        "release": 8.06942008476419,
+        "travel": 2978.1854249492644,
+        "finish": 151.81457505073547
+      },
+      "last_finish": 58.9
+    },
+    {
+      "name": "invalid-then-B",
+      "trace_sha256": "06cd04e041ff6e97ee2e0b469e52db4920b93bf258d68551efbe196d2832acba",
+      "passed": true,
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "robots": {
+        "A": {
+          "grant": 27.45,
+          "start": 27.6,
+          "clear_crossing": 53.369305799152386,
+          "release": 53.45,
+          "arrival": 57.38185424949265,
+          "brake_applied": 57.4,
+          "finish": 58.9,
+          "start_ticks": 15.000000000000213,
+          "release_ticks": 8.069420084761703,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.8145750507351,
+          "halt_ticks": 150.0
+        },
+        "B": {
+          "grant": 0.05,
+          "start": 1.6,
+          "clear_crossing": 27.369305799152357,
+          "release": 27.45,
+          "arrival": 31.381854249492644,
+          "brake_applied": 31.4,
+          "finish": 32.9,
+          "start_ticks": 155.0,
+          "release_ticks": 8.06942008476419,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.81457505073547,
+          "halt_ticks": 150.0
+        }
+      },
+      "maxima_ticks": {
+        "start": 155.0,
+        "release": 8.06942008476419,
+        "travel": 2978.1854249492644,
+        "finish": 151.81457505073547
+      },
+      "last_finish": 58.9
+    },
+    {
+      "name": "late-B",
+      "trace_sha256": "6d0963d18c672d17fe7f80968583d58edb20570b5fbd9e7d3e2189fba9c3241e",
+      "passed": true,
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "robots": {
+        "A": {
+          "grant": 0.05,
+          "start": 1.6,
+          "clear_crossing": 27.369305799152382,
+          "release": 27.45,
+          "arrival": 31.381854249492644,
+          "brake_applied": 31.4,
+          "finish": 32.9,
+          "start_ticks": 155.0,
+          "release_ticks": 8.069420084761703,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.81457505073547,
+          "halt_ticks": 150.0
+        },
+        "B": {
+          "grant": 27.45,
+          "start": 27.6,
+          "clear_crossing": 53.36930579915236,
+          "release": 53.45,
+          "arrival": 57.38185424949265,
+          "brake_applied": 57.4,
+          "finish": 58.9,
+          "start_ticks": 15.000000000000213,
+          "release_ticks": 8.069420084764545,
+          "travel_ticks": 2978.1854249492644,
+          "finish_ticks": 151.8145750507351,
+          "halt_ticks": 150.0
+        }
+      },
+      "maxima_ticks": {
+        "start": 155.0,
+        "release": 8.069420084764545,
+        "travel": 2978.1854249492644,
+        "finish": 151.81457505073547
+      },
+      "last_finish": 58.9
+    }
+  ],
+  "scope": "four retained stable runs; no physical rerun or universal Python refinement"
+}

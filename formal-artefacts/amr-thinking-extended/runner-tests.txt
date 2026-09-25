@@ -1,0 +1,55 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "T64-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+test_acceptance_is_terminal_and_selects_first_arm (test_runner.RunnerTests.test_acceptance_is_terminal_and_selects_first_arm) ... ok
+test_both_first_prompts_match_frozen_previous_enhanced_prompt (test_runner.RunnerTests.test_both_first_prompts_match_frozen_previous_enhanced_prompt) ... ok
+test_changed_previous_frozen_source_is_rejected_before_initialization (test_runner.RunnerTests.test_changed_previous_frozen_source_is_rejected_before_initialization) ... ok
+test_child_wall_deadline_is_660_seconds (test_runner.RunnerTests.test_child_wall_deadline_is_660_seconds) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+test_cycle_stops_each_condition_and_run_cannot_be_reused (test_runner.RunnerTests.test_cycle_stops_each_condition_and_run_cannot_be_reused) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "N64-F", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 2, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "N64-F", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 3, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "N64-F", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 4, "source_bad": 0, "accepted": false, "fatal": null}
+test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts (test_runner.RunnerTests.test_eight_call_ceiling_round_robin_and_no_reasoning_in_prompts) ... ok
+test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content (test_runner.RunnerTests.test_empty_reasoning_is_unconfirmed_without_rejecting_valid_content) ... ok
+test_falsey_nontext_content_and_deep_json_are_fatal (test_runner.RunnerTests.test_falsey_nontext_content_and_deep_json_are_fatal) ... ok
+test_fatal_assessment_does_not_reenter_failed_parser (test_runner.RunnerTests.test_fatal_assessment_does_not_reenter_failed_parser) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "truncated"}
+test_fatal_transports_and_truncation_never_retry (test_runner.RunnerTests.test_fatal_transports_and_truncation_never_retry) ... ok
+test_fixture_cannot_enter_live_execution (test_runner.RunnerTests.test_fixture_cannot_enter_live_execution) ... ok
+test_frozen_dependency_drift_prevents_worker_before_post (test_runner.RunnerTests.test_frozen_dependency_drift_prevents_worker_before_post) ... ok
+test_impossible_reasoning_count_is_invalid_usage (test_runner.RunnerTests.test_impossible_reasoning_count_is_invalid_usage) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "transport_error"}
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "invalid_utf8"}
+test_malformed_provider_json_stops_without_retry (test_runner.RunnerTests.test_malformed_provider_json_stops_without_retry) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+{"condition": "T64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": null}
+test_oversized_followup_stops_with_final_evidence_without_post (test_runner.RunnerTests.test_oversized_followup_stops_with_final_evidence_without_post) ... ok
+test_payload_arms_have_equal_limits_and_correct_thinking_controls (test_runner.RunnerTests.test_payload_arms_have_equal_limits_and_correct_thinking_controls) ... ok
+test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint (test_runner.RunnerTests.test_post_boundary_has_one_dispatch_600s_deadline_and_fixed_endpoint) ... ok
+test_post_redacts_credential_echo_and_exception_messages (test_runner.RunnerTests.test_post_redacts_credential_echo_and_exception_messages) ... ok
+test_previous_stage_evidence_drift_stops_worker_before_post (test_runner.RunnerTests.test_previous_stage_evidence_drift_stops_worker_before_post) ... ok
+test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence (test_runner.RunnerTests.test_previous_stage_inventory_and_frozen_hashes_are_setup_evidence) ... ok
+[Legacy-only test entry omitted during record maintenance.]
+test_total_completion_tokens_include_reasoning_in_usage_and_cap (test_runner.RunnerTests.test_total_completion_tokens_include_reasoning_in_usage_and_cap) ... ok
+{"condition": "N64-F", "repair": 1, "source_bad": 0, "accepted": false, "fatal": "invalid_usage"}
+test_invalid_usage_stops_all_conditions (test_runner.RunnerTests.test_invalid_usage_stops_all_conditions) ... ok
+test_worker_exclusive_claim_allows_only_one_post (test_runner.RunnerTests.test_worker_exclusive_claim_allows_only_one_post) ... ok
+test_worker_rejects_payload_prompt_and_preflight_tampering (test_runner.RunnerTests.test_worker_rejects_payload_prompt_and_preflight_tampering) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 37.325s
+
+OK

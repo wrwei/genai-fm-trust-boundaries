@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "checked_ticks": 1001,
+  "checked_start_cases": 201402,
+  "maxima_ticks": {
+    "observation": 9,
+    "release": 9,
+    "finish": 169,
+    "start_waiting": 15,
+    "start_braking": 160
+  },
+  "two_task_bound_ticks": 6884,
+  "two_task_bound_seconds": 68.84,
+  "hol_timing_rows": [
+    [
+      0,
+      0,
+      5,
+      5,
+      165
+    ],
+    [
+      1,
+      5,
+      10,
+      10,
+      170
+    ],
+    [
+      2,
+      5,
+      10,
+      10,
+      170
+    ],
+    [
+      3,
+      5,
+      10,
+      10,
+      170
+    ],
+    [
+      4,
+      5,
+      10,
+      10,
+      170
+    ]
+  ],
+  "hol_source_rows": [
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      8,
+      6
+    ]
+  ]
+}

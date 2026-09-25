@@ -1,0 +1,37 @@
+Started at Sun Sep 13 16:38:40 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/Runtime_Interface
+Building Bridge_Algebra_Repair ...
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Trace_Repair
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair 100% (0.114s cumulated time)
+Bridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Trace_Repair 100% (0.567s cumulated time)
+Timing Bridge_Algebra_Repair (2 threads, 0.508s elapsed time, 0.688s cpu time, 0.031s GC time, factor 1.35)
+Finished Bridge_Algebra_Repair (0:00:04 elapsed time)
+Running Runtime_Interface ...
+Runtime_Interface: theory Runtime_Interface.Runtime_Interface
+Runtime_Interface: theory Runtime_Interface.Runtime_Interface 100% (1.646s cumulated time)
+Runtime_Interface FAILED (see also "isabelle build_log -H Error Runtime_Interface")
+*** Failed to apply initial proof method (line 67 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy"):
+*** goal (1 subgoal):
+***  1. ref_run (abstract_state s) (filter controlled [snd (step s c)]) =
+***     Some
+***      (abstract_state
+***        (fst (step s
+***               c)))
+*** At command "by" (line 67 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy")
+Unfinished session(s): Runtime_Interface
+
+Finished at Sun Sep 13 16:38:53 GMT+8 2026
+0:00:13 elapsed time

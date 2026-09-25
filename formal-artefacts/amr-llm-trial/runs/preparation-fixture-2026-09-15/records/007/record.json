@@ -1,0 +1,59 @@
+{
+  "accepted": false,
+  "assessment": {
+    "accepted": false,
+    "checked_inputs": 0,
+    "correspondence_mismatches": 0,
+    "correspondence_witnesses": [],
+    "model_violation_inputs": 0,
+    "parse_error": "invalid UTF-8 at byte 0",
+    "parse_pass": false,
+    "select_inputs": 0,
+    "source_sha256": null,
+    "source_violation_inputs": 0,
+    "source_witnesses": [],
+    "spec_id": "amr-supervisor-obligations/v1.1",
+    "step_inputs": 0
+  },
+  "attempt_index": 0,
+  "encoding_error": "invalid UTF-8 at byte 0",
+  "feedback": {
+    "checked_inputs": 0,
+    "correspondence_witnesses": [],
+    "counts": {
+      "correspondence_mismatches": 0,
+      "model_violation_inputs": 0,
+      "select_inputs": 0,
+      "source_violation_inputs": 0,
+      "step_inputs": 0
+    },
+    "parse_error": "invalid UTF-8 at byte 0",
+    "rejection_category": "encoding_rejection",
+    "source_witnesses": [],
+    "witness_cap": 2,
+    "witnesses_may_not_cover_all_failure_classes": true
+  },
+  "metadata": {
+    "attempt_index": 0,
+    "decoding": {
+      "mode": "no-model-called"
+    },
+    "finished_at_utc": "2026-09-15T13:48:39.961547+00:00",
+    "input_tokens": null,
+    "model_id": "FIXTURE-offline-rehearsal",
+    "output_tokens": null,
+    "provider": "fixture",
+    "request_id": "FIXTURE-P2-R2-0",
+    "request_sha256": "0386fd078eee97973364adf8a26af90f08b824f7803d2dcf53b4d0f2d896d257",
+    "requested_max_output_tokens": 8192,
+    "sample_id": "P2-R2",
+    "started_at_utc": "2026-09-15T13:48:39.961547+00:00",
+    "status": "ok"
+  },
+  "prompt_sha256": "0386fd078eee97973364adf8a26af90f08b824f7803d2dcf53b4d0f2d896d257",
+  "raw_sha256": "ccfa33e2e59073e40fd92fc20fc0282f7c59a7c816efa2c9d542b0dd9e9ecee7",
+  "sample_id": "P2-R2",
+  "terminal_reason": null,
+  "violation_flags": [],
+  "record_sha256": "cf62c18636b140a78f27b62632e0b08026187307824fb3bcb69cd37c294483e2"
+}

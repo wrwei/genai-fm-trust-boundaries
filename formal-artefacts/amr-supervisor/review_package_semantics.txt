@@ -1,0 +1,686 @@
+FILE: language.py
+"""Strict, bounded AMR supervisor syntax and first-match source semantics.
+
+Parsing only uses Python's AST as syntax; no expression is compiled or eval'd.
+Totality and action obligations are checked separately over the finite domain.
+"""
+from __future__ import annotations
+
+import ast
+from collections.abc import Mapping
+from dataclasses import dataclass
+import json
+from typing import TypeAlias
+
+MODES = ("Idle", "Waiting", "Traversing", "BrakeRequested", "Stopped", "ResumePending", "Done")
+STEP_FACTS = ("ObservationUsable", "PedestrianBlocked", "OwnReservation", "Released",
+              "BodyClearOfZ", "Halted", "AtGoal", "TaskActive")
+SELECT_FACTS = ("OwnerFree", "RequestA", "RequestB", "PreferA", "PreferB")
+SELECT_ACTIONS = ("SelectA", "SelectB", "Defer")
+STEP_ACTIONS = ("Request", "Proceed", "Brake", "Resume", "Release", "Finish")
+MODE_FACTS = tuple("Mode" + mode for mode in MODES)
+MAX_TEXT_BYTES = 200 * 1024
+MAX_EXPR_LENGTH = 512
+MAX_AST_NODES = 64
+MAX_EXPR_DEPTH = 8
+Expr: TypeAlias = tuple
+
+
+@dataclass(frozen=True)
+class Rule:
+    condition: Expr
+    action: str
+    next_mode: str | None = None
+
+
+@dataclass(frozen=True)
+class Program:
+    schema: str
+    select: tuple[Rule, ...]
+    step: tuple[Rule, ...]
+
+
+def _unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
+def _invalid_constant(value):
+    raise ValueError(f"invalid JSON constant: {value}")
+
+
+def _expression(text: str, allowed: tuple[str, ...]) -> Expr:
+    if type(text) is not str or not text.strip() or len(text) > MAX_EXPR_LENGTH:
+        raise ValueError("when must be a nonempty expression of at most 512 characters")
+    try:
+        tree = ast.parse(text.strip(), mode="eval")
+    except (SyntaxError, RecursionError) as exc:
+        raise ValueError("invalid when syntax") from exc
+    if sum(1 for _ in ast.walk(tree)) > MAX_AST_NODES:
+        raise ValueError("expression exceeds 64 AST nodes")
+
+    def convert(node, depth):
+        if depth > MAX_EXPR_DEPTH:
+            raise ValueError("expression exceeds depth 8")
+        if isinstance(node, ast.Constant) and type(node.value) is bool:
+            return ("const", node.value)
+        if isinstance(node, ast.Name) and node.id in allowed:
+            return ("var", node.id)
+        if isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
+            return ("not", convert(node.operand, depth + 1))
+        if isinstance(node, ast.BoolOp) and isinstance(node.op, (ast.And, ast.Or)):
+            return ("and" if isinstance(node.op, ast.And) else "or",
+                    *(convert(value, depth + 1) for value in node.values))
+        raise ValueError(f"forbidden expression syntax or name: {type(node).__name__}")
+
+    return convert(tree.body, 1)
+
+
+def _rules(value, step: bool) -> tuple[Rule, ...]:
+    if type(value) is not list or len(value) > 8:
+        raise ValueError("each function must contain a list of at most 8 rules")
+    keys = {"when", "action", "next"} if step else {"when", "action"}
+    actions = STEP_ACTIONS if step else SELECT_ACTIONS
+    names = STEP_FACTS + MODE_FACTS if step else SELECT_FACTS
+    rules = []
+    for item in value:
+        if type(item) is not dict or set(item) != keys:
+            raise ValueError("rule has missing or extra fields")
+        if type(item["action"]) is not str or item["action"] not in actions:
+            raise ValueError("invalid action")
+        next_mode = item.get("next")
+        if step and (type(next_mode) is not str or next_mode not in MODES):
+            raise ValueError("invalid next mode")
+        rules.append(Rule(_expression(item["when"], names), item["action"], next_mode))
+    return tuple(rules)
+
+
+def parse_program(text: str) -> Program:
+    """Parse strict JSON into immutable rules; an uncovered domain is permitted."""
+    if type(text) is not str:
+        raise ValueError("program text must be a string")
+    try:
+        size = len(text.encode("utf-8"))
+    except UnicodeError as exc:
+        raise ValueError("program text must be valid UTF-8") from exc
+    if size > MAX_TEXT_BYTES:
+        raise ValueError("program exceeds 200 KB")
+    try:
+        data = json.loads(text, object_pairs_hook=_unique_object, parse_constant=_invalid_constant)
+    except (json.JSONDecodeError, RecursionError) as exc:
+        raise ValueError("invalid program JSON") from exc
+    if type(data) is not dict or set(data) != {"schema", "select", "step"}:
+        raise ValueError("program requires exactly schema, select, step")
+    if data["schema"] != "amr-supervisor/v1":
+        raise ValueError("unsupported schema")
+    select, step = _rules(data["select"], False), _rules(data["step"], True)
+    if len(select) + len(step) > 32:
+        raise ValueError("program exceeds 32 total branches")
+    return Program(data["schema"], select, step)
+
+
+def _validated_facts(facts, names):
+    if not isinstance(facts, Mapping) or set(facts) != set(names):
+        raise ValueError("facts must have the exact expected key set")
+    result = dict(facts)
+    if any(type(value) is not bool for value in result.values()):
+        raise ValueError("facts must contain real bool values")
+    return result
+
+
+def _evaluate(expr: Expr, facts: Mapping[str, bool]) -> bool:
+    kind = expr[0]
+    if kind == "const":
+        return expr[1]
+    if kind == "var":
+        return facts[expr[1]]
+    if kind == "not":
+        return not _evaluate(expr[1], facts)
+    if kind == "and":
+        return all(_evaluate(child, facts) for child in expr[1:])
+    if kind == "or":
+        return any(_evaluate(child, facts) for child in expr[1:])
+    raise ValueError("invalid immutable expression")
+
+
+def eval_select(program: Program, facts: Mapping[str, bool]) -> str:
+    values = _validated_facts(facts, SELECT_FACTS)
+    for rule in program.select:
+        if _evaluate(rule.condition, values):
+            return rule.action
+    raise ValueError("no matching select rule")
+
+
+def eval_step(program: Program, mode: str, facts: Mapping[str, bool]) -> tuple[str, str]:
+    if type(mode) is not str or mode not in MODES:
+        raise ValueError("invalid current mode")
+    values = _validated_facts(facts, STEP_FACTS)
+    values.update({"Mode" + name: name == mode for name in MODES})
+    for rule in program.step:
+        if _evaluate(rule.condition, values):
+            return rule.action, rule.next_mode
+    raise ValueError("no matching step rule")
+
+FILE: model.py
+"""Extract ordered source branches into an independently executed relation.
+
+Only immutable syntax and vocabulary cross the source/target boundary. Target
+guards are postfix stack programs; every enabled branch remains observable.
+Fault names denote experimental mutations, not claims about existing tools.
+"""
+from dataclasses import dataclass
+from collections.abc import Mapping
+
+from language import Program, MODES, SELECT_FACTS, STEP_FACTS
+
+
+@dataclass(frozen=True)
+class TargetRule:
+    guard: tuple
+    action: str
+    next_mode: str | None
+
+    def to_dict(self):
+        return {'guard': [list(instruction) for instruction in self.guard],
+                'action': self.action, 'next': self.next_mode}
+
+
+@dataclass(frozen=True)
+class Model:
+    schema: str
+    select: tuple[TargetRule, ...]
+    step: tuple[TargetRule, ...]
+    fault: str | None = None
+
+    def to_dict(self):
+        return {'schema': self.schema, 'fault': self.fault,
+                'encoding': 'postfix-priority-guards/v1',
+                'select': [rule.to_dict() for rule in self.select],
+                'step': [rule.to_dict() for rule in self.step]}
+
+
+def _compile(expression, invert_observation=False):
+    op, *args = expression
+    if op == 'const':
+        return (('PUSH', args[0]),)
+    if op == 'var':
+        code = (('LOAD', args[0]),)
+        return code + (('NOT',),) if invert_observation and args[0] == 'ObservationUsable' else code
+    if op == 'not':
+        code = _compile(args[0], invert_observation)
+        # Cancellation also simplifies an original not ObservationUsable when
+        # the deliberately faulty compiler flips its inner occurrence.
+        return code[:-1] if code[-1] == ('NOT',) else code + (('NOT',),)
+    if op in ('and', 'or'):
+        code = tuple(instruction for arg in args for instruction in _compile(arg, invert_observation))
+        return code + ((op.upper(), len(args)),)
+    raise ValueError(f'unsupported expression opcode: {op}')
+
+
+def _extract_rules(rules, fault, is_step):
+    preceding = []
+    extracted = []
+    for rule in rules:
+        condition = _compile(rule.condition, is_step and fault == 'invert_observation_tests')
+        guard = condition
+        if fault != 'omit_priority':
+            for previous in preceding:
+                guard += previous + (('NOT',), ('AND', 2))
+        if not is_step and fault == 'choose_b_when_both' and rule.action == 'SelectA':
+            both = (('LOAD', 'RequestA'), ('LOAD', 'RequestB'), ('AND', 2))
+            extracted.append(TargetRule(guard + both + (('AND', 2),), 'SelectB', rule.next_mode))
+            extracted.append(TargetRule(guard + both + (('NOT',), ('AND', 2)), 'SelectA', rule.next_mode))
+        else:
+            extracted.append(TargetRule(guard, rule.action, rule.next_mode))
+        preceding.append(condition)
+    return tuple(extracted)
+
+
+def extract_model(program: Program, fault=None):
+    """Compile a parsed Program, optionally injecting one named extraction fault."""
+    if fault not in (None, 'omit_priority', 'choose_b_when_both', 'invert_observation_tests'):
+        raise ValueError(f'unknown extraction fault: {fault}')
+    return Model(program.schema, _extract_rules(program.select, fault, False),
+                 _extract_rules(program.step, fault, True), fault)
+
+
+def _facts(facts, expected):
+    if not isinstance(facts, Mapping) or set(facts) != set(expected):
+        raise ValueError('facts must have exactly the target input keys')
+    if any(type(value) is not bool for value in facts.values()):
+        raise ValueError('target input values must be exact booleans')
+    return dict(facts)
+
+
+def _enabled(code, environment):
+    stack = []
+    for instruction in code:
+        opcode = instruction[0]
+        if opcode == 'PUSH':
+            stack.append(instruction[1])
+        elif opcode == 'LOAD':
+            stack.append(environment[instruction[1]])
+        elif opcode == 'NOT':
+            stack.append(not stack.pop())
+        elif opcode in ('AND', 'OR'):
+            count = instruction[1]
+            values = stack[-count:] if count else []
+            if count:
+                del stack[-count:]
+            stack.append(all(values) if opcode == 'AND' else any(values))
+        else:
+            raise ValueError(f'unknown target instruction: {opcode}')
+    if len(stack) != 1 or type(stack[0]) is not bool:
+        raise ValueError('invalid target stack result')
+    return stack[0]
+
+
+def model_select(model, facts):
+    environment = _facts(facts, SELECT_FACTS)
+    return tuple(rule.action for rule in model.select if _enabled(rule.guard, environment))
+
+
+def model_step(model, mode, facts):
+    if mode not in MODES:
+        raise ValueError(f'unknown target mode: {mode}')
+    environment = _facts(facts, STEP_FACTS)
+    environment.update(('Mode' + name, mode == name) for name in MODES)
+    return tuple((rule.action, rule.next_mode) for rule in model.step if _enabled(rule.guard, environment))
+
+FILE: assurance.py
+"""Fixed obligation checks, independent source/model accounting over finite inputs.
+
+The rules are an authored specification. Exhausting Boolean valuations does not
+prove natural-language adequacy, physical abstraction, reachability or liveness.
+"""
+import hashlib
+import itertools
+
+from language import parse_program, eval_select, eval_step, MODES, SELECT_FACTS, STEP_FACTS
+from model import extract_model, model_select, model_step
+
+SPEC_ID = 'amr-supervisor-obligations/v1'
+
+
+def valuations(names):
+    for bits in itertools.product((False, True), repeat=len(names)):
+        yield dict(zip(names, bits))
+
+
+def selection_violations(action, f):
+    if action not in ('SelectA', 'SelectB', 'Defer'):
+        return ['selection_unknown_action']
+    if action == 'SelectA' and not (f['OwnerFree'] and f['RequestA']):
+        return ['selection_without_available_request_A']
+    if action == 'SelectB' and not (f['OwnerFree'] and f['RequestB']):
+        return ['selection_without_available_request_B']
+    if action == 'Defer' and f['OwnerFree'] and (f['RequestA'] or f['RequestB']):
+        return ['selection_unnecessary_deferral']
+    return []
+
+
+def obligation(mode, f):
+    """Name and required response for the fixed precedence obligations."""
+    blocked = not f['ObservationUsable'] or not f['TaskActive'] or f['PedestrianBlocked']
+    finish = not blocked and f['AtGoal'] and f['Halted'] and f['Released']
+    release = not (blocked or finish) and f['OwnReservation'] and f['BodyClearOfZ']
+    braking = not (blocked or finish or release) and mode == 'BrakeRequested' and not f['Halted']
+    request = not (blocked or finish or release or braking) and not f['OwnReservation'] and not f['Released']
+    resume = not (blocked or finish or release or braking or request) and mode == 'Stopped'
+    requirements = (
+        (blocked, 'stop_on_invalid_or_blocked_input', ('Brake', 'Stopped' if f['Halted'] else 'BrakeRequested')),
+        (finish, 'finish_only_at_valid_halted_released_goal', ('Finish', 'Done')),
+        (release, 'release_owned_and_clear_zone', ('Release', 'Traversing')),
+        (braking, 'wait_for_standstill', ('Brake', 'BrakeRequested')),
+        (request, 'request_before_passage', ('Request', 'Waiting')),
+        (resume, 'resume_before_proceed', ('Resume', 'ResumePending')),
+        (not any((blocked, finish, release, braking, request, resume)), 'proceed_when_currently_allowed', ('Proceed', 'Traversing')),
+    )
+    active = [(name, response) for applies, name, response in requirements if applies]
+    if len(active) != 1:
+        raise RuntimeError('Authored obligation partition is not exclusive/total')
+    return active[0]
+
+
+def step_violations(response, mode, f):
+    name, expected = obligation(mode, f)
+    return [] if response == expected else [name]
+
+
+def assess_source(text, *, fault=None):
+    report = dict(spec_id=SPEC_ID, source_sha256=hashlib.sha256(text.encode('utf-8')).hexdigest(),
+                  translator_fault=fault, parse_pass=False, parse_error=None,
+                  checked_inputs=0, select_inputs=0, step_inputs=0,
+                  source_violation_inputs=0, model_violation_inputs=0, correspondence_mismatches=0,
+                  source_witnesses=[], model_witnesses=[], correspondence_witnesses=[],
+                  source_policy_pass=False, model_policy_pass=False, correspondence_pass=False, accepted=False)
+    try:
+        program = parse_program(text)
+    except (ValueError, TypeError, SyntaxError) as error:
+        report['parse_error'] = str(error)
+        return report
+    report['parse_pass'] = True
+    target = extract_model(program, fault=fault)
+
+    def inspect(kind, facts, mode=None):
+        context = dict(function=kind, facts=facts, mode=mode)
+        source_error = model_error = None
+        try:
+            source = eval_select(program, facts) if kind == 'select' else eval_step(program, mode, facts)
+        except ValueError as error:
+            source, source_error = None, str(error)
+        try:
+            outputs = model_select(target, facts) if kind == 'select' else model_step(target, mode, facts)
+        except ValueError as error:
+            outputs, model_error = (), str(error)
+        def bad(value):
+            return selection_violations(value, facts) if kind == 'select' else step_violations(value, mode, facts)
+        source_issues = [source_error] if source_error else bad(source)
+        model_issues = [model_error or 'no_enabled_model_response'] if not outputs else sorted({reason for output in outputs for reason in bad(output)})
+        # The target is a relation: duplicate equal outcomes have no semantic effect.
+        mismatch = source_error is not None or model_error is not None or set(outputs) != {source}
+        report['checked_inputs'] += 1
+        report[kind+'_inputs'] += 1
+        if source_issues:
+            report['source_violation_inputs'] += 1
+            if len(report['source_witnesses']) < 4:
+                report['source_witnesses'].append(dict(**context, response=source, violations=source_issues))
+        if model_issues:
+            report['model_violation_inputs'] += 1
+            if len(report['model_witnesses']) < 4:
+                report['model_witnesses'].append(dict(**context, responses=outputs, violations=model_issues))
+        if mismatch:
+            report['correspondence_mismatches'] += 1
+            if len(report['correspondence_witnesses']) < 4:
+                report['correspondence_witnesses'].append(dict(**context, source_response=source, model_responses=outputs,
+                                                                 source_error=source_error, model_error=model_error))
+    for facts in valuations(SELECT_FACTS):
+        inspect('select', facts)
+    for mode in MODES:
+        for facts in valuations(STEP_FACTS):
+            inspect('step', facts, mode)
+    report['source_policy_pass'] = report['source_violation_inputs'] == 0
+    report['model_policy_pass'] = report['model_violation_inputs'] == 0
+    report['correspondence_pass'] = report['correspondence_mismatches'] == 0
+    report['accepted'] = all(report[key] for key in ('source_policy_pass', 'model_policy_pass', 'correspondence_pass'))
+    return report
+
+FILE: tests/test_language.py
+"""Behavioral tests for the restricted source interpreter."""
+import dataclasses
+import importlib.util
+import json
+from pathlib import Path
+import sys
+import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+try:
+    import language
+except ModuleNotFoundError:
+    language = None
+
+
+class LanguageTests(unittest.TestCase):
+    def setUp(self):
+        self.assertIsNotNone(language, "restricted language implementation is missing")
+
+    def source(self, select=None, step=None):
+        return json.dumps({"schema": "amr-supervisor/v1",
+            "select": select if select is not None else [{"when": "True", "action": "Defer"}],
+            "step": step if step is not None else [{"when": "True", "action": "Brake", "next": "Stopped"}]})
+
+    def facts(self, names):
+        return dict.fromkeys(names, False)
+
+    def test_first_match_and_boolean_precedence(self):
+        p = language.parse_program(self.source(select=[
+            {"when": "OwnerFree and (RequestA or not RequestB)", "action": "SelectA"},
+            {"when": "True", "action": "SelectB"}]))
+        facts = self.facts(language.SELECT_FACTS)
+        self.assertEqual(language.eval_select(p, facts), "SelectB")
+        facts["OwnerFree"] = True
+        self.assertEqual(language.eval_select(p, facts), "SelectA")
+
+    def test_non_total_is_parseable_and_unmatched_is_error(self):
+        p = language.parse_program(self.source(select=[], step=[]))
+        with self.assertRaisesRegex(ValueError, "match"):
+            language.eval_select(p, self.facts(language.SELECT_FACTS))
+        with self.assertRaisesRegex(ValueError, "match"):
+            language.eval_step(p, "Idle", self.facts(language.STEP_FACTS))
+
+    def test_mode_predicates_are_internal(self):
+        p = language.parse_program(self.source(step=[
+            {"when": "ModeStopped and not ModeIdle", "action": "Resume", "next": "ResumePending"},
+            {"when": "True", "action": "Proceed", "next": "Traversing"}]))
+        facts = self.facts(language.STEP_FACTS)
+        self.assertEqual(language.eval_step(p, "Stopped", facts), ("Resume", "ResumePending"))
+        self.assertEqual(language.eval_step(p, "Idle", facts), ("Proceed", "Traversing"))
+        facts["ModeStopped"] = True
+        with self.assertRaises(ValueError):
+            language.eval_step(p, "Idle", facts)
+
+    def test_facts_exact_keys_and_real_bools(self):
+        p = language.parse_program(self.source())
+        for evaluator, names in [(lambda f: language.eval_select(p, f), language.SELECT_FACTS),
+                (lambda f: language.eval_step(p, "Idle", f), language.STEP_FACTS)]:
+            for bad in [None, {}, {**self.facts(names), "unexpected": False}]:
+                with self.subTest(bad=bad), self.assertRaises(ValueError):
+                    evaluator(bad)
+            for value in [0, 1, "False", None]:
+                bad = self.facts(names)
+                bad[names[0]] = value
+                with self.subTest(value=value), self.assertRaises(ValueError):
+                    evaluator(bad)
+        with self.assertRaises(ValueError):
+            language.eval_step(p, "Bogus", self.facts(language.STEP_FACTS))
+
+    def test_rejects_executable_and_non_boolean_syntax(self):
+        for expr in ["__import__('os').getcwd()", "OwnerFree.real", "OwnerFree == True",
+                "1", "None", "OwnerFree + RequestA", "[True]", "True if OwnerFree else False",
+                "Unknown", "ModeIdle", "ObservationUsable", "OwnerFree[0]", "lambda: True"]:
+            with self.subTest(expr=expr), self.assertRaises(ValueError):
+                language.parse_program(self.source(select=[{"when": expr, "action": "Defer"}]))
+
+    def test_rejects_json_schema_duplicate_keys_and_wrong_enums(self):
+        bad = ["[]", "null", "{", self.source().replace('"schema":', '"schema":"x","schema":'),
+            self.source().replace('"when":', '"when":"False","when":', 1),
+            self.source().replace('amr-supervisor/v1', 'wrong'),
+            self.source().replace('"Defer"', '"Brake"'), self.source().replace('"Stopped"', '"Other"'),
+            self.source().replace('"Brake"', '"SelectA"'),
+            self.source().replace('"True"', 'true', 1),
+            self.source().replace('"select":', '"extra":0,"select":'),
+            self.source(select=[{"when": "True", "action": "Defer", "next": "Idle"}]),
+            self.source(step=[{"when": "True", "action": "Brake"}]),
+            self.source(select="bad"), self.source(select=[False]),
+            self.source().replace('"Defer"', 'NaN'), self.source().replace('"Defer"', '[]')]
+        for value in bad:
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                language.parse_program(value)
+
+    def test_resource_bounds(self):
+        for expr in [" " * 513 + "True", "not " * 9 + "True", " or ".join(["OwnerFree"] * 32)]:
+            with self.subTest(expr=expr), self.assertRaises(ValueError):
+                language.parse_program(self.source(select=[{"when": expr, "action": "Defer"}]))
+        with self.assertRaises(ValueError):
+            language.parse_program(self.source(select=[{"when": "True", "action": "Defer"}] * 9))
+        with self.assertRaises(ValueError):
+            language.parse_program(self.source() + " " * (200 * 1024))
+
+    def test_immutable_program_rules_and_expression(self):
+        p = language.parse_program(self.source())
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            p.schema = "changed"
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            p.select[0].action = "SelectA"
+        self.assertIsInstance(p.select, tuple)
+        self.assertEqual(p.select[0].condition, ("const", True))
+        self.assertIsNone(p.select[0].next_mode)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+FILE: tests/test_model.py
+"""Independent target behavior, including deliberately defective extractions."""
+import importlib
+import itertools
+import json
+from pathlib import Path
+import sys
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+
+class ModelTests(unittest.TestCase):
+    def setUp(self):
+        self.assertIsNotNone(importlib.util.find_spec('model'), 'target model is not implemented')
+        self.m = importlib.import_module('model')
+        self.l = importlib.import_module('language')
+
+    def program(self, select=None, step=None):
+        rule = self.l.Rule
+        return self.l.Program('amr-supervisor/v1', tuple(select or [rule(('const', True), 'Defer', None)]),
+                              tuple(step or [rule(('const', True), 'Proceed', 'Traversing')]))
+
+    def select_facts(self, **changes):
+        return dict(dict.fromkeys(self.l.SELECT_FACTS, False), **changes)
+
+    def step_facts(self, **changes):
+        return dict(dict.fromkeys(self.l.STEP_FACTS, False), **changes)
+
+    def test_priority_is_encoded_and_omission_exposes_both_enabled_rules(self):
+        p = self.program(select=[self.l.Rule(('var', 'RequestA'), 'SelectA', None),
+                                 self.l.Rule(('const', True), 'Defer', None)])
+        facts = self.select_facts(RequestA=True)
+        self.assertEqual(self.l.eval_select(p, facts), 'SelectA')
+        self.assertEqual(self.m.model_select(self.m.extract_model(p), facts), ('SelectA',))
+        self.assertEqual(self.m.model_select(self.m.extract_model(p, 'omit_priority'), facts), ('SelectA', 'Defer'))
+
+    def test_duplicate_enabled_outcomes_are_not_deduplicated(self):
+        p = self.program(select=[self.l.Rule(('const', True), 'Defer', None)] * 2)
+        self.assertEqual(self.m.model_select(self.m.extract_model(p, 'omit_priority'), self.select_facts()), ('Defer', 'Defer'))
+
+    def test_modes_are_derived_and_step_priority_preserved(self):
+        p = self.program(step=[self.l.Rule(('var', 'ModeStopped'), 'Resume', 'ResumePending'),
+                               self.l.Rule(('const', True), 'Proceed', 'Traversing')])
+        model = self.m.extract_model(p)
+        for mode in self.l.MODES:
+            want = (('Resume', 'ResumePending'),) if mode == 'Stopped' else (('Proceed', 'Traversing'),)
+            self.assertEqual(self.m.model_step(model, mode, self.step_facts()), want)
+        self.assertEqual(self.m.model_step(self.m.extract_model(p, 'omit_priority'), 'Stopped', self.step_facts()),
+                         (('Resume', 'ResumePending'), ('Proceed', 'Traversing')))
+
+    def test_nested_boolean_expression_truth_table(self):
+        expr = ('and', ('or', ('var', 'RequestA'), ('var', 'RequestB')), ('not', ('var', 'OwnerFree')), ('const', True))
+        model = self.m.extract_model(self.program(select=[self.l.Rule(expr, 'SelectA', None), self.l.Rule(('const', True), 'Defer', None)]))
+        for a, b, free in itertools.product((False, True), repeat=3):
+            self.assertEqual(self.m.model_select(model, self.select_facts(RequestA=a, RequestB=b, OwnerFree=free)),
+                             ('SelectA',) if (a or b) and not free else ('Defer',))
+
+    def test_choose_b_fault_only_changes_both_requests(self):
+        p = self.program(select=[self.l.Rule(('var', 'RequestA'), 'SelectA', None), self.l.Rule(('const', True), 'Defer', None)])
+        model = self.m.extract_model(p, 'choose_b_when_both')
+        for a, b in itertools.product((False, True), repeat=2):
+            self.assertEqual(self.m.model_select(model, self.select_facts(RequestA=a, RequestB=b)),
+                             ('SelectB',) if a and b else ('SelectA',) if a else ('Defer',))
+
+    def test_observation_fault_flips_positive_and_negated_occurrences(self):
+        for expr, original_when_true in [(('var', 'ObservationUsable'), True), (('not', ('var', 'ObservationUsable')), False)]:
+            p = self.program(step=[self.l.Rule(expr, 'Brake', 'Stopped'), self.l.Rule(('const', True), 'Proceed', 'Traversing')])
+            for observed in (False, True):
+                facts = self.step_facts(ObservationUsable=observed)
+                normal = self.m.model_step(self.m.extract_model(p), 'Idle', facts)
+                faulty = self.m.model_step(self.m.extract_model(p, 'invert_observation_tests'), 'Idle', facts)
+                self.assertEqual(normal, (('Brake', 'Stopped'),) if observed == original_when_true else (('Proceed', 'Traversing'),))
+                self.assertEqual(faulty, (('Proceed', 'Traversing'),) if observed == original_when_true else (('Brake', 'Stopped'),))
+
+    def test_strict_inputs_and_unknown_fault_rejected(self):
+        model = self.m.extract_model(self.program())
+        for facts in [{}, self.select_facts(RequestA=1), dict(self.select_facts(), Extra=False)]:
+            with self.assertRaises(ValueError):
+                self.m.model_select(model, facts)
+        for facts in [{}, self.step_facts(Halted=0), dict(self.step_facts(), ModeIdle=True)]:
+            with self.assertRaises(ValueError):
+                self.m.model_step(model, 'Idle', facts)
+        with self.assertRaises(ValueError):
+            self.m.model_step(model, 'NotAMode', self.step_facts())
+        with self.assertRaises(ValueError):
+            self.m.extract_model(self.program(), 'unknown')
+
+    def test_no_enabled_rule_is_empty_relation_and_serialization_is_detached(self):
+        p = self.program(select=[self.l.Rule(('const', False), 'SelectA', None)])
+        model = self.m.extract_model(p)
+        self.assertEqual(self.m.model_select(model, self.select_facts()), ())
+        evidence = model.to_dict()
+        json.dumps(evidence)
+        evidence['select'].clear()
+        self.assertTrue(model.to_dict()['select'])
+        with self.assertRaises(AttributeError):
+            model.select = ()
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+FILE: tests/test_assurance.py
+"""Candidate defects and semantic mismatches must survive separate accounting."""
+from pathlib import Path
+import sys
+import unittest
+
+HERE = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(HERE))
+from assurance import assess_source
+
+def candidate(name):
+    return (HERE/'candidates'/f'{name}.json').read_text(encoding='utf-8')
+
+class AssuranceTests(unittest.TestCase):
+    def test_reference_and_equivalent_expression_are_accepted(self):
+        for name in ('authored_reference', 'authored_demorgan'):
+            result = assess_source(candidate(name))
+            self.assertTrue(result['accepted'])
+            self.assertEqual(result['checked_inputs'], 1824)
+
+    def test_candidate_safety_and_progress_defects_are_rejected_raw(self):
+        for name in ('ignore_pedestrian', 'always_brake', 'early_release', 'finish_unhalted', 'reversed_observation'):
+            result = assess_source(candidate(name))
+            self.assertFalse(result['accepted'])
+            self.assertGreater(result['source_violation_inputs'], 0, name)
+            self.assertTrue(result['source_witnesses'])
+
+    def test_unrestricted_code_is_parse_failure_not_repaired_candidate(self):
+        result = assess_source(candidate('external_call'))
+        self.assertFalse(result['parse_pass'])
+        self.assertFalse(result['accepted'])
+        self.assertEqual(result['checked_inputs'], 0)
+
+    def test_both_policies_can_pass_while_source_model_disagree(self):
+        result = assess_source(candidate('authored_reference'), fault='choose_b_when_both')
+        self.assertEqual(result['source_violation_inputs'], 0)
+        self.assertEqual(result['model_violation_inputs'], 0)
+        self.assertGreater(result['correspondence_mismatches'], 0)
+        self.assertFalse(result['accepted'])
+
+    def test_model_only_pass_does_not_make_bad_source_pass(self):
+        result = assess_source(candidate('reversed_observation'), fault='invert_observation_tests')
+        self.assertTrue(result['model_policy_pass'])
+        self.assertFalse(result['source_policy_pass'])
+        self.assertFalse(result['correspondence_pass'])
+        self.assertFalse(result['accepted'])
+
+    def test_missing_priority_negations_do_not_preserve_first_match(self):
+        result = assess_source(candidate('authored_reference'), fault='omit_priority')
+        self.assertGreater(result['correspondence_mismatches'], 0)
+        self.assertFalse(result['accepted'])
+
+if __name__ == '__main__':
+    unittest.main()
+

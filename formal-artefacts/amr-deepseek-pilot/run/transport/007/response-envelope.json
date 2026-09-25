@@ -1,0 +1,28 @@
+{
+  "id": "703604e4-0388-4ac8-afef-c9d7e2208bf4",
+  "object": "chat.completion",
+  "created": 1789621894,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"schema\":\"amr-supervisor/v1\",\"select\":[{\"when\":\"OwnerFree and RequestA and RequestB\",\"action\":\"SelectA\"},{\"when\":\"OwnerFree and RequestA\",\"action\":\"SelectA\"},{\"when\":\"OwnerFree and RequestB\",\"action\":\"SelectB\"},{\"when\":\"True\",\"action\":\"Defer\"}],\"step\":[{\"when\":\"not ObservationUsable or not TaskActive or PedestrianBlocked\",\"action\":\"Brake\",\"next\":\"BrakeRequested\"},{\"when\":\"not ObservationUsable or not TaskActive or PedestrianBlocked\",\"action\":\"Brake\",\"next\":\"Stopped\"},{\"when\":\"AtGoal and Released\",\"action\":\"Brake\",\"next\":\"BrakeRequested\"},{\"when\":\"AtGoal and Released\",\"action\":\"Finish\",\"next\":\"Done\"},{\"when\":\"OwnReservation and BodyClearOfZ\",\"action\":\"Release\",\"next\":\"Traversing\"},{\"when\":\"ModeBrakeRequested and not Halted\",\"action\":\"Brake\",\"next\":\"BrakeRequested\"},{\"when\":\"not OwnReservation and not Released\",\"action\":\"Request\",\"next\":\"Waiting\"},{\"when\":\"ModeStopped\",\"action\":\"Resume\",\"next\":\"ResumePending\"}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1120,
+    "completion_tokens": 251,
+    "total_tokens": 1371,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 480
+  },
+  "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+}

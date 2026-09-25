@@ -1,0 +1,18 @@
+{"condition": "D8-O", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 1, "source_bad": 784, "accepted": false, "fatal": null}
+{"condition": "D8-F", "repair": 1, "source_bad": 839, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 1, "source_bad": 784, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 2, "source_bad": 784, "accepted": false, "fatal": null}
+{"condition": "D12-F", "repair": 2, "source_bad": 784, "accepted": false, "fatal": null}
+{"condition": "D12-O", "repair": 3, "source_bad": 784, "accepted": false, "fatal": null}
+{
+  "protocol_id": "amr-forge-diagnostic/v1",
+  "mode": "live",
+  "new_calls": 7,
+  "network_dispatches": 7,
+  "stop": "protocol_complete",
+  "selected_for_exploratory_physics": null,
+  "old_run_unchanged": true,
+  "finished_at_utc": "2026-09-17T06:03:36.074922+00:00",
+  "scope": "four repair trajectories from one previously observed failure; not independent task samples"
+}

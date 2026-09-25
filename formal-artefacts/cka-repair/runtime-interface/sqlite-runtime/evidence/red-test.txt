@@ -1,0 +1,16 @@
+test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit) ... ERROR
+
+======================================================================
+ERROR: test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/sqlite-runtime/test_runtime.py", line 27, in setUp
+    self.ledger.initialize()
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/sqlite-runtime/ledger.py", line 9, in initialize
+    raise NotImplementedError("transactional initialization is not implemented")
+NotImplementedError: transactional initialization is not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)

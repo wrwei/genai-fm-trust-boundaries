@@ -1,0 +1,19 @@
+{
+  "attempt_index": 1,
+  "identity": {
+    "decoding": {
+      "mode": "no-model-called"
+    },
+    "max_output_tokens": 8192,
+    "model_id": "FIXTURE-offline-rehearsal",
+    "model_revision": "fixture-v1",
+    "provider": "fixture",
+    "record_mode": "fixture",
+    "transport": "local-original-byte-files"
+  },
+  "issued_at_utc": "2026-09-15T13:48:39.080260+00:00",
+  "previous_record_sha256": "da7c466fb23907b9d6f7373bc6a31ce9a44fc87a26f7f58b2ce961ef968e207a",
+  "prompt_sha256": "dbd0ead0f79a8b42741c58ec6e4ef4e902a45bf1e3e692867a05b7ad3643bd50",
+  "sample_id": "P2-R1",
+  "request_record_sha256": "62b57beb6d224d35e63cfa7fe07938be0115fa86fae630496812112e60cf6c2d"
+}

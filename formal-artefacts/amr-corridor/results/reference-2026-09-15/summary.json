@@ -1,0 +1,625 @@
+{
+  "scope": "Exploratory synthetic reference environment; no LLM or proof",
+  "episodes": {
+    "C01_A_first": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 51984,
+      "early_releases": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {
+        "A": 31.45,
+        "B": 57.4
+      },
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "controller_completed_robots": [
+        "A",
+        "B"
+      ],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [
+          "A",
+          "B"
+        ],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 57.4,
+      "reservation_owner": null,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "none",
+        "always_stop": false,
+        "front_only": false,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": true
+    },
+    "C01_B_first": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 51984,
+      "early_releases": [],
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {
+        "B": 31.45,
+        "A": 57.4
+      },
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "controller_completed_robots": [
+        "A",
+        "B"
+      ],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [
+          "A",
+          "B"
+        ],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 57.4,
+      "reservation_owner": null,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "config": {
+        "preference": "B",
+        "pedestrian": "none",
+        "always_stop": false,
+        "front_only": false,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": true
+    },
+    "C10_temporary_pedestrian": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 60181,
+      "early_releases": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "pedestrian_brakes": 1,
+      "resumes_after_pedestrian": 1,
+      "completion_times": {
+        "A": 39.05,
+        "B": 64.95
+      },
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "controller_completed_robots": [
+        "A",
+        "B"
+      ],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [
+          "A",
+          "B"
+        ],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 64.95,
+      "reservation_owner": null,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999898,
+          -2.588207426157396e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "temporary",
+        "always_stop": false,
+        "front_only": false,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": true
+    },
+    "C12_permanent_pedestrian": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 130074,
+      "early_releases": [],
+      "grant_order": [
+        "A"
+      ],
+      "pedestrian_brakes": 1,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {},
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [],
+      "controller_completed_robots": [],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "horizon",
+      "time": 120.0,
+      "reservation_owner": "A",
+      "final_poses": {
+        "A": [
+          8.345026729288927,
+          3.503539512547152e-15,
+          -8.482797797526587e-16
+        ],
+        "B": [
+          20.0,
+          2.0,
+          3.141592653589793
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "permanent",
+        "always_stop": false,
+        "front_only": false,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": false
+    },
+    "C12_always_stop": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 3.6793477672871995,
+      "continuous_intervals_checked": 108000,
+      "early_releases": [],
+      "grant_order": [
+        "A"
+      ],
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {},
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [],
+      "controller_completed_robots": [],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "horizon",
+      "time": 120.0,
+      "reservation_owner": "A",
+      "final_poses": {
+        "A": [
+          4.0,
+          -2.0,
+          0.0
+        ],
+        "B": [
+          20.0,
+          2.0,
+          3.141592653589793
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "none",
+        "always_stop": true,
+        "front_only": false,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": false
+    },
+    "C05_front_only_release": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 48879,
+      "early_releases": [
+        {
+          "time": 22.55,
+          "robot": "A",
+          "pose": [
+            17.553211575462164,
+            -1.5532115754623033,
+            -0.7853981633974361
+          ]
+        },
+        {
+          "time": 45.05,
+          "robot": "B",
+          "pose": [
+            6.446788424537796,
+            1.5532115754622258,
+            2.356194490192352
+          ]
+        }
+      ],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {
+        "A": 31.45,
+        "B": 53.95
+      },
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "controller_completed_robots": [
+        "A",
+        "B"
+      ],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [
+          "A",
+          "B"
+        ],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 53.95,
+      "reservation_owner": null,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "none",
+        "always_stop": false,
+        "front_only": true,
+        "sensor_blackout": null,
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": false
+    },
+    "C08_observation_blackout": {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 56934,
+      "early_releases": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "completion_times": {
+        "A": 37.0,
+        "B": 62.9
+      },
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "controller_completed_robots": [
+        "A",
+        "B"
+      ],
+      "independent_goals": {
+        "A": [
+          22,
+          -2
+        ],
+        "B": [
+          2,
+          2
+        ]
+      },
+      "physical_completion_score": {
+        "completed_robots": [
+          "A",
+          "B"
+        ],
+        "completion_mismatches": []
+      },
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 62.9,
+      "reservation_owner": null,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999898,
+          -2.588207426157396e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "config": {
+        "preference": "A",
+        "pedestrian": "none",
+        "always_stop": false,
+        "front_only": false,
+        "sensor_blackout": [
+          10.0,
+          15.0
+        ],
+        "dt": 0.01,
+        "horizon": 120.0
+      },
+      "safe_and_complete": true
+    }
+  },
+  "stopping": {
+    "C07_full_bound": {
+      "initial_state": {
+        "pose": [
+          0,
+          0,
+          0
+        ],
+        "speed": 1,
+        "forbidden_boundary_x": 4
+      },
+      "omit_reaction": false,
+      "actual_brake": 0.8,
+      "dt": 0.01,
+      "brake_issued": 2.35,
+      "brake_delivery": 2.45,
+      "halted_time": 3.7,
+      "final_front_x": 3.4749999999999908,
+      "clearance": 0.5250000000000091,
+      "required_margin": 0.2,
+      "margin_violation": false,
+      "crossed_boundary": false,
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "scope": "synthetic fixed-boundary witness; no LLM or hardware"
+    },
+    "C07_omit_reaction": {
+      "initial_state": {
+        "pose": [
+          0,
+          0,
+          0
+        ],
+        "speed": 1,
+        "forbidden_boundary_x": 4
+      },
+      "omit_reaction": true,
+      "actual_brake": 0.8,
+      "dt": 0.01,
+      "brake_issued": 2.8,
+      "brake_delivery": 2.9,
+      "halted_time": 4.15,
+      "final_front_x": 3.924999999999981,
+      "clearance": 0.07500000000001872,
+      "required_margin": 0.2,
+      "margin_violation": true,
+      "crossed_boundary": false,
+      "assumption_violated": [],
+      "assumption_detected": [],
+      "scope": "synthetic fixed-boundary witness; no LLM or hardware"
+    },
+    "C12_weak_brake": {
+      "initial_state": {
+        "pose": [
+          0,
+          0,
+          0
+        ],
+        "speed": 1,
+        "forbidden_boundary_x": 4
+      },
+      "omit_reaction": false,
+      "actual_brake": 0.4,
+      "dt": 0.01,
+      "brake_issued": 2.35,
+      "brake_delivery": 2.45,
+      "halted_time": 4.96,
+      "final_front_x": 4.099999999999991,
+      "clearance": -0.09999999999999087,
+      "required_margin": 0.2,
+      "margin_violation": true,
+      "crossed_boundary": true,
+      "assumption_violated": [
+        "braking_lower_bound"
+      ],
+      "assumption_detected": [],
+      "scope": "synthetic fixed-boundary witness; no LLM or hardware"
+    }
+  },
+  "geometry": {
+    "pose": [
+      18.1,
+      -2,
+      0
+    ],
+    "front_x": 18.5,
+    "rear_x": 17.7,
+    "front_only_clear": true,
+    "whole_body_clear": false,
+    "actual_body_intersects_Z": true
+  },
+  "refinements": {
+    "C01_A_first": {
+      "dt": 0.005,
+      "same_outcomes": true,
+      "time_difference": 0.0,
+      "max_final_coordinate_difference": 8.100187187665142e-13,
+      "coarse_early_release_count": 0,
+      "fine_early_release_count": 0
+    },
+    "C10_temporary_pedestrian": {
+      "dt": 0.005,
+      "same_outcomes": true,
+      "time_difference": 0.0,
+      "max_final_coordinate_difference": 8.064660050877137e-13,
+      "coarse_early_release_count": 0,
+      "fine_early_release_count": 0
+    },
+    "C05_front_only_release": {
+      "dt": 0.005,
+      "same_outcomes": true,
+      "time_difference": 0.0,
+      "max_final_coordinate_difference": 8.100187187665142e-13,
+      "coarse_early_release_count": 2,
+      "fine_early_release_count": 2
+    },
+    "C07_full_bound": {
+      "dt": 0.005,
+      "same_outcomes": true,
+      "clearance_difference": 2.1316282072803006e-14
+    },
+    "C07_omit_reaction": {
+      "dt": 0.005,
+      "same_outcomes": true,
+      "clearance_difference": 2.1316282072803006e-14
+    }
+  }
+}

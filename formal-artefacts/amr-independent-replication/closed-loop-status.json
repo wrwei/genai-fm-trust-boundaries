@@ -1,0 +1,16 @@
+{
+  "entered": true,
+  "unique_sources": 5,
+  "episodes": 30,
+  "reference_episodes": 5,
+  "sample_to_source_key": {
+    "P1-R1": "source_01",
+    "P2-R1": "source_02",
+    "P3-R2": "source_02",
+    "P3-R1": "source_03",
+    "P1-R2": "source_04",
+    "P2-R2": "source_05"
+  },
+  "manual_replacement": false,
+  "new_model_calls": 0
+}

@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-09-15T12:50:31.177447+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "parameters": {
+    "path": "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json",
+    "sha256": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6"
+  },
+  "code_sha256": {
+    "controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+  },
+  "code_sha256_after": {
+    "controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+    "oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+    "plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+    "run_suite.py": "dfda132bc5b882a8440a5bb119d0799fd8e36181747c49c0d476048c2a860939",
+    "simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+  },
+  "code_stable_during_run": true,
+  "parameters_stable_during_run": true,
+  "test_sha256": {
+    "test_controller.py": "5e09e1eac602325a1e8fde8c40ab8770742bb5844d0beb0c85c714a31d7c3a28",
+    "test_oracle.py": "e9555920779d38ff2f2e0aa26adc0b8e6024b7b287906bca87264608c910056e",
+    "test_parameters.py": "dfa3cf74da5ea04d7f338019dc64e75421b6ce6db1b306a3b81769fa5ad9027a",
+    "test_plant.py": "c5fc0a6a036a65a5e994f9acd13ff97f122fdba2a497733725bf9925220e4c4e",
+    "test_simulation.py": "05176cbf49fb57626d369a43523361690618a114495eb7676c7518b79ce018f0"
+  },
+  "files_sha256": {
+    "C01_A_first.dt005.json": "2cc476ce1e61cb61bdfbfb22fcc1853d2550ba543afa8e6051d1dad671a87e63",
+    "C01_A_first.dt005.trace.jsonl.gz": "0382507657e156ba2c7cc747ce6f4c9ad9c712e8313fa322db695e5f604753dc",
+    "C01_A_first.json": "5f086ab9151b67eb9c9ae70dc2f5c54b2802510ccc276ce164ea16085696e880",
+    "C01_A_first.trace.jsonl.gz": "9bb94e022e9d9819fc4491fca685402dbea982414b2b1c91955e1822239d8b8d",
+    "C01_B_first.json": "007edb22fe7cd35fc53b6b724403b1d583348002f37db53a2434b4ba2c9968b8",
+    "C01_B_first.trace.jsonl.gz": "9ede0a7214a3b8711b132f26fcd727ec06df1ae63f621c0d32bb517f2c37dcbe",
+    "C05_front_only_release.dt005.json": "46bd59ed636dd54222b767897d76d37389ef6bf0196f8bbf22ce3474cdfc66f7",
+    "C05_front_only_release.dt005.trace.jsonl.gz": "1f8cce6bc2c3ca7c11ae16600e43573a17cfd81749530496dc91c37488e59610",
+    "C05_front_only_release.json": "59cbb5ced0bc638e5ee65e50d5e1091baea7a179d2232f6c2843c5ff35d8a08d",
+    "C05_front_only_release.trace.jsonl.gz": "626c8f4129972fd830a4f21b901d417414c6834c48020a5c6e2eec1795291c6a",
+    "C07_full_bound.dt005.json": "a642de5d611932e58e08b5ae4cf2ef42c3bb0657e8a4a001eaba6568020be7af",
+    "C07_full_bound.dt005.trace.jsonl.gz": "92e744787d8c01206b8002c029f946958efad521808fe9698cd074f357dfe0c6",
+    "C07_full_bound.json": "0863bd830df698f81dee20cf258238b5a6b482ba866619ad46f133e959746882",
+    "C07_full_bound.trace.jsonl.gz": "b15d38c21347bb2ab86945add8ad2b567edb36f09d1f31c9b09a3bded898be9f",
+    "C07_omit_reaction.dt005.json": "cd4ffce65640764b6e11ebf0b791299866f11ee47a05805447b315f1a7571b5f",
+    "C07_omit_reaction.dt005.trace.jsonl.gz": "b58f15f9075d61659691ce0934bc35fe13491c9ef5853bf4085ac4812c7c40f1",
+    "C07_omit_reaction.json": "b1c4fb7595428711bc85bf21f35899b25f4cf91b36b5746c84ad3ac6934f7af9",
+    "C07_omit_reaction.trace.jsonl.gz": "80f805a5923d8459f00f5d4a1695ceaaff2ed0197ec8ad14a3eb33311865f933",
+    "C08_observation_blackout.json": "d416146dcae793f2287eb522caf129e4d32db8695e945e2fe4da48fc76a0c78b",
+    "C08_observation_blackout.trace.jsonl.gz": "2d8cb35df3887b8f8222fbf5c1372a46e6b1f796bc5a6c5ce80e65c59f2d41d0",
+    "C10_temporary_pedestrian.dt005.json": "3ed882cf82b0c0f86669c2f3ac349dc3a54f0650fb6da21c2d473841bee423e2",
+    "C10_temporary_pedestrian.dt005.trace.jsonl.gz": "e5b0e82121c66211d3961cadb833b6a839f7df8dfcb794c4a93c18f3d27bab3c",
+    "C10_temporary_pedestrian.json": "dc94139b2741f0042e51ff4d7fb29f5172afb7b9f7234b11adb11c1f7eebd89e",
+    "C10_temporary_pedestrian.trace.jsonl.gz": "77149c2384784bbf8956327ebc8392537867ae71699eea7189d3b8a0c4ba4bda",
+    "C12_always_stop.json": "8b420c87d4f88146566566fc57335ceb6612d908dbada72384a28adbf8b74b1d",
+    "C12_always_stop.trace.jsonl.gz": "e0525b186132abc4bd1584f8709a8a0f8748d1315ec0b20b9924a73a59dbe2af",
+    "C12_permanent_pedestrian.json": "b955b5aea43305808e0855c03f73fcdcbf3af693f0431511bbdb7eda7f423495",
+    "C12_permanent_pedestrian.trace.jsonl.gz": "1b6394588ffb8f0b79ce57593fd24a596db47da16a69ce3e9e2cfff9e2c22ace",
+    "C12_weak_brake.json": "533605ec14f353ce0c762926c9b8e41b1d4c196aa56de8395551d9b64cb56038",
+    "C12_weak_brake.trace.jsonl.gz": "3a6eaa25d723cadfc35d1d3f45eaad5934a0d10050059922e63d83b64b2ef67b",
+    "summary.json": "0d2dff755e2bf49ab572382a877ab2f62d45c41ffbef03e5e9d1f4653de0ea51"
+  },
+  "full_episodes": 10,
+  "stopping_runs": 5,
+  "geometry_fixtures": 1,
+  "llm_calls": 0,
+  "new_formal_builds": 0,
+  "limits": [
+    "Synthetic dynamics and sensing",
+    "No generated supervisor",
+    "No universal pedestrian safety",
+    "Floating-point oracle bounds are not formal proofs",
+    "No hardware calibration or certification"
+  ]
+}

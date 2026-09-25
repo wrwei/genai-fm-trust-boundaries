@@ -1,0 +1,27 @@
+{
+  "gap": "apply",
+  "constructed_fault": null,
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "reference_violations": [],
+  "grant_order": [
+    "A"
+  ],
+  "final_pose": [
+    4.0,
+    -2.0,
+    0.0
+  ],
+  "final_speed": 0.0,
+  "final_intent": "Brake",
+  "overlaps_zone": false,
+  "termination": "bounded_witness",
+  "collision_pairs": [],
+  "unresolved_pairs": [],
+  "continuous_intervals_checked": 180,
+  "early_releases": [],
+  "completed_robots": [],
+  "run_id": "E3b-good",
+  "trace": "E3b-good.jsonl.gz",
+  "trace_sha256": "c0b71f092b3aa087f634f12236e9f91c3686656be68b770088fd5694a455407e",
+  "expected_outcome_observed": true
+}

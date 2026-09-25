@@ -1,0 +1,14 @@
+test_six_chains_preserve_failures_and_never_become_live_samples (test_rehearsal.RehearsalTest.test_six_chains_preserve_failures_and_never_become_live_samples) ... FAIL
+
+======================================================================
+FAIL: test_six_chains_preserve_failures_and_never_become_live_samples (test_rehearsal.RehearsalTest.test_six_chains_preserve_failures_and_never_become_live_samples)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_rehearsal.py", line 15, in test_six_chains_preserve_failures_and_never_become_live_samples
+    self.assertTrue((HERE / 'rehearse.py').is_file(), 'rehearse.py is not implemented')
+AssertionError: False is not true : rehearse.py is not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

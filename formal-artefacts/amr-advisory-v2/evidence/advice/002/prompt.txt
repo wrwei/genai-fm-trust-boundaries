@@ -1,0 +1,2 @@
+Factory transport tasks: B delivers a maintenance part with deadline10minutes; A replenishes stock with deadline30minutes. Both may safely be chosen. Which task should be recommended first under an earlier-deadline rule?
+This is advisory data only. Return exactly one JSON object with the single key "prefer" and value "A" or "B". No code, actions, credentials or explanation.

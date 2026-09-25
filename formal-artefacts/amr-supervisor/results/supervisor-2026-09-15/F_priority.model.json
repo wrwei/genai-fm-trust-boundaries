@@ -1,0 +1,320 @@
+{
+  "schema": "amr-supervisor/v1",
+  "fault": "omit_priority",
+  "encoding": "postfix-priority-guards/v1",
+  "select": [
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnerFree"
+        ],
+        [
+          "LOAD",
+          "RequestA"
+        ],
+        [
+          "LOAD",
+          "RequestB"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "AND",
+          3
+        ]
+      ],
+      "action": "SelectA",
+      "next": null
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnerFree"
+        ],
+        [
+          "LOAD",
+          "RequestB"
+        ],
+        [
+          "LOAD",
+          "RequestA"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "AND",
+          3
+        ]
+      ],
+      "action": "SelectB",
+      "next": null
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnerFree"
+        ],
+        [
+          "LOAD",
+          "RequestA"
+        ],
+        [
+          "LOAD",
+          "RequestB"
+        ],
+        [
+          "LOAD",
+          "PreferA"
+        ],
+        [
+          "LOAD",
+          "PreferB"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "OR",
+          2
+        ],
+        [
+          "AND",
+          4
+        ]
+      ],
+      "action": "SelectA",
+      "next": null
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnerFree"
+        ],
+        [
+          "LOAD",
+          "RequestA"
+        ],
+        [
+          "LOAD",
+          "RequestB"
+        ],
+        [
+          "AND",
+          3
+        ]
+      ],
+      "action": "SelectB",
+      "next": null
+    },
+    {
+      "guard": [
+        [
+          "PUSH",
+          true
+        ]
+      ],
+      "action": "Defer",
+      "next": null
+    }
+  ],
+  "step": [
+    {
+      "guard": [
+        [
+          "LOAD",
+          "ObservationUsable"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "LOAD",
+          "TaskActive"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "LOAD",
+          "PedestrianBlocked"
+        ],
+        [
+          "OR",
+          3
+        ],
+        [
+          "LOAD",
+          "Halted"
+        ],
+        [
+          "AND",
+          2
+        ]
+      ],
+      "action": "Brake",
+      "next": "Stopped"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "ObservationUsable"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "LOAD",
+          "TaskActive"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "LOAD",
+          "PedestrianBlocked"
+        ],
+        [
+          "OR",
+          3
+        ],
+        [
+          "LOAD",
+          "AtGoal"
+        ],
+        [
+          "LOAD",
+          "Released"
+        ],
+        [
+          "LOAD",
+          "Halted"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "AND",
+          3
+        ],
+        [
+          "OR",
+          2
+        ]
+      ],
+      "action": "Brake",
+      "next": "BrakeRequested"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "AtGoal"
+        ],
+        [
+          "LOAD",
+          "Halted"
+        ],
+        [
+          "LOAD",
+          "Released"
+        ],
+        [
+          "AND",
+          3
+        ]
+      ],
+      "action": "Finish",
+      "next": "Done"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnReservation"
+        ],
+        [
+          "LOAD",
+          "BodyClearOfZ"
+        ],
+        [
+          "AND",
+          2
+        ]
+      ],
+      "action": "Release",
+      "next": "Traversing"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "ModeBrakeRequested"
+        ],
+        [
+          "LOAD",
+          "Halted"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "AND",
+          2
+        ]
+      ],
+      "action": "Brake",
+      "next": "BrakeRequested"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "OwnReservation"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "LOAD",
+          "Released"
+        ],
+        [
+          "NOT"
+        ],
+        [
+          "AND",
+          2
+        ]
+      ],
+      "action": "Request",
+      "next": "Waiting"
+    },
+    {
+      "guard": [
+        [
+          "LOAD",
+          "ModeStopped"
+        ]
+      ],
+      "action": "Resume",
+      "next": "ResumePending"
+    },
+    {
+      "guard": [
+        [
+          "PUSH",
+          true
+        ]
+      ],
+      "action": "Proceed",
+      "next": "Traversing"
+    }
+  ]
+}

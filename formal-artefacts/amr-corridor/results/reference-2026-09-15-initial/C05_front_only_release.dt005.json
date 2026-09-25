@@ -1,0 +1,360 @@
+{
+  "collision_pairs": [],
+  "collision_witnesses": [],
+  "unresolved_pairs": [],
+  "distance_lower_bound_m": 0.26318542394917005,
+  "continuous_intervals_checked": 97362,
+  "early_releases": [
+    {
+      "time": 22.55,
+      "robot": "A",
+      "pose": [
+        17.553211575463006,
+        -1.5532115754626366,
+        -0.7853981633977305
+      ]
+    },
+    {
+      "time": 45.05,
+      "robot": "B",
+      "pose": [
+        6.446788424537378,
+        1.5532115754624467,
+        2.3561944901920593
+      ]
+    }
+  ],
+  "grant_order": [
+    "A",
+    "B"
+  ],
+  "pedestrian_brakes": 0,
+  "resumes_after_pedestrian": 0,
+  "completion_times": {
+    "A": 31.45,
+    "B": 53.95
+  },
+  "assumption_violated": [],
+  "assumption_detected": [],
+  "completed_robots": [
+    "A",
+    "B"
+  ],
+  "termination": "complete",
+  "time": 53.95,
+  "reservation_owner": null,
+  "events": [
+    {
+      "kind": "mode",
+      "time": 0.0,
+      "robot": "A",
+      "mode": "BrakeRequested"
+    },
+    {
+      "kind": "command_issued",
+      "time": 0.0,
+      "command": {
+        "robot_id": "A",
+        "seq": 1,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.0,
+        "delivery": 0.1,
+        "expiry": 0.3
+      },
+      "reason": "observation_unusable",
+      "reservation_id": null,
+      "sample_time": null
+    },
+    {
+      "kind": "mode",
+      "time": 0.0,
+      "robot": "B",
+      "mode": "BrakeRequested"
+    },
+    {
+      "kind": "command_issued",
+      "time": 0.0,
+      "command": {
+        "robot_id": "B",
+        "seq": 1,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.0,
+        "delivery": 0.1,
+        "expiry": 0.3
+      },
+      "reason": "observation_unusable",
+      "reservation_id": null,
+      "sample_time": null
+    },
+    {
+      "kind": "grant",
+      "time": 0.05,
+      "robot": "A",
+      "mission_id": "mission-A",
+      "reservation_id": 1
+    },
+    {
+      "kind": "mode",
+      "time": 0.05,
+      "robot": "A",
+      "mode": "Traversing"
+    },
+    {
+      "kind": "command_issued",
+      "time": 0.05,
+      "command": {
+        "robot_id": "A",
+        "seq": 2,
+        "intent": "Proceed",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.05,
+        "delivery": 0.15,
+        "expiry": 0.35
+      },
+      "reason": "current_permission",
+      "reservation_id": 1,
+      "sample_time": 0.0
+    },
+    {
+      "kind": "command_delivered",
+      "time": 0.1,
+      "command": {
+        "robot_id": "A",
+        "seq": 1,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.0,
+        "delivery": 0.1,
+        "expiry": 0.3
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "command_delivered",
+      "time": 0.1,
+      "command": {
+        "robot_id": "B",
+        "seq": 1,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.0,
+        "delivery": 0.1,
+        "expiry": 0.3
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "command_delivered",
+      "time": 0.15,
+      "command": {
+        "robot_id": "A",
+        "seq": 2,
+        "intent": "Proceed",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 0.05,
+        "delivery": 0.15,
+        "expiry": 0.35
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "mode",
+      "time": 1.5,
+      "robot": "B",
+      "mode": "Stopped"
+    },
+    {
+      "kind": "release",
+      "time": 22.55,
+      "robot": "A",
+      "actual_body_still_in_Z": true
+    },
+    {
+      "kind": "grant",
+      "time": 22.55,
+      "robot": "B",
+      "mission_id": "mission-B",
+      "reservation_id": 2
+    },
+    {
+      "kind": "mode",
+      "time": 22.55,
+      "robot": "B",
+      "mode": "Traversing"
+    },
+    {
+      "kind": "command_issued",
+      "time": 22.55,
+      "command": {
+        "robot_id": "B",
+        "seq": 2,
+        "intent": "Proceed",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 22.55,
+        "delivery": 22.65,
+        "expiry": 22.85
+      },
+      "reason": "current_permission",
+      "reservation_id": 2,
+      "sample_time": 22.5
+    },
+    {
+      "kind": "command_delivered",
+      "time": 22.65,
+      "command": {
+        "robot_id": "B",
+        "seq": 2,
+        "intent": "Proceed",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 22.55,
+        "delivery": 22.65,
+        "expiry": 22.85
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "mode",
+      "time": 29.85,
+      "robot": "A",
+      "mode": "BrakeRequested"
+    },
+    {
+      "kind": "command_issued",
+      "time": 29.85,
+      "command": {
+        "robot_id": "A",
+        "seq": 3,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 29.85,
+        "delivery": 29.95,
+        "expiry": 30.15
+      },
+      "reason": "at_goal",
+      "reservation_id": null,
+      "sample_time": 29.8
+    },
+    {
+      "kind": "command_delivered",
+      "time": 29.95,
+      "command": {
+        "robot_id": "A",
+        "seq": 3,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 29.85,
+        "delivery": 29.95,
+        "expiry": 30.15
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "complete",
+      "time": 31.45,
+      "robot": "A",
+      "goal": [
+        22,
+        -2
+      ]
+    },
+    {
+      "kind": "mode",
+      "time": 31.45,
+      "robot": "A",
+      "mode": "Done"
+    },
+    {
+      "kind": "release",
+      "time": 45.05,
+      "robot": "B",
+      "actual_body_still_in_Z": true
+    },
+    {
+      "kind": "mode",
+      "time": 52.35,
+      "robot": "B",
+      "mode": "BrakeRequested"
+    },
+    {
+      "kind": "command_issued",
+      "time": 52.35,
+      "command": {
+        "robot_id": "B",
+        "seq": 3,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 52.35,
+        "delivery": 52.45,
+        "expiry": 52.65
+      },
+      "reason": "at_goal",
+      "reservation_id": null,
+      "sample_time": 52.3
+    },
+    {
+      "kind": "command_delivered",
+      "time": 52.45,
+      "command": {
+        "robot_id": "B",
+        "seq": 3,
+        "intent": "Brake",
+        "mission_revision": 1,
+        "map_revision": 1,
+        "issued": 52.35,
+        "delivery": 52.45,
+        "expiry": 52.65
+      },
+      "status": "accepted"
+    },
+    {
+      "kind": "complete",
+      "time": 53.95,
+      "robot": "B",
+      "goal": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "mode",
+      "time": 53.95,
+      "robot": "B",
+      "mode": "Done"
+    }
+  ],
+  "final_poses": {
+    "A": [
+      21.999999999999567,
+      -2.0000000000000138,
+      1.6323747908941755e-15
+    ],
+    "B": [
+      2.000000000000007,
+      2.000000000000004,
+      3.141592653589789
+    ]
+  },
+  "config": {
+    "preference": "A",
+    "pedestrian": "none",
+    "always_stop": false,
+    "front_only": true,
+    "sensor_blackout": null,
+    "dt": 0.005,
+    "horizon": 120.0
+  },
+  "safe_and_complete": false
+}

@@ -1,0 +1,162 @@
+{
+  "scope": "offline derivation of seven real responses from one diagnostic seed",
+  "new_calls": 7,
+  "cumulative_model_calls": 25,
+  "verified_evidence_files": 97,
+  "generation_dependencies_verified": 63,
+  "input_tokens": 16471,
+  "output_tokens": 1800,
+  "cache_hit_tokens": 7424,
+  "unique_response_texts": 3,
+  "rows": [
+    {
+      "sequence": 1,
+      "condition": "D8-O",
+      "repair": 1,
+      "source_violations": 839,
+      "model_violations": 839,
+      "correspondence": 55,
+      "rules": {
+        "select": 4,
+        "step": 8,
+        "total": 12
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784,
+        "no matching step rule": 55
+      },
+      "source_sha256": "7b263c1eabf5a5ea02fc1e45f01217b629d538a8f667bd28b16a31a36374894c",
+      "input_tokens": 2074,
+      "output_tokens": 254,
+      "cache_hit_tokens": 1920,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 2,
+      "condition": "D12-O",
+      "repair": 1,
+      "source_violations": 784,
+      "model_violations": 784,
+      "correspondence": 0,
+      "rules": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784
+      },
+      "source_sha256": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+      "input_tokens": 2074,
+      "output_tokens": 270,
+      "cache_hit_tokens": 0,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 3,
+      "condition": "D8-F",
+      "repair": 1,
+      "source_violations": 839,
+      "model_violations": 839,
+      "correspondence": 55,
+      "rules": {
+        "select": 4,
+        "step": 8,
+        "total": 12
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784,
+        "no matching step rule": 55
+      },
+      "source_sha256": "7b263c1eabf5a5ea02fc1e45f01217b629d538a8f667bd28b16a31a36374894c",
+      "input_tokens": 2800,
+      "output_tokens": 254,
+      "cache_hit_tokens": 1024,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 4,
+      "condition": "D12-F",
+      "repair": 1,
+      "source_violations": 784,
+      "model_violations": 784,
+      "correspondence": 0,
+      "rules": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784
+      },
+      "source_sha256": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+      "input_tokens": 2800,
+      "output_tokens": 270,
+      "cache_hit_tokens": 1024,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 5,
+      "condition": "D12-O",
+      "repair": 2,
+      "source_violations": 784,
+      "model_violations": 784,
+      "correspondence": 0,
+      "rules": {
+        "select": 4,
+        "step": 8,
+        "total": 12
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784
+      },
+      "source_sha256": "dfe475a7dc75a684b3f4f6bc05a34e2eb34dabc61e328f3fc613664ff247f311",
+      "input_tokens": 1935,
+      "output_tokens": 241,
+      "cache_hit_tokens": 1024,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 6,
+      "condition": "D12-F",
+      "repair": 2,
+      "source_violations": 784,
+      "model_violations": 784,
+      "correspondence": 0,
+      "rules": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784
+      },
+      "source_sha256": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+      "input_tokens": 2889,
+      "output_tokens": 270,
+      "cache_hit_tokens": 1024,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    },
+    {
+      "sequence": 7,
+      "condition": "D12-O",
+      "repair": 3,
+      "source_violations": 784,
+      "model_violations": 784,
+      "correspondence": 0,
+      "rules": {
+        "select": 4,
+        "step": 8,
+        "total": 12
+      },
+      "issues": {
+        "stop_on_invalid_or_blocked_input": 784
+      },
+      "source_sha256": "dfe475a7dc75a684b3f4f6bc05a34e2eb34dabc61e328f3fc613664ff247f311",
+      "input_tokens": 1899,
+      "output_tokens": 241,
+      "cache_hit_tokens": 1408,
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  ]
+}

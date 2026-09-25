@@ -1,0 +1,12 @@
+{
+  "run_manifest_files": 33,
+  "frozen_generation_inputs": 63,
+  "exact_run_inventory": true,
+  "historical_and_frozen_inputs_unchanged": true,
+  "provider_content_and_usage_match": true,
+  "initial_prompts_and_feedback_match": true,
+  "fees_recomputed": true,
+  "credential_shaped_values_absent": true,
+  "no_physical_output_created": true,
+  "independent_full_assessment_audit": "result-audit.md"
+}

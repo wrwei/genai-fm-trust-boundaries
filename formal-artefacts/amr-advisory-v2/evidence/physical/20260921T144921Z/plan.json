@@ -1,0 +1,119 @@
+{
+  "batch": "20260921T144921Z",
+  "runs": [
+    [
+      "P-A",
+      "episode",
+      {
+        "advice": "A"
+      }
+    ],
+    [
+      "P-B",
+      "episode",
+      {
+        "advice": "B"
+      }
+    ],
+    [
+      "P-none",
+      "episode",
+      {}
+    ],
+    [
+      "E2-center",
+      "episode",
+      {
+        "center_clear": true
+      }
+    ],
+    [
+      "E2-whole",
+      "episode",
+      {}
+    ],
+    [
+      "E3a-bad",
+      "gap",
+      {
+        "gap": "commit",
+        "bad": true
+      }
+    ],
+    [
+      "E3a-good",
+      "gap",
+      {
+        "gap": "commit"
+      }
+    ],
+    [
+      "E3b-bad",
+      "gap",
+      {
+        "gap": "apply",
+        "bad": true
+      }
+    ],
+    [
+      "E3b-good",
+      "gap",
+      {
+        "gap": "apply"
+      }
+    ],
+    [
+      "E4-wait",
+      "episode",
+      {
+        "wait_advice": true
+      }
+    ],
+    [
+      "E4-fifo",
+      "episode",
+      {}
+    ],
+    [
+      "B2-temporary",
+      "episode",
+      {
+        "pedestrian": "temporary"
+      }
+    ],
+    [
+      "B2-permanent",
+      "episode",
+      {
+        "pedestrian": "permanent"
+      }
+    ],
+    [
+      "Brake-inside",
+      "braking",
+      {
+        "inside": true
+      }
+    ],
+    [
+      "Brake-outside",
+      "braking",
+      {
+        "inside": false
+      }
+    ]
+  ],
+  "identities": {
+    "original_parameters_sha256": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6",
+    "effective_parameters_sha256": "17e594c171d7ea444aab60bff2d58e18895185579bba48a032dc6cfeaacd2293",
+    "source_sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "files": {
+      "amr-advisory-v2\\physical.py": "6cd2b6a8fb2eeb307c495ad880d70c0eafad6ffca13452e8276ff90c4a7772cd",
+      "amr-corridor\\plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+      "amr-corridor\\oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+      "amr-corridor\\controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+      "amr-corridor\\simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+    }
+  },
+  "contract_sha256": "77389c9d4801d4721f57b027f252fe850489e7967953c42836eb67aa4a9d9ef5"
+}

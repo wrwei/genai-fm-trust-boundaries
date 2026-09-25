@@ -1,0 +1,142 @@
+{
+  "checked_at_utc": "2026-09-22T02:24:53.463607+00:00",
+  "scope": "Three diagnostic stages: complete offline unit suites, frozen-input verification, replay, provider-envelope comparison, and existing analyzers.",
+  "python": "C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "real_model_calls": 0,
+  "new_physical_episodes": 0,
+  "historical_result_files_modified": false,
+  "stages": [
+    {
+      "stage": "amr-forge-diagnostic",
+      "tests": {
+        "passed": true,
+        "count": 50,
+        "elapsed_seconds": 99.306,
+        "command": [
+          "python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "working_directory": "formal-artefacts/amr-forge-diagnostic",
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-forge-diagnostic-tests.log",
+        "log_sha256": "978554440e497efae235f2ec33d6b8e65ce3afa993c5bb28e91f515685df1d14"
+      },
+      "archive_audit": {
+        "stage": "amr-forge-diagnostic",
+        "network_calls": 0,
+        "new_physical_episodes": 0,
+        "verify_inputs": true,
+        "replay": true,
+        "record_count": 7,
+        "condition_states": {
+          "D8-O": "cycle",
+          "D12-O": "cycle",
+          "D8-F": "cycle",
+          "D12-F": "cycle"
+        },
+        "provider_content_usage_and_status": true,
+        "analyze": "no analyzer in this stage",
+        "passed": true,
+        "elapsed_seconds": 0.703,
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-forge-diagnostic-audit.log"
+      }
+    },
+    {
+      "stage": "amr-thinking-diagnostic",
+      "tests": {
+        "passed": true,
+        "count": 27,
+        "elapsed_seconds": 47.869,
+        "command": [
+          "python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "working_directory": "formal-artefacts/amr-thinking-diagnostic",
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-diagnostic-tests.log",
+        "log_sha256": "77869f5bf71d6de7de224623c2e312559d3993da7335c3beb4411ff4b03f2d19"
+      },
+      "archive_audit": {
+        "stage": "amr-thinking-diagnostic",
+        "network_calls": 0,
+        "new_physical_episodes": 0,
+        "verify_inputs": true,
+        "replay": true,
+        "record_count": 2,
+        "condition_states": {
+          "N12-F": null,
+          "T12-F": "truncated"
+        },
+        "provider_content_usage_and_status": true,
+        "analyze": true,
+        "analysis_output_directory": "formal-artefacts/record-maintenance-2026-09-22/derived/amr-thinking-diagnostic",
+        "passed": true,
+        "elapsed_seconds": 0.734,
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-diagnostic-audit.log"
+      },
+      "analyzer": {
+        "passed": true,
+        "execution": "Full main() assertions; only derived output writes redirected into maintenance directory.",
+        "regenerated_analysis_equals_saved_analysis": true,
+        "historical_outputs_not_overwritten": true
+      }
+    },
+    {
+      "stage": "amr-thinking-extended",
+      "tests": {
+        "passed": true,
+        "count": 30,
+        "elapsed_seconds": 50.244,
+        "command": [
+          "python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "working_directory": "formal-artefacts/amr-thinking-extended",
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-extended-tests.log",
+        "log_sha256": "efb87cdab1aaa1b5b9c5aa2700e0f75e8f34ff76a8132dffceb1712b669c7388"
+      },
+      "archive_audit": {
+        "stage": "amr-thinking-extended",
+        "network_calls": 0,
+        "new_physical_episodes": 0,
+        "verify_inputs": true,
+        "replay": true,
+        "record_count": 3,
+        "condition_states": {
+          "N64-F": "cycle",
+          "T64-F": "accepted"
+        },
+        "provider_content_usage_and_status": true,
+        "analyze": true,
+        "analysis_output_directory": "formal-artefacts/record-maintenance-2026-09-22/derived/amr-thinking-extended",
+        "passed": true,
+        "elapsed_seconds": 0.875,
+        "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-extended-audit.log"
+      },
+      "analyzer": {
+        "passed": true,
+        "execution": "Full main() assertions; only derived output writes redirected into maintenance directory.",
+        "regenerated_analysis_equals_saved_analysis": true,
+        "historical_outputs_not_overwritten": true
+      }
+    }
+  ],
+  "total_tests_passed": 107,
+  "all_passed": true
+}

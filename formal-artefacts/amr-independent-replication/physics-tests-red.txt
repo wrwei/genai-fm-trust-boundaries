@@ -1,0 +1,61 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_altered_source_fails_before_deployment (test_simulate.ReplicationPhysicsTests.test_altered_source_fails_before_deployment) ... FAIL
+test_duplicates_reuse_physics_but_keep_all_six_samples (test_simulate.ReplicationPhysicsTests.test_duplicates_reuse_physics_but_keep_all_six_samples) ... FAIL
+test_fixed_physical_oracle_and_profile_are_reused (test_simulate.ReplicationPhysicsTests.test_fixed_physical_oracle_and_profile_are_reused) ... FAIL
+test_missing_or_reordered_source_mapping_rejected (test_simulate.ReplicationPhysicsTests.test_missing_or_reordered_source_mapping_rejected) ... FAIL
+test_partial_or_fatal_batch_never_selects_physics (test_simulate.ReplicationPhysicsTests.test_partial_or_fatal_batch_never_selects_physics) ... FAIL
+test_two_byte_distinct_sources_have_fifteen_episodes (test_simulate.ReplicationPhysicsTests.test_two_byte_distinct_sources_have_fifteen_episodes) ... FAIL
+
+======================================================================
+FAIL: test_altered_source_fails_before_deployment (test_simulate.ReplicationPhysicsTests.test_altered_source_fails_before_deployment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+======================================================================
+FAIL: test_duplicates_reuse_physics_but_keep_all_six_samples (test_simulate.ReplicationPhysicsTests.test_duplicates_reuse_physics_but_keep_all_six_samples)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+======================================================================
+FAIL: test_fixed_physical_oracle_and_profile_are_reused (test_simulate.ReplicationPhysicsTests.test_fixed_physical_oracle_and_profile_are_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+======================================================================
+FAIL: test_missing_or_reordered_source_mapping_rejected (test_simulate.ReplicationPhysicsTests.test_missing_or_reordered_source_mapping_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+======================================================================
+FAIL: test_partial_or_fatal_batch_never_selects_physics (test_simulate.ReplicationPhysicsTests.test_partial_or_fatal_batch_never_selects_physics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+======================================================================
+FAIL: test_two_byte_distinct_sources_have_fifteen_episodes (test_simulate.ReplicationPhysicsTests.test_two_byte_distinct_sources_have_fifteen_episodes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-independent-replication/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'replication physics adapter is absent')
+AssertionError: unexpectedly None : replication physics adapter is absent
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=6)

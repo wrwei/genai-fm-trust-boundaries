@@ -1,0 +1,50 @@
+test_offline_fixture_can_be_audited_but_never_deployed (test_simulate.PhysicsTests.test_offline_fixture_can_be_audited_but_never_deployed) ... FAIL
+test_partial_batch_does_not_deploy_earlier_success (test_simulate.PhysicsTests.test_partial_batch_does_not_deploy_earlier_success) ... FAIL
+test_physics_reuses_fixed_profile_and_independent_oracle (test_simulate.PhysicsTests.test_physics_reuses_fixed_profile_and_independent_oracle) ... FAIL
+test_selection_requires_both_terminal_conditions_and_fixed_order (test_simulate.PhysicsTests.test_selection_requires_both_terminal_conditions_and_fixed_order) ... FAIL
+test_tampered_source_is_rejected (test_simulate.PhysicsTests.test_tampered_source_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_offline_fixture_can_be_audited_but_never_deployed (test_simulate.PhysicsTests.test_offline_fixture_can_be_audited_but_never_deployed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'extended physics adapter is absent')
+AssertionError: unexpectedly None : extended physics adapter is absent
+
+======================================================================
+FAIL: test_partial_batch_does_not_deploy_earlier_success (test_simulate.PhysicsTests.test_partial_batch_does_not_deploy_earlier_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'extended physics adapter is absent')
+AssertionError: unexpectedly None : extended physics adapter is absent
+
+======================================================================
+FAIL: test_physics_reuses_fixed_profile_and_independent_oracle (test_simulate.PhysicsTests.test_physics_reuses_fixed_profile_and_independent_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'extended physics adapter is absent')
+AssertionError: unexpectedly None : extended physics adapter is absent
+
+======================================================================
+FAIL: test_selection_requires_both_terminal_conditions_and_fixed_order (test_simulate.PhysicsTests.test_selection_requires_both_terminal_conditions_and_fixed_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'extended physics adapter is absent')
+AssertionError: unexpectedly None : extended physics adapter is absent
+
+======================================================================
+FAIL: test_tampered_source_is_rejected (test_simulate.PhysicsTests.test_tampered_source_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-thinking-extended/tests/test_simulate.py", line 22, in setUp
+    self.assertIsNotNone(self.sim, 'extended physics adapter is absent')
+AssertionError: unexpectedly None : extended physics adapter is absent
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)

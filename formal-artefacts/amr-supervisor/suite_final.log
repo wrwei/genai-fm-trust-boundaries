@@ -1,0 +1,22 @@
+{"candidate": "authored_reference", "accepted": true, "source_bad": 0, "model_bad": 0, "mismatches": 0}
+{"candidate": "authored_demorgan", "accepted": true, "source_bad": 0, "model_bad": 0, "mismatches": 0}
+{"candidate": "ignore_pedestrian", "accepted": false, "source_bad": 187, "model_bad": 187, "mismatches": 0}
+{"candidate": "always_brake", "accepted": false, "source_bad": 187, "model_bad": 187, "mismatches": 0}
+{"candidate": "early_release", "accepted": false, "source_bad": 42, "model_bad": 42, "mismatches": 0}
+{"candidate": "finish_unhalted", "accepted": false, "source_bad": 28, "model_bad": 28, "mismatches": 0}
+{"candidate": "reversed_observation", "accepted": false, "source_bad": 374, "model_bad": 374, "mismatches": 0}
+{"candidate": "external_call", "accepted": false, "source_bad": 0, "model_bad": 0, "mismatches": 0}
+{"candidate": "goal_stop_gap", "accepted": false, "source_bad": 25, "model_bad": 25, "mismatches": 0}
+{"fault": "F_priority", "source_pass": true, "model_pass": false, "mismatches": 1749}
+{"fault": "F_safe_different", "source_pass": true, "model_pass": true, "mismatches": 3}
+{"fault": "F_model_only", "source_pass": false, "model_pass": true, "mismatches": 374}
+{"episode": "normal_A_handwritten", "time": 58.95, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "normal_A_source", "time": 58.95, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "normal_B_handwritten", "time": 58.95, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "normal_B_source", "time": 58.95, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "temporary_handwritten", "time": 65.9, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "temporary_source", "time": 65.9, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "blackout_handwritten", "time": 63.85, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "blackout_source", "time": 63.85, "done": ["A", "B"], "collisions": [], "rejections": 0}
+{"episode": "permanent_handwritten", "time": 120.0, "done": [], "collisions": [], "rejections": 0}
+{"episode": "permanent_source", "time": 120.0, "done": [], "collisions": [], "rejections": 0}

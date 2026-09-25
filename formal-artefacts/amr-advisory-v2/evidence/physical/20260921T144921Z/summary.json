@@ -1,0 +1,960 @@
+{
+  "batch": "20260921T144921Z",
+  "runs": [
+    [
+      "P-A",
+      "episode",
+      {
+        "advice": "A"
+      }
+    ],
+    [
+      "P-B",
+      "episode",
+      {
+        "advice": "B"
+      }
+    ],
+    [
+      "P-none",
+      "episode",
+      {}
+    ],
+    [
+      "E2-center",
+      "episode",
+      {
+        "center_clear": true
+      }
+    ],
+    [
+      "E2-whole",
+      "episode",
+      {}
+    ],
+    [
+      "E3a-bad",
+      "gap",
+      {
+        "gap": "commit",
+        "bad": true
+      }
+    ],
+    [
+      "E3a-good",
+      "gap",
+      {
+        "gap": "commit"
+      }
+    ],
+    [
+      "E3b-bad",
+      "gap",
+      {
+        "gap": "apply",
+        "bad": true
+      }
+    ],
+    [
+      "E3b-good",
+      "gap",
+      {
+        "gap": "apply"
+      }
+    ],
+    [
+      "E4-wait",
+      "episode",
+      {
+        "wait_advice": true
+      }
+    ],
+    [
+      "E4-fifo",
+      "episode",
+      {}
+    ],
+    [
+      "B2-temporary",
+      "episode",
+      {
+        "pedestrian": "temporary"
+      }
+    ],
+    [
+      "B2-permanent",
+      "episode",
+      {
+        "pedestrian": "permanent"
+      }
+    ],
+    [
+      "Brake-inside",
+      "braking",
+      {
+        "inside": true
+      }
+    ],
+    [
+      "Brake-outside",
+      "braking",
+      {
+        "inside": false
+      }
+    ]
+  ],
+  "identities": {
+    "original_parameters_sha256": "ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6",
+    "effective_parameters_sha256": "17e594c171d7ea444aab60bff2d58e18895185579bba48a032dc6cfeaacd2293",
+    "source_sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "files": {
+      "amr-advisory-v2\\physical.py": "6cd2b6a8fb2eeb307c495ad880d70c0eafad6ffca13452e8276ff90c4a7772cd",
+      "amr-corridor\\plant.py": "dcc80f02d78535606b8cbe33a19de6501e51305b70bab550562ca6319180fd6d",
+      "amr-corridor\\oracle.py": "a6799ec03b5aaa9b5010a0e60940007852d277d401e4d8dd3a7388e43724b6a8",
+      "amr-corridor\\controller.py": "d0614e2fa169da9c6d6e915acb17d6f7a8bc1d31a9b056ec4d65f897ff29b9e4",
+      "amr-corridor\\simulation.py": "1cd3eb7ff6c428502ae5cacd4659556f418de032c5f8a9125f038335013ccf58"
+    }
+  },
+  "contract_sha256": "77389c9d4801d4721f57b027f252fe850489e7967953c42836eb67aa4a9d9ef5",
+  "results": [
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 53334,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.9,
+        "B": 58.9
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 58.9,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": "A",
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "P-A",
+      "trace": "P-A.jsonl.gz",
+      "trace_sha256": "857da9f0bc823eccd3f49019c3e3ba2f08d7e1ff97ab99a26aeef9306ea1f30a",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 53334,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "completion_times": {
+        "B": 32.9,
+        "A": 58.9
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 58.9,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": "B",
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "P-B",
+      "trace": "P-B.jsonl.gz",
+      "trace_sha256": "19608d65de932e5f653d8b312bc3874d960b9f3eef4521c2475e45a9071ae17f",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 53334,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.9,
+        "B": 58.9
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 58.9,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "P-none",
+      "trace": "P-none.jsonl.gz",
+      "trace_sha256": "6bc083900bba3e7dd7804746a4120291ea18d279c93353af90701ef9947c28b1",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 51894,
+      "early_releases": [
+        {
+          "time": 25.85,
+          "robot": "A",
+          "pose": [
+            18.002169032709265,
+            -1.9999999999999907,
+            -2.3314683517128287e-15
+          ],
+          "actual_speed": 0.04657287525374826,
+          "actual_body_still_in_Z": true
+        },
+        {
+          "time": 50.25,
+          "robot": "B",
+          "pose": [
+            5.997830967290625,
+            1.9999999999999938,
+            3.141592653589787
+          ],
+          "actual_speed": 0.046572875253690554,
+          "actual_body_still_in_Z": true
+        }
+      ],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.9,
+        "B": 57.3
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 57.3,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": true,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "E2-center",
+      "trace": "E2-center.jsonl.gz",
+      "trace_sha256": "bf909067d39fd487c4217267f159537e130b72f49ee4a5c6fb00c8abfe9a0c77",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 53334,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.9,
+        "B": 58.9
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 58.9,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "E2-whole",
+      "trace": "E2-whole.jsonl.gz",
+      "trace_sha256": "0ed27777ea3bef385344e55818b39934645ff39a07311bc945c4b34a8ccb1e3f",
+      "expected_outcome_observed": true
+    },
+    {
+      "gap": "commit",
+      "constructed_fault": "cached_commit_permission",
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "reference_violations": [
+        {
+          "kind": "protocol",
+          "time": 0.1,
+          "before": {
+            "req_a": true,
+            "req_b": true,
+            "owner": null,
+            "blocked": true,
+            "fresh": true,
+            "pending": "A",
+            "command": null
+          },
+          "input": [
+            "Commit"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Grant",
+              "A"
+            ]
+          ],
+          "reference_accepted": false,
+          "permission_version": 1,
+          "reservation_generation": 1,
+          "actual_pose": [
+            4.0,
+            -2.0,
+            0.0
+          ],
+          "actual_speed": 0.0
+        }
+      ],
+      "grant_order": [
+        "A"
+      ],
+      "final_pose": [
+        4.0,
+        -2.0,
+        0.0
+      ],
+      "final_speed": 0.0,
+      "final_intent": "Brake",
+      "overlaps_zone": false,
+      "termination": "bounded_witness",
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "continuous_intervals_checked": 180,
+      "early_releases": [],
+      "completed_robots": [],
+      "run_id": "E3a-bad",
+      "trace": "E3a-bad.jsonl.gz",
+      "trace_sha256": "9ef79fde871bcfdc0e6cafc03d7ba8a52e49c5f71d059f8183a55f6e8adb0717",
+      "expected_outcome_observed": true
+    },
+    {
+      "gap": "commit",
+      "constructed_fault": null,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "reference_violations": [],
+      "grant_order": [],
+      "final_pose": [
+        4.0,
+        -2.0,
+        0.0
+      ],
+      "final_speed": 0.0,
+      "final_intent": "Brake",
+      "overlaps_zone": false,
+      "termination": "bounded_witness",
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "continuous_intervals_checked": 180,
+      "early_releases": [],
+      "completed_robots": [],
+      "run_id": "E3a-good",
+      "trace": "E3a-good.jsonl.gz",
+      "trace_sha256": "46c1aba414c20ecef038d0b41f0baa1c09a62279f37e6bb40e737543d373dda4",
+      "expected_outcome_observed": true
+    },
+    {
+      "gap": "apply",
+      "constructed_fault": "cached_apply_permission",
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "reference_violations": [
+        {
+          "kind": "protocol",
+          "time": 0.1,
+          "before": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": "A"
+          },
+          "input": [
+            "Apply"
+          ],
+          "after": {
+            "req_a": false,
+            "req_b": true,
+            "owner": "A",
+            "blocked": true,
+            "fresh": true,
+            "pending": null,
+            "command": null
+          },
+          "events": [
+            [
+              "Proceed",
+              "A"
+            ]
+          ],
+          "reference_accepted": false,
+          "permission_version": 1,
+          "reservation_generation": 1,
+          "actual_pose": [
+            4.0,
+            -2.0,
+            0.0
+          ],
+          "actual_speed": 0.0
+        }
+      ],
+      "grant_order": [
+        "A"
+      ],
+      "final_pose": [
+        4.0024999999999995,
+        -2.0,
+        0.0
+      ],
+      "final_speed": 0.049999999999999996,
+      "final_intent": "Proceed",
+      "overlaps_zone": false,
+      "termination": "bounded_witness",
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "continuous_intervals_checked": 180,
+      "early_releases": [],
+      "completed_robots": [],
+      "run_id": "E3b-bad",
+      "trace": "E3b-bad.jsonl.gz",
+      "trace_sha256": "790844ec7005086f1a64b8e66b00d0e9fd1c71693c7429e95034d68907ce17a5",
+      "expected_outcome_observed": true
+    },
+    {
+      "gap": "apply",
+      "constructed_fault": null,
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "reference_violations": [],
+      "grant_order": [
+        "A"
+      ],
+      "final_pose": [
+        4.0,
+        -2.0,
+        0.0
+      ],
+      "final_speed": 0.0,
+      "final_intent": "Brake",
+      "overlaps_zone": false,
+      "termination": "bounded_witness",
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "continuous_intervals_checked": 180,
+      "early_releases": [],
+      "completed_robots": [],
+      "run_id": "E3b-good",
+      "trace": "E3b-good.jsonl.gz",
+      "trace_sha256": "c0b71f092b3aa087f634f12236e9f91c3686656be68b770088fd5694a455407e",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 3.6793477672871995,
+      "continuous_intervals_checked": 108000,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [],
+      "completion_times": {},
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [],
+      "completion_mismatches": [],
+      "termination": "horizon",
+      "time": 120.0,
+      "final_poses": {
+        "A": [
+          4.0,
+          -2.0,
+          0.0
+        ],
+        "B": [
+          20.0,
+          2.0,
+          3.141592653589793
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": true,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "E4-wait",
+      "trace": "E4-wait.jsonl.gz",
+      "trace_sha256": "a06d87df01d1a6b3ed373cc0b9f391623908e0c51915f0fb941f3f98f00aedc3",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 53334,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.9,
+        "B": 58.9
+      },
+      "pedestrian_trigger": null,
+      "pedestrian_brakes": 0,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 58.9,
+      "final_poses": {
+        "A": [
+          22.000000000000377,
+          -1.9999999999999907,
+          -2.3314683517128287e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "none",
+        "horizon": 120.0
+      },
+      "run_id": "E4-fifo",
+      "trace": "E4-fifo.jsonl.gz",
+      "trace_sha256": "c1df2d91644f508a06bed60bd04995640328c9cbd66c03ed4ab025f89c0d604b",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 61215,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 40.1,
+        "B": 66.1
+      },
+      "pedestrian_trigger": {
+        "time": 10.68,
+        "robot": "A",
+        "pose": [
+          8.000000618484114,
+          3.796218185829576e-15,
+          -8.482797797526587e-16
+        ],
+        "speed": 0.0007864376269063212,
+        "domain": "straight_N_before_H"
+      },
+      "pedestrian_brakes": 1,
+      "resumes_after_pedestrian": 1,
+      "pedestrian_brake_evidence": [
+        {
+          "time": 10.75,
+          "robot": "A",
+          "observation": {
+            "robot_id": "A",
+            "sample_time": 10.7,
+            "pose": [
+              8.000116347236652,
+              3.796120015468862e-15,
+              -8.482797797526587e-16
+            ],
+            "speed": 0.010786437626906321,
+            "blocked": true,
+            "mission_revision": 1,
+            "map_revision": 1
+          },
+          "age": 0.05000000000000071,
+          "domain": true,
+          "distance": 3.099883652763348,
+          "bound": 0.29370302082622535,
+          "condition": true
+        }
+      ],
+      "completed_robots": [
+        "A",
+        "B"
+      ],
+      "completion_mismatches": [],
+      "termination": "complete",
+      "time": 66.1,
+      "final_poses": {
+        "A": [
+          22.00000000000038,
+          -1.999999999999989,
+          -2.598615767013257e-15
+        ],
+        "B": [
+          2.0000000000000466,
+          1.9999999999999938,
+          3.141592653589787
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "temporary",
+        "horizon": 120.0
+      },
+      "run_id": "B2-temporary",
+      "trace": "B2-temporary.jsonl.gz",
+      "trace_sha256": "7ff3772c5d3d5767dabf6b41904fbf02af86e3c7da5419f025414e2b5183aa1a",
+      "expected_outcome_observed": true
+    },
+    {
+      "collision_pairs": [],
+      "collision_witnesses": [],
+      "unresolved_pairs": [],
+      "distance_lower_bound_m": 0.26068542394925565,
+      "continuous_intervals_checked": 129937,
+      "early_releases": [],
+      "reference_violations": [],
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "pedestrian_trigger": {
+        "time": 10.68,
+        "robot": "A",
+        "pose": [
+          8.000000618484114,
+          3.796218185829576e-15,
+          -8.482797797526587e-16
+        ],
+        "speed": 0.0007864376269063212,
+        "domain": "straight_N_before_H"
+      },
+      "pedestrian_brakes": 1,
+      "resumes_after_pedestrian": 0,
+      "pedestrian_brake_evidence": [
+        {
+          "time": 10.75,
+          "robot": "A",
+          "observation": {
+            "robot_id": "A",
+            "sample_time": 10.7,
+            "pose": [
+              8.000116347236652,
+              3.796120015468862e-15,
+              -8.482797797526587e-16
+            ],
+            "speed": 0.010786437626906321,
+            "blocked": true,
+            "mission_revision": 1,
+            "map_revision": 1
+          },
+          "age": 0.05000000000000071,
+          "domain": true,
+          "distance": 3.099883652763348,
+          "bound": 0.29370302082622535,
+          "condition": true
+        }
+      ],
+      "completed_robots": [],
+      "completion_mismatches": [],
+      "termination": "horizon",
+      "time": 120.0,
+      "final_poses": {
+        "A": [
+          8.011958883431136,
+          3.786074231474092e-15,
+          -8.482797797526587e-16
+        ],
+        "B": [
+          20.0,
+          2.0,
+          3.141592653589793
+        ]
+      },
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "config": {
+        "advice": null,
+        "center_clear": false,
+        "wait_advice": false,
+        "pedestrian": "permanent",
+        "horizon": 120.0
+      },
+      "run_id": "B2-permanent",
+      "trace": "B2-permanent.jsonl.gz",
+      "trace_sha256": "8ec774ef2fbf61ea758f501c5e74e9a18dd1abdc23c3b7e4b79cfc80af82aece",
+      "expected_outcome_observed": true
+    },
+    {
+      "inside": true,
+      "condition": true,
+      "bound": 1.3341000000000003,
+      "observed_front_distance": 1.3441000000000003,
+      "observation_age": 0.05,
+      "delivery_delay": 0.1,
+      "total_actual_observation_to_brake": 0.15,
+      "heading": 0.0,
+      "observed_pose": [
+        9.755899999999999,
+        0.0,
+        0.0
+      ],
+      "actual_brake": 0.8,
+      "standstill_margin": 0.5691000000000045,
+      "min_trajectory_margin": 0.5691000000000042,
+      "crossed_boundary": false,
+      "final_speed": 0.0,
+      "final_pose": [
+        10.530899999999995,
+        0.0,
+        0.0
+      ],
+      "halted_time": 1.4,
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "reference_violations": [],
+      "early_releases": [],
+      "completed_robots": [],
+      "termination": "standstill",
+      "run_id": "Brake-inside",
+      "trace": "Brake-inside.jsonl.gz",
+      "trace_sha256": "1f63c2e21e93a5720a081baaedae61a8f9da475f4237b58bad7f8c55decefa0d",
+      "expected_outcome_observed": true
+    },
+    {
+      "inside": false,
+      "condition": false,
+      "bound": 1.3341000000000003,
+      "observed_front_distance": 1.3241000000000003,
+      "observation_age": 0.05,
+      "delivery_delay": 0.1,
+      "total_actual_observation_to_brake": 0.15,
+      "heading": 0.0,
+      "observed_pose": [
+        9.7759,
+        0.0,
+        0.0
+      ],
+      "actual_brake": 0.8,
+      "standstill_margin": 0.5491000000000031,
+      "min_trajectory_margin": 0.5491000000000028,
+      "crossed_boundary": false,
+      "final_speed": 0.0,
+      "final_pose": [
+        10.550899999999997,
+        0.0,
+        0.0
+      ],
+      "halted_time": 1.4,
+      "collision_pairs": [],
+      "unresolved_pairs": [],
+      "reference_violations": [],
+      "early_releases": [],
+      "completed_robots": [],
+      "termination": "standstill",
+      "run_id": "Brake-outside",
+      "trace": "Brake-outside.jsonl.gz",
+      "trace_sha256": "196e82987ac5d634ecb304d72f802a029a1b697be99dd509c88d634706c78ee2",
+      "expected_outcome_observed": true
+    }
+  ],
+  "expected_outcomes": 15,
+  "total": 15
+}

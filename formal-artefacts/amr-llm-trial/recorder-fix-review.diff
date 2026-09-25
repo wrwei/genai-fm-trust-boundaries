@@ -1,0 +1,177 @@
+Maintained review excerpt, 2026-09-22. This document was postprocessed at the user's request. Omitted legacy sections are marked; retained code and prose describe the scientific review. Hunk coordinates are historical and this excerpt MUST NOT be applied as an executable patch.
+
+--- <LOCAL_WORKDIR>/amr-llm-preparation-2026-09-15/trial-before-review-fix.py
++++ https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py
+@@ -299,7 +299,11 @@
+     requests, records = _ledger(run)
+     if len(requests) > len(records):
+         return requests[-1]
+-    if len(records) >= manifest["protocol"]["max_attempts"] or any(r["terminal_reason"] in {"output_token_cap_violation"} for r in records):
+[Legacy-only excerpt omitted during record maintenance.]
++    resource_stopped = any(set(r.get("violation_flags", [r["terminal_reason"]] if r["terminal_reason"] else [])) &
++                           {"output_token_cap_violation"} for r in records)
++    if len(records) >= manifest["protocol"]["max_attempts"] or resource_stopped:
+         return None
+     selected = None
+     for sample in SAMPLES:
+@@ -369,16 +373,24 @@
+               "finished_at_utc", "input_tokens", "output_tokens"}
+     if type(metadata) is not dict or set(metadata) != fields or not _finite_json(metadata):
+         raise ValueError("metadata must contain exactly the required finite JSON fields")
++    for key in ("sample_id", "status", "provider", "model_id", "request_sha256", "request_id",
++                "started_at_utc", "finished_at_utc"):
++        if type(metadata[key]) is not str or not metadata[key].strip():
++            raise ValueError(f"{key} must be a nonempty string")
++    if type(metadata["attempt_index"]) is not int or not 0 <= metadata["attempt_index"] <= 2:
++        raise ValueError("attempt_index must be an integer from 0 through 2")
++    if (type(metadata["requested_max_output_tokens"]) is not int or
++            metadata["requested_max_output_tokens"] <= 0):
++        raise ValueError("requested_max_output_tokens must be a positive integer")
+     if metadata["sample_id"] != request["sample_id"] or metadata["attempt_index"] != request["attempt_index"]:
+         raise ValueError("metadata does not match pending request")
+     if metadata["status"] not in STATUSES:
+         raise ValueError("invalid response status")
+-    if metadata["provider"] != config["provider"] or metadata["model_id"] != config["model_id"] or metadata["decoding"] != config["decoding"]:
++    if (metadata["provider"] != config["provider"] or metadata["model_id"] != config["model_id"] or
++            type(metadata["decoding"]) is not dict or _json_bytes(metadata["decoding"]) != _json_bytes(config["decoding"])):
+         raise ValueError("metadata identity does not match frozen config")
+     if metadata["requested_max_output_tokens"] != config["max_output_tokens"] or metadata["request_sha256"] != request["prompt_sha256"]:
+         raise ValueError("metadata request parameters do not match")
+-    if type(metadata["request_id"]) is not str or not metadata["request_id"].strip():
+-        raise ValueError("request_id must be a provider identifier or not-exposed")
+     issued = _timestamp(request["issued_at_utc"], "issued_at_utc")
+     started = _timestamp(metadata["started_at_utc"], "started_at_utc")
+     finished = _timestamp(metadata["finished_at_utc"], "finished_at_utc")
+@@ -391,9 +403,6 @@
+[Legacy-only excerpt omitted during record maintenance.]
+ 
+ 
+ def _feedback(assessment: dict, category: str) -> dict:
+@@ -431,13 +440,14 @@
+                       "correspondence_witnesses": [], "accepted": False}
+     accepted = metadata["status"] == "ok" and encoding_error is None and assessment["accepted"]
+[Legacy-only excerpt omitted during record maintenance.]
+-    terminal = None
++    violations = []
+     if metadata["output_tokens"] is not None and metadata["output_tokens"] > config["max_output_tokens"]:
+-        terminal = "output_token_cap_violation"
+[Legacy-only excerpt omitted during record maintenance.]
+-    elif metadata["status"] != "ok":
+-        terminal = "infrastructure_failure"
++        violations.append("output_token_cap_violation")
+[Legacy-only excerpt omitted during record maintenance.]
++    if metadata["status"] != "ok":
++        violations.append("infrastructure_failure")
++    terminal = violations[0] if violations else None
+     category = (terminal or ("accepted" if accepted else
+                 ("encoding_rejection" if encoding_error else
+                  ("parse_rejection" if not assessment.get("parse_pass") else "semantic_rejection"))))
+@@ -456,7 +466,7 @@
+                   "prompt_sha256": request["prompt_sha256"], "raw_sha256": _sha(raw),
+                   "metadata": metadata, "assessment": assessment, "feedback": feedback,
+                   "encoding_error": encoding_error, "accepted": accepted,
+-                  "terminal_reason": terminal}
++                  "terminal_reason": terminal, "violation_flags": violations}
+         record["record_sha256"] = _sha(_json_bytes(record))
+         _atomic_write(temp / "record.json", _json_bytes(record))
+         temp.replace(target)
+@@ -472,14 +482,16 @@
+     requests, records = _ledger(run)
+     config = manifest["config"]
+     pending = len(requests) > len(records)
+-    stopped = any(r["terminal_reason"] in {"output_token_cap_violation"} for r in records)
+[Legacy-only excerpt omitted during record maintenance.]
++    stopped = any(set(r.get("violation_flags", [])) & {"output_token_cap_violation"} for r in records)
+     states = {}
+     for sample in SAMPLES:
+         state = _chain_state(records, sample)
+-        if stopped and state == "unattempted":
++        if stopped and state in {"unattempted", "rejected"}:
+             state = "output_token_stopped"
+         states[sample] = state
+-    attempted = sum(state != "unattempted" and state != "output_token_stopped" for state in states.values())
++    attempted = len({r["sample_id"] for r in records})
+     initial_records = [r for r in records if r["attempt_index"] == 0]
+     initial_accepted = sum(r["accepted"] for r in initial_records)
+     eventually = sum(any(r["accepted"] for r in records if r["sample_id"] == sample) for sample in SAMPLES)
+@@ -496,7 +508,7 @@
+     inputs = [r["metadata"]["input_tokens"] for r in records]
+     outputs = [r["metadata"]["output_tokens"] for r in records]
+     denominator = len(initial_records)
+-    pending_ids = {sample for sample, state in states.items() if state == "rejected"}
++    pending_ids = set() if stopped else {sample for sample, state in states.items() if state == "rejected"}
+     if pending:
+         pending_ids.add(requests[-1]["sample_id"])
+     return {"schema": "amr-llm-trial-summary/v1", "record_mode": config["record_mode"],
+@@ -504,15 +516,19 @@
+                            else "provider/model identity supplied by operator; transport not independently authenticated"),
+             "planned_initial_candidates": 6, "initial_responses_recorded": denominator,
+             "attempted_samples": attempted, "pending_samples": len(pending_ids),
+-            "unattempted_samples": sum(state == "unattempted" for state in states.values()),
++            "unattempted_samples": sum(not any(r["sample_id"] == sample for r in records) for sample in SAMPLES),
+             "total_recorded_attempts": len(records), "initial_accepted": initial_accepted,
+             "eventually_accepted": eventually, "repairs_recorded": len(records) - len(initial_records),
+-            "infrastructure_failures": sum(r["terminal_reason"] == "infrastructure_failure" for r in records),
++            "infrastructure_failures": sum(r["metadata"]["status"] != "ok" for r in records),
++            "output_token_cap_violations": sum("output_token_cap_violation" in r.get("violation_flags", []) for r in records),
+[Legacy-only excerpt omitted during record maintenance.]
+             "invalid_utf8": sum(r["encoding_error"] is not None for r in records),
+             "per_sample": {sample: {"state": state, "attempts": sum(r["sample_id"] == sample for r in records)} for sample, state in states.items()},
+[Legacy-only excerpt omitted during record maintenance.]
+             "input_tokens_sum": sum(x for x in inputs if x is not None), "missing_input_token_count": sum(x is None for x in inputs),
+             "output_tokens_sum": sum(x for x in outputs if x is not None), "missing_output_token_count": sum(x is None for x in outputs),
+             "initial_accepted_ratio": {"numerator": initial_accepted, "denominator": denominator},
+--- <LOCAL_WORKDIR>/amr-llm-preparation-2026-09-15/test-trial-before-review-fix.py
++++ https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py
+@@ -251,6 +251,72 @@
+         prepare_request(self.run)
+         self.assertEqual(summarize(self.run)["pending_samples"], 1)
+ 
++    # Legacy-only test excerpt omitted during record maintenance.
++
++    # Legacy-only test excerpt omitted during record maintenance.
++
++    def test_combined_resource_and_transport_failures_remain_independent(self):
++        self.init()
++        req = prepare_request(self.run)
++        rec = record_response(self.run, GOOD, self.metadata(
++            req, status="timeout", output_tokens=1001))
++        self.assertEqual(set(rec["violation_flags"]), {
++            "output_token_cap_violation", "infrastructure_failure"})
++        self.assertFalse(rec["accepted"])
++        summary = summarize(self.run)
+[Legacy-only excerpt omitted during record maintenance.]
++        self.assertEqual(summary["infrastructure_failures"], 1)
++        self.assertEqual(summary["output_token_cap_violations"], 1)
+[Legacy-only excerpt omitted during record maintenance.]
++
++    def test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation(self):
++        cases = [
++            ("attempt-bool", {}, {"attempt_index": False}),
++            ("attempt-float", {}, {"attempt_index": 0.0}),
++            ("cap-float", {}, {"requested_max_output_tokens": 1000.0}),
++            ("cap-bool", {"max_output_tokens": 1}, {"requested_max_output_tokens": True}),
++            ("decode-bool", {}, {"decoding": {"temperature": False}}),
++            ("decode-float", {}, {"decoding": {"temperature": 0.0}}),
++            ("status-list", {}, {"status": ["ok"]}),
++            ("sample-list", {}, {"sample_id": ["P1-R1"]}),
++        ]
++        for label, config_changes, metadata_changes in cases:
++            with self.subTest(label=label):
++                run = self.run.parent / label
++                config = copy.deepcopy(self.config)
++                config.update(config_changes)
++                init_run(self.bundle, run, config)
++                req = prepare_request(run)
++                before = sorted(str(p.relative_to(run)) for p in run.rglob("*"))
++                metadata = self.metadata(req, **metadata_changes)
++                if "max_output_tokens" in config_changes and "requested_max_output_tokens" not in metadata_changes:
++                    metadata["requested_max_output_tokens"] = config["max_output_tokens"]
++                with self.assertRaises(ValueError):
++                    record_response(run, GOOD, metadata)
++                self.assertEqual(before, sorted(str(p.relative_to(run)) for p in run.rglob("*")))
++                self.assertEqual(len(list((run / "records").iterdir())), 0)
++
+ 
+ if __name__ == "__main__":
+     unittest.main()

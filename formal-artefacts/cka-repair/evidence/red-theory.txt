@@ -1,0 +1,23 @@
+theory Bridge_Algebra_Repair
+  imports Main
+begin
+
+text \<open>Independent repair session: no imports from the admitted legacy bridge
+theories. These two statements deliberately start with failing proofs so that
+the actual build failure is observed before their proof scripts are supplied.\<close>
+
+lemma test_shrinks:
+  fixes x t :: "'a::dioid"
+  assumes "t \<le> 1"
+  shows "x * t \<le> x"
+  by fail
+
+lemma inequality_is_vacuous_for_zero:
+  fixes P D :: "'a::dioid"
+    and parallel :: "'a \<Rightarrow> 'a \<Rightarrow> 'a"
+    and project :: "'a \<Rightarrow> 'b::order"
+  assumes "mono project"
+  shows "project (parallel P D * 0) \<le> project P"
+  by fail
+
+end

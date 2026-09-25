@@ -1,0 +1,23 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_six_chains_preserve_failures_and_never_become_live_samples (test_rehearsal.RehearsalTest.test_six_chains_preserve_failures_and_never_become_live_samples) ... ok
+test_all_exhausted_and_partial_summary_denominators_and_selection (test_trial.TrialTests.test_all_exhausted_and_partial_summary_denominators_and_selection) ... ok
+test_broken_timestamps_and_prior_chain_mutation_are_rejected (test_trial.TrialTests.test_broken_timestamps_and_prior_chain_mutation_are_rejected) ... ok
+test_combined_resource_and_transport_failures_remain_independent (test_trial.TrialTests.test_combined_resource_and_transport_failures_remain_independent) ... ok
+test_config_rejects_missing_negative_nan_bool_and_live_placeholders (test_trial.TrialTests.test_config_rejects_missing_negative_nan_bool_and_live_placeholders) ... ok
+[Legacy-only test entry omitted during record maintenance.]
+[Legacy-only test entry omitted during record maintenance.]
+test_infrastructure_statuses_are_terminal_and_never_accepted (test_trial.TrialTests.test_infrastructure_statuses_are_terminal_and_never_accepted) ... ok
+test_integrity_mutations_fail_closed (test_trial.TrialTests.test_integrity_mutations_fail_closed) ... ok
+test_invalid_utf8_and_usage_violations_are_retained_and_stop (test_trial.TrialTests.test_invalid_utf8_and_usage_violations_are_retained_and_stop) ... ok
+test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation (test_trial.TrialTests.test_metadata_numeric_aliases_and_nonstring_identities_are_rejected_without_mutation) ... ok
+test_original_input_manifest_digest_and_complete_inventory_are_verified (test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) ... ok
+test_pending_is_idempotent_and_mismatch_or_duplicate_does_not_mutate (test_trial.TrialTests.test_pending_is_idempotent_and_mismatch_or_duplicate_does_not_mutate) ... ok
+test_pending_sample_count_is_distinct_for_a_pending_repair (test_trial.TrialTests.test_pending_sample_count_is_distinct_for_a_pending_repair) ... ok
+test_raw_crlf_is_preserved_and_fenced_json_is_not_normalized (test_trial.TrialTests.test_raw_crlf_is_preserved_and_fenced_json_is_not_normalized) ... ok
+test_rejected_initial_gets_feedback_then_accepted_repair (test_trial.TrialTests.test_rejected_initial_gets_feedback_then_accepted_repair) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.339s
+
+OK

@@ -1,0 +1,303 @@
+{
+  "initial_state": {
+    "pose": [
+      0,
+      0,
+      0
+    ],
+    "speed": 1,
+    "forbidden_boundary_x": 4
+  },
+  "omit_reaction": false,
+  "actual_brake": 0.8,
+  "dt": 0.005,
+  "brake_issued": 2.35,
+  "brake_delivery": 2.45,
+  "halted_time": 3.705,
+  "final_front_x": 3.4749999999999694,
+  "clearance": 0.5250000000000304,
+  "required_margin": 0.2,
+  "margin_violation": false,
+  "crossed_boundary": false,
+  "decisions": [
+    {
+      "time": 0.1,
+      "observed_at": 0.0,
+      "observed_front_distance": 3.6,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.15,
+      "observed_at": 0.05,
+      "observed_front_distance": 3.5500000000000003,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.2,
+      "observed_at": 0.1,
+      "observed_front_distance": 3.5,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.25,
+      "observed_at": 0.15,
+      "observed_front_distance": 3.45,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.3,
+      "observed_at": 0.2,
+      "observed_front_distance": 3.4,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.35,
+      "observed_at": 0.25,
+      "observed_front_distance": 3.35,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.4,
+      "observed_at": 0.3,
+      "observed_front_distance": 3.3,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.45,
+      "observed_at": 0.35,
+      "observed_front_distance": 3.25,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.5,
+      "observed_at": 0.4,
+      "observed_front_distance": 3.1999999999999997,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.55,
+      "observed_at": 0.45,
+      "observed_front_distance": 3.15,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.6,
+      "observed_at": 0.5,
+      "observed_front_distance": 3.0999999999999996,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.65,
+      "observed_at": 0.55,
+      "observed_front_distance": 3.05,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.7,
+      "observed_at": 0.6,
+      "observed_front_distance": 2.9999999999999996,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.75,
+      "observed_at": 0.65,
+      "observed_front_distance": 2.9499999999999997,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.8,
+      "observed_at": 0.7,
+      "observed_front_distance": 2.8999999999999995,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.85,
+      "observed_at": 0.75,
+      "observed_front_distance": 2.8499999999999996,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.9,
+      "observed_at": 0.8,
+      "observed_front_distance": 2.7999999999999994,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 0.95,
+      "observed_at": 0.85,
+      "observed_front_distance": 2.7499999999999996,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.0,
+      "observed_at": 0.9,
+      "observed_front_distance": 2.6999999999999993,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.05,
+      "observed_at": 0.95,
+      "observed_front_distance": 2.6499999999999995,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.1,
+      "observed_at": 1.0,
+      "observed_front_distance": 2.599999999999999,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.15,
+      "observed_at": 1.05,
+      "observed_front_distance": 2.5500000000000003,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.2,
+      "observed_at": 1.1,
+      "observed_front_distance": 2.5000000000000013,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.25,
+      "observed_at": 1.15,
+      "observed_front_distance": 2.4500000000000024,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.3,
+      "observed_at": 1.2,
+      "observed_front_distance": 2.4000000000000035,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.35,
+      "observed_at": 1.25,
+      "observed_front_distance": 2.3500000000000045,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.4,
+      "observed_at": 1.3,
+      "observed_front_distance": 2.3000000000000056,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.45,
+      "observed_at": 1.35,
+      "observed_front_distance": 2.2500000000000067,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.5,
+      "observed_at": 1.4,
+      "observed_front_distance": 2.2000000000000077,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.55,
+      "observed_at": 1.45,
+      "observed_front_distance": 2.150000000000009,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.6,
+      "observed_at": 1.5,
+      "observed_front_distance": 2.10000000000001,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.65,
+      "observed_at": 1.55,
+      "observed_front_distance": 2.050000000000011,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.7,
+      "observed_at": 1.6,
+      "observed_front_distance": 2.000000000000012,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.75,
+      "observed_at": 1.65,
+      "observed_front_distance": 1.950000000000013,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.8,
+      "observed_at": 1.7,
+      "observed_front_distance": 1.9000000000000141,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.85,
+      "observed_at": 1.75,
+      "observed_front_distance": 1.8500000000000152,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.9,
+      "observed_at": 1.8,
+      "observed_front_distance": 1.8000000000000163,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 1.95,
+      "observed_at": 1.85,
+      "observed_front_distance": 1.7500000000000173,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.0,
+      "observed_at": 1.9,
+      "observed_front_distance": 1.7000000000000184,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.05,
+      "observed_at": 1.95,
+      "observed_front_distance": 1.6500000000000195,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.1,
+      "observed_at": 2.0,
+      "observed_front_distance": 1.6000000000000205,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.15,
+      "observed_at": 2.05,
+      "observed_front_distance": 1.5500000000000216,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.2,
+      "observed_at": 2.1,
+      "observed_front_distance": 1.5000000000000226,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.25,
+      "observed_at": 2.15,
+      "observed_front_distance": 1.4500000000000237,
+      "required_distance": 1.391015625
+    },
+    {
+      "time": 2.3,
+      "observed_at": 2.2,
+      "observed_front_distance": 1.4000000000000248,
+      "required_distance": 1.3910156249999992
+    },
+    {
+      "time": 2.35,
+      "observed_at": 2.25,
+      "observed_front_distance": 1.3500000000000258,
+      "required_distance": 1.391015625
+    }
+  ],
+  "assumption_violated": [],
+  "assumption_detected": [],
+  "scope": "synthetic fixed-boundary witness; no LLM or hardware"
+}

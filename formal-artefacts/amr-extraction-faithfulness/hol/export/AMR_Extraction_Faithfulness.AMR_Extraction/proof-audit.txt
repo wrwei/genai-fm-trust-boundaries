@@ -1,0 +1,16 @@
+No skipped proofs or oracle dependencies
+AMR_Extraction.negate_correct
+AMR_Extraction.compile_correct
+AMR_Extraction.priority_correct
+AMR_Extraction.extraction_preserves
+AMR_Extraction.target_singleton_iff
+AMR_Extraction.no_match_preserved
+AMR_Extraction.property_lifting
+AMR_Extraction.total_property_lifting
+AMR_Extraction.compile_nonempty
+AMR_Extraction.omitted_priority_witness(1)
+AMR_Extraction.omitted_priority_witness(2)
+AMR_Extraction.incorrect_negation_witness(1)
+AMR_Extraction.incorrect_negation_witness(2)
+AMR_Extraction.uncovered_witness(1)
+AMR_Extraction.uncovered_witness(2)

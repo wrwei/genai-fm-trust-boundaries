@@ -1,0 +1,64 @@
+{
+  "accepted": false,
+  "assessment": {
+    "accepted": false,
+    "checked_inputs": 0,
+    "correspondence_mismatches": 0,
+    "correspondence_pass": false,
+    "correspondence_witnesses": [],
+    "model_policy_pass": false,
+    "model_violation_inputs": 0,
+    "model_witnesses": [],
+    "parse_error": "invalid program JSON",
+    "parse_pass": false,
+    "select_inputs": 0,
+    "source_policy_pass": false,
+    "source_sha256": "8e5ab90617e5f87380538278fa784ac47656e00d5e69ecefb50fafed0668cb2a",
+    "source_violation_inputs": 0,
+    "source_witnesses": [],
+    "spec_id": "amr-supervisor-obligations/v1.1",
+    "step_inputs": 0,
+    "translator_fault": null
+  },
+  "attempt_index": 0,
+  "encoding_error": null,
+  "feedback": {
+    "checked_inputs": 0,
+    "correspondence_witnesses": [],
+    "counts": {
+      "correspondence_mismatches": 0,
+      "model_violation_inputs": 0,
+      "select_inputs": 0,
+      "source_violation_inputs": 0,
+      "step_inputs": 0
+    },
+    "parse_error": "invalid program JSON",
+    "rejection_category": "parse_rejection",
+    "source_witnesses": [],
+    "witness_cap": 2,
+    "witnesses_may_not_cover_all_failure_classes": true
+  },
+  "metadata": {
+    "attempt_index": 0,
+    "decoding": {
+      "mode": "no-model-called"
+    },
+    "finished_at_utc": "2026-09-15T13:48:39.364798+00:00",
+    "input_tokens": null,
+    "model_id": "FIXTURE-offline-rehearsal",
+    "output_tokens": null,
+    "provider": "fixture",
+    "request_id": "FIXTURE-P3-R1-0",
+    "request_sha256": "f9799391755d295dbb40fff70f6741954f323dbbd5c01fc3241ee7ccdb28cdc4",
+    "requested_max_output_tokens": 8192,
+    "sample_id": "P3-R1",
+    "started_at_utc": "2026-09-15T13:48:39.364798+00:00",
+    "status": "ok"
+  },
+  "prompt_sha256": "f9799391755d295dbb40fff70f6741954f323dbbd5c01fc3241ee7ccdb28cdc4",
+  "raw_sha256": "8e5ab90617e5f87380538278fa784ac47656e00d5e69ecefb50fafed0668cb2a",
+  "sample_id": "P3-R1",
+  "terminal_reason": null,
+  "violation_flags": [],
+  "record_sha256": "a8b6053a480b30067939902b0bdb49be9c34b539cc1af1e5b7346d181a824d7a"
+}

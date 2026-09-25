@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "name": "none",
+      "counts": {
+        "adapter": 1414,
+        "protocol": 1414,
+        "observation_sample": 2358,
+        "source_step": 1838,
+        "command_issued": 6,
+        "source_select": 113,
+        "motion": 5890,
+        "plant_intervals": 11780,
+        "geometry_nodes": 53010,
+        "continuous_pair_intervals": 53010,
+        "observation_received": 2356,
+        "command_applied": 6,
+        "release": 2,
+        "complete": 2
+      },
+      "grants": [
+        "A",
+        "B"
+      ],
+      "replies": [],
+      "finishes": [
+        "A",
+        "B"
+      ],
+      "trace_sha256": "6f115bb0e5d29f9ec639d8d41b0a0e971d41e2c2993c9b2b675c812d52e3d909"
+    },
+    {
+      "name": "retained-B",
+      "counts": {
+        "adapter": 1415,
+        "protocol": 1414,
+        "observation_sample": 2358,
+        "source_step": 1838,
+        "command_issued": 6,
+        "source_select": 113,
+        "motion": 5890,
+        "plant_intervals": 11780,
+        "geometry_nodes": 53010,
+        "continuous_pair_intervals": 53010,
+        "observation_received": 2356,
+        "command_applied": 6,
+        "release": 2,
+        "complete": 2
+      },
+      "grants": [
+        "B",
+        "A"
+      ],
+      "replies": [
+        [
+          0.0,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "finishes": [
+        "B",
+        "A"
+      ],
+      "trace_sha256": "4d3ba44fe86a90e430b829e3441cc509a251e945dcd78e3e2f89dcacda0848a7"
+    },
+    {
+      "name": "invalid-then-B",
+      "counts": {
+        "adapter": 1417,
+        "protocol": 1414,
+        "observation_sample": 2358,
+        "source_step": 1838,
+        "command_issued": 6,
+        "source_select": 113,
+        "motion": 5890,
+        "plant_intervals": 11780,
+        "geometry_nodes": 53010,
+        "continuous_pair_intervals": 53010,
+        "observation_received": 2356,
+        "command_applied": 6,
+        "release": 2,
+        "complete": 2
+      },
+      "grants": [
+        "B",
+        "A"
+      ],
+      "replies": [
+        [
+          0.0,
+          "old",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ],
+        [
+          0.0,
+          "req",
+          "ctx",
+          "{\"prefer\":\"B\",\"grant\":true}"
+        ],
+        [
+          0.01,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "finishes": [
+        "B",
+        "A"
+      ],
+      "trace_sha256": "06cd04e041ff6e97ee2e0b469e52db4920b93bf258d68551efbe196d2832acba"
+    },
+    {
+      "name": "late-B",
+      "counts": {
+        "adapter": 1415,
+        "protocol": 1414,
+        "observation_sample": 2358,
+        "source_step": 1838,
+        "command_issued": 6,
+        "source_select": 113,
+        "motion": 5890,
+        "plant_intervals": 11780,
+        "geometry_nodes": 53010,
+        "continuous_pair_intervals": 53010,
+        "observation_received": 2356,
+        "command_applied": 6,
+        "release": 2,
+        "complete": 2
+      },
+      "grants": [
+        "A",
+        "B"
+      ],
+      "replies": [
+        [
+          0.06,
+          "req",
+          "ctx",
+          "{\"prefer\": \"B\"}"
+        ]
+      ],
+      "finishes": [
+        "A",
+        "B"
+      ],
+      "trace_sha256": "6d0963d18c672d17fe7f80968583d58edb20570b5fbd9e7d3e2189fba9c3241e"
+    }
+  ],
+  "totals": {
+    "adapter": 5661,
+    "protocol": 5656,
+    "observation_sample": 9432,
+    "source_step": 7352,
+    "command_issued": 24,
+    "source_select": 452,
+    "motion": 23560,
+    "plant_intervals": 47120,
+    "geometry_nodes": 212040,
+    "continuous_pair_intervals": 212040,
+    "observation_received": 9424,
+    "command_applied": 24,
+    "release": 8,
+    "complete": 8
+  },
+  "mechanism_outcomes": 11,
+  "dependencies_verified": 37,
+  "audit_sha256": "e75b59a095e274176762ff54789a5dae1ae0aac10c68c41934bda39f2cce17ed",
+  "independent_geometry_sha256": "2093843161731677836ea2fbe8ae86e45f13f52ef87d70d7180eb883df4708c2",
+  "source_link_audit_sha256": "8b51e1d86c2f4bcb7795ef49f972d35e1e8e751f28f829f5c7ffa371b19d41a2",
+  "scope": "HOL transition table, exact source and reference-plant replay; independent geometry; no hardware or continuous refinement theorem"
+}

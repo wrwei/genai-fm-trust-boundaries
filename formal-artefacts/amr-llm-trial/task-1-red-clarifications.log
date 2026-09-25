@@ -1,0 +1,79 @@
+test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) ... 
+  test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='original') ... ERROR
+  test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='manifest') ... ERROR
+  test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='inventory') ... ERROR
+test_pending_sample_count_is_distinct_for_a_pending_repair (tests.test_trial.TrialTests.test_pending_sample_count_is_distinct_for_a_pending_repair) ... ERROR
+test_invalid_utf8_and_usage_violations_are_retained_and_stop (tests.test_trial.TrialTests.test_invalid_utf8_and_usage_violations_are_retained_and_stop) ... ERROR
+
+======================================================================
+ERROR: test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='original')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 146, in test_original_input_manifest_digest_and_complete_inventory_are_verified
+    init_run(self.bundle, run, self.config)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 148, in init_run
+    protocol, protocol_raw = _load_protocol(bundle)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 141, in _load_protocol
+    raise ValueError("protocol.json does not match the fixed protocol")
+ValueError: protocol.json does not match the fixed protocol
+
+======================================================================
+ERROR: test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='manifest')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 146, in test_original_input_manifest_digest_and_complete_inventory_are_verified
+    init_run(self.bundle, run, self.config)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 148, in init_run
+    protocol, protocol_raw = _load_protocol(bundle)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 141, in _load_protocol
+    raise ValueError("protocol.json does not match the fixed protocol")
+ValueError: protocol.json does not match the fixed protocol
+
+======================================================================
+ERROR: test_original_input_manifest_digest_and_complete_inventory_are_verified (tests.test_trial.TrialTests.test_original_input_manifest_digest_and_complete_inventory_are_verified) (target='inventory')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 146, in test_original_input_manifest_digest_and_complete_inventory_are_verified
+    init_run(self.bundle, run, self.config)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 148, in init_run
+    protocol, protocol_raw = _load_protocol(bundle)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 141, in _load_protocol
+    raise ValueError("protocol.json does not match the fixed protocol")
+ValueError: protocol.json does not match the fixed protocol
+
+======================================================================
+ERROR: test_pending_sample_count_is_distinct_for_a_pending_repair (tests.test_trial.TrialTests.test_pending_sample_count_is_distinct_for_a_pending_repair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 248, in test_pending_sample_count_is_distinct_for_a_pending_repair
+    self.init()
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 60, in init
+    return init_run(self.bundle, self.run, self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 148, in init_run
+    protocol, protocol_raw = _load_protocol(bundle)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 141, in _load_protocol
+    raise ValueError("protocol.json does not match the fixed protocol")
+ValueError: protocol.json does not match the fixed protocol
+
+======================================================================
+ERROR: test_invalid_utf8_and_usage_violations_are_retained_and_stop (tests.test_trial.TrialTests.test_invalid_utf8_and_usage_violations_are_retained_and_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/tests/test_trial.py", line 202, in test_invalid_utf8_and_usage_violations_are_retained_and_stop
+    init_run(self.bundle, run, self.config)
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 148, in init_run
+    protocol, protocol_raw = _load_protocol(bundle)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-llm-trial/trial.py", line 141, in _load_protocol
+    raise ValueError("protocol.json does not match the fixed protocol")
+ValueError: protocol.json does not match the fixed protocol
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.068s
+
+FAILED (errors=5)

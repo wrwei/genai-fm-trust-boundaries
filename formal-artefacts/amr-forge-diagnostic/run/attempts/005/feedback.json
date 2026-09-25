@@ -1,0 +1,59 @@
+{
+  "rejection_category": "semantic_rejection",
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "counts": {
+    "select_inputs": 32,
+    "step_inputs": 1792,
+    "source_violation_inputs": 784,
+    "model_violation_inputs": 784,
+    "correspondence_mismatches": 0
+  },
+  "source_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": false
+      },
+      "mode": "Idle",
+      "response": [
+        "Brake",
+        "Stopped"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Brake",
+        "Stopped"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    }
+  ],
+  "correspondence_witnesses": [],
+  "witness_cap": 2,
+  "witnesses_may_not_cover_all_failure_classes": true
+}

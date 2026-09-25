@@ -1,0 +1,137 @@
+{
+  "recorded_at_utc": "2026-09-13T09:31:30.215102+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "sqlite": "3.45.1",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "sqlite_settings_observed": {
+    "journal_mode": "delete",
+    "synchronous": 3,
+    "foreign_keys": 1,
+    "busy_timeout": 3000,
+    "integrity_check": "ok"
+  },
+  "baseline": {
+    "command_argv": [
+      "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/sqlite-runtime/test_runtime.py"
+    ],
+    "started_utc": "2026-09-13T09:31:22.984576+00:00",
+    "finished_utc": "2026-09-13T09:31:28.184233+00:00",
+    "return_code": 0,
+    "source_sha256_before": {
+      "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+      "ingress.py": "e54e247cf553db70d7296bfb2482a4d703f148748b32ccff7709b46e7b762cb8",
+      "ledger.py": "e73ccaf15bfad705d6b4654b1ccb93bc35de350698bc8086054fdadfbdab2c36",
+      "test_runtime.py": "60baafeececb3751e0ffd4b779a748be9f754a59c125c51e01f7383e29fa5544",
+      "verify.py": "70455e5034753a5f0d39d33f60a151a1d05bf4ede8b9b9f79cf747d51e6a88ff"
+    },
+    "log_sha256": "e32f17ab6af72c6b85a1e9312eb942b8134031cda481fb2573bf7e9862154f00",
+    "result_sha256": "9b088cf0f602b911f0d2d1a032337dca854c8c0c407a566ce725bfdd6a0aae86"
+  },
+  "mutations": [
+    {
+      "name": "authority_bypass",
+      "file": "ingress.py",
+      "replace": "if role == \"advice\" and command != \"Advice\":",
+      "with": "if False:  # Deliberately omit the advice authority restriction.",
+      "detected_by_assertion": true,
+      "run": {
+        "command_argv": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "C:\\Users\\Admin\\AppData\\Local\\Temp\\runtime-mutant-sa7eejza\\test_runtime.py",
+          "RuntimeTests.test_http_authority_isolation"
+        ],
+        "started_utc": "2026-09-13T09:31:28.216313+00:00",
+        "finished_utc": "2026-09-13T09:31:28.472595+00:00",
+        "return_code": 1,
+        "source_sha256_before": {
+          "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+          "ingress.py": "52892c9842ff85602631c6ee5cb99cd2e09abfda20d9e6f020fe71c9685f543a",
+          "ledger.py": "e73ccaf15bfad705d6b4654b1ccb93bc35de350698bc8086054fdadfbdab2c36",
+          "test_runtime.py": "60baafeececb3751e0ffd4b779a748be9f754a59c125c51e01f7383e29fa5544",
+          "verify.py": "70455e5034753a5f0d39d33f60a151a1d05bf4ede8b9b9f79cf747d51e6a88ff"
+        },
+        "log_sha256": "f8ac67ed59a6395a2ffa817bfd467ea876054ff5eef9d22100d397b178eb5229",
+        "result_sha256": "8a55bc6b348189a89dceac135cc1084f2518f7f56df7368510e918913910cb9b"
+      }
+    },
+    {
+      "name": "cached_permission",
+      "file": "ledger.py",
+      "replace": "elif s[\"stage\"] == \"Approved\" and s[\"permitted\"]:",
+      "with": "elif s[\"stage\"] == \"Approved\":  # Deliberately use stale approval.",
+      "detected_by_assertion": true,
+      "run": {
+        "command_argv": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "C:\\Users\\Admin\\AppData\\Local\\Temp\\runtime-mutant-yfnrritd\\test_runtime.py",
+          "RuntimeTests.test_revocation_at_commit"
+        ],
+        "started_utc": "2026-09-13T09:31:28.500339+00:00",
+        "finished_utc": "2026-09-13T09:31:28.730051+00:00",
+        "return_code": 1,
+        "source_sha256_before": {
+          "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+          "ingress.py": "e54e247cf553db70d7296bfb2482a4d703f148748b32ccff7709b46e7b762cb8",
+          "ledger.py": "df4d5a24aa70b923e913edbd32218ea5416b44297cccb24db5810b7ab36e2361",
+          "test_runtime.py": "60baafeececb3751e0ffd4b779a748be9f754a59c125c51e01f7383e29fa5544",
+          "verify.py": "70455e5034753a5f0d39d33f60a151a1d05bf4ede8b9b9f79cf747d51e6a88ff"
+        },
+        "log_sha256": "2a4811b9a83005e26c6cc455de33bb18a86f961d111cfedbe4123fe2e48b1788",
+        "result_sha256": "8a55bc6b348189a89dceac135cc1084f2518f7f56df7368510e918913910cb9b"
+      }
+    },
+    {
+      "name": "split_transaction",
+      "file": "ledger.py",
+      "replace": "                    visit(\"after_effect\")",
+      "with": "                    con.execute(\"COMMIT\")\n                    con.execute(\"BEGIN IMMEDIATE\")\n                    visit(\"after_effect\")",
+      "detected_by_assertion": true,
+      "run": {
+        "command_argv": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "C:\\Users\\Admin\\AppData\\Local\\Temp\\runtime-mutant-amxolcoz\\test_runtime.py",
+          "RuntimeTests.test_crash_recovery"
+        ],
+        "started_utc": "2026-09-13T09:31:28.755628+00:00",
+        "finished_utc": "2026-09-13T09:31:30.188044+00:00",
+        "return_code": 1,
+        "source_sha256_before": {
+          "crash_worker.py": "ff61114062247690b47bd78db243799a1dbce94a356d7a302673455daff193f7",
+          "ingress.py": "e54e247cf553db70d7296bfb2482a4d703f148748b32ccff7709b46e7b762cb8",
+          "ledger.py": "19079f395c11de8539ba61b48c439e1bf9d0125e5fd26ea047d1342391c25c11",
+          "test_runtime.py": "60baafeececb3751e0ffd4b779a748be9f754a59c125c51e01f7383e29fa5544",
+          "verify.py": "70455e5034753a5f0d39d33f60a151a1d05bf4ede8b9b9f79cf747d51e6a88ff"
+        },
+        "log_sha256": "7168e5a21ba8af0cc2f127dc1f336e4784aceede55ec66ca5c2b9aaf4caf96d9",
+        "result_sha256": "f44b94d10c4585e7a226de6b7ce4b5260658e9e24d991e313290cb467b382df5"
+      }
+    }
+  ],
+  "model_inputs_sha256": {
+    "Runtime_Interface.thy": "8e3dda6c53f442707339b27bc31fa0fd5d4af3c257a3e8b2ce64aad16bc6f9d7",
+    "emit_table.ML": "dfaa1841e82f1ece3aaac670645b0c937029b66e1ad5ecb00f990265743d37d9",
+    "evidence/runtime_interface.ML": "84347f9d62e61dcf0efcfc2f680bff87c71fa4a6257d7b15cd43071c6277291c",
+    "evidence/transition_table.csv": "54448f6ef3e0e8144420bcea0faa2261088bfea01520e7d7d916b20ab8e69190",
+    "evidence/run_record.json": "264961a72b8547a304b91b530e2e686465fc85b4837fd409a38758072be8b9c5"
+  },
+  "scope": [
+    "Empirical Python/SQLite correspondence, not a new Isabelle proof",
+    "Single operation and same-database effects; not remote exactly-once",
+    "Abrupt application exits at five checkpoints; not power-loss or pager fault testing",
+    "Authenticated loopback request cases; assumes secret control token and protected executor/database",
+    "Finite concurrency scenarios; no deployed scheduling/fairness guarantee"
+  ]
+}

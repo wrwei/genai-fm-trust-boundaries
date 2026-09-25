@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-13",
+  "base": "442ec0e",
+  "body_bibliographies_and_historical_json_unchanged": true,
+  "original_363_objects_preserved": true,
+  "collection_records": 365,
+  "screening_records": 330,
+  "comparison_records": 82,
+  "prior_proof_source_and_evidence_hashes_preserved": true,
+  "new_source_and_evidence_hashes_match": true,
+  "local_links_checked": 98,
+  "candidate_citation_keys_resolve": 18,
+  "new_bibtex_keys_noncolliding": 6,
+  "new_theory_admissions_or_target_axiomatization_commands": 0,
+  "whitespace_checks": "passed",
+  "note": "No manuscript PDF rebuild; no real service or external literature experiments reproduced."
+}

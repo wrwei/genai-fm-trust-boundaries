@@ -1,0 +1,38 @@
+test_advice_outage_and_retry (__main__.RuntimeTests.test_advice_outage_and_retry) ... ok
+test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) ... ok
+test_generated_model_table (__main__.RuntimeTests.test_generated_model_table) ... ERROR
+test_http_authority_isolation (__main__.RuntimeTests.test_http_authority_isolation) ... ok
+test_http_rejects_ambiguous_inputs (__main__.RuntimeTests.test_http_rejects_ambiguous_inputs) ... ok
+test_operation_binding (__main__.RuntimeTests.test_operation_binding) ... ok
+test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit) ... ok
+test_revocation_serialized_while_service_holds_lock (__main__.RuntimeTests.test_revocation_serialized_while_service_holds_lock) ... ok
+test_two_processes_same_operation (__main__.RuntimeTests.test_two_processes_same_operation) ... ok
+
+======================================================================
+ERROR: test_generated_model_table (__main__.RuntimeTests.test_generated_model_table)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\sqlite-runtime-7hx3j2y6\\model-12-7.db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\tempfile.py", line 893, in onerror
+    _os.unlink(path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\sqlite-runtime-7hx3j2y6\\model-12-7.db'
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.132s
+
+FAILED (errors=1)

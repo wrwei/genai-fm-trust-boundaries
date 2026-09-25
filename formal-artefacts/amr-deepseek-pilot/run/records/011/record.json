@@ -1,0 +1,399 @@
+{
+  "accepted": false,
+  "assessment": {
+    "accepted": false,
+    "checked_inputs": 1824,
+    "correspondence_mismatches": 55,
+    "correspondence_pass": false,
+    "correspondence_witnesses": [
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": true,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": true,
+          "Halted": false,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": true,
+          "Halted": true,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      }
+    ],
+    "model_policy_pass": false,
+    "model_violation_inputs": 839,
+    "model_witnesses": [
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": false
+        },
+        "function": "step",
+        "mode": "Idle",
+        "responses": [
+          [
+            "Brake",
+            "Stopped"
+          ]
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "responses": [
+          [
+            "Brake",
+            "Stopped"
+          ]
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": true,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": false
+        },
+        "function": "step",
+        "mode": "Idle",
+        "responses": [
+          [
+            "Brake",
+            "Stopped"
+          ]
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": true,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "responses": [
+          [
+            "Brake",
+            "Stopped"
+          ]
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      }
+    ],
+    "parse_error": null,
+    "parse_pass": true,
+    "select_inputs": 32,
+    "source_policy_pass": false,
+    "source_sha256": "907f78cfc9e8798808a35e9abdd3f8442fc72bb9b1efcb374cb075a31a8792fe",
+    "source_violation_inputs": 839,
+    "source_witnesses": [
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": false
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": true,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": false
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": true,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      }
+    ],
+    "spec_id": "amr-supervisor-obligations/v1.1",
+    "step_inputs": 1792,
+    "translator_fault": null
+  },
+  "attempt_index": 1,
+  "encoding_error": null,
+  "feedback": {
+    "checked_inputs": 1824,
+    "correspondence_witnesses": [
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": true,
+          "ObservationUsable": true,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": true,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "model_error": null,
+        "model_responses": [],
+        "source_error": "no matching step rule",
+        "source_response": null
+      }
+    ],
+    "counts": {
+      "correspondence_mismatches": 55,
+      "model_violation_inputs": 839,
+      "select_inputs": 32,
+      "source_violation_inputs": 839,
+      "step_inputs": 1792
+    },
+    "parse_error": null,
+    "rejection_category": "semantic_rejection",
+    "source_witnesses": [
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": false
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      },
+      {
+        "facts": {
+          "AtGoal": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "ObservationUsable": false,
+          "OwnReservation": false,
+          "PedestrianBlocked": false,
+          "Released": false,
+          "TaskActive": true
+        },
+        "function": "step",
+        "mode": "Idle",
+        "response": [
+          "Brake",
+          "Stopped"
+        ],
+        "violations": [
+          "stop_on_invalid_or_blocked_input"
+        ]
+      }
+    ],
+    "witness_cap": 2,
+    "witnesses_may_not_cover_all_failure_classes": true
+  },
+  "metadata": {
+    "attempt_index": 1,
+    "decoding": {
+      "stream": false,
+      "temperature": 0,
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "finished_at_utc": "2026-09-17T05:11:40.349643+00:00",
+    "input_tokens": 2041,
+    "model_id": "deepseek-flash",
+    "output_tokens": 258,
+    "provider": "deepseek",
+    "request_id": "b34960dd-1c92-4e85-b174-6d34202279af",
+    "request_sha256": "6c12a9f73227156d7a653143236948a4e233309bdf0e7e328dff5ae3bd56dc89",
+    "requested_max_output_tokens": 2048,
+    "sample_id": "P1-R2",
+    "started_at_utc": "2026-09-17T05:11:38.798676+00:00",
+    "status": "ok"
+  },
+  "prompt_sha256": "6c12a9f73227156d7a653143236948a4e233309bdf0e7e328dff5ae3bd56dc89",
+  "raw_sha256": "907f78cfc9e8798808a35e9abdd3f8442fc72bb9b1efcb374cb075a31a8792fe",
+  "sample_id": "P1-R2",
+  "terminal_reason": null,
+  "violation_flags": [],
+  "record_sha256": "2d1178d358eadb6360eac49ec1ab3b5fec869e15f5dcf63c94b215e7c4583b0e"
+}

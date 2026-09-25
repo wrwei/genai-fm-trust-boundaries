@@ -1,0 +1,2 @@
+AUDIT: foundational lemmas have no oracle dependencies
+AUDIT: trace results have no oracle dependencies

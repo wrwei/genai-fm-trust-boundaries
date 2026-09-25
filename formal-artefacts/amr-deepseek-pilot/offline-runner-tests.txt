@@ -1,0 +1,21 @@
+Maintenance 2026-09-22: this historical log excerpt has revised labels/fields and marked omissions. The reported totals and timings belong to the original run; they are not a new verification result.
+
+test_acceptance_stops_each_chain_then_moves_to_next_sample (test_pilot.PilotTests.test_acceptance_stops_each_chain_then_moves_to_next_sample) ... ok
+test_changed_frozen_runner_prevents_next_dispatch (test_pilot.PilotTests.test_changed_frozen_runner_prevents_next_dispatch) ... ok
+test_duplicate_execute_refuses_before_any_worker_invocation (test_pilot.PilotTests.test_duplicate_execute_refuses_before_any_worker_invocation) ... ok
+test_import_preserves_one_record_exactly_once (test_pilot.PilotTests.test_import_preserves_one_record_exactly_once) ... ok
+test_missing_usage_is_global_stop_even_with_valid_response (test_pilot.PilotTests.test_missing_usage_is_global_stop_even_with_valid_response) ... ok
+test_output_token_violation_stops_all_remaining_chains (test_pilot.PilotTests.test_output_token_violation_stops_all_remaining_chains) ... ok
+test_repair_payload_is_exact_recorder_feedback_and_preserves_response (test_pilot.PilotTests.test_repair_payload_is_exact_recorder_feedback_and_preserves_response) ... ok
+test_reported_model_mismatch_preserves_body_and_stops_globally (test_pilot.PilotTests.test_reported_model_mismatch_preserves_body_and_stops_globally) ... ok
+[Legacy-only test entry omitted during record maintenance.]
+test_six_rejected_chains_have_two_repairs_and_eighteen_total (test_pilot.PilotTests.test_six_rejected_chains_have_two_repairs_and_eighteen_total) ... ok
+test_timeout_is_global_stop_without_retry (test_pilot.PilotTests.test_timeout_is_global_stop_without_retry) ... ok
+test_transport_error_stops_with_valid_usage (test_pilot.PilotTests.test_transport_error_stops_with_valid_usage) ... ok
+test_worker_rejects_changed_http_prompt_before_post (test_pilot.PilotTests.test_worker_rejects_changed_http_prompt_before_post) ... ok
+test_worker_rejects_nonfixed_directory_before_network (test_pilot.PilotTests.test_worker_rejects_nonfixed_directory_before_network) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.850s
+
+OK

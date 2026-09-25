@@ -1,0 +1,69 @@
+theory Runtime_Interface
+  imports "Bridge_Algebra_Repair.Bridge_Trace_Repair"
+begin
+
+text \<open>A finite protocol for one logical operation. The service checks the
+current permission and records its effect atomically with completion. LostAck
+is a lost notification after that atomic step, not an uncertain remote commit.\<close>
+
+datatype phase = Idle | Pending | Approved | Completed
+datatype command = Submit | Service | SetPermission bool | Advice bool | LostAck | Poll
+datatype event = Policy bool | Commit | Hidden command
+
+record istate =
+  permitted :: bool
+  stage :: phase
+
+definition initial :: istate where
+  "initial = \<lparr>permitted = True, stage = Idle\<rparr>"
+
+fun step :: "istate \<Rightarrow> command \<Rightarrow> istate \<times> event" where
+  "step s Submit =
+    (s\<lparr>stage := (if stage s = Idle then Pending else stage s)\<rparr>, Hidden Submit)"
+| "step s Service =
+    (if stage s = Pending \<and> permitted s then
+       (s\<lparr>stage := Approved\<rparr>, Hidden Service)
+     else if stage s = Approved \<and> permitted s then
+       (s\<lparr>stage := Completed\<rparr>, Commit)
+     else (s, Hidden Service))"
+| "step s (SetPermission b) = (s\<lparr>permitted := b\<rparr>, Policy b)"
+| "step s (Advice b) = (s, Hidden (Advice b))"
+| "step s LostAck = (s, Hidden LostAck)"
+| "step s Poll = (s, Hidden Poll)"
+
+fun run_state :: "(istate \<Rightarrow> command \<Rightarrow> istate \<times> event)
+    \<Rightarrow> istate \<Rightarrow> command list \<Rightarrow> istate" where
+  "run_state k s [] = s"
+| "run_state k s (c # cs) = run_state k (fst (k s c)) cs"
+
+fun run_trace :: "(istate \<Rightarrow> command \<Rightarrow> istate \<times> event)
+    \<Rightarrow> istate \<Rightarrow> command list \<Rightarrow> event list" where
+  "run_trace k s [] = []"
+| "run_trace k s (c # cs) = snd (k s c) # run_trace k (fst (k s c)) cs"
+
+fun controlled :: "event \<Rightarrow> bool" where
+  "controlled (Policy b) = True"
+| "controlled Commit = True"
+| "controlled (Hidden c) = False"
+
+definition control_alphabet :: "event set" where
+  "control_alphabet = {e. controlled e}"
+
+definition abstract_state :: "istate \<Rightarrow> bool \<times> bool" where
+  "abstract_state s = (permitted s, stage s = Completed)"
+
+fun ref_step :: "bool \<times> bool \<Rightarrow> event \<Rightarrow> (bool \<times> bool) option" where
+  "ref_step r (Policy b) = Some (b, snd r)"
+| "ref_step r Commit = (if fst r \<and> \<not> snd r then Some (fst r, True) else None)"
+| "ref_step r (Hidden c) = None"
+
+fun ref_run :: "bool \<times> bool \<Rightarrow> event list \<Rightarrow> (bool \<times> bool) option" where
+  "ref_run r [] = Some r"
+| "ref_run r (e # es) = (case ref_step r e of None \<Rightarrow> None | Some r' \<Rightarrow> ref_run r' es)"
+
+lemma step_simulation:
+  "ref_run (abstract_state s) (filter controlled [snd (step s c)]) =
+    Some (abstract_state (fst (step s c)))"
+  by fail
+
+end

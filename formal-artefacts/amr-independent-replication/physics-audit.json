@@ -1,0 +1,2988 @@
+{
+  "disposition": "verified",
+  "trace_only": true,
+  "new_model_calls": 0,
+  "physical_episodes_executed": 0,
+  "physical_manifest_files": 70,
+  "frozen_input_files": 166,
+  "unique_source_count": 5,
+  "episode_count": 30,
+  "totals": {
+    "step": 75816,
+    "select": 44148,
+    "motion": 220590,
+    "observations": 88296,
+    "dropped": 600,
+    "halted_checks": 42498
+  },
+  "geometry_intervals": 2133618,
+  "minimum_distance_lower_bound_m": 0.26068542394925565,
+  "summary_sha256": "181172124fed7a47bcbfca5edef1a1db33327dd6163b8318277d0a54ebe5924a",
+  "manifest_sha256": "c61a3cbba2e45557fb8c676f7f258b1df72aff9ced389592dc31ba305eaa36cf",
+  "episodes": [
+    {
+      "name": "reference_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "reference_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "completion_times": {
+        "B": 32.95,
+        "A": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "reference_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "reference_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "reference_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_01_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_01_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_01_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_01_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_01_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_02_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_02_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_02_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_02_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_02_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_03_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_03_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "B",
+        "A"
+      ],
+      "completion_times": {
+        "B": 32.95,
+        "A": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_03_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_03_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_03_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_04_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_04_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_04_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_04_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_04_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_05_normal_A",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_05_normal_B",
+      "counts": {
+        "step": 1840,
+        "select": 1180,
+        "motion": 5895,
+        "observations": 2360,
+        "dropped": 0,
+        "halted_checks": 530
+      },
+      "geometry_intervals": 53379,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 32.95,
+        "B": 58.95
+      },
+      "time": 58.95,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 27.55,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 31.35,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 32.95,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 57.35,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 58.95,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_05_temporary",
+      "counts": {
+        "step": 2118,
+        "select": 1319,
+        "motion": 6590,
+        "observations": 2638,
+        "dropped": 0,
+        "halted_checks": 781
+      },
+      "geometry_intervals": 61018,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 39.9,
+        "B": 65.9
+      },
+      "time": 65.9,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.05,
+          "robot": "B",
+          "action": "Request",
+          "prior": "Stopped",
+          "mode": "Waiting",
+          "intent": "Brake"
+        },
+        {
+          "time": 17.1,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 34.5,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 38.3,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 39.9,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 64.3,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 65.9,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    },
+    {
+      "name": "source_05_blackout",
+      "counts": {
+        "step": 2036,
+        "select": 1278,
+        "motion": 6385,
+        "observations": 2556,
+        "dropped": 100,
+        "halted_checks": 699
+      },
+      "geometry_intervals": 57771,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Done",
+        "B": "Done"
+      },
+      "grant_order": [
+        "A",
+        "B"
+      ],
+      "completion_times": {
+        "A": 37.85,
+        "B": 63.85
+      },
+      "time": 63.85,
+      "reservation_owner": null,
+      "safe_and_complete": true,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.0,
+          "robot": "A",
+          "action": "Resume",
+          "prior": "Stopped",
+          "mode": "ResumePending",
+          "intent": "Brake"
+        },
+        {
+          "time": 15.05,
+          "robot": "A",
+          "action": "Proceed",
+          "prior": "ResumePending",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 32.45,
+          "robot": "B",
+          "action": "Proceed",
+          "prior": "Waiting",
+          "mode": "Traversing",
+          "intent": "Proceed"
+        },
+        {
+          "time": 36.25,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 37.85,
+          "robot": "A",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        },
+        {
+          "time": 62.25,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 63.85,
+          "robot": "B",
+          "action": "Finish",
+          "prior": "BrakeRequested",
+          "mode": "Done",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": []
+    },
+    {
+      "name": "source_05_permanent",
+      "counts": {
+        "step": 4802,
+        "select": 2401,
+        "motion": 12000,
+        "observations": 4802,
+        "dropped": 0,
+        "halted_checks": 4543
+      },
+      "geometry_intervals": 130056,
+      "minimum_distance_lower_bound_m": 0.26068542394925565,
+      "final_speeds": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_modes": {
+        "A": "Stopped",
+        "B": "Stopped"
+      },
+      "grant_order": [
+        "A"
+      ],
+      "completion_times": {},
+      "time": 120.0,
+      "reservation_owner": "A",
+      "safe_and_complete": false,
+      "boundaries": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "Traversing",
+          "mode": "BrakeRequested",
+          "intent": "Brake"
+        },
+        {
+          "time": 10.05,
+          "robot": "B",
+          "action": "Brake",
+          "prior": "Waiting",
+          "mode": "Stopped",
+          "intent": "Brake"
+        },
+        {
+          "time": 11.65,
+          "robot": "A",
+          "action": "Brake",
+          "prior": "BrakeRequested",
+          "mode": "Stopped",
+          "intent": "Brake"
+        }
+      ],
+      "stopping_evidence": [
+        {
+          "time": 10.05,
+          "robot": "A",
+          "observation_pose": [
+            7.985241563874596,
+            -0.014758436125372561,
+            0.7853981633974458
+          ],
+          "observation_speed": 0.18274169979695098,
+          "observation_sample_time": 10.0,
+          "world_x_footprint_extent": 0.49497474683058346,
+          "observation_distance_to_H": 3.01978368929482,
+          "required_distance": null,
+          "straight_approach_applicable": false,
+          "straight_approach_condition": null,
+          "scope_reason": "observed_heading_not_forward_along_N;observed_pose_not_on_straight_N_centerline"
+        }
+      ]
+    }
+  ],
+  "comparisons": {
+    "source_01": {
+      "normal_A": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "normal_B": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": false,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "temporary": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "blackout": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "permanent": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      }
+    },
+    "source_02": {
+      "normal_A": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "normal_B": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": false,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "temporary": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "blackout": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "permanent": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      }
+    },
+    "source_03": {
+      "normal_A": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "normal_B": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "temporary": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "blackout": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "permanent": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      }
+    },
+    "source_04": {
+      "normal_A": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "normal_B": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": false,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "temporary": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "blackout": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "permanent": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      }
+    },
+    "source_05": {
+      "normal_A": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "normal_B": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": false,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "temporary": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "blackout": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      },
+      "permanent": {
+        "equal_scored_outcomes": true,
+        "equal_grant_order": true,
+        "time_difference_source_minus_handwritten": 0.0
+      }
+    }
+  },
+  "limits": "Related deterministic analytic episodes; not independent industrial tasks or a safety theorem. Straight-approach stopping evidence is inapplicable when its recorded domain conditions fail; geometric replay is a separate safety check. Preference is advisory, not a mandatory ordering obligation."
+}

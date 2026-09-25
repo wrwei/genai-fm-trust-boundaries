@@ -1,0 +1,31 @@
+{
+  "condition": "D12-O",
+  "repair": 1,
+  "started_at_utc": "2026-09-17T06:03:11.057362+00:00",
+  "finished_at_utc": "2026-09-17T06:03:13.229731+00:00",
+  "usage_summary": {
+    "input_tokens": 2074,
+    "output_tokens": 270,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 2074
+  },
+  "fatal": null,
+  "accepted": false,
+  "provider_model": "deepseek-flash",
+  "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+  "provider_request_id": "6e721244-6247-4839-9f01-8988388b6b38",
+  "files_sha256": {
+    "assessment.json.gz": "f5d760951046b6111ea37ff43693a9050d14192142eb2df953c9ea37c4995b50",
+    "dispatch-intent.json": "4a9b1482fb93c90d571f6d118ad5c4fd14725aa5a4848cb856e431e43174e636",
+    "dispatch.json": "ee8f3d2e0f28ec9c1c3b61feb0155873987d45e1c36f9ccc3d4050de9b297b65",
+    "feedback.json": "a62e948931aac7d4bcf29f6a40274ea3f71a30677cb3de56cf0e9792e0e8e3a4",
+    "http-body.bin": "2096f09538425799afbb126409c08655ee7595460fcb8bfb038520ae772f176d",
+    "http-request.json": "627b79d801b6b2bbdbc594236f0b494ab211e4e1ef672caca2efd8e6545d7615",
+    "preflight.json": "bb70edd8485f0c5a0dea398267b1c6770fc74cd8e70bdcf420a87f0ee465eba3",
+    "prompt.txt": "515038bb3e9983ee829855bd3a08e5c7581defc093f7a52417ecfbdaa222fc0c",
+    "request.json": "4c2a9ac0e253f5bce81ce0fd2c770f931f0b343d83ab23d905912e0906dfe405",
+    "response.bin": "c4dcfc68cf4b2ddd636725bd15a2ddca6174a02f37692c6f40b127aab5bc8124",
+    "transport.json": "8b7fde15ed8b20a69fafab83f68db5672c3b5e7110c48fa25e9de9277bd36cfb",
+    "worker-claim.json": "b0ed4c6d6e270d352b7126dddb1b2930bdf71da5dbb9d1f3fc70b5f98bb75b17"
+  }
+}

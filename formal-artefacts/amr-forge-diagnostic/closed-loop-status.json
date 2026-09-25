@@ -1,0 +1,6 @@
+{
+  "entered": false,
+  "reason": "No accepted diagnostic source; predeclared deployment gate failed",
+  "prepared_adapter_tests": 8,
+  "new_model_calls": 0
+}

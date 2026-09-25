@@ -1,0 +1,167 @@
+{
+  "candidate": "authored_reference",
+  "spec_id": "amr-supervisor-obligations/v1.1",
+  "source_sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+  "translator_fault": "omit_priority",
+  "parse_pass": true,
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "select_inputs": 32,
+  "step_inputs": 1792,
+  "source_violation_inputs": 0,
+  "model_violation_inputs": 1749,
+  "correspondence_mismatches": 1749,
+  "source_witnesses": [],
+  "model_witnesses": [
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": false,
+        "PreferB": false
+      },
+      "mode": null,
+      "responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "violations": [
+        "selection_unnecessary_deferral"
+      ]
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": false,
+        "PreferB": true
+      },
+      "mode": null,
+      "responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "violations": [
+        "selection_unnecessary_deferral"
+      ]
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": true,
+        "PreferB": false
+      },
+      "mode": null,
+      "responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "violations": [
+        "selection_unnecessary_deferral"
+      ]
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": true,
+        "PreferB": true
+      },
+      "mode": null,
+      "responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "violations": [
+        "selection_unnecessary_deferral"
+      ]
+    }
+  ],
+  "correspondence_witnesses": [
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": false,
+        "PreferB": false
+      },
+      "mode": null,
+      "source_response": "SelectB",
+      "model_responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": false,
+        "PreferB": true
+      },
+      "mode": null,
+      "source_response": "SelectB",
+      "model_responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": true,
+        "PreferB": false
+      },
+      "mode": null,
+      "source_response": "SelectB",
+      "model_responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "select",
+      "facts": {
+        "OwnerFree": true,
+        "RequestA": false,
+        "RequestB": true,
+        "PreferA": true,
+        "PreferB": true
+      },
+      "mode": null,
+      "source_response": "SelectB",
+      "model_responses": [
+        "SelectB",
+        "Defer"
+      ],
+      "source_error": null,
+      "model_error": null
+    }
+  ],
+  "source_policy_pass": true,
+  "model_policy_pass": false,
+  "correspondence_pass": false,
+  "accepted": false
+}

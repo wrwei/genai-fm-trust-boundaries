@@ -1,0 +1,15 @@
+No skipped proofs or oracle dependencies
+AMR_Progress.triangular_time_bound
+AMR_Progress.profile_time_bound
+AMR_Progress.positive_profile_coefficient
+AMR_Progress.min_peak_conditions(1)
+AMR_Progress.min_peak_conditions(2)
+AMR_Progress.min_peak_conditions(3)
+AMR_Progress.min_peak_conditions(4)
+AMR_Progress.min_peak_conditions(5)
+AMR_Progress.planned_segment_time_bound
+AMR_Progress.finite_schedule_drains
+AMR_Progress.schedule_budget
+AMR_Progress.two_task_budget
+AMR_Progress.nominal_budget
+AMR_Progress.upper_bounds_do_not_imply_completion

@@ -1,0 +1,263 @@
+[
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "2db697b563029c979dc8afa817ab9d8f1b28caab4900412ec35e7cb8f056fc77"
+    },
+    "started_utc": "2026-09-13T08:38:11.955051+00:00",
+    "finished_utc": "2026-09-13T08:38:53.783859+00:00",
+    "return_code": 1,
+    "log_sha256": "dd0a22e7b422488a8a3386ea0d9415f2b2531524cd60ce93526feccc44f2a46d",
+    "label": "red",
+    "output": "Started at Sun Sep 13 16:38:40 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nBuilding Bridge_Algebra_Repair ...\nBridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair\nBridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Trace_Repair\nBridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Algebra_Repair 100% (0.114s cumulated time)\nBridge_Algebra_Repair: theory Bridge_Algebra_Repair.Bridge_Trace_Repair 100% (0.567s cumulated time)\nTiming Bridge_Algebra_Repair (2 threads, 0.508s elapsed time, 0.688s cpu time, 0.031s GC time, factor 1.35)\nFinished Bridge_Algebra_Repair (0:00:04 elapsed time)\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface 100% (1.646s cumulated time)\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n*** Failed to apply initial proof method (line 67 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (1 subgoal):\n***  1. ref_run (abstract_state s) (filter controlled [snd (step s c)]) =\n***     Some\n***      (abstract_state\n***        (fst (step s\n***               c)))\n*** At command \"by\" (line 67 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:38:53 GMT+8 2026\n0:00:13 elapsed time\n",
+    "source_snapshot": "evidence/red-theory.txt"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "e2f523ad332a48aab5885adf03df313827fca88bb1c5936dc1b0006870611d72"
+    },
+    "started_utc": "2026-09-13T08:40:50.822438+00:00",
+    "finished_utc": "2026-09-13T08:41:30.331061+00:00",
+    "return_code": 1,
+    "log_sha256": "5c4f48edd9646b7f3976483036a89a433b73ca0d4ceb578d9afce8be8e61972b",
+    "label": "core",
+    "output": "Started at Sun Sep 13 16:41:18 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n*** Failed to finish proof (line 160 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (1 subgoal):\n***  1. ?filter controlled (run_trace step initial (lift_events es)) = es;\n***      canonical (abstract_state initial) = initial?\n***     ? es �� filter controlled `\n***             range\n***              (run_trace step\n***                initial)\n*** At command \"by\" (line 160 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** \n*** At command \"ML\" (line 278 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** Failed to finish proof (line 160 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (1 subgoal):\n***  1. ?filter controlled (run_trace step initial (lift_events es)) = es;\n***      canonical (abstract_state initial) = initial?\n***     ? es �� filter controlled `\n***             range\n***              (run_trace step\n***                initial)\n*** At command \"by\" (line 160 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:41:30 GMT+8 2026\n0:00:11 elapsed time\n",
+    "raw_output_base64": "U3RhcnRlZCBhdCBTdW4gU2VwIDEzIDE2OjQxOjE4IEdNVCs4IDIwMjYgKHBvbHltbC01LjkuMl94ODZfNjRfMzItd2luZG93cyBvbiBERVNLVE9QLUIyMUVFUkgpCklTQUJFTExFX1RPT0xfSkFWQV9PUFRJT05TPSItRGphdmEuYXd0LmhlYWRsZXNzPXRydWUgLVhtczUxMm0gLVhteDRnIC1Yc3MxNm0iCklTQUJFTExFX0JVSUxEX09QVElPTlM9IiIKCk1MX1BMQVRGT1JNPSJ4ODZfNjRfMzItd2luZG93cyIKTUxfSE9NRT0iL2N5Z2RyaXZlL2QvQUlSXzIwMjZfRm9ybWFsLy5yZXZpZXdfd29yay9pc2FiZWxsZTIwMjUtMi9Jc2FiZWxsZTIwMjUtMi9jb250cmliL3BvbHltbC01LjkuMi0yL3g4Nl82NF8zMi13aW5kb3dzIgpNTF9TWVNURU09InBvbHltbC01LjkuMiIKTUxfT1BUSU9OUz0iLS1taW5oZWFwIDUwMCIKClNlc3Npb24gUHVyZS9QdXJlClNlc3Npb24gTWlzYy9Ub29scwpTZXNzaW9uIEhPTC9IT0wgKG1haW4pClNlc3Npb24gVW5zb3J0ZWQvQnJpZGdlX0FsZ2VicmFfUmVwYWlyClNlc3Npb24gVW5zb3J0ZWQvUnVudGltZV9JbnRlcmZhY2UKUnVubmluZyBSdW50aW1lX0ludGVyZmFjZSAuLi4KUnVudGltZV9JbnRlcmZhY2U6IHRoZW9yeSBSdW50aW1lX0ludGVyZmFjZS5SdW50aW1lX0ludGVyZmFjZQpSdW50aW1lX0ludGVyZmFjZSBGQUlMRUQgKHNlZSBhbHNvICJpc2FiZWxsZSBidWlsZF9sb2cgLUggRXJyb3IgUnVudGltZV9JbnRlcmZhY2UiKQoqKiogRmFpbGVkIHRvIGZpbmlzaCBwcm9vZiAobGluZSAxNjAgb2YgIi9jeWdkcml2ZS9kL0FJUl8yMDI2X0Zvcm1hbC9BSVJfMjAyNl9Gb3JtYWwvZm9ybWFsLWFydGVmYWN0cy9ja2EtcmVwYWlyL3J1bnRpbWUtaW50ZXJmYWNlL1J1bnRpbWVfSW50ZXJmYWNlLnRoeSIpOgoqKiogZ29hbCAoMSBzdWJnb2FsKToKKioqICAxLiA/ZmlsdGVyIGNvbnRyb2xsZWQgKHJ1bl90cmFjZSBzdGVwIGluaXRpYWwgKGxpZnRfZXZlbnRzIGVzKSkgPSBlczsKKioqICAgICAgY2Fub25pY2FsIChhYnN0cmFjdF9zdGF0ZSBpbml0aWFsKSA9IGluaXRpYWw/CioqKiAgICAgPyBlcyChyiBmaWx0ZXIgY29udHJvbGxlZCBgCioqKiAgICAgICAgICAgICByYW5nZQoqKiogICAgICAgICAgICAgIChydW5fdHJhY2Ugc3RlcAoqKiogICAgICAgICAgICAgICAgaW5pdGlhbCkKKioqIEF0IGNvbW1hbmQgImJ5IiAobGluZSAxNjAgb2YgIi9jeWdkcml2ZS9kL0FJUl8yMDI2X0Zvcm1hbC9BSVJfMjAyNl9Gb3JtYWwvZm9ybWFsLWFydGVmYWN0cy9ja2EtcmVwYWlyL3J1bnRpbWUtaW50ZXJmYWNlL1J1bnRpbWVfSW50ZXJmYWNlLnRoeSIpCioqKiAKKioqIEF0IGNvbW1hbmQgIk1MIiAobGluZSAyNzggb2YgIi9jeWdkcml2ZS9kL0FJUl8yMDI2X0Zvcm1hbC9BSVJfMjAyNl9Gb3JtYWwvZm9ybWFsLWFydGVmYWN0cy9ja2EtcmVwYWlyL3J1bnRpbWUtaW50ZXJmYWNlL1J1bnRpbWVfSW50ZXJmYWNlLnRoeSIpCioqKiBGYWlsZWQgdG8gZmluaXNoIHByb29mIChsaW5lIDE2MCBvZiAiL2N5Z2RyaXZlL2QvQUlSXzIwMjZfRm9ybWFsL0FJUl8yMDI2X0Zvcm1hbC9mb3JtYWwtYXJ0ZWZhY3RzL2NrYS1yZXBhaXIvcnVudGltZS1pbnRlcmZhY2UvUnVudGltZV9JbnRlcmZhY2UudGh5Iik6CioqKiBnb2FsICgxIHN1YmdvYWwpOgoqKiogIDEuID9maWx0ZXIgY29udHJvbGxlZCAocnVuX3RyYWNlIHN0ZXAgaW5pdGlhbCAobGlmdF9ldmVudHMgZXMpKSA9IGVzOwoqKiogICAgICBjYW5vbmljYWwgKGFic3RyYWN0X3N0YXRlIGluaXRpYWwpID0gaW5pdGlhbD8KKioqICAgICA/IGVzIKHKIGZpbHRlciBjb250cm9sbGVkIGAKKioqICAgICAgICAgICAgIHJhbmdlCioqKiAgICAgICAgICAgICAgKHJ1bl90cmFjZSBzdGVwCioqKiAgICAgICAgICAgICAgICBpbml0aWFsKQoqKiogQXQgY29tbWFuZCAiYnkiIChsaW5lIDE2MCBvZiAiL2N5Z2RyaXZlL2QvQUlSXzIwMjZfRm9ybWFsL0FJUl8yMDI2X0Zvcm1hbC9mb3JtYWwtYXJ0ZWZhY3RzL2NrYS1yZXBhaXIvcnVudGltZS1pbnRlcmZhY2UvUnVudGltZV9JbnRlcmZhY2UudGh5IikKVW5maW5pc2hlZCBzZXNzaW9uKHMpOiBSdW50aW1lX0ludGVyZmFjZQoKRmluaXNoZWQgYXQgU3VuIFNlcCAxMyAxNjo0MTozMCBHTVQrOCAyMDI2CjA6MDA6MTEgZWxhcHNlZCB0aW1lCg==",
+    "encoding_note": "Native diagnostic output was not entirely UTF-8. Replacement-character display plus exact raw bytes retained; hash refers to raw bytes.",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "b6e475d628ec0a9d2d32cd84b38ddf46cf176bb2a8639548c432f2c9e9c2f822"
+    },
+    "started_utc": "2026-09-13T08:43:10.951423+00:00",
+    "finished_utc": "2026-09-13T08:43:50.719873+00:00",
+    "return_code": 1,
+    "log_sha256": "78a28a0ac804d63b2fda88af5ea5649a9442e5c58831cefccf4bff6b7dbcfbf3",
+    "label": "connected",
+    "output": "Started at Sun Sep 13 16:43:38 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n*** Failed to finish proof (line 219 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (1 subgoal):\n***  1. ?a. a\n*** At command \"by\" (line 219 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** \n*** At command \"ML\" (line 355 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** Failed to finish proof (line 219 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (1 subgoal):\n***  1. ?a. a\n*** At command \"by\" (line 219 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:43:50 GMT+8 2026\n0:00:11 elapsed time\n",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "8eeaab6e81afcfa5781f2eb9d112fd275fe49d75677b671ec7109ed9d49135e9"
+    },
+    "started_utc": "2026-09-13T08:44:56.881080+00:00",
+    "finished_utc": "2026-09-13T08:45:36.384109+00:00",
+    "return_code": 1,
+    "log_sha256": "4c9de850fed5a9307c8877b2a2896a2a397fb46da81f7d59054d46fb56efd8b7",
+    "label": "verified",
+    "output": "Started at Sun Sep 13 16:45:24 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n*** No such variable in theorem: \"?s\" (line 254 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** At command \"using\" (line 254 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** \n*** At command \"ML\" (line 384 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** No such variable in theorem: \"?s\" (line 254 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** At command \"using\" (line 254 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:45:36 GMT+8 2026\n0:00:11 elapsed time\n",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "b41f4278941a6bc1910317004122e92b09972a0078beffbe3ceafc5cc1a6dbd9"
+    },
+    "started_utc": "2026-09-13T08:46:17.982879+00:00",
+    "finished_utc": "2026-09-13T08:46:57.662159+00:00",
+    "return_code": 1,
+    "log_sha256": "8a2fccf84602289cb630a7867e1163861d8c5399b11ee630c3c9079bf5a79d57",
+    "label": "final",
+    "output": "Started at Sun Sep 13 16:46:45 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n...\n***        ?ref_run (x1, False) es = Some r'; e = Policy x1;\n***         ?a b aa ba.\n***            ref_run (a, b) es = Some (aa, ba) ?\n***            count_list es Commit �� (if b then 0 else 1);\n***         r = (a, False); ? b?\n***        ? count_list es Commit �� Suc 0\n***  3. ?a b. ?e = Commit;\n***            ?a b aa ba.\n***               ref_run (a, b) es = Some (aa, ba) ?\n***               count_list es Commit �� (if b then 0 else 1);\n***            r = (True, False); a; ? b; ref_run (True, True) es = Some r'?\n***           ? count_list es Commit =\n***              0\n*** At command \"by\" (line 245 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** \n*** At command \"ML\" (line 384 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\n*** Failed to finish proof (line 245 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\"):\n*** goal (3 subgoals):\n***  1. ?x1 a b.\n***        ?ref_run (x1, True) es = Some r'; e = Policy x1;\n***         ?a b aa ba.\n***            ref_run (a, b) es = Some (aa, ba) ?\n***            count_list es Commit �� (if b then 0 else 1);\n***         r = (a, True); b?\n***        ? count_list es Commit = 0\n***  2. ?x1 a b.\n***        ?ref_run (x1, False) es = Some r'; e = Policy x1;\n***         ?a b aa ba.\n***            ref_run (a, b) es = Some (aa, ba) ?\n***            count_list es Commit �� (if b then 0 else 1);\n***         r = (a, False); ? b?\n***        ? count_list es Commit �� Suc 0\n***  3. ?a b. ?e = Commit;\n***            ?a b aa ba.\n***               ref_run (a, b) es = Some (aa, ba) ?\n***               count_list es Commit �� (if b then 0 else 1);\n***            r = (True, False); a; ? b; ref_run (True, True) es = Some r'?\n***           ? count_list es Commit =\n***              0\n*** At command \"by\" (line 245 of \"https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/cka-repair/runtime-interface/Runtime_Interface.thy\")\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:46:57 GMT+8 2026\n0:00:11 elapsed time\n",
+    "raw_output_base64": "U3RhcnRlZCBhdCBTdW4gU2VwIDEzIDE2OjQ2OjQ1IEdNVCs4IDIwMjYgKHBvbHltbC01LjkuMl94ODZfNjRfMzItd2luZG93cyBvbiBERVNLVE9QLUIyMUVFUkgpCklTQUJFTExFX1RPT0xfSkFWQV9PUFRJT05TPSItRGphdmEuYXd0LmhlYWRsZXNzPXRydWUgLVhtczUxMm0gLVhteDRnIC1Yc3MxNm0iCklTQUJFTExFX0JVSUxEX09QVElPTlM9IiIKCk1MX1BMQVRGT1JNPSJ4ODZfNjRfMzItd2luZG93cyIKTUxfSE9NRT0iL2N5Z2RyaXZlL2QvQUlSXzIwMjZfRm9ybWFsLy5yZXZpZXdfd29yay9pc2FiZWxsZTIwMjUtMi9Jc2FiZWxsZTIwMjUtMi9jb250cmliL3BvbHltbC01LjkuMi0yL3g4Nl82NF8zMi13aW5kb3dzIgpNTF9TWVNURU09InBvbHltbC01LjkuMiIKTUxfT1BUSU9OUz0iLS1taW5oZWFwIDUwMCIKClNlc3Npb24gUHVyZS9QdXJlClNlc3Npb24gTWlzYy9Ub29scwpTZXNzaW9uIEhPTC9IT0wgKG1haW4pClNlc3Npb24gVW5zb3J0ZWQvQnJpZGdlX0FsZ2VicmFfUmVwYWlyClNlc3Npb24gVW5zb3J0ZWQvUnVudGltZV9JbnRlcmZhY2UKUnVubmluZyBSdW50aW1lX0ludGVyZmFjZSAuLi4KUnVudGltZV9JbnRlcmZhY2U6IHRoZW9yeSBSdW50aW1lX0ludGVyZmFjZS5SdW50aW1lX0ludGVyZmFjZQpSdW50aW1lX0ludGVyZmFjZSBGQUlMRUQgKHNlZSBhbHNvICJpc2FiZWxsZSBidWlsZF9sb2cgLUggRXJyb3IgUnVudGltZV9JbnRlcmZhY2UiKQouLi4KKioqICAgICAgICA/cmVmX3J1biAoeDEsIEZhbHNlKSBlcyA9IFNvbWUgcic7IGUgPSBQb2xpY3kgeDE7CioqKiAgICAgICAgID9hIGIgYWEgYmEuCioqKiAgICAgICAgICAgIHJlZl9ydW4gKGEsIGIpIGVzID0gU29tZSAoYWEsIGJhKSA/CioqKiAgICAgICAgICAgIGNvdW50X2xpc3QgZXMgQ29tbWl0IKHcIChpZiBiIHRoZW4gMCBlbHNlIDEpOwoqKiogICAgICAgICByID0gKGEsIEZhbHNlKTsgPyBiPwoqKiogICAgICAgID8gY291bnRfbGlzdCBlcyBDb21taXQgodwgU3VjIDAKKioqICAzLiA/YSBiLiA/ZSA9IENvbW1pdDsKKioqICAgICAgICAgICAgP2EgYiBhYSBiYS4KKioqICAgICAgICAgICAgICAgcmVmX3J1biAoYSwgYikgZXMgPSBTb21lIChhYSwgYmEpID8KKioqICAgICAgICAgICAgICAgY291bnRfbGlzdCBlcyBDb21taXQgodwgKGlmIGIgdGhlbiAwIGVsc2UgMSk7CioqKiAgICAgICAgICAgIHIgPSAoVHJ1ZSwgRmFsc2UpOyBhOyA/IGI7IHJlZl9ydW4gKFRydWUsIFRydWUpIGVzID0gU29tZSByJz8KKioqICAgICAgICAgICA/IGNvdW50X2xpc3QgZXMgQ29tbWl0ID0KKioqICAgICAgICAgICAgICAwCioqKiBBdCBjb21tYW5kICJieSIgKGxpbmUgMjQ1IG9mICIvY3lnZHJpdmUvZC9BSVJfMjAyNl9Gb3JtYWwvQUlSXzIwMjZfRm9ybWFsL2Zvcm1hbC1hcnRlZmFjdHMvY2thLXJlcGFpci9ydW50aW1lLWludGVyZmFjZS9SdW50aW1lX0ludGVyZmFjZS50aHkiKQoqKiogCioqKiBBdCBjb21tYW5kICJNTCIgKGxpbmUgMzg0IG9mICIvY3lnZHJpdmUvZC9BSVJfMjAyNl9Gb3JtYWwvQUlSXzIwMjZfRm9ybWFsL2Zvcm1hbC1hcnRlZmFjdHMvY2thLXJlcGFpci9ydW50aW1lLWludGVyZmFjZS9SdW50aW1lX0ludGVyZmFjZS50aHkiKQoqKiogRmFpbGVkIHRvIGZpbmlzaCBwcm9vZiAobGluZSAyNDUgb2YgIi9jeWdkcml2ZS9kL0FJUl8yMDI2X0Zvcm1hbC9BSVJfMjAyNl9Gb3JtYWwvZm9ybWFsLWFydGVmYWN0cy9ja2EtcmVwYWlyL3J1bnRpbWUtaW50ZXJmYWNlL1J1bnRpbWVfSW50ZXJmYWNlLnRoeSIpOgoqKiogZ29hbCAoMyBzdWJnb2Fscyk6CioqKiAgMS4gP3gxIGEgYi4KKioqICAgICAgICA/cmVmX3J1biAoeDEsIFRydWUpIGVzID0gU29tZSByJzsgZSA9IFBvbGljeSB4MTsKKioqICAgICAgICAgP2EgYiBhYSBiYS4KKioqICAgICAgICAgICAgcmVmX3J1biAoYSwgYikgZXMgPSBTb21lIChhYSwgYmEpID8KKioqICAgICAgICAgICAgY291bnRfbGlzdCBlcyBDb21taXQgodwgKGlmIGIgdGhlbiAwIGVsc2UgMSk7CioqKiAgICAgICAgIHIgPSAoYSwgVHJ1ZSk7IGI/CioqKiAgICAgICAgPyBjb3VudF9saXN0IGVzIENvbW1pdCA9IDAKKioqICAyLiA/eDEgYSBiLgoqKiogICAgICAgID9yZWZfcnVuICh4MSwgRmFsc2UpIGVzID0gU29tZSByJzsgZSA9IFBvbGljeSB4MTsKKioqICAgICAgICAgP2EgYiBhYSBiYS4KKioqICAgICAgICAgICAgcmVmX3J1biAoYSwgYikgZXMgPSBTb21lIChhYSwgYmEpID8KKioqICAgICAgICAgICAgY291bnRfbGlzdCBlcyBDb21taXQgodwgKGlmIGIgdGhlbiAwIGVsc2UgMSk7CioqKiAgICAgICAgIHIgPSAoYSwgRmFsc2UpOyA/IGI/CioqKiAgICAgICAgPyBjb3VudF9saXN0IGVzIENvbW1pdCCh3CBTdWMgMAoqKiogIDMuID9hIGIuID9lID0gQ29tbWl0OwoqKiogICAgICAgICAgICA/YSBiIGFhIGJhLgoqKiogICAgICAgICAgICAgICByZWZfcnVuIChhLCBiKSBlcyA9IFNvbWUgKGFhLCBiYSkgPwoqKiogICAgICAgICAgICAgICBjb3VudF9saXN0IGVzIENvbW1pdCCh3CAoaWYgYiB0aGVuIDAgZWxzZSAxKTsKKioqICAgICAgICAgICAgciA9IChUcnVlLCBGYWxzZSk7IGE7ID8gYjsgcmVmX3J1biAoVHJ1ZSwgVHJ1ZSkgZXMgPSBTb21lIHInPwoqKiogICAgICAgICAgID8gY291bnRfbGlzdCBlcyBDb21taXQgPQoqKiogICAgICAgICAgICAgIDAKKioqIEF0IGNvbW1hbmQgImJ5IiAobGluZSAyNDUgb2YgIi9jeWdkcml2ZS9kL0FJUl8yMDI2X0Zvcm1hbC9BSVJfMjAyNl9Gb3JtYWwvZm9ybWFsLWFydGVmYWN0cy9ja2EtcmVwYWlyL3J1bnRpbWUtaW50ZXJmYWNlL1J1bnRpbWVfSW50ZXJmYWNlLnRoeSIpClVuZmluaXNoZWQgc2Vzc2lvbihzKTogUnVudGltZV9JbnRlcmZhY2UKCkZpbmlzaGVkIGF0IFN1biBTZXAgMTMgMTY6NDY6NTcgR01UKzggMjAyNgowOjAwOjExIGVsYXBzZWQgdGltZQo=",
+    "encoding_note": "Native diagnostic output was not entirely UTF-8. Replacement-character display plus exact raw bytes retained; hash refers to raw bytes.",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "cc4e2fe58836413568bca62f3a8de8a43560b7205e22b1df8906528ab38ae35a"
+    },
+    "started_utc": "2026-09-13T08:47:54.710325+00:00",
+    "finished_utc": "2026-09-13T08:51:27.833258+00:00",
+    "return_code": 142,
+    "log_sha256": "0256406c5926011cd5b443721aade04cb7d033122440d1873ad39cce04f29e6a",
+    "label": "checked",
+    "output": "Started at Sun Sep 13 16:48:22 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface: command \"ML\" running for 20.042s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 22.057s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 20.883s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 24.070s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 22.885s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 26.072s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 24.898s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 28.085s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 26.910s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 30.097s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 28.918s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 32.105s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 30.922s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 34.109s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 32.925s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 36.112s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 34.936s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 38.123s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 36.949s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 40.136s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 38.960s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 42.147s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 40.967s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 44.154s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 42.981s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 46.168s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 44.997s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 48.184s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 47.008s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 50.195s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 49.023s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 52.210s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 51.038s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 54.225s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 53.049s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 56.236s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 55.061s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 58.248s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 57.074s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 60.261s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 59.082s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 62.269s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 61.093s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 64.280s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 63.106s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 66.293s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 65.119s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 68.306s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 67.133s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 70.320s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 69.149s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 72.336s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 71.157s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 74.344s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 73.165s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 76.352s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 75.174s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 78.361s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 77.179s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 80.366s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 79.182s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 82.369s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 81.187s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 84.374s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 83.200s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 86.387s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 85.213s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 88.400s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 87.215s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 90.402s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 89.217s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 92.404s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 91.227s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 94.414s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 93.227s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 96.414s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 95.239s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 98.426s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 97.249s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 100.436s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 99.265s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 102.452s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 101.279s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 104.466s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 103.284s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 106.471s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 105.285s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 108.472s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 107.289s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 110.476s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 109.304s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 112.491s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 111.310s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 114.497s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 113.323s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 116.510s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 115.335s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 118.522s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 117.340s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 120.527s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 119.350s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 122.537s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 121.360s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 124.547s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 123.371s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 126.558s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 125.380s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 128.567s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 127.382s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 130.569s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 129.396s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 132.583s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 131.410s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 134.597s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 133.420s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 136.607s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 135.432s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 138.619s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 137.439s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 140.626s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 139.452s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 142.639s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 141.452s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 144.639s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 143.455s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 146.642s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 145.457s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 148.644s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 147.469s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 150.656s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 149.480s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 152.667s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 151.483s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 154.670s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 153.483s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 156.670s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 155.492s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 158.679s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 157.492s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 160.679s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 159.502s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 162.689s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 161.505s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 164.692s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 163.511s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 166.698s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 165.519s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 168.706s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 167.535s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 170.722s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 169.539s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 172.726s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 171.554s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 174.741s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 173.559s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 176.746s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"by\" running for 174.122s (line 295 of theory \"Runtime_Interface.Runtime_Interface\")\nRuntime_Interface: command \"ML\" running for 177.309s (line 389 of theory \"Runtime_Interface.Runtime_Interface\")\n*** Timeout\nRuntime_Interface FAILED (see also \"isabelle build_log -H Error Runtime_Interface\")\n\nUnfinished session(s): Runtime_Interface\n\nFinished at Sun Sep 13 16:51:27 GMT+8 2026\n0:03:05 elapsed time\n",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "f624e75481c199a4f67ea1d24589fea7ebed265a888f902906a2eeeaf3190d76"
+    },
+    "started_utc": "2026-09-13T08:52:11.528716+00:00",
+    "finished_utc": "2026-09-13T08:52:52.312888+00:00",
+    "return_code": 0,
+    "log_sha256": "b5fb62b2baaced249744a4e3ce0fa7c4e0dab8fa9b916a58b276218bd0d130ae",
+    "label": "explicit_induction",
+    "output": "Started at Sun Sep 13 16:52:39 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface 100% (10.821s cumulated time)\nTiming Runtime_Interface (2 threads, 6.777s elapsed time, 7.188s cpu time, 0.172s GC time, factor 1.06)\nFinished Runtime_Interface (0:00:08 elapsed time)\n\nFinished at Sun Sep 13 16:52:52 GMT+8 2026\n0:00:13 elapsed time\n",
+    "source_snapshot": "intermediate full snapshot not retained; pre-run hash recorded"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "build",
+      "-v",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-D",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "8e3dda6c53f442707339b27bc31fa0fd5d4af3c257a3e8b2ce64aad16bc6f9d7"
+    },
+    "started_utc": "2026-09-13T08:54:52.904058+00:00",
+    "finished_utc": "2026-09-13T08:55:33.925755+00:00",
+    "return_code": 0,
+    "log_sha256": "2906397d951b94896d2f7971e4afb1b88af837ab308d7863195fd0f8e2615467",
+    "label": "replayable",
+    "output": "Started at Sun Sep 13 16:55:20 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)\nISABELLE_TOOL_JAVA_OPTIONS=\"-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m\"\nISABELLE_BUILD_OPTIONS=\"\"\n\nML_PLATFORM=\"x86_64_32-windows\"\nML_HOME=\"<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows\"\nML_SYSTEM=\"polyml-5.9.2\"\nML_OPTIONS=\"--minheap 500\"\n\nSession Pure/Pure\nSession Misc/Tools\nSession HOL/HOL (main)\nSession Unsorted/Bridge_Algebra_Repair\nSession Unsorted/Runtime_Interface\nRunning Runtime_Interface ...\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface\nRuntime_Interface: theory Runtime_Interface.Runtime_Interface 100% (11.050s cumulated time)\nTiming Runtime_Interface (2 threads, 6.942s elapsed time, 7.609s cpu time, 0.234s GC time, factor 1.10)\nFinished Runtime_Interface (0:00:08 elapsed time)\n\nFinished at Sun Sep 13 16:55:33 GMT+8 2026\n0:00:13 elapsed time\n",
+    "source_snapshot": "current Runtime_Interface.thy and ROOT"
+  },
+  {
+    "command_argv": [
+      "<ISABELLE_HOME>/contrib/cygwin/bin/bash.exe",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "export USER_HOME=<ISABELLE_WORKDIR>/user; export PATH=/usr/bin:/bin:$PATH; exec \"$@\"",
+      "isabelle-task",
+      "<ISABELLE_HOME>/bin/isabelle",
+      "export",
+      "-n",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair",
+      "-d",
+      "https://github.com/wrwei/genai-fm-trust-boundaries/tree/main/formal-artefacts/cka-repair/runtime-interface",
+      "-O",
+      "<LOCAL_WORKDIR>/runtime-interface/final_exported",
+      "-x",
+      "Runtime_Interface.Runtime_Interface:code/**",
+      "Runtime_Interface"
+    ],
+    "source_sha256_before": {
+      "formal-artefacts\\cka-repair\\runtime-interface\\ROOT": "facb2ab88adc963f3a67f120d761da5d7c6ca39aadc552f2618ec4f402c4ce04",
+      "formal-artefacts\\cka-repair\\runtime-interface\\Runtime_Interface.thy": "8e3dda6c53f442707339b27bc31fa0fd5d4af3c257a3e8b2ce64aad16bc6f9d7"
+    },
+    "started_utc": "2026-09-13T08:55:49.978343+00:00",
+    "finished_utc": "2026-09-13T08:56:17.961906+00:00",
+    "return_code": 0,
+    "log_sha256": "de9516824352869bd77ca3e80946c74d6f6c5d4f9c3e23b9ed5907ddd68eeae8",
+    "label": "final_export",
+    "output": "export \"<LOCAL_WORKDIR>/runtime-interface/final_exported/Runtime_Interface.Runtime_Interface/code/runtime_interface.ML\"\n",
+    "source_snapshot": "current Runtime_Interface.thy and ROOT"
+  }
+]

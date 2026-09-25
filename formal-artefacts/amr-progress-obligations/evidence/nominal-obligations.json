@@ -1,0 +1,150 @@
+[
+  {
+    "name": "none",
+    "trace_sha256": "6f115bb0e5d29f9ec639d8d41b0a0e971d41e2c2993c9b2b675c812d52e3d909",
+    "passed": true,
+    "grant_order": [
+      "A",
+      "B"
+    ],
+    "tasks": {
+      "A": {
+        "grant": 0.05,
+        "start": 1.6,
+        "arrival_at_rest": 31.381854249492644,
+        "release": 27.45,
+        "finish": 32.9,
+        "start_delay": 1.55,
+        "travel_duration": 29.781854249492643,
+        "finish_delay": 1.5181457505073546
+      },
+      "B": {
+        "grant": 27.45,
+        "start": 27.6,
+        "arrival_at_rest": 57.38185424949265,
+        "release": 53.45,
+        "finish": 58.9,
+        "start_delay": 0.15000000000000213,
+        "travel_duration": 29.781854249492646,
+        "finish_delay": 1.518145750507351
+      }
+    },
+    "controller_steps": 1838,
+    "max_observation_delivery": 0.05000000000000426,
+    "max_command_delivery": 0.10000000000000142,
+    "last_completion": 58.9,
+    "conditional_two_task_budget": 70.2,
+    "scope": "local obligation checks on retained traces; universal discharge remains open"
+  },
+  {
+    "name": "retained-B",
+    "trace_sha256": "4d3ba44fe86a90e430b829e3441cc509a251e945dcd78e3e2f89dcacda0848a7",
+    "passed": true,
+    "grant_order": [
+      "B",
+      "A"
+    ],
+    "tasks": {
+      "A": {
+        "grant": 27.45,
+        "start": 27.6,
+        "arrival_at_rest": 57.38185424949265,
+        "release": 53.45,
+        "finish": 58.9,
+        "start_delay": 0.15000000000000213,
+        "travel_duration": 29.781854249492646,
+        "finish_delay": 1.518145750507351
+      },
+      "B": {
+        "grant": 0.05,
+        "start": 1.6,
+        "arrival_at_rest": 31.381854249492644,
+        "release": 27.45,
+        "finish": 32.9,
+        "start_delay": 1.55,
+        "travel_duration": 29.781854249492643,
+        "finish_delay": 1.5181457505073546
+      }
+    },
+    "controller_steps": 1838,
+    "max_observation_delivery": 0.05000000000000426,
+    "max_command_delivery": 0.10000000000000142,
+    "last_completion": 58.9,
+    "conditional_two_task_budget": 70.2,
+    "scope": "local obligation checks on retained traces; universal discharge remains open"
+  },
+  {
+    "name": "invalid-then-B",
+    "trace_sha256": "06cd04e041ff6e97ee2e0b469e52db4920b93bf258d68551efbe196d2832acba",
+    "passed": true,
+    "grant_order": [
+      "B",
+      "A"
+    ],
+    "tasks": {
+      "A": {
+        "grant": 27.45,
+        "start": 27.6,
+        "arrival_at_rest": 57.38185424949265,
+        "release": 53.45,
+        "finish": 58.9,
+        "start_delay": 0.15000000000000213,
+        "travel_duration": 29.781854249492646,
+        "finish_delay": 1.518145750507351
+      },
+      "B": {
+        "grant": 0.05,
+        "start": 1.6,
+        "arrival_at_rest": 31.381854249492644,
+        "release": 27.45,
+        "finish": 32.9,
+        "start_delay": 1.55,
+        "travel_duration": 29.781854249492643,
+        "finish_delay": 1.5181457505073546
+      }
+    },
+    "controller_steps": 1838,
+    "max_observation_delivery": 0.05000000000000426,
+    "max_command_delivery": 0.10000000000000142,
+    "last_completion": 58.9,
+    "conditional_two_task_budget": 70.2,
+    "scope": "local obligation checks on retained traces; universal discharge remains open"
+  },
+  {
+    "name": "late-B",
+    "trace_sha256": "6d0963d18c672d17fe7f80968583d58edb20570b5fbd9e7d3e2189fba9c3241e",
+    "passed": true,
+    "grant_order": [
+      "A",
+      "B"
+    ],
+    "tasks": {
+      "A": {
+        "grant": 0.05,
+        "start": 1.6,
+        "arrival_at_rest": 31.381854249492644,
+        "release": 27.45,
+        "finish": 32.9,
+        "start_delay": 1.55,
+        "travel_duration": 29.781854249492643,
+        "finish_delay": 1.5181457505073546
+      },
+      "B": {
+        "grant": 27.45,
+        "start": 27.6,
+        "arrival_at_rest": 57.38185424949265,
+        "release": 53.45,
+        "finish": 58.9,
+        "start_delay": 0.15000000000000213,
+        "travel_duration": 29.781854249492646,
+        "finish_delay": 1.518145750507351
+      }
+    },
+    "controller_steps": 1838,
+    "max_observation_delivery": 0.05000000000000426,
+    "max_command_delivery": 0.10000000000000142,
+    "last_completion": 58.9,
+    "conditional_two_task_budget": 70.2,
+    "scope": "local obligation checks on retained traces; universal discharge remains open"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "evidence_files_verified": 32,
+  "preparation_inputs_verified": 47,
+  "raw_assistant_content_exact": true,
+  "assessment_replay_exact": true,
+  "usage_recomputed_exact": true,
+  "recorded_requests": 1,
+  "recorded_responses": 1,
+  "valid_json": true,
+  "select_rules": 4,
+  "step_rules": 9,
+  "formal_checked_inputs": 0,
+  "post_hoc_diagnosis": {
+    "scope": "single-witness rule inspection; outside the formal acceptance result",
+    "identical_condition_step_rules_1_based": [
+      1,
+      2
+    ],
+    "effect": "first-match semantics always shadows the second rule",
+    "mode": "Idle",
+    "facts": {
+      "ObservationUsable": true,
+      "PedestrianBlocked": true,
+      "OwnReservation": false,
+      "Released": false,
+      "BodyClearOfZ": false,
+      "Halted": true,
+      "AtGoal": false,
+      "TaskActive": true
+    },
+    "first_rule_response": [
+      "Brake",
+      "BrakeRequested"
+    ],
+    "required_response": [
+      "Brake",
+      "Stopped"
+    ],
+    "obligation": "stop_on_invalid_or_blocked_input",
+    "physical_consequence_measured": false
+  },
+  "adapter_tests": 5,
+  "adapter_tests_passed": true,
+  "credential_scan_passed": true,
+  "credential_scan_files": 40,
+  "review": "Independent read-only review: no material findings; no model calls made by reviewer"
+}

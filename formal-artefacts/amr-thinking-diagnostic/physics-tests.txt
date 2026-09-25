@@ -1,0 +1,16 @@
+{"condition": "N12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "T12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+test_offline_fixture_can_be_audited_but_never_deployed (test_simulate.PhysicsTests.test_offline_fixture_can_be_audited_but_never_deployed) ... ok
+test_partial_batch_does_not_deploy_earlier_success (test_simulate.PhysicsTests.test_partial_batch_does_not_deploy_earlier_success) ... ok
+test_physics_reuses_fixed_profile_and_independent_oracle (test_simulate.PhysicsTests.test_physics_reuses_fixed_profile_and_independent_oracle) ... ok
+{"condition": "N12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "T12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+test_selection_requires_both_terminal_conditions_and_fixed_order (test_simulate.PhysicsTests.test_selection_requires_both_terminal_conditions_and_fixed_order) ... ok
+{"condition": "N12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+{"condition": "T12-F", "repair": 1, "source_bad": 0, "accepted": true, "fatal": null}
+test_tampered_source_is_rejected (test_simulate.PhysicsTests.test_tampered_source_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 11.711s
+
+OK

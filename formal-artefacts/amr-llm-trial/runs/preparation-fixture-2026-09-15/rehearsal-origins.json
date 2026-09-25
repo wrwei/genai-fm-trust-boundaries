@@ -1,0 +1,98 @@
+{
+  "provenance": "Offline fixture workflow rehearsal. No model call, sampling, repair generation or new physical simulation.",
+  "input_fixture_sha256": {
+    "authored_reference": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+    "goal_stop_gap": "59252a17409a30f1bbaf7e22a4a16379684d46b3d76a4e9e8ccdba91853d6d68",
+    "always_brake": "51af10ddbf3a1c51993a11c5f26fbcd5f34439ad29056e88c6feb36a448030a7"
+  },
+  "entries": [
+    {
+      "sample_id": "P1-R1",
+      "attempt_index": 0,
+      "status": "ok",
+      "origin": "authored_reference",
+      "raw_sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+      "accepted": true
+    },
+    {
+      "sample_id": "P2-R1",
+      "attempt_index": 0,
+      "status": "ok",
+      "origin": "goal_stop_gap",
+      "raw_sha256": "59252a17409a30f1bbaf7e22a4a16379684d46b3d76a4e9e8ccdba91853d6d68",
+      "accepted": false
+    },
+    {
+      "sample_id": "P2-R1",
+      "attempt_index": 1,
+      "status": "ok",
+      "origin": "authored_reference",
+      "raw_sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+      "accepted": true
+    },
+    {
+      "sample_id": "P3-R1",
+      "attempt_index": 0,
+      "status": "ok",
+      "origin": "authored_reference wrapped in Markdown fences by rehearsal",
+      "raw_sha256": "8e5ab90617e5f87380538278fa784ac47656e00d5e69ecefb50fafed0668cb2a",
+      "accepted": false
+    },
+    {
+      "sample_id": "P3-R1",
+      "attempt_index": 1,
+      "status": "ok",
+      "origin": "authored_reference",
+      "raw_sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+      "accepted": true
+    },
+    {
+      "sample_id": "P1-R2",
+      "attempt_index": 0,
+      "status": "timeout",
+      "origin": "simulated timeout; no call made",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "accepted": false
+    },
+    {
+      "sample_id": "P2-R2",
+      "attempt_index": 0,
+      "status": "ok",
+      "origin": "invalid UTF-8 bytes authored for rehearsal",
+      "raw_sha256": "ccfa33e2e59073e40fd92fc20fc0282f7c59a7c816efa2c9d542b0dd9e9ecee7",
+      "accepted": false
+    },
+    {
+      "sample_id": "P2-R2",
+      "attempt_index": 1,
+      "status": "ok",
+      "origin": "authored_reference",
+      "raw_sha256": "028e06d895b64e67d5f05917f035faaa94acb87c2a031e57b3bd4875de816bc0",
+      "accepted": true
+    },
+    {
+      "sample_id": "P3-R2",
+      "attempt_index": 0,
+      "status": "ok",
+      "origin": "always_brake",
+      "raw_sha256": "51af10ddbf3a1c51993a11c5f26fbcd5f34439ad29056e88c6feb36a448030a7",
+      "accepted": false
+    },
+    {
+      "sample_id": "P3-R2",
+      "attempt_index": 1,
+      "status": "ok",
+      "origin": "always_brake",
+      "raw_sha256": "51af10ddbf3a1c51993a11c5f26fbcd5f34439ad29056e88c6feb36a448030a7",
+      "accepted": false
+    },
+    {
+      "sample_id": "P3-R2",
+      "attempt_index": 2,
+      "status": "ok",
+      "origin": "always_brake",
+      "raw_sha256": "51af10ddbf3a1c51993a11c5f26fbcd5f34439ad29056e88c6feb36a448030a7",
+      "accepted": false
+    }
+  ]
+}

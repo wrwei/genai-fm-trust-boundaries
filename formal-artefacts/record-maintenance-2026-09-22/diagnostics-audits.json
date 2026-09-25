@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "amr-forge-diagnostic",
+    "network_calls": 0,
+    "new_physical_episodes": 0,
+    "verify_inputs": true,
+    "replay": true,
+    "record_count": 7,
+    "condition_states": {
+      "D8-O": "cycle",
+      "D12-O": "cycle",
+      "D8-F": "cycle",
+      "D12-F": "cycle"
+    },
+    "provider_content_usage_and_status": true,
+    "analyze": "no analyzer in this stage",
+    "passed": true,
+    "elapsed_seconds": 0.703,
+    "log": "formal-artefacts/record-maintenance-2026-09-22/amr-forge-diagnostic-audit.log"
+  },
+  {
+    "stage": "amr-thinking-diagnostic",
+    "network_calls": 0,
+    "new_physical_episodes": 0,
+    "verify_inputs": true,
+    "replay": true,
+    "record_count": 2,
+    "condition_states": {
+      "N12-F": null,
+      "T12-F": "truncated"
+    },
+    "provider_content_usage_and_status": true,
+    "analyze": true,
+    "analysis_output_directory": "formal-artefacts/record-maintenance-2026-09-22/derived/amr-thinking-diagnostic",
+    "passed": true,
+    "elapsed_seconds": 0.734,
+    "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-diagnostic-audit.log"
+  },
+  {
+    "stage": "amr-thinking-extended",
+    "network_calls": 0,
+    "new_physical_episodes": 0,
+    "verify_inputs": true,
+    "replay": true,
+    "record_count": 3,
+    "condition_states": {
+      "N64-F": "cycle",
+      "T64-F": "accepted"
+    },
+    "provider_content_usage_and_status": true,
+    "analyze": true,
+    "analysis_output_directory": "formal-artefacts/record-maintenance-2026-09-22/derived/amr-thinking-extended",
+    "passed": true,
+    "elapsed_seconds": 0.875,
+    "log": "formal-artefacts/record-maintenance-2026-09-22/amr-thinking-extended-audit.log"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "core": {
+    "rows": 11664,
+    "states": 432,
+    "inputs": 27,
+    "mismatches": [],
+    "independent_reference_failures": [],
+    "scope": "exhaustive finite core transition conformance, not whole Python refinement"
+  },
+  "selector": {
+    "rows": 1296,
+    "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+    "mismatches": [],
+    "scope": "exact source outputs vs independent HOL selector on core states/advice domain"
+  },
+  "input_sha256": {
+    "hol\\export\\AMR_Advisory_V2.AMR_Protocol\\core-transitions.csv": "186547d67fdd3cdb92382ee4ae73c56f419996c00defcda38b9326095fef1d8c",
+    "hol\\export\\AMR_Advisory_V2.AMR_Protocol\\selector.csv": "3f03a679c6040d9251d0ebe310e4af8968fc03d4edaaf816a9aa1274bda9a3a7",
+    "protocol.py": "f35566d6a94b4f09e914c8781f7ff6ad54b29db49be9c0d01a42264d82c5a2cd",
+    "source_check.py": "bee8ab0031b0228dd5d140ccbf4fd4e8cb7e83eb5d5045253bec04d5ec6aafde",
+    "hol\\AMR_Protocol.thy": "47f8ee71c4cdddfa6946588169be8f3df738740838c6bfb492c30797ece3dcf5"
+  },
+  "passed": true
+}

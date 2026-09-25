@@ -1,0 +1,43 @@
+{
+  "schema": "amr-record-maintenance-verification/v1",
+  "verified_at_utc": "2026-09-22T02:26:11.398968+00:00",
+  "status": "completed_except_legacy_pilot_control_change_pending_confirmation",
+  "new_model_calls": 0,
+  "credential_access": false,
+  "git_history_rewritten": false,
+  "protected_evidence_files": 407,
+  "protected_evidence_all_byte_identical": true,
+  "changed_files_in_baseline_scope": 341,
+  "amr_python_ast_files_verified": 128,
+  "copied_prior_inventories_verified": 11,
+  "downstream_run_and_physical_manifests_verified": 6,
+  "v2_manifest_entries_verified": 205,
+  "tests": {
+    "forge_full": 50,
+    "thinking_diagnostic_full": 27,
+    "thinking_extended_full": 30,
+    "replication_full": 33,
+    "advice_targeted": 9,
+    "total": 149,
+    "all_passed": true,
+    "scope": "Offline fixtures; the legacy pilot continuation suite is not certified."
+  },
+  "scientific_replay": {
+    "core": "core-verification.json",
+    "diagnostics": "diagnostics-verification.json",
+    "replication": "replication-fresh-generation-audit.json",
+    "advice": "v2-verification.json"
+  },
+  "independent_review": "independent-review.md",
+  "pending": {
+    "reason": "Automatic approval review rejected changing persistent monetary controls in the historical pilot launcher and requested explicit confirmation. No bypass was attempted.",
+    "files": [
+      "formal-artefacts/amr-deepseek-pilot/pilot.py",
+      "formal-artefacts/amr-deepseek-pilot/run/snapshot-pilot.py",
+      "formal-artefacts/amr-deepseek-pilot/tests/test_pilot.py"
+    ],
+    "files_unchanged_from_baseline": true,
+    "effect": "Legacy fresh-execution path remains incompatible with cleaned metadata; retained-record analysis passes. Current replication/v2 paths do not use the legacy launcher."
+  },
+  "provenance": "Postprocessed snapshot digests identify maintained files, not original pre-execution bytes; retained experimental timestamps are historical."
+}

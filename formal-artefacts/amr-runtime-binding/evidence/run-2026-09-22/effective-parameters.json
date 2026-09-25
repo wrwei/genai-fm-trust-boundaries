@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "scenario_id": "AMR-advisory-v2-physical",
+  "status": "proposed_simulation_design_not_hardware_calibration",
+  "units": {
+    "length": "m",
+    "time": "s",
+    "speed": "m/s",
+    "acceleration": "m/s^2",
+    "angle": "rad"
+  },
+  "map": {
+    "extent": [
+      0,
+      24,
+      -3.5,
+      3.5
+    ],
+    "reservation_zone_Z": [
+      6,
+      18,
+      -2.6,
+      2.6
+    ],
+    "narrow_corridor_N": [
+      8,
+      16,
+      -0.8,
+      0.8
+    ],
+    "pedestrian_strip_H": [
+      11.5,
+      12.5,
+      -3.5,
+      3.5
+    ],
+    "route_A": [
+      [
+        2,
+        -2
+      ],
+      [
+        4,
+        -2
+      ],
+      [
+        6,
+        -2
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        16,
+        0
+      ],
+      [
+        18,
+        -2
+      ],
+      [
+        22,
+        -2
+      ]
+    ],
+    "route_B": [
+      [
+        22,
+        2
+      ],
+      [
+        20,
+        2
+      ],
+      [
+        18,
+        2
+      ],
+      [
+        16,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "staging_A": [
+      4,
+      -2
+    ],
+    "staging_B": [
+      20,
+      2
+    ],
+    "notes": "Z includes merge/diverge approaches. Paths are candidate centerlines; swept-footprint clearance must be checked before simulation claims. Narrow corridor is operated as one lane."
+  },
+  "robot": {
+    "length": 0.8,
+    "width": 0.6,
+    "speed_limit": 1.0,
+    "forward_acceleration_upper_bound": 0.5,
+    "braking_deceleration_lower_bound": 0.8,
+    "position_error_bound": 0.05,
+    "speed_error_bound": 0.05,
+    "clearance_margin": 0.2
+  },
+  "timing": {
+    "plant_output_step": 0.01,
+    "safety_monitor_period": 0.05,
+    "accepted_observation_age_upper_bound": 0.1,
+    "monitor_compute_upper_bound": 0.02,
+    "brake_delivery_and_onset_upper_bound": 0.1,
+    "total_reaction_upper_bound": 0.27,
+    "advice_expiry": 2.0,
+    "episode_horizon": 120.0
+  },
+  "stopping_calculation": {
+    "v_upper": "max(0, observed_speed + speed_error_bound)",
+    "reaction": "observation_age + safety_monitor_period + monitor_compute_upper_bound + brake_delivery_and_onset_upper_bound",
+    "distance": "v_upper*T + 0.5*a_upper*T*T + (v_upper+a_upper*T)^2/(2*b_lower) + position_error_bound + clearance_margin",
+    "distance_reference": "distance from estimated front bumper at observation timestamp to a fixed forbidden boundary along a straight approach",
+    "observed_speeds_for_design_check": [
+      0.2,
+      0.6,
+      1.0
+    ],
+    "warning": "Own conservative stopping-envelope calculation, not an ISO formula, hardware measurement, moving-obstacle proof or completed simulation."
+  },
+  "stress_levels": {
+    "total_reaction_delay": [
+      {
+        "value": 0.15,
+        "class": "within"
+      },
+      {
+        "value": 0.25,
+        "class": "boundary"
+      },
+      {
+        "value": 0.5,
+        "class": "outside_assumption"
+      }
+    ],
+    "absolute_position_error": [
+      {
+        "value": 0.025,
+        "class": "within"
+      },
+      {
+        "value": 0.05,
+        "class": "boundary"
+      },
+      {
+        "value": 0.15,
+        "class": "outside_assumption"
+      }
+    ],
+    "actual_braking_deceleration": [
+      {
+        "value": 1.0,
+        "class": "within"
+      },
+      {
+        "value": 0.8,
+        "class": "boundary"
+      },
+      {
+        "value": 0.4,
+        "class": "outside_assumption"
+      }
+    ]
+  },
+  "unclaimed": [
+    "robot or human safety certification",
+    "unconditional pedestrian collision avoidance",
+    "physical robot calibration",
+    "complete bridge-to-AMR refinement",
+    "LLM performance"
+  ]
+}

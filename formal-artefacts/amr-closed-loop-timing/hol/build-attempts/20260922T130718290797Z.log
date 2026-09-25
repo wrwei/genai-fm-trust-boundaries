@@ -1,0 +1,72 @@
+Started at Tue Sep 22 21:06:55 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Extraction_Faithfulness
+Session Unsorted/AMR_Progress_Obligations
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/AMR_Advisory_V2
+Session Unsorted/AMR_Runtime_Binding
+Session Unsorted/AMR_Closed_Loop_Timing
+Building AMR_Runtime_Binding ...
+AMR_Runtime_Binding: theory AMR_Runtime_Binding.AMR_Runtime_Binding
+AMR_Runtime_Binding: theory AMR_Runtime_Binding.AMR_Runtime_Binding 100% (2.960s cumulated time)
+Timing AMR_Runtime_Binding (2 threads, 2.787s elapsed time, 4.234s cpu time, 0.141s GC time, factor 1.52)
+Finished AMR_Runtime_Binding (0:00:07 elapsed time)
+Running AMR_Closed_Loop_Timing ...
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction 100% (1.472s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress 100% (1.527s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts 100% (9.459s cumulated time)
+AMR_Closed_Loop_Timing FAILED (see also "isabelle build_log -H Error AMR_Closed_Loop_Timing")
+*** Extra variables on rhs: "advice"
+*** The error(s) above occurred in definition:
+*** "v ��
+***  fst (step u
+***        (Validate
+***          (select u
+***            advice)))"
+*** At command "theorem" (line 97 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Failed to finish proof (line 86 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy"):
+*** goal (1 subgoal):
+***  1. ??env. target_results env p_9eaa530b5825_step_target =
+***            result_list (source_result env p_9eaa530b5825_step_source);
+***      map (��m. source_result (menv m) p_9eaa530b5825_step_source)
+***       milestones =
+***      milestone_outputs?
+***     ? map (��m. result_list
+***                  (source_result (menv m) p_9eaa530b5825_step_source))
+***         milestones =
+***        map result_list
+***         milestone_outputs
+*** At command "by" (line 86 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Bad arguments for method "code_simp" (line 81 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy"):
+***   add : milestones_def milestone_outputs_def p_9eaa530b5825_step_source_def
+*** At command "by" (line 81 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Undefined method: "omega" (line 48 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** At command "by" (line 48 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Undefined method: "omega" (line 41 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** At command "by" (line 41 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Failed to finish proof (line 34 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy"):
+*** goal (1 subgoal):
+***  1. g + (15::'a)
+***     �� g +
+***       (163::'a)
+*** At command "by" (line 34 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** Undefined method: "omega" (line 25 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+*** At command "by" (line 25 of "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/AMR_Closed_Loop_Timing.thy")
+Unfinished session(s): AMR_Closed_Loop_Timing
+
+Finished at Tue Sep 22 21:07:17 GMT+8 2026
+0:00:22 elapsed time

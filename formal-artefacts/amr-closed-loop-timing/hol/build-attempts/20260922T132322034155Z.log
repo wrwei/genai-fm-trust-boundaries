@@ -1,0 +1,36 @@
+Started at Tue Sep 22 21:23:04 GMT+8 2026 (polyml-5.9.2_x86_64_32-windows on DESKTOP-B21EERH)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms512m -Xmx4g -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="x86_64_32-windows"
+ML_HOME="<ISABELLE_HOME>/contrib/polyml-5.9.2-2/x86_64_32-windows"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 500"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session Unsorted/AMR_Extraction_Faithfulness
+Session Unsorted/AMR_Progress_Obligations
+Session Unsorted/Bridge_Algebra_Repair
+Session Unsorted/AMR_Advisory_V2
+Session Unsorted/AMR_Runtime_Binding
+Session Unsorted/AMR_Closed_Loop_Timing
+Running AMR_Closed_Loop_Timing ...
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Extraction 100% (2.092s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Progress_Obligations.AMR_Progress 100% (2.156s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing
+AMR_Closed_Loop_Timing: theory AMR_Extraction_Faithfulness.AMR_Artifacts 100% (9.495s cumulated time)
+AMR_Closed_Loop_Timing: theory AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing 100% (4.955s cumulated time)
+Timing AMR_Closed_Loop_Timing (2 threads, 8.866s elapsed time, 14.672s cpu time, 0.406s GC time, factor 1.65)
+Finished AMR_Closed_Loop_Timing (0:00:10 elapsed time)
+Exporting AMR_Closed_Loop_Timing ...
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/export/AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing/source.csv"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/export/AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing/timing-proof-audit.txt"
+export "https://github.com/wrwei/genai-fm-trust-boundaries/blob/main/formal-artefacts/amr-closed-loop-timing/hol/export/AMR_Closed_Loop_Timing.AMR_Closed_Loop_Timing/timing.csv"
+
+Finished at Tue Sep 22 21:23:21 GMT+8 2026
+0:00:16 elapsed time

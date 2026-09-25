@@ -1,0 +1,211 @@
+{
+  "candidate": "reversed_observation",
+  "spec_id": "amr-supervisor-obligations/v1.1",
+  "source_sha256": "493a0a2e8b2e1333db69a0e67d9b0f10abd6a05265db388f083362d66c39a452",
+  "translator_fault": "invert_observation_tests",
+  "parse_pass": true,
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "select_inputs": 32,
+  "step_inputs": 1792,
+  "source_violation_inputs": 374,
+  "model_violation_inputs": 0,
+  "correspondence_mismatches": 374,
+  "source_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "response": [
+        "Request",
+        "Waiting"
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ]
+    }
+  ],
+  "model_witnesses": [],
+  "correspondence_witnesses": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "source_response": [
+        "Request",
+        "Waiting"
+      ],
+      "model_responses": [
+        [
+          "Brake",
+          "BrakeRequested"
+        ]
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "source_response": [
+        "Request",
+        "Waiting"
+      ],
+      "model_responses": [
+        [
+          "Brake",
+          "BrakeRequested"
+        ]
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "source_response": [
+        "Request",
+        "Waiting"
+      ],
+      "model_responses": [
+        [
+          "Brake",
+          "Stopped"
+        ]
+      ],
+      "source_error": null,
+      "model_error": null
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": true,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "source_response": [
+        "Request",
+        "Waiting"
+      ],
+      "model_responses": [
+        [
+          "Brake",
+          "Stopped"
+        ]
+      ],
+      "source_error": null,
+      "model_error": null
+    }
+  ],
+  "source_policy_pass": false,
+  "model_policy_pass": true,
+  "correspondence_pass": false,
+  "accepted": false
+}

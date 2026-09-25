@@ -1,0 +1,221 @@
+{
+  "date": "2026-09-13",
+  "scope": "Directed primary-source/tool checks for review and proof repair; not a new Scholar screening round.",
+  "new_google_scholar_queries": 0,
+  "historical_47_page_and_330_record_registers_changed": false,
+  "queries": [
+    {
+      "query": "site.isabelle.in.tum.de website-Isabelle2025-2 download Windows exe",
+      "purpose": "Official portable Windows release"
+    },
+    {
+      "query": "site.isabelle.in.tum.de idempotent_semiring ordered_semiring Isabelle HOL",
+      "purpose": "Check stock HOL algebra classes"
+    },
+    {
+      "query": "site.isa-afp.org Concurrent Kleene Algebra tests exchange shuffle",
+      "purpose": "Locate formalised semantic precedents"
+    },
+    {
+      "query": "site.isa-afp.org Kleene Algebra idempotent_semiring dioid",
+      "purpose": "Distinguish AFP algebra from stock HOL class"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://isabelle.in.tum.de/installation.html",
+      "level": "official installation page inspected",
+      "finding": "Windows bundle has required components and Cygwin; archive can be unpacked at a chosen location."
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/research/hvg/Isabelle/installation.html",
+      "level": "official mirror page inspected",
+      "finding": "Alternative official distribution route."
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/",
+      "level": "official distribution listing inspected",
+      "finding": "Isabelle2025-2 Windows archive available."
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle2025-2.exe",
+      "level": "downloaded via HTTPS; archive extracted without invoking installer",
+      "bytes": 1069837790,
+      "local_sha256": "51f47f3259f168de4517cf6e46e90409ab2c45ab4651d5b793509056571379c5",
+      "hash_scope": "Local byte fingerprint; not compared to a publisher-signed checksum."
+    },
+    {
+      "url": "https://isabelle.in.tum.de/library/HOL/HOL/Rings.html",
+      "level": "web library inspected and downloaded distribution source checked",
+      "finding": "Stock HOL dioid extends semiring_1 and canonically_ordered_monoid_add; its ordered_semiring instance suffices for the elementary lemmas. Additive idempotence is not required."
+    },
+    {
+      "url": "https://isa-afp.org/entries/Kleene_Algebra.html",
+      "level": "release entry inspected",
+      "finding": "AFP Kleene Algebra provides established algebraic foundations and models. This task did not install or instantiate that library."
+    },
+    {
+      "url": "https://isa-afp.org/browser_info/current/AFP/Kleene_Algebra/Dioid.html",
+      "level": "theory presentation inspected",
+      "finding": "The AFP algebra hierarchy uses an idempotent dioid; do not equate names alone with stock HOL dioid."
+    },
+    {
+      "url": "https://www.isa-afp.org/browser_info/current/AFP/ConcurrentHOL/outline.pdf",
+      "level": "search result excerpt only",
+      "finding": "Lead for concurrent trace models and annihilation laws; no full-text or implementation claim is derived here."
+    },
+    {
+      "url": "https://www.isa-afp.org/browser_info/current/AFP/Algebraic_VCs/document.pdf",
+      "level": "search result excerpt only",
+      "finding": "Lead for algebra-to-concrete-semantics connections; not a newly reviewed study."
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1007%2F978-3-031-68738-9_13",
+      "level": "direct Crossref HTTPS JSON read",
+      "purpose": "Complete candidate bibliography entry for the already inspected CLARISSA continuous-assurance paper",
+      "metadata": {
+        "DOI": "10.1007/978-3-031-68738-9_13",
+        "title": [
+          "Enabling Theory-Based Continuous Assurance: A Coherent Approach with Semantics and Automated Synthesis"
+        ],
+        "author": [
+          {
+            "given": "Srivatsan",
+            "family": "Varadarajan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robin",
+            "family": "Bloomfield",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "John",
+            "family": "Rushby",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gopal",
+            "family": "Gupta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anitha",
+            "family": "Murugesan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Stroud",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kateryna",
+            "family": "Netkachova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Isaac Hong",
+            "family": "Wong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joaquín",
+            "family": "Arias",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Lecture Notes in Computer Science",
+          "Computer Safety, Reliability, and Security. SAFECOMP 2024 Workshops"
+        ],
+        "page": "173-187",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "publisher": "Springer Nature Switzerland"
+      },
+      "response_message_sha256": "29f5f8074b14134740bff37a7a5f748b88f25c82971f143f887d5198eb0cdeca",
+      "note": "API message fields saved below; raw response message retained in workspace scratch. Normalise nonbreaking spaces only for title presentation."
+    }
+  ],
+  "access_notes": [
+    "TUM distribution redirect rejected by web safe-open; official Cambridge mirror used.",
+    "DOI landing-page open failed; Crossref endpoint supplied bibliographic metadata, not full text.",
+    "Normal sandbox network calls denied; official HTTPS retrieval used approved escalation.",
+    "Ubuntu WSL2 is registered but cannot start: HCS_E_HYPERV_NOT_INSTALLED. No virtualisation setting was changed.",
+    "Portable Windows Isabelle used its bundled Cygwin. No system-wide installer was run."
+  ],
+  "existing_content_evidence_reused": {
+    "runtime": "comparison_records.json C06,C07,C17,C18,C23,C24,C25,C32,C33,C34 and comparison_source_log.json",
+    "assurance": "records.json U01,N01,N02,N03,N04,N13; ../verification/cascon_crosswalk.json P12/P13",
+    "scope": "Existing primary-section checks remain at their recorded dates and depths; no claim of fresh full-text review or external replication."
+  }
+}

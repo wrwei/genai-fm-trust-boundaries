@@ -1,0 +1,30 @@
+{"episode": "reference_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "reference_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "reference_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "reference_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "reference_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_01_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_01_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_01_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_01_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_01_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_02_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_02_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_02_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_02_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_02_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_03_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_03_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_03_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_03_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_03_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_04_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_04_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_04_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_04_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_04_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_05_normal_A", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_05_normal_B", "time": 58.95, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_05_temporary", "time": 65.9, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_05_blackout", "time": 63.85, "completed": ["A", "B"], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}
+{"episode": "source_05_permanent", "time": 120.0, "completed": [], "collision_pairs": [], "unresolved_pairs": [], "runtime_rejections": 0}

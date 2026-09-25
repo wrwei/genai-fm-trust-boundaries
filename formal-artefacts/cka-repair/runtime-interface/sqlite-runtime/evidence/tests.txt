@@ -1,0 +1,14 @@
+test_advice_outage_and_retry (__main__.RuntimeTests.test_advice_outage_and_retry) ... ok
+test_crash_recovery (__main__.RuntimeTests.test_crash_recovery) ... ok
+test_generated_model_table (__main__.RuntimeTests.test_generated_model_table) ... ok
+test_http_authority_isolation (__main__.RuntimeTests.test_http_authority_isolation) ... ok
+test_http_rejects_ambiguous_inputs (__main__.RuntimeTests.test_http_rejects_ambiguous_inputs) ... ok
+test_operation_binding (__main__.RuntimeTests.test_operation_binding) ... ok
+test_revocation_at_commit (__main__.RuntimeTests.test_revocation_at_commit) ... ok
+test_revocation_serialized_while_service_holds_lock (__main__.RuntimeTests.test_revocation_serialized_while_service_holds_lock) ... ok
+test_two_processes_same_operation (__main__.RuntimeTests.test_two_processes_same_operation) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.002s
+
+OK

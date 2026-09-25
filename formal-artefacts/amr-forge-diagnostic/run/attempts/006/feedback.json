@@ -1,0 +1,212 @@
+{
+  "schema": "amr-forge-diagnostic-feedback/v1",
+  "stage": "source_model",
+  "parse_error": null,
+  "checked_inputs": 1824,
+  "counts": {
+    "select_inputs": 32,
+    "step_inputs": 1792,
+    "source_violation_inputs": 784,
+    "model_violation_inputs": 784,
+    "correspondence_mismatches": 0
+  },
+  "current_example_cap": 8,
+  "regression_example_cap": 4,
+  "current_examples": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": false,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": false,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": false
+      },
+      "mode": "Idle",
+      "input": {
+        "function": "step",
+        "facts": {
+          "ObservationUsable": false,
+          "PedestrianBlocked": false,
+          "OwnReservation": false,
+          "Released": false,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "AtGoal": false,
+          "TaskActive": false
+        },
+        "mode": "Idle"
+      },
+      "input_id": "step:a298c05b0fa7f8067b8e6eeffb18d0b68039a342b24fcde35b9f2054748b5dca",
+      "source_location": {
+        "status": "matched",
+        "function": "step",
+        "rule_index": 0,
+        "json_path": "$.step[0]",
+        "condition": "not ObservationUsable or not TaskActive or PedestrianBlocked"
+      },
+      "actual": [
+        "Brake",
+        "Stopped"
+      ],
+      "allowed_outputs": [
+        [
+          "Brake",
+          "BrakeRequested"
+        ]
+      ],
+      "violations": [
+        "stop_on_invalid_or_blocked_input"
+      ],
+      "model_outputs": [
+        [
+          "Brake",
+          "Stopped"
+        ]
+      ],
+      "model_violations": [
+        "stop_on_invalid_or_blocked_input"
+      ],
+      "source_error": null,
+      "model_error": null,
+      "correspondence_category": "matched",
+      "requirement_id": "stop_on_invalid_or_blocked_input",
+      "stage": "source_policy",
+      "fix_directive": "Give the stop obligation priority over goal, release, request, resume, and proceed behavior. On unusable observation, inactive task, or pedestrian blockage, Brake is required; use Stopped only when Halted is true, and BrakeRequested while Halted is false."
+    }
+  ],
+  "regression_examples": [
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": false,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "input": {
+        "function": "step",
+        "facts": {
+          "ObservationUsable": true,
+          "PedestrianBlocked": false,
+          "OwnReservation": false,
+          "Released": true,
+          "BodyClearOfZ": false,
+          "Halted": false,
+          "AtGoal": false,
+          "TaskActive": true
+        },
+        "mode": "Idle"
+      },
+      "input_id": "step:b618dedf8ca9519097d2b4ff3c4c33e947f3de6d2b84463861b7ddd3f7b9baa5",
+      "source_location": {
+        "status": "matched",
+        "function": "step",
+        "rule_index": 8,
+        "json_path": "$.step[8]",
+        "condition": "True"
+      },
+      "actual": [
+        "Proceed",
+        "Traversing"
+      ],
+      "allowed_outputs": [
+        [
+          "Proceed",
+          "Traversing"
+        ]
+      ],
+      "violations": [],
+      "model_outputs": [
+        [
+          "Proceed",
+          "Traversing"
+        ]
+      ],
+      "model_violations": [],
+      "source_error": null,
+      "model_error": null,
+      "correspondence_category": "matched",
+      "requirement_id": "proceed_when_currently_allowed",
+      "stage": "satisfied",
+      "fix_directive": "Provide Proceed with Traversing when none of the higher-priority stop, goal, release, standstill, request, or resume obligations applies. Ensure a matching rule covers the remaining valid input.",
+      "history_status": "repaired",
+      "previous_actual": null,
+      "previous_requirement_id": "proceed_when_currently_allowed",
+      "first_seen_order": 0
+    },
+    {
+      "function": "step",
+      "facts": {
+        "ObservationUsable": true,
+        "PedestrianBlocked": false,
+        "OwnReservation": false,
+        "Released": true,
+        "BodyClearOfZ": false,
+        "Halted": true,
+        "AtGoal": false,
+        "TaskActive": true
+      },
+      "mode": "Idle",
+      "input": {
+        "function": "step",
+        "facts": {
+          "ObservationUsable": true,
+          "PedestrianBlocked": false,
+          "OwnReservation": false,
+          "Released": true,
+          "BodyClearOfZ": false,
+          "Halted": true,
+          "AtGoal": false,
+          "TaskActive": true
+        },
+        "mode": "Idle"
+      },
+      "input_id": "step:cc484c65be4cbf29c5cedee7594460103dca29d6676916773eb4dcdbc9bc78ba",
+      "source_location": {
+        "status": "matched",
+        "function": "step",
+        "rule_index": 8,
+        "json_path": "$.step[8]",
+        "condition": "True"
+      },
+      "actual": [
+        "Proceed",
+        "Traversing"
+      ],
+      "allowed_outputs": [
+        [
+          "Proceed",
+          "Traversing"
+        ]
+      ],
+      "violations": [],
+      "model_outputs": [
+        [
+          "Proceed",
+          "Traversing"
+        ]
+      ],
+      "model_violations": [],
+      "source_error": null,
+      "model_error": null,
+      "correspondence_category": "matched",
+      "requirement_id": "proceed_when_currently_allowed",
+      "stage": "satisfied",
+      "fix_directive": "Provide Proceed with Traversing when none of the higher-priority stop, goal, release, standstill, request, or resume obligations applies. Ensure a matching rule covers the remaining valid input.",
+      "history_status": "repaired",
+      "previous_actual": null,
+      "previous_requirement_id": "proceed_when_currently_allowed",
+      "first_seen_order": 1
+    }
+  ],
+  "selection_policy": "first input per (function, obligation, allowed outputs, Halted) group; sorted groups; history regressed, repaired, unresolved then first seen"
+}

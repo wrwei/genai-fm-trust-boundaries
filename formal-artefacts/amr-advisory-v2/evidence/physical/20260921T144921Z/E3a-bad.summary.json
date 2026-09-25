@@ -1,0 +1,68 @@
+{
+  "gap": "commit",
+  "constructed_fault": "cached_commit_permission",
+  "source_id": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+  "reference_violations": [
+    {
+      "kind": "protocol",
+      "time": 0.1,
+      "before": {
+        "req_a": true,
+        "req_b": true,
+        "owner": null,
+        "blocked": true,
+        "fresh": true,
+        "pending": "A",
+        "command": null
+      },
+      "input": [
+        "Commit"
+      ],
+      "after": {
+        "req_a": false,
+        "req_b": true,
+        "owner": "A",
+        "blocked": true,
+        "fresh": true,
+        "pending": null,
+        "command": null
+      },
+      "events": [
+        [
+          "Grant",
+          "A"
+        ]
+      ],
+      "reference_accepted": false,
+      "permission_version": 1,
+      "reservation_generation": 1,
+      "actual_pose": [
+        4.0,
+        -2.0,
+        0.0
+      ],
+      "actual_speed": 0.0
+    }
+  ],
+  "grant_order": [
+    "A"
+  ],
+  "final_pose": [
+    4.0,
+    -2.0,
+    0.0
+  ],
+  "final_speed": 0.0,
+  "final_intent": "Brake",
+  "overlaps_zone": false,
+  "termination": "bounded_witness",
+  "collision_pairs": [],
+  "unresolved_pairs": [],
+  "continuous_intervals_checked": 180,
+  "early_releases": [],
+  "completed_robots": [],
+  "run_id": "E3a-bad",
+  "trace": "E3a-bad.jsonl.gz",
+  "trace_sha256": "9ef79fde871bcfdc0e6cafc03d7ba8a52e49c5f71d059f8183a55f6e8adb0717",
+  "expected_outcome_observed": true
+}

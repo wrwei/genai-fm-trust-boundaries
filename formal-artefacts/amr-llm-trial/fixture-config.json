@@ -1,0 +1,11 @@
+{
+  "record_mode": "fixture",
+  "provider": "fixture",
+  "model_id": "FIXTURE-offline-rehearsal",
+  "model_revision": "fixture-v1",
+  "decoding": {
+    "mode": "no-model-called"
+  },
+  "max_output_tokens": 8192,
+  "transport": "local-original-byte-files"
+}

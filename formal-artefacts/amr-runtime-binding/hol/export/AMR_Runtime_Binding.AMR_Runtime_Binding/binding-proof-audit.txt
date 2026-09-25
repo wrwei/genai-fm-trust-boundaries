@@ -1,0 +1,8 @@
+No skipped proofs or oracle dependencies
+AMR_Runtime_Binding.adapter_step_correspondence
+AMR_Runtime_Binding.adapter_accepts
+AMR_Runtime_Binding.adapter_source_inclusion
+AMR_Runtime_Binding.adapter_component_embedding
+AMR_Runtime_Binding.adapter_authority
+AMR_Runtime_Binding.messages_preserve_core
+AMR_Runtime_Binding.adapter_two_service_authorization

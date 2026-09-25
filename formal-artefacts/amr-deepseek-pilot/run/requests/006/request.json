@@ -1,0 +1,23 @@
+{
+  "attempt_index": 2,
+  "identity": {
+    "decoding": {
+      "stream": false,
+      "temperature": 0,
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "max_output_tokens": 2048,
+    "model_id": "deepseek-flash",
+    "model_revision": "provider-not-exposed",
+    "provider": "deepseek",
+    "record_mode": "live",
+    "transport": "direct-https-chat-completions-single-post"
+  },
+  "issued_at_utc": "2026-09-17T05:11:29.014003+00:00",
+  "previous_record_sha256": "b8897c081c47b871658bdbc89fa106db4a6b6c70e5804d1b9365b1babb19920c",
+  "prompt_sha256": "59740d8b688e20cd5218340357608a18c0cbcd50460afaa5c8bb77987f7fb31d",
+  "sample_id": "P2-R1",
+  "request_record_sha256": "3cae2b02da3f96dea87b8a7acc087d6418079e1e31e996dba7804211c05b6b79"
+}

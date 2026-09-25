@@ -1,0 +1,1068 @@
+{
+  "disposition": "verified",
+  "audited_at_utc": "2026-09-22T02:23:18.855512+00:00",
+  "network_calls": 0,
+  "generation_manifest_files": 90,
+  "frozen_inputs": 72,
+  "full_assessments_recomputed": 6,
+  "generation_unchanged": true,
+  "rows": [
+    {
+      "sequence": "001",
+      "sample_id": "P1-R1",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+      "response_bytes": 1156,
+      "rule_counts": {
+        "select": 3,
+        "step": 9,
+        "total": 12
+      },
+      "usage_summary": {
+        "input_tokens": 1128,
+        "output_tokens": 7200,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 1128
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 26100,
+        "reasoning_tokens": 6894,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 29.748056,
+      "full_assessment_match": true
+    },
+    {
+      "sequence": "002",
+      "sample_id": "P2-R1",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+      "response_bytes": 1372,
+      "rule_counts": {
+        "select": 3,
+        "step": 9,
+        "total": 12
+      },
+      "usage_summary": {
+        "input_tokens": 1167,
+        "output_tokens": 10497,
+        "cache_hit_tokens": 640,
+        "cache_miss_tokens": 527
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 42220,
+        "reasoning_tokens": 10084,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 41.808276,
+      "full_assessment_match": true
+    },
+    {
+      "sequence": "003",
+      "sample_id": "P3-R1",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "response_bytes": 1736,
+      "rule_counts": {
+        "select": 7,
+        "step": 9,
+        "total": 16
+      },
+      "usage_summary": {
+        "input_tokens": 1146,
+        "output_tokens": 13527,
+        "cache_hit_tokens": 640,
+        "cache_miss_tokens": 506
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 52095,
+        "reasoning_tokens": 13004,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 53.017314,
+      "full_assessment_match": true
+    },
+    {
+      "sequence": "004",
+      "sample_id": "P1-R2",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+      "response_bytes": 1069,
+      "rule_counts": {
+        "select": 4,
+        "step": 9,
+        "total": 13
+      },
+      "usage_summary": {
+        "input_tokens": 1128,
+        "output_tokens": 7972,
+        "cache_hit_tokens": 896,
+        "cache_miss_tokens": 232
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 30777,
+        "reasoning_tokens": 7678,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 32.36382,
+      "full_assessment_match": true
+    },
+    {
+      "sequence": "005",
+      "sample_id": "P2-R2",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+      "response_bytes": 1372,
+      "rule_counts": {
+        "select": 3,
+        "step": 9,
+        "total": 12
+      },
+      "usage_summary": {
+        "input_tokens": 1167,
+        "output_tokens": 9667,
+        "cache_hit_tokens": 1024,
+        "cache_miss_tokens": 143
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 38509,
+        "reasoning_tokens": 9254,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 38.290119,
+      "full_assessment_match": true
+    },
+    {
+      "sequence": "006",
+      "sample_id": "P3-R2",
+      "attempt": 0,
+      "phase": "initial",
+      "accepted": true,
+      "fatal": null,
+      "parse_pass": true,
+      "checked_inputs": 1824,
+      "source_violation_inputs": 0,
+      "model_violation_inputs": 0,
+      "correspondence_mismatches": 0,
+      "source_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+      "response_bytes": 1372,
+      "rule_counts": {
+        "select": 3,
+        "step": 9,
+        "total": 12
+      },
+      "usage_summary": {
+        "input_tokens": 1146,
+        "output_tokens": 10229,
+        "cache_hit_tokens": 896,
+        "cache_miss_tokens": 250
+      },
+      "thinking_metadata": {
+        "requested_mode": "enabled",
+        "requested_reasoning_effort": "high",
+        "reasoning_content_present": true,
+        "reasoning_content_bytes": 40384,
+        "reasoning_tokens": 9816,
+        "mode_evidence": "reasoning_observed"
+      },
+      "fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+      "elapsed_seconds": 41.782156,
+      "full_assessment_match": true
+    }
+  ],
+  "stop": "protocol_complete",
+  "initial_accepted_count": 6,
+  "eventually_accepted_count": 6,
+  "selected_sources": [
+    {
+      "sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+      "response_path": "attempts/001/response.bin",
+      "representative_sample": "P1-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R1"
+      ]
+    },
+    {
+      "sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+      "response_path": "attempts/002/response.bin",
+      "representative_sample": "P2-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R1",
+        "P3-R2"
+      ]
+    },
+    {
+      "sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+      "response_path": "attempts/003/response.bin",
+      "representative_sample": "P3-R1",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P3-R1"
+      ]
+    },
+    {
+      "sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+      "response_path": "attempts/004/response.bin",
+      "representative_sample": "P1-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P1-R2"
+      ]
+    },
+    {
+      "sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+      "response_path": "attempts/005/response.bin",
+      "representative_sample": "P2-R2",
+      "first_accepted_attempt": 0,
+      "sample_ids": [
+        "P2-R2"
+      ]
+    }
+  ],
+  "behavior_diagnostic": {
+    "selection_input_count": 32,
+    "step_input_count": 1792,
+    "selection_classes": [
+      {
+        "class_id": "select_behavior_01",
+        "sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "sample_ids": [
+          "P1-R1",
+          "P2-R1",
+          "P1-R2",
+          "P2-R2",
+          "P3-R2"
+        ],
+        "selection_outputs": [
+          {
+            "input_id": "select:e1d293666f2218f3b2a3c7f8a72611c3cadd9a12cf066b78fc52aaa3db2aa1e0",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:219b7297f4f66d4038d209dec05e84aea2e56d275b4d7dda17958276dbc14dcc",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:8333ecc1bfb20e09d1fe3a3b5c5afbea2069f27f71ccbe73436aff91f9f19e4f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:c49e3b9953762340271b1719f21cffc98734cb9a38b57dc98ed6ef4fdc2805f4",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:7bc5fee6197372f722132da0045969127eba53eeecf3cb5296f2dda72fc02491",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:9e9b2d0a85c3fca33614d9ccac320e851ba891b55dd95d342841719119452405",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:9345a1ca06dd2291b20ff2485b59bae4fb276cee42d1d9f871ce92cc7a412af2",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:e115ece7c771b8b665acb07e5ec36d3228b494db0fc8d28635051a8477376f2f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:1d878c1070c8b602ba6ed0a235aa78c15104e214bd73931264cfaac394320486",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:219ac990d531ab2304fd18352385f7e292d647a007c317aab617ae57ad0e1a1a",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:66e26a6936c52a960f362401254e2529cbbdd38b77c79a3d5b4ecc1c3ae25d2f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:db588234f870834943a2c0c160da0eae228dc429a721768c1011e0474a2e0b3c",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cf332b28e725e8ee702922e3edf2f1e41b3cf92af8e244414131d6e818a74216",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cbc3497f01a9a844c3da2f9e58ce3a1e4ae3684ef04112e13c76e6e259078ad7",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:53341293ffa915a01fd1999c4348fd9e73fce32ef3e6f077787188b962783398",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:7f5e3469d579519957616a6ccbc4181f5ce636f3971afbb2b2883801a6fb9970",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:61a82317e28ff27468a30582338047cf407f4102c63b674b6793d3a366ffd5b6",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:5ee848955ce0f94403c1c79a80480559b58cedb21f5ee32a25e32aa20a882940",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:2e5465a0dbed71950f0c91ebaebb2653f9b23c8ff384933ca61e7a6744faabe9",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cc3213adf8bd19093e054b5838a8ff2c1582216136f1e388be66a382ede5f602",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:144d4e49c0913e60c72a084d2565e1edf9f1157b18c985335e578d4cdddef991",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:1e57424ff86ca2da1be8ec39f626cc2289635abb45777ee156aadfcd2932a52f",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:15019ab7c752f0544538c661d9986698e23c16879463bdbae03ecad4b62ffd51",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:e46720095bfb2e0344d378edf980812b0049ef79de69db1546b1ceb7df73cb86",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:8b9757d46ed267d461a7bcb4328ba4fd082e769302c0504fa6dbdd726fbf68a8",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:e97453d4a87f24e780046053d05ee2bcaef8ab19dce6fb51ea136e6bbde8f448",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:d88a62174b1b0d8ccee2c1caef8c2a06885263ac69cb0eb34ba16cc415e18248",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:6817eaf0fea766fc1de669bcb5d1c77257c2ad6ecdf0858b0fdf3321e1a92d4b",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:ff4d567b121fdebdfb23768c264b30426a06229c5453c17dbf1d8524b3eef542",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:17385e6aa3e2d25664265c328d4ff7bc296993d3e137868041c29f1561bd0794",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:327761032e7ee28e6fed073ce86e41e75c4d372e7ef83bb7e07cc823a3802f85",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:874615aab530b2b2082463d700f66f9f27f4f8f2477e175a018800424d971f55",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          }
+        ]
+      },
+      {
+        "class_id": "select_behavior_02",
+        "sha256": "b1cff18b56657af94ad10a2cfabd2a67c970db5066b5457f63e729a7bf4806a6",
+        "sample_ids": [
+          "P3-R1"
+        ],
+        "selection_outputs": [
+          {
+            "input_id": "select:e1d293666f2218f3b2a3c7f8a72611c3cadd9a12cf066b78fc52aaa3db2aa1e0",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:219b7297f4f66d4038d209dec05e84aea2e56d275b4d7dda17958276dbc14dcc",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:8333ecc1bfb20e09d1fe3a3b5c5afbea2069f27f71ccbe73436aff91f9f19e4f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:c49e3b9953762340271b1719f21cffc98734cb9a38b57dc98ed6ef4fdc2805f4",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:7bc5fee6197372f722132da0045969127eba53eeecf3cb5296f2dda72fc02491",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:9e9b2d0a85c3fca33614d9ccac320e851ba891b55dd95d342841719119452405",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:9345a1ca06dd2291b20ff2485b59bae4fb276cee42d1d9f871ce92cc7a412af2",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:e115ece7c771b8b665acb07e5ec36d3228b494db0fc8d28635051a8477376f2f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:1d878c1070c8b602ba6ed0a235aa78c15104e214bd73931264cfaac394320486",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:219ac990d531ab2304fd18352385f7e292d647a007c317aab617ae57ad0e1a1a",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:66e26a6936c52a960f362401254e2529cbbdd38b77c79a3d5b4ecc1c3ae25d2f",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:db588234f870834943a2c0c160da0eae228dc429a721768c1011e0474a2e0b3c",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cf332b28e725e8ee702922e3edf2f1e41b3cf92af8e244414131d6e818a74216",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cbc3497f01a9a844c3da2f9e58ce3a1e4ae3684ef04112e13c76e6e259078ad7",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:53341293ffa915a01fd1999c4348fd9e73fce32ef3e6f077787188b962783398",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:7f5e3469d579519957616a6ccbc4181f5ce636f3971afbb2b2883801a6fb9970",
+            "facts": {
+              "OwnerFree": false,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:61a82317e28ff27468a30582338047cf407f4102c63b674b6793d3a366ffd5b6",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:5ee848955ce0f94403c1c79a80480559b58cedb21f5ee32a25e32aa20a882940",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:2e5465a0dbed71950f0c91ebaebb2653f9b23c8ff384933ca61e7a6744faabe9",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:cc3213adf8bd19093e054b5838a8ff2c1582216136f1e388be66a382ede5f602",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "Defer"
+          },
+          {
+            "input_id": "select:144d4e49c0913e60c72a084d2565e1edf9f1157b18c985335e578d4cdddef991",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:1e57424ff86ca2da1be8ec39f626cc2289635abb45777ee156aadfcd2932a52f",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:15019ab7c752f0544538c661d9986698e23c16879463bdbae03ecad4b62ffd51",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:e46720095bfb2e0344d378edf980812b0049ef79de69db1546b1ceb7df73cb86",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": false,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:8b9757d46ed267d461a7bcb4328ba4fd082e769302c0504fa6dbdd726fbf68a8",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:e97453d4a87f24e780046053d05ee2bcaef8ab19dce6fb51ea136e6bbde8f448",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:d88a62174b1b0d8ccee2c1caef8c2a06885263ac69cb0eb34ba16cc415e18248",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:6817eaf0fea766fc1de669bcb5d1c77257c2ad6ecdf0858b0fdf3321e1a92d4b",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": false,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:ff4d567b121fdebdfb23768c264b30426a06229c5453c17dbf1d8524b3eef542",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:17385e6aa3e2d25664265c328d4ff7bc296993d3e137868041c29f1561bd0794",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": false,
+              "PreferB": true
+            },
+            "actual": "SelectB"
+          },
+          {
+            "input_id": "select:327761032e7ee28e6fed073ce86e41e75c4d372e7ef83bb7e07cc823a3802f85",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": false
+            },
+            "actual": "SelectA"
+          },
+          {
+            "input_id": "select:874615aab530b2b2082463d700f66f9f27f4f8f2477e175a018800424d971f55",
+            "facts": {
+              "OwnerFree": true,
+              "RequestA": true,
+              "RequestB": true,
+              "PreferA": true,
+              "PreferB": true
+            },
+            "actual": "SelectA"
+          }
+        ]
+      }
+    ],
+    "sample_mapping": {
+      "P1-R1": {
+        "selection_class": "select_behavior_01",
+        "selection_sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "8c9a614d51b0004e5b3b039666c31232bc15e72ce6045a9cda6684ff52ce7824",
+        "accepted_attempt": 0
+      },
+      "P2-R1": {
+        "selection_class": "select_behavior_01",
+        "selection_sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+        "accepted_attempt": 0
+      },
+      "P3-R1": {
+        "selection_class": "select_behavior_02",
+        "selection_sha256": "b1cff18b56657af94ad10a2cfabd2a67c970db5066b5457f63e729a7bf4806a6",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "9eaa530b58253c1a07c6369882ed59eacb4cfac7dc40850e4100d31f387a47cd",
+        "accepted_attempt": 0
+      },
+      "P1-R2": {
+        "selection_class": "select_behavior_01",
+        "selection_sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "eb5a9d7915a64a816b95223e864e47f9fcff117b490c78994b6fdb61285d6ed3",
+        "accepted_attempt": 0
+      },
+      "P2-R2": {
+        "selection_class": "select_behavior_01",
+        "selection_sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "d864df79a77d78db50ad14bf6f683ec2897dfa0c2668f95244fda76c6f7f8c75",
+        "accepted_attempt": 0
+      },
+      "P3-R2": {
+        "selection_class": "select_behavior_01",
+        "selection_sha256": "b49e579160b3576d7831e9b8ea0acc01272fc7205faaa1c3b8a7b9c042f772d1",
+        "step_sha256": "a0ed5cc15758da345bbdd656c5126461f7254aba7598c7ab7118e5dd07b9b4ba",
+        "raw_sha256": "c7e96f0c096ea4b1cb67607f700b23f24a34d6d11d3f0c36b7acba6bb446e8b9",
+        "accepted_attempt": 0
+      }
+    },
+    "unique_accepted_ast_count": 5,
+    "unique_accepted_step_behavior_count": 1,
+    "all_accepted_step_behaviors_equal": true,
+    "scope": "Descriptive accepted-program output equivalence only; no change to acceptance or exact-byte physical selection."
+  },
+  "result_sha256": "bc47c4736a9863c7bd80b5c746596fc87c0cf6b12d3e87c216c32d538d4a3198",
+  "manifest_sha256": "db80586701f72befc7baebb29c4bd269c03b22fb84a9b44e27bb55b57d9314da",
+  "audit_script_sha256": "a8def850cfb13629eb7368ecb79f9e7d43fe55372f68819b0eb1c4134b0e5c11",
+  "scope": "One AMR task, three wordings, six fresh requests; no physical or hardware claim."
+}

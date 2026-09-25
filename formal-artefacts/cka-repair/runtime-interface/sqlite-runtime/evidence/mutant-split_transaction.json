@@ -1,0 +1,47 @@
+{
+  "tests_run": 1,
+  "failures": 2,
+  "errors": 0,
+  "observations": {
+    "crash_recovery": [
+      {
+        "point": "before_begin",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "recovered_effects": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_read",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 0,
+        "recovered_effects": 0,
+        "after_retry_balance": 7
+      },
+      {
+        "point": "after_effect",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 7,
+        "recovered_effects": 1
+      },
+      {
+        "point": "after_state",
+        "exit": 73,
+        "recovered_stage": "Approved",
+        "recovered_balance": 7,
+        "recovered_effects": 1
+      },
+      {
+        "point": "after_commit",
+        "exit": 73,
+        "recovered_stage": "Completed",
+        "recovered_balance": 7,
+        "recovered_effects": 1,
+        "after_retry_balance": 7
+      }
+    ]
+  }
+}

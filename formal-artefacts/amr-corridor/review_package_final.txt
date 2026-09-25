@@ -1,0 +1,1232 @@
+FILE: controller.py
+"""Handwritten reference decisions. This module never reads the plant or oracle."""
+from dataclasses import dataclass
+import math
+
+
+@dataclass(frozen=True)
+class Observation:
+    robot_id: str
+    sample_time: float
+    pose: tuple
+    speed: float
+    blocked: bool
+    mission_revision: int
+    map_revision: int
+
+
+@dataclass(frozen=True)
+class Command:
+    robot_id: str
+    seq: int
+    intent: str
+    mission_revision: int
+    map_revision: int
+    issued: float
+    delivery: float
+    expiry: float
+
+
+def usable(obs, robot_id, now, params):
+    return (obs is not None and obs.robot_id == robot_id
+            and obs.mission_revision == 1 and obs.map_revision == 1
+            and all(math.isfinite(x) for x in (*obs.pose, obs.speed, obs.sample_time, now))
+            and 0 <= now - obs.sample_time <= params['timing']['accepted_observation_age_upper_bound'] + 1e-9)
+
+
+def braking_distance(speed, age, params, omit_reaction=False):
+    """Proposed sufficient bound, evaluated at observation-time front bumper."""
+    if not math.isfinite(speed) or not math.isfinite(age) or age < 0:
+        raise ValueError('Finite speed and nonnegative observation age required')
+    r, t = params['robot'], params['timing']
+    upper = max(0, speed + r['speed_error_bound'])
+    delay = 0 if omit_reaction else (age + t['safety_monitor_period'] +
+                                   t['monitor_compute_upper_bound'] + t['brake_delivery_and_onset_upper_bound'])
+    a, b = r['forward_acceleration_upper_bound'], r['braking_deceleration_lower_bound']
+    return upper * delay + .5 * a * delay ** 2 + (upper + a * delay) ** 2 / (2 * b) + r['position_error_bound'] + r['clearance_margin']
+
+
+def body_clear(obs, robot_id, now, params, front_only=False):
+    if not usable(obs, robot_id, now, params):
+        return False
+    r = params['robot']
+    x, _, theta = obs.pose
+    extent = abs(math.cos(theta)) * r['length'] / 2 + abs(math.sin(theta)) * r['width'] / 2
+    left, right, _, _ = params['map']['reservation_zone_Z']
+    if front_only:
+        # Deliberate geometric mutation. This is not a safety feature.
+        return x + extent > right if robot_id == 'A' else x - extent < left
+    buffer = r['position_error_bound'] + r['clearance_margin']
+    return x - extent > right + buffer if robot_id == 'A' else x + extent < left - buffer
+
+
+class Reservation:
+    """No timeout release: a missing heartbeat cannot establish clearance."""
+    def __init__(self):
+        self.owner = None
+        self.mission_id = None
+        self.serial = 0
+
+    def acquire(self, robot_id, mission_id):
+        if self.owner is not None:
+            return False
+        self.owner, self.mission_id = robot_id, mission_id
+        self.serial += 1
+        return True
+
+    def release(self, robot_id, mission_id, clear):
+        if not clear or (self.owner, self.mission_id) != (robot_id, mission_id):
+            return False
+        self.owner = self.mission_id = None
+        return True
+
+
+class Actuator:
+    def __init__(self, robot_id):
+        self.robot_id = robot_id
+        self.intent = 'Brake'
+        self.sequence = -1
+        self.brake_since = 0.0
+
+    def accept(self, command, now):
+        if command.robot_id != self.robot_id:
+            return 'wrong_robot'
+        if command.intent not in ('Proceed', 'Brake'):
+            return 'bad_intent'
+        if (command.mission_revision, command.map_revision) != (1, 1):
+            return 'wrong_revision'
+        if now < command.delivery - 1e-9:
+            return 'not_delivered'
+        if now > command.expiry + 1e-9:
+            return 'expired'
+        if command.seq <= self.sequence:
+            return 'old_sequence'
+        self.sequence = command.seq
+        if command.intent == 'Brake' and self.intent != 'Brake':
+            self.brake_since = now
+        self.intent = command.intent
+        return 'accepted'
+
+
+def reference_decision(obs, robot_id, now, params, permitted, goal, always_stop=False):
+    if not usable(obs, robot_id, now, params):
+        return 'Brake', 'observation_unusable'
+    if always_stop:
+        return 'Brake', 'always_stop_reference'
+    if obs.blocked:
+        return 'Brake', 'pedestrian_blocked'
+    if not permitted:
+        return 'Brake', 'waiting_for_reservation'
+    if math.dist(obs.pose[:2], goal) <= .01:
+        return 'Brake', 'at_goal'
+    return 'Proceed', 'current_permission'
+
+FILE: plant.py
+"""Analytic fixed-route reference plant, independent of supervision and scoring.
+
+SI units. Vertices require rest before bounded, finite-duration rotation.
+Angular inertia is omitted: delivered Brake freezes rotation immediately.
+"""
+from collections import deque
+from dataclasses import asdict, dataclass
+from math import atan2, cos, hypot, isfinite, pi, sin, sqrt
+
+
+@dataclass(frozen=True)
+class MotionPiece:
+    duration: float
+    start_pose: tuple
+    initial_speed: float
+    acceleration: float
+    angular_velocity: float
+    point_speed_bound: float
+
+    def sample(self, relative_t):
+        if not isfinite(relative_t) or relative_t < -1e-12 or relative_t > self.duration + 1e-12:
+            raise ValueError('sample time outside motion interval')
+        t = min(self.duration, max(0.0, relative_t))
+        x, y, theta = self.start_pose
+        distance = self.initial_speed * t + self.acceleration * t * t / 2
+        return (x + cos(theta) * distance, y + sin(theta) * distance,
+                theta + self.angular_velocity * t)
+
+    def to_dict(self):
+        return asdict(self)
+
+    @classmethod
+    def from_dict(cls, value):
+        return cls(**{**value, 'start_pose': tuple(value['start_pose'])})
+
+
+class RobotPlant:
+    def __init__(self, route, length=.8, width=.6, speed_limit=1.0,
+                 accel=.5, brake=.8, turn_rate=pi / 2, *, initial_speed=0.0):
+        for v in (length, width, speed_limit, accel, brake, turn_rate):
+            if not isfinite(v) or v <= 0:
+                raise ValueError('physical parameters must be positive and finite')
+        self.route = tuple(tuple(map(float, p)) for p in route)
+        if len(self.route) < 2 or any(len(p) != 2 or not all(map(isfinite, p)) for p in self.route):
+            raise ValueError('route requires at least two finite xy vertices')
+        if any(a == b for a, b in zip(self.route, self.route[1:])):
+            raise ValueError('consecutive vertices must differ')
+        if not isfinite(initial_speed) or not 0 <= initial_speed <= speed_limit:
+            raise ValueError('initial speed must lie within speed limits')
+        x, y = self.route[0]
+        dx, dy = self.route[1][0] - x, self.route[1][1] - y
+        if initial_speed * initial_speed > 2 * brake * hypot(dx, dy) + 1e-12:
+            raise ValueError('initial speed cannot stop by first waypoint')
+        self.length, self.width = length, width
+        self.speed_limit, self.accel, self.brake, self.turn_rate = speed_limit, accel, brake, turn_rate
+        self._pose, self._speed = (x, y, atan2(dy, dx)), initial_speed
+        self._waypoint = 1
+        self._phases = deque()
+        self._intent = None
+
+    @property
+    def pose(self):
+        return self._pose
+
+    @property
+    def speed(self):
+        return self._speed
+
+    @property
+    def finished(self):
+        return self._waypoint >= len(self.route) and self._speed == 0
+
+    def _plan(self, intent):
+        if intent == 'Brake':
+            if self._speed > 0:
+                self._phases.append([self._speed / self.brake, -self.brake, 0.0, 'halt'])
+            return
+        if self.finished:
+            return
+        x, y, theta = self._pose
+        tx, ty = self.route[self._waypoint]
+        distance = hypot(tx - x, ty - y)
+        if distance < 1e-10 and self._speed == 0:
+            self._waypoint += 1
+            self._plan(intent)
+            return
+        angle = (atan2(ty - y, tx - x) - theta + pi) % (2 * pi) - pi
+        if abs(angle) > 1e-10:
+            if self._speed > 1e-10:
+                raise RuntimeError('cannot rotate while translating')
+            self._phases.append([abs(angle) / self.turn_rate, 0.0,
+                                 self.turn_rate if angle > 0 else -self.turn_rate, 'turn'])
+            return
+        # Integrate dv/dt=a then dv/dt=-b; solve the distance equation
+        # for peak velocity, optionally inserting a constant-speed interval.
+        v, a, b = self._speed, self.accel, self.brake
+        peak = min(self.speed_limit, sqrt((2 * a * b * distance + b * v * v) / (a + b)))
+        if peak < v - 1e-9:
+            raise RuntimeError('unreachable waypoint without overtravel')
+        peak = max(v, peak)
+        up = (peak - v) / a
+        cruise_distance = distance - (peak * peak - v * v) / (2 * a) - peak * peak / (2 * b)
+        if up > 0:
+            self._phases.append([up, a, 0.0, 'phase'])
+        if cruise_distance > 1e-12:
+            self._phases.append([cruise_distance / peak, 0.0, 0.0, 'phase'])
+        self._phases.append([peak / b, -b, 0.0, 'arrive'])
+
+    def advance(self, dt, intent='Proceed'):
+        """Apply an already delivered command for dt and return its exact pieces."""
+        if not isfinite(dt) or dt < 0 or intent not in ('Proceed', 'Brake'):
+            raise ValueError('expected finite nonnegative dt and Proceed or Brake')
+        if intent != self._intent:
+            self._phases.clear()
+            self._intent = intent
+        pieces = []
+        remaining = dt
+        while remaining > 0:
+            if not self._phases:
+                self._plan(intent)
+            if not self._phases:
+                pieces.append(MotionPiece(remaining, self.pose, 0.0, 0.0, 0.0, 0.0))
+                break
+            phase = self._phases[0]
+            duration, acceleration, omega, event = phase
+            step = min(remaining, duration)
+            end_speed = self.speed + acceleration * step
+            bound = max(self.speed, end_speed) + abs(omega) * hypot(self.length, self.width) / 2
+            piece = MotionPiece(step, self.pose, self.speed, acceleration, omega, bound)
+            pieces.append(piece)
+            self._pose = piece.sample(step)
+            self._speed = end_speed
+            remaining -= step
+            if step == duration:
+                self._phases.popleft()
+                if event in ('halt', 'arrive'):
+                    # Exact analytic zero-speed event; no position projection.
+                    self._speed = 0.0
+                if event == 'arrive':
+                    self._waypoint += 1
+            else:
+                phase[0] -= step
+        return pieces
+
+FILE: oracle.py
+"""Independent convex geometry and conservative continuous rectangle checks.
+
+No controller or plant dependencies. Bounds supplied to sweep_check must bound
+the speed of EVERY body point (including rotation), throughout the interval.
+Floating point arithmetic and a fixed tolerance are not a formal proof.
+"""
+import math
+
+
+def _finite(value, name, minimum=None, strict=False):
+    try:
+        value = float(value)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError(name + ' must be finite') from exc
+    if not math.isfinite(value) or (minimum is not None and
+            (value < minimum or (strict and value == minimum))):
+        raise ValueError(name + ' is outside its valid range')
+    return value
+
+
+def rectangle(pose, length, width):
+    """Return four counterclockwise vertices for (x, y, theta), in metres/radians."""
+    if len(pose) != 3:
+        raise ValueError('pose must contain x, y, theta')
+    x, y, theta = (_finite(v, 'pose') for v in pose)
+    length = _finite(length, 'length', 0, True)
+    width = _finite(width, 'width', 0, True)
+    c, s = math.cos(theta), math.sin(theta)
+    points = tuple((x + c*u - s*v, y + s*u + c*v)
+                   for u, v in ((-length/2, -width/2), (length/2, -width/2),
+                                (length/2, width/2), (-length/2, width/2)))
+    if not all(math.isfinite(v) for p in points for v in p):
+        raise ValueError('rectangle arithmetic overflow')
+    return points
+
+
+def _polygon(points):
+    points = tuple(tuple(_finite(v, 'vertex') for v in p) for p in points)
+    if len(points) < 3 or any(len(p) != 2 for p in points):
+        raise ValueError('polygon needs at least three 2D vertices')
+    return points
+
+
+def _edges(points):
+    return zip(points, points[1:] + points[:1])
+
+
+def _point_segment(p, a, b):
+    dx, dy = b[0]-a[0], b[1]-a[1]
+    norm = math.hypot(dx, dy)
+    if norm == 0:
+        return math.hypot(p[0]-a[0], p[1]-a[1])
+    ux, uy = dx/norm, dy/norm
+    along = max(0., min(norm, (p[0]-a[0])*ux + (p[1]-a[1])*uy))
+    return math.hypot(p[0]-a[0]-along*ux, p[1]-a[1]-along*uy)
+
+
+def polygon_distance(a, b):
+    """Euclidean distance between filled convex polygons; touching gives zero.
+
+    Vertices must be ordered around nondegenerate convex polygons. Either
+    orientation is accepted. Concave or self-intersecting input is unsupported.
+    """
+    a, b = _polygon(a), _polygon(b)
+    separated = False
+    for polygon in (a, b):
+        for p, q in _edges(polygon):
+            dx, dy = q[0]-p[0], q[1]-p[1]
+            norm = math.hypot(dx, dy)
+            if norm == 0:
+                continue
+            nx, ny = -dy/norm, dx/norm
+            pa = [x*nx + y*ny for x, y in a]
+            pb = [x*nx + y*ny for x, y in b]
+            if not all(math.isfinite(v) for v in pa + pb):
+                raise ValueError('polygon arithmetic overflow')
+            if max(pa) < min(pb) or max(pb) < min(pa):
+                separated = True
+                break
+        if separated:
+            break
+    if not separated:
+        return 0.
+    distance = min(_point_segment(p, u, v)
+                   for vertices, segments in ((a, b), (b, a))
+                   for p in vertices for u, v in _edges(segments))
+    if not math.isfinite(distance):
+        raise ValueError('distance arithmetic overflow')
+    return distance
+
+
+def sweep_check(pose_a, pose_b, length_a, width_a, length_b, width_b,
+                duration, speed_bound_a, speed_bound_b, *, epsilon=1e-9,
+                max_depth=24, max_intervals=100000):
+    """Check continuous motion at relative times in [0, duration].
+
+    A sampled distance <= epsilon is a numerical collision witness (not
+    necessarily the first contact). A midpoint distance minus epsilon and the
+    relative point-speed bound times half the interval certifies separation.
+    Exhausted budgets return unresolved, never clear. distance_lower_bound is
+    a bound over the ENTIRE interval; unresolved/collision return zero.
+    Trusted continuous callbacks and valid point-speed bounds are preconditions.
+    """
+    duration = _finite(duration, 'duration', 0)
+    va = _finite(speed_bound_a, 'speed_bound_a', 0)
+    vb = _finite(speed_bound_b, 'speed_bound_b', 0)
+    relative_speed = _finite(va + vb, 'combined speed', 0)
+    epsilon = _finite(epsilon, 'epsilon', 0)
+    for name, value, minimum in [('max_depth', max_depth, 0),
+                                  ('max_intervals', max_intervals, 1)]:
+        if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
+            raise ValueError(name + ' must be an integer within range')
+    for name, value in [('length_a', length_a), ('width_a', width_a),
+                        ('length_b', length_b), ('width_b', width_b)]:
+        _finite(value, name, 0, True)
+
+    def distance(t):
+        return polygon_distance(rectangle(pose_a(t), length_a, width_a),
+                                rectangle(pose_b(t), length_b, width_b))
+
+    def result(status, witness=None, bound=0.):
+        return dict(status=status, witness_time=witness, distance_lower_bound=bound)
+
+    for t in (0., duration):
+        d = distance(t)
+        if d <= epsilon:
+            return result('collision', t)
+    if duration == 0:
+        return result('clear', bound=max(0., d-epsilon))
+
+    pending = [(0., duration, 0)]
+    lower_bound = math.inf
+    unresolved = False
+    visited = 0
+    while pending:
+        if visited >= max_intervals:
+            return result('unresolved')
+        lo, hi, depth = pending.pop()
+        visited += 1
+        mid = lo + (hi-lo)/2
+        d = distance(mid)
+        if d <= epsilon:
+            return result('collision', mid)
+        bound = d - epsilon - relative_speed * ((hi-lo)/2)
+        if bound > 0:
+            lower_bound = min(lower_bound, bound)
+        elif depth >= max_depth or mid == lo or mid == hi:
+            unresolved = True
+        else:
+            pending.append((mid, hi, depth+1))
+            pending.append((lo, mid, depth+1))
+    return result('unresolved') if unresolved else result('clear', bound=lower_bound)
+
+FILE: simulation.py
+"""Deterministic reference episodes, separate sensor/controller and scoring paths.
+
+Events on the fixed output clock: sample -> receive -> monitor/reservation ->
+deliver -> continuous plant interval. Commands become effective after 0.10 s.
+This synthetic closed loop is not a robot-stack or LLM evaluation.
+"""
+from dataclasses import asdict
+import hashlib
+import json
+import math
+from pathlib import Path
+
+from controller import (Observation, Command, Actuator, Reservation, body_clear,
+                        braking_distance, reference_decision, usable)
+from plant import RobotPlant, MotionPiece
+from oracle import rectangle, polygon_distance, sweep_check
+
+PARAMETER_PATH = Path(__file__).resolve().parents[2] / 'literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json'
+FROZEN_PARAMETERS_SHA256 = 'ce4e5058052d8f87e6187254ab42e870c37197176dc8ea20c59aa5aa442630a6'
+
+
+def parameters(path=PARAMETER_PATH):
+    # This first fixture has fixed geometry/constants, not arbitrary map support.
+    # Refuse drift instead of hashing a new config but executing old constants.
+    raw = Path(path).read_bytes()
+    if hashlib.sha256(raw).hexdigest() != FROZEN_PARAMETERS_SHA256:
+        raise ValueError('This fixture requires the frozen AMR-Corridor-v0.1 parameters; adapt and revalidate code before changing them')
+    return json.loads(raw)
+
+
+def clock_multiple(value, dt):
+    count = round(value / dt)
+    if count < 0 or abs(count * dt - value) > 1e-9:
+        raise ValueError('Event times must be integral multiples of output dt')
+    return count
+
+
+def pedestrian_pose(t, mode):
+    # Exogenous schedule frozen before comparative runs: enter at t=10;
+    # cross south to north at 1 m/s, or remain at the lane centre.
+    y = -3.5 + max(0, t - 10)
+    if mode == 'permanent':
+        y = min(0, y)
+    return (12.0, min(3.5, y), math.pi / 2)
+
+
+def pedestrian_present(t, mode):
+    return mode != 'none' and t >= 10 and (mode == 'permanent' or t < 17)
+
+
+def pedestrian_speed(t, mode):
+    return 0 if mode == 'permanent' and t >= 13.5 else 1
+
+
+def wall_rectangles():
+    # Inner wall faces y=+/-0.8; opening x=11.5..12.5.
+    return [((x, y, 0), 3.5, .14) for x in (9.75, 14.25) for y in (-.87, .87)]
+
+
+def piece_at(pieces, relative_t):
+    offset = 0.0
+    for piece in pieces:
+        if relative_t <= offset + piece.duration + 1e-10:
+            return piece, offset
+        offset += piece.duration
+    raise ValueError('Motion pieces do not cover interval')
+
+
+def assess_interval(t, dt, pieces, pedestrian, stats):
+    """Independent oracle consumes physical trajectories, never safety predicates."""
+    boundaries = {0., dt}
+    for sequence in pieces.values():
+        total = 0.
+        for piece in sequence:
+            total += piece.duration
+            if 1e-10 < total < dt - 1e-10:
+                boundaries.add(total)
+    cuts = sorted(boundaries)
+    for lo, hi in zip(cuts, cuts[1:]):
+        moving = {}
+        for name, sequence in pieces.items():
+            piece, offset = piece_at(sequence, (lo + hi) / 2)
+            moving[name] = (lambda tau, p=piece, start=lo-offset: p.sample(start+tau),
+                            .8, .6, piece.point_speed_bound)
+        pairs = [('A:B', moving['A'], moving['B'])]
+        for name, body in moving.items():
+            for number, (pose, length, width) in enumerate(wall_rectangles()):
+                pairs.append((name + ':wall' + str(number), body,
+                              (lambda tau, p=pose: p, length, width, 0)))
+            if pedestrian_present(t + (lo + hi) / 2, pedestrian):
+                pairs.append((name + ':pedestrian', body,
+                              (lambda tau, start=t+lo: pedestrian_pose(start+tau, pedestrian),
+                               .5, .5, pedestrian_speed(t+lo, pedestrian))))
+        for name, a, b in pairs:
+            result = sweep_check(a[0], b[0], a[1], a[2], b[1], b[2], hi-lo, a[3], b[3])
+            stats['continuous_intervals_checked'] += 1
+            stats['distance_lower_bound_m'] = min(stats['distance_lower_bound_m'], result['distance_lower_bound'])
+            if result['status'] == 'collision' and name not in stats['collision_pairs']:
+                stats['collision_pairs'].append(name)
+                stats['collision_witnesses'].append({'pair': name, 'time': t+lo+result['witness_time']})
+            if result['status'] == 'unresolved' and name not in stats['unresolved_pairs']:
+                stats['unresolved_pairs'].append(name)
+
+
+def score_completion(controller_completed, physical_states, goals):
+    """Score reported Done against actual goal position and standstill.
+
+    Inputs are scoring-only snapshots. No observation, controller predicate or
+    logical mode can supply the physical goal/velocity check.
+    """
+    validated, mismatches = [], []
+    for name in sorted(controller_completed):
+        pose, speed = physical_states[name]
+        distance = math.dist(pose[:2], goals[name])
+        at_goal = math.isfinite(distance) and distance <= .01
+        stopped = math.isfinite(speed) and abs(speed) <= 1e-9
+        if at_goal and stopped:
+            validated.append(name)
+        else:
+            reasons = []
+            if not at_goal:
+                reasons.append('actual_position_outside_goal_tolerance')
+            if not stopped:
+                reasons.append('actual_speed_not_halted')
+            mismatches.append(dict(robot=name, reason=reasons,
+                                   goal_distance_m=distance, speed=speed))
+    return dict(completed_robots=validated, completion_mismatches=mismatches)
+
+
+def run_episode(*, preference='A', pedestrian='none', always_stop=False,
+                front_only=False, sensor_blackout=None, dt=.01, horizon=120., emit=None):
+    if preference not in ('A', 'B') or pedestrian not in ('none', 'temporary', 'permanent'):
+        raise ValueError('Unsupported scenario')
+    if not math.isfinite(dt) or dt <= 0:
+        raise ValueError('dt must be positive and finite')
+    p = parameters()
+    period = clock_multiple(p['timing']['safety_monitor_period'], dt)
+    sensor_delay = clock_multiple(.05, dt)
+    command_delay = clock_multiple(.10, dt)
+    steps = clock_multiple(horizon, dt)
+    if period < 1 or dt > .01:
+        raise ValueError('dt must divide 0.05 s and be at most 0.01 s')
+    robots = {name: RobotPlant(p['map']['route_' + name][1:]) for name in ('A', 'B')}
+    independent_goals = {name: tuple(p['map']['route_' + name][-1]) for name in robots}
+    actuators = {name: Actuator(name) for name in robots}
+    observations = {name: None for name in robots}
+    sensor_queue, command_queue = {}, {}
+    reservation = Reservation()
+    released, completed = set(), set()
+    last_sent = {name: None for name in robots}
+    sequence = {name: 0 for name in robots}
+    pedestrian_stopped = set()
+    last_mode = {name: 'Waiting' for name in robots}
+    events = []
+    stats = dict(collision_pairs=[], collision_witnesses=[], unresolved_pairs=[],
+                 distance_lower_bound_m=math.inf, continuous_intervals_checked=0,
+                 early_releases=[], grant_order=[], pedestrian_brakes=0,
+                 resumes_after_pedestrian=0, completion_times={},
+                 assumption_violated=[], assumption_detected=[])
+
+    def record(kind, time, **data):
+        row = dict(kind=kind, time=round(time, 10), **data)
+        if kind != 'observation':
+            events.append(row)
+        if emit:
+            emit(row)
+
+    # Conservative standstill evidence based on effective sustained Brake,
+    # bounded speed/acceleration and the declared braking lower bound.
+    r = p['robot']
+    halt_bound = (r['speed_limit'] + r['speed_error_bound'] +
+                  r['forward_acceleration_upper_bound'] * p['timing']['total_reaction_upper_bound']) / r['braking_deceleration_lower_bound']
+    t = 0.
+    for tick in range(steps + 1):
+        t = round(tick * dt, 10)
+        if tick % period == 0:
+            for name, robot in robots.items():
+                obs = Observation(name, t, robot.pose, robot.speed,
+                                  pedestrian_present(t, pedestrian), 1, 1)
+                sensor_queue.setdefault(tick + sensor_delay, []).append(obs)
+                record('observation', t, packet=asdict(obs), receive_time=round(t+.05, 10))
+        for obs in sensor_queue.pop(tick, []):
+            if sensor_blackout and obs.robot_id == 'A' and sensor_blackout[0] <= t < sensor_blackout[1]:
+                record('observation_dropped', t, robot='A', sample_time=obs.sample_time)
+            else:
+                observations[obs.robot_id] = obs
+        if tick % period == 0:
+            owner = reservation.owner
+            if owner and body_clear(observations[owner], owner, t, p, front_only):
+                actual = rectangle(robots[owner].pose, .8, .6)
+                zone = rectangle((12, 0, 0), 12, 5.2)
+                occupied = polygon_distance(actual, zone) <= 1e-9
+                if occupied:
+                    stats['early_releases'].append({'time': t, 'robot': owner, 'pose': robots[owner].pose})
+                reservation.release(owner, 'mission-'+owner, True)
+                released.add(owner)
+                record('release', t, robot=owner, actual_body_still_in_Z=occupied)
+            if reservation.owner is None:
+                for name in (preference, 'B' if preference == 'A' else 'A'):
+                    if name not in released and usable(observations[name], name, t, p):
+                        reservation.acquire(name, 'mission-'+name)
+                        stats['grant_order'].append(name)
+                        record('grant', t, robot=name, mission_id='mission-'+name, reservation_id=reservation.serial)
+                        break
+            for name in robots:
+                obs = observations[name]
+                goal = p['map']['route_'+name][-1]
+                permitted = reservation.owner == name or name in released
+                action, reason = reference_decision(obs, name, t, p, permitted, goal, always_stop)
+                actuator = actuators[name]
+                halted = (actuator.intent == 'Brake' and t-actuator.brake_since >= halt_bound)
+                if name in released and usable(obs, name, t, p) and math.dist(obs.pose[:2], goal) <= .01 and halted:
+                    if name not in completed:
+                        completed.add(name)
+                        stats['completion_times'][name] = t
+                        record('complete', t, robot=name, goal=goal)
+                if action == 'Brake' and reason == 'pedestrian_blocked' and last_sent[name] != 'Brake':
+                    stats['pedestrian_brakes'] += 1
+                    pedestrian_stopped.add(name)
+                    distance = 11.5 - obs.pose[0] - .4 if name == 'A' else obs.pose[0] - .4 - 12.5
+                    required = braking_distance(obs.speed, t-obs.sample_time, p)
+                    condition = distance >= required
+                    record('pedestrian_brake', t, robot=name, observation_distance_to_H=distance,
+                           required_distance=required, straight_approach_condition=condition)
+                    if not condition:
+                        stats['assumption_violated'].append({'time': t, 'robot': name, 'condition': 'viable_straight_approach_at_first_blocked_observation'})
+                if action == 'Proceed' and name in pedestrian_stopped and last_sent[name] == 'Brake':
+                    stats['resumes_after_pedestrian'] += 1
+                    pedestrian_stopped.remove(name)
+                    record('resume', t, robot=name)
+                mode = 'Done' if name in completed else ('Stopped' if action == 'Brake' and halted else ('BrakeRequested' if action == 'Brake' else 'Traversing'))
+                if mode != last_mode[name]:
+                    record('mode', t, robot=name, mode=mode)
+                    last_mode[name] = mode
+                if action != last_sent[name]:
+                    sequence[name] += 1
+                    command = Command(name, sequence[name], action, 1, 1, t, round(t+.1, 10), round(t+.3, 10))
+                    command_queue.setdefault(tick+command_delay, []).append(command)
+                    record('command_issued', t, command=asdict(command), reason=reason,
+                           reservation_id=reservation.serial if reservation.owner == name else None,
+                           sample_time=obs.sample_time if obs else None)
+                    last_sent[name] = action
+        for command in command_queue.pop(tick, []):
+            accepted = actuators[command.robot_id].accept(command, t)
+            record('command_delivered', t, command=asdict(command), status=accepted)
+        if len(completed) == 2 or tick == steps:
+            break
+        pieces = {name: robot.advance(dt, actuators[name].intent) for name, robot in robots.items()}
+        assess_interval(t, dt, pieces, pedestrian, stats)
+        if emit:
+            emit(dict(kind='motion', time=t, duration=dt,
+                      robots={name: [piece.to_dict() for piece in motions] for name, motions in pieces.items()}))
+    physical_score = score_completion(
+        completed, {name: (robot.pose, robot.speed) for name, robot in robots.items()},
+        independent_goals)
+    validated = physical_score['completed_robots']
+    stats.update(completed_robots=validated, controller_completed_robots=sorted(completed),
+                 independent_goals=independent_goals, physical_completion_score=physical_score,
+                 completion_mismatches=physical_score['completion_mismatches'],
+                 termination=('complete' if len(validated) == 2 else
+                              'completion_mismatch' if len(completed) == 2 else 'horizon'),
+                 time=t, reservation_owner=reservation.owner, events=events,
+                 final_poses={name: robot.pose for name, robot in robots.items()},
+                 config=dict(preference=preference, pedestrian=pedestrian, always_stop=always_stop,
+                             front_only=front_only, sensor_blackout=sensor_blackout, dt=dt, horizon=horizon),
+                 safe_and_complete=(len(validated) == 2 and not stats['collision_pairs'] and
+                                    not stats['unresolved_pairs'] and not stats['early_releases']))
+    return stats
+
+
+def geometry_witness():
+    p = parameters()
+    obs = Observation('A', 0, (18.1, -2, 0), 0, False, 1, 1)
+    return dict(pose=obs.pose, front_x=18.5, rear_x=17.7,
+                front_only_clear=body_clear(obs, 'A', 0, p, True),
+                whole_body_clear=body_clear(obs, 'A', 0, p),
+                actual_body_intersects_Z=polygon_distance(rectangle(obs.pose, .8, .6), rectangle((12, 0, 0), 12, 5.2)) <= 1e-9)
+
+
+def run_stopping_witness(*, omit_reaction=False, actual_brake=.8, dt=.01, emit=None):
+    """C07 straight fixed-boundary paired closed-loop witness, not an episode.
+
+    Initial front distance=3.6 m; both policies start from the same viable state.
+    First threshold crossing is held Brake; actual plant does not use its bound.
+    """
+    p = parameters()
+    period, lag, delivery = (clock_multiple(value, dt) for value in (.05, .1, .1))
+    robot = RobotPlant([(0, 0), (50, 0)], initial_speed=1, brake=actual_brake)
+    packets, latest = {}, None
+    brake_tick = None
+    issued_time = delivered_time = halted_time = None
+    rows = []
+    for tick in range(clock_multiple(10, dt)+1):
+        t = round(tick*dt, 10)
+        if tick % period == 0:
+            packets[tick+lag] = (t, robot.pose[0], robot.speed)
+        latest = packets.pop(tick, latest)
+        if tick % period == 0 and latest and brake_tick is None:
+            observed_at, x, speed = latest
+            distance = 4 - x - .4
+            required = braking_distance(speed, t-observed_at, p, omit_reaction)
+            rows.append(dict(time=t, observed_at=observed_at, observed_front_distance=distance, required_distance=required))
+            if distance <= required:
+                brake_tick = tick+delivery
+                issued_time, delivered_time = t, round((tick+delivery)*dt, 10)
+        braking = brake_tick is not None and tick >= brake_tick
+        if braking and robot.speed == 0:
+            halted_time = t
+            break
+        pieces = robot.advance(dt, 'Brake' if braking else 'Proceed')
+        if emit:
+            emit(dict(kind='motion', time=t, duration=dt, intent='Brake' if braking else 'Proceed', pieces=[piece.to_dict() for piece in pieces]))
+    clearance = 4 - robot.pose[0] - .4
+    return dict(initial_state=dict(pose=[0, 0, 0], speed=1, forbidden_boundary_x=4),
+                omit_reaction=omit_reaction, actual_brake=actual_brake, dt=dt,
+                brake_issued=issued_time, brake_delivery=delivered_time, halted_time=halted_time,
+                final_front_x=robot.pose[0]+.4, clearance=clearance,
+                required_margin=p['robot']['clearance_margin'],
+                margin_violation=clearance < p['robot']['clearance_margin']-1e-9,
+                crossed_boundary=clearance < -1e-9, decisions=rows,
+                assumption_violated=(['braking_lower_bound'] if actual_brake < .8 else []),
+                assumption_detected=[], scope='synthetic fixed-boundary witness; no LLM or hardware')
+
+FILE: run_suite.py
+"""Run the fixed, exploratory reference suite and retain replayable evidence."""
+import argparse
+import datetime
+import gzip
+import hashlib
+import io
+import json
+from pathlib import Path
+import platform
+import sys
+from contextlib import contextmanager
+
+from simulation import run_episode, run_stopping_witness, geometry_witness, PARAMETER_PATH
+
+HERE = Path(__file__).resolve().parent
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n', encoding='utf-8')
+
+
+@contextmanager
+def trace_writer(path):
+    # Fixed gzip header for identical event streams on the same implementation.
+    with path.open('wb') as raw:
+        with gzip.GzipFile(filename='', mode='wb', fileobj=raw, mtime=0) as compressed:
+            with io.TextIOWrapper(compressed, encoding='utf-8', newline='\n') as output:
+                def emit(row):
+                    output.write(json.dumps(row, separators=(',', ':'), allow_nan=False)+'\n')
+                yield emit
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True, help='New evidence directory; existing directories are not overwritten')
+    args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=False)
+    source_before = {p.name:digest(p) for p in sorted(HERE.glob('*.py'))}
+    parameter_before = digest(PARAMETER_PATH)
+    cases = [
+        ('C01_A_first', {}),
+        ('C01_B_first', dict(preference='B')),
+        ('C10_temporary_pedestrian', dict(pedestrian='temporary')),
+        ('C12_permanent_pedestrian', dict(pedestrian='permanent')),
+        ('C12_always_stop', dict(always_stop=True)),
+        ('C05_front_only_release', dict(front_only=True)),
+        ('C08_observation_blackout', dict(sensor_blackout=(10., 15.))),
+    ]
+    episodes = {}
+    for case_id, config in cases:
+        with trace_writer(args.output/(case_id+'.trace.jsonl.gz')) as emit:
+            result = run_episode(**config, emit=emit)
+        write_json(args.output/(case_id+'.json'), result)
+        episodes[case_id] = {key: value for key, value in result.items() if key != 'events'}
+        print(json.dumps(dict(case=case_id, completed=result['completed_robots'], time=result['time'],
+                              collisions=result['collision_pairs'], unresolved=result['unresolved_pairs'],
+                              early_releases=len(result['early_releases'])), ensure_ascii=True), flush=True)
+    stopping = {}
+    for case_id, config in [('C07_full_bound', {}), ('C07_omit_reaction', dict(omit_reaction=True)),
+                            ('C12_weak_brake', dict(actual_brake=.4))]:
+        with trace_writer(args.output/(case_id+'.trace.jsonl.gz')) as emit:
+            result = run_stopping_witness(**config, emit=emit)
+        write_json(args.output/(case_id+'.json'), result)
+        stopping[case_id] = {key: value for key, value in result.items() if key != 'decisions'}
+        print(json.dumps(dict(case=case_id, clearance=result['clearance'], margin_violation=result['margin_violation'],
+                              crossed_boundary=result['crossed_boundary']), ensure_ascii=True), flush=True)
+
+    # New runs, not fixed-action replay: monitor/event periods remain the same.
+    refinements = {}
+    for case_id, config in cases:
+        if case_id not in ('C01_A_first', 'C10_temporary_pedestrian', 'C05_front_only_release'):
+            continue
+        with trace_writer(args.output/(case_id+'.dt005.trace.jsonl.gz')) as emit:
+            fine = run_episode(**config, dt=.005, emit=emit)
+        write_json(args.output/(case_id+'.dt005.json'), fine)
+        coarse = episodes[case_id]
+        fields = ['completed_robots', 'grant_order', 'collision_pairs', 'unresolved_pairs', 'safe_and_complete']
+        refinements[case_id] = dict(dt=.005,
+                                   same_outcomes=all(coarse[k] == fine[k] for k in fields),
+                                   time_difference=abs(coarse['time']-fine['time']),
+                                   max_final_coordinate_difference=max(abs(x-y) for name in ('A', 'B') for x,y in zip(coarse['final_poses'][name], fine['final_poses'][name])),
+                                   coarse_early_release_count=len(coarse['early_releases']), fine_early_release_count=len(fine['early_releases']))
+        print(json.dumps(dict(refinement=case_id, **refinements[case_id])), flush=True)
+    for case_id, omit in [('C07_full_bound', False), ('C07_omit_reaction', True)]:
+        with trace_writer(args.output/(case_id+'.dt005.trace.jsonl.gz')) as emit:
+            fine = run_stopping_witness(omit_reaction=omit, dt=.005, emit=emit)
+        coarse = stopping[case_id]
+        write_json(args.output/(case_id+'.dt005.json'), fine)
+        refinements[case_id] = dict(dt=.005, same_outcomes=fine['margin_violation'] == coarse['margin_violation'] and fine['crossed_boundary'] == coarse['crossed_boundary'],
+                                   clearance_difference=abs(fine['clearance']-coarse['clearance']))
+    write_json(args.output/'summary.json', dict(scope='Exploratory synthetic reference environment; no LLM or proof',
+                                               episodes=episodes, stopping=stopping, geometry=geometry_witness(), refinements=refinements))
+    source_after = {p.name:digest(p) for p in sorted(HERE.glob('*.py'))}
+    manifest = dict(created_at_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                    python=sys.version, platform=platform.platform(),
+                    parameters=dict(path=str(PARAMETER_PATH), sha256=digest(PARAMETER_PATH)),
+                    code_sha256=source_before, code_sha256_after=source_after,
+                    code_stable_during_run=source_before == source_after,
+                    parameters_stable_during_run=parameter_before == digest(PARAMETER_PATH),
+                    test_sha256={p.name:digest(p) for p in sorted((HERE/'tests').glob('test_*.py'))},
+                    files_sha256={p.name:digest(p) for p in sorted(args.output.iterdir()) if p.is_file()},
+                    full_episodes=10, stopping_runs=5, geometry_fixtures=1, llm_calls=0, new_formal_builds=0,
+                    limits=['Synthetic dynamics and sensing', 'No generated supervisor', 'No universal pedestrian safety',
+                            'Floating-point oracle bounds are not formal proofs', 'No hardware calibration or certification'])
+    write_json(args.output/'manifest.json', manifest)
+    if not manifest['code_stable_during_run'] or not manifest['parameters_stable_during_run']:
+        raise RuntimeError('Source or parameters changed during the run; evidence retained but provenance is invalid')
+
+
+if __name__ == '__main__':
+    main()
+
+FILE: tests/test_controller.py
+"""Independent numeric and protocol fixtures for the reference controller."""
+import json
+from pathlib import Path
+import sys
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from controller import Observation, Command, Actuator, Reservation, braking_distance, body_clear
+
+PARAMS = json.loads((Path(__file__).resolve().parents[3] / 'literature/scholar_search_2026-09-10/followup/research_amr_parameters_2026-09-15.json').read_text(encoding='utf-8'))
+
+def observation(x, y=-2, robot='A', time=1, theta=0, speed=0):
+    return Observation(robot, time, (x, y, theta), speed, False, 1, 1)
+
+class ControllerTests(unittest.TestCase):
+    def test_stopping_bound_includes_old_observation_and_delivery(self):
+        self.assertAlmostEqual(braking_distance(1.0, .1, PARAMS), 1.391015625)
+        self.assertGreater(braking_distance(1.0, .1, PARAMS), braking_distance(1.0, 0, PARAMS))
+
+    def test_front_out_does_not_release_tail(self):
+        obs = observation(18.1)
+        self.assertTrue(body_clear(obs, 'A', 1, PARAMS, front_only=True))
+        self.assertFalse(body_clear(obs, 'A', 1, PARAMS))
+        self.assertTrue(body_clear(observation(18.7), 'A', 1, PARAMS))
+
+    def test_wrong_object_stale_or_wrong_exit_does_not_clear(self):
+        for obs in [observation(20, robot='B'), observation(20, time=0), observation(4)]:
+            self.assertFalse(body_clear(obs, 'A', 1, PARAMS))
+
+    def test_timeout_cannot_reassign_occupied_reservation(self):
+        r = Reservation()
+        self.assertTrue(r.acquire('A', 'mission-A'))
+        self.assertFalse(r.acquire('B', 'mission-B'))
+        self.assertFalse(r.release('A', 'mission-A', False))
+        self.assertEqual(r.owner, 'A')
+        self.assertFalse(r.release('A', 'wrong-mission', True))
+        self.assertTrue(r.release('A', 'mission-A', True))
+        self.assertTrue(r.acquire('B', 'mission-B'))
+
+    def test_late_old_proceed_cannot_overwrite_new_brake(self):
+        a = Actuator('A')
+        brake = Command('A', 2, 'Brake', 1, 1, 0, .1, 1)
+        old = Command('A', 1, 'Proceed', 1, 1, 0, .2, 1)
+        self.assertEqual(a.accept(brake, .1), 'accepted')
+        self.assertEqual(a.accept(old, .2), 'old_sequence')
+        self.assertEqual(a.intent, 'Brake')
+
+    def test_expired_wrong_robot_and_old_revision_cannot_execute(self):
+        a = Actuator('A')
+        cases = [
+            (Command('B', 1, 'Proceed', 1, 1, 0, .1, 1), .1, 'wrong_robot'),
+            (Command('A', 1, 'Proceed', 1, 1, 0, .1, .2), .3, 'expired'),
+            (Command('A', 1, 'Proceed', 0, 1, 0, .1, 1), .1, 'wrong_revision'),
+        ]
+        for command, now, reason in cases:
+            self.assertEqual(a.accept(command, now), reason)
+            self.assertEqual(a.intent, 'Brake')
+
+if __name__ == '__main__':
+    unittest.main()
+
+FILE: tests/test_plant.py
+import math
+import unittest
+try:
+    from plant import RobotPlant, MotionPiece
+except ImportError:
+    RobotPlant = MotionPiece = None
+
+
+class PlantTests(unittest.TestCase):
+    def make(self, *args, **kwargs):
+        self.assertIsNotNone(RobotPlant, 'timed plant is not implemented')
+        return RobotPlant(*args, **kwargs)
+
+    def test_analytic_braking_and_hold(self):
+        p = self.make([(0, 0), (10, 0)], initial_speed=1)
+        pieces = p.advance(2, 'Brake')
+        self.assertAlmostEqual(pieces[0].duration, 1.25)
+        self.assertAlmostEqual(pieces[0].sample(1.25)[0], .625)
+        self.assertAlmostEqual(p.pose[0], .625)
+        self.assertEqual(p.speed, 0)
+        p.advance(5, 'Brake')
+        self.assertAlmostEqual(p.pose[0], .625)
+
+    def test_turn_has_duration_and_zero_translation(self):
+        p = self.make([(0, 0), (1, 0), (1, 1)])
+        pieces = p.advance(20)
+        turns = [q for q in pieces if abs(q.angular_velocity) > 0]
+        self.assertEqual(len(turns), 1)
+        q = turns[0]
+        self.assertAlmostEqual(q.duration, 1)
+        self.assertAlmostEqual(q.sample(.5)[2], math.pi / 4)
+        self.assertAlmostEqual(q.sample(.5)[0], 1)
+        self.assertAlmostEqual(q.sample(.5)[1], 0)
+        self.assertAlmostEqual(q.initial_speed, 0)
+        self.assertTrue(p.finished)
+        self.assertAlmostEqual(p.pose[1], 1)
+        self.assertEqual(p.speed, 0)
+
+    def test_dt_partition_independence(self):
+        route = [(0, 0), (1, 0), (1, 3), (-2, 3)]
+        a, b = self.make(route), self.make(route)
+        for duration, intent in [(1.1, 'Proceed'), (.7, 'Brake'), (5.13, 'Proceed'), (.2, 'Brake'), (20, 'Proceed')]:
+            a.advance(duration, intent)
+            for _ in range(100):
+                b.advance(duration / 100, intent)
+            for x, y in zip(a.pose, b.pose):
+                self.assertAlmostEqual(x, y, places=9)
+            self.assertAlmostEqual(a.speed, b.speed, places=9)
+        self.assertTrue(a.finished and b.finished)
+
+    def test_brake_resume_and_rotation_freeze(self):
+        p = self.make([(0, 0), (10, 0), (10, 10)])
+        p.advance(1)
+        p.advance(2, 'Brake')
+        self.assertEqual(p.speed, 0)
+        self.assertFalse(p.finished)
+        parts = p.advance(20)
+        turning = next(q for q in parts if q.angular_velocity)
+        # Independently locate half of the turn from the same initial state.
+        p = self.make([(0, 0), (1, 0), (1, 1)])
+        full = p.advance(20)
+        t = 0
+        for q in full:
+            if q.angular_velocity:
+                t += q.duration / 2
+                break
+            t += q.duration
+        p = self.make([(0, 0), (1, 0), (1, 1)])
+        p.advance(t)
+        before = p.pose
+        p.advance(3, 'Brake')
+        self.assertEqual(p.pose, before)
+        p.advance(20)
+        self.assertTrue(p.finished)
+
+    def test_serialized_pieces_continuity_and_bounds(self):
+        p = self.make([(0, 0), (2, 0), (2, 1)])
+        pieces = p.advance(10)
+        self.assertAlmostEqual(sum(q.duration for q in pieces), 10)
+        last = (0, 0, 0)
+        for q in pieces:
+            restored = MotionPiece.from_dict(q.to_dict())
+            for x, y in zip(last, q.sample(0)):
+                self.assertAlmostEqual(x, y)
+            self.assertEqual(q.sample(q.duration / 2), restored.sample(q.duration / 2))
+            for t in (0, q.duration):
+                v = abs(q.initial_speed + q.acceleration * t)
+                self.assertGreaterEqual(q.point_speed_bound + 1e-12, v + abs(q.angular_velocity) * .5)
+            last = q.sample(q.duration)
+
+    def test_invalid_inputs(self):
+        for kwargs in ({'brake': 0}, {'initial_speed': -1}, {'speed_limit': float('nan')}):
+            with self.assertRaises(ValueError):
+                self.make([(0, 0), (10, 0)], **kwargs)
+        with self.assertRaises(ValueError):
+            self.make([(0, 0), (.1, 0)], initial_speed=1)
+        p = self.make([(0, 0), (1, 0)])
+        with self.assertRaises(ValueError):
+            p.advance(-1)
+        with self.assertRaises(ValueError):
+            p.advance(1, 'Teleport')
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+FILE: tests/test_oracle.py
+"""Analytic fixtures independent of the oracle implementation."""
+import importlib.util
+import math
+from pathlib import Path
+import unittest
+
+
+class OracleTests(unittest.TestCase):
+    def setUp(self):
+        path = Path(__file__).resolve().parents[1] / "oracle.py"
+        self.assertTrue(path.exists(), "Independent collision oracle has not been implemented")
+        spec = importlib.util.spec_from_file_location("independent_oracle", path)
+        self.oracle = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.oracle)
+
+    def sweep(self, a, b, **kwargs):
+        args = dict(length_a=.2, width_a=.2, length_b=.2, width_b=.2,
+                    duration=1., speed_bound_a=0., speed_bound_b=0.)
+        args.update(kwargs)
+        return self.oracle.sweep_check(a, b, **args)
+
+    def test_rectangle_rotation(self):
+        points = self.oracle.rectangle((2., 3., math.pi / 2), 4., 2.)
+        for actual, expected in zip(points, [(3, 1), (3, 5), (1, 5), (1, 1)]):
+            for x, y in zip(actual, expected):
+                self.assertAlmostEqual(x, y)
+
+    def test_polygon_analytic_distances_overlap_and_contact(self):
+        a = [(0, 0), (1, 0), (1, 1), (0, 1)]
+        for b, expected in [([(4, 5), (5, 5), (5, 6), (4, 6)], 5.),
+                            ([(1, 0), (2, 0), (2, 1), (1, 1)], 0.),
+                            ([(.2, .2), (.3, .2), (.3, .3), (.2, .3)], 0.)]:
+            self.assertAlmostEqual(self.oracle.polygon_distance(a, b), expected)
+            self.assertAlmostEqual(self.oracle.polygon_distance(b, a), expected)
+
+    def test_frame_endpoints_clear_but_midpoint_crosses(self):
+        result = self.sweep(lambda t: (-1 + 2*t, 0, 0), lambda t: (0, 0, 0),
+                            speed_bound_a=2)
+        self.assertEqual(result['status'], 'collision')
+        self.assertEqual(result['witness_time'], .5)
+        self.assertEqual(result['distance_lower_bound'], 0)
+
+    def test_rotation_sweep_hits_between_clear_endpoints(self):
+        result = self.sweep(lambda t: (0, 0, math.pi*t), lambda t: (0, .8, 0),
+                            length_a=2, width_a=.1,
+                            speed_bound_a=math.pi*math.hypot(1, .05))
+        self.assertEqual(result['status'], 'collision')
+        self.assertEqual(result['witness_time'], .5)
+
+    def test_static_clear_has_conservative_distance(self):
+        result = self.sweep(lambda t: (0, 0, 0), lambda t: (2, 0, 0))
+        self.assertEqual(result['status'], 'clear')
+        self.assertIsNone(result['witness_time'])
+        self.assertGreater(result['distance_lower_bound'], 1.79)
+        self.assertLessEqual(result['distance_lower_bound'], 1.8)
+
+    def test_exact_contact_and_zero_duration(self):
+        result = self.sweep(lambda t: (0, 0, 0), lambda t: (.2, 0, 0), duration=0)
+        self.assertEqual(result['status'], 'collision')
+        self.assertEqual(result['witness_time'], 0)
+
+    def test_subdivision_finds_off_midpoint_collision(self):
+        result = self.sweep(lambda t: (-.5+2*t, 0, 0), lambda t: (0, 0, 0),
+                            speed_bound_a=2)
+        self.assertEqual(result['status'], 'collision')
+        self.assertAlmostEqual(result['witness_time'], .25)
+
+    def test_unresolved_budget_never_reports_clear(self):
+        result = self.sweep(lambda t: (0, 0, 0), lambda t: (1, 0, 0),
+                            speed_bound_a=100, max_depth=0)
+        self.assertEqual(result['status'], 'unresolved')
+        self.assertIsNone(result['witness_time'])
+        self.assertEqual(result['distance_lower_bound'], 0)
+
+    def test_invalid_inputs_are_rejected(self):
+        for kwargs in [dict(duration=-1), dict(speed_bound_a=-1),
+                       dict(speed_bound_b=float('nan')), dict(duration=float('inf')),
+                       dict(length_a=0), dict(width_b=-1), dict(epsilon=-1),
+                       dict(max_depth=-1), dict(max_intervals=0)]:
+            with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                self.sweep(lambda t: (0, 0, 0), lambda t: (1, 0, 0), **kwargs)
+        with self.assertRaises(ValueError):
+            self.sweep(lambda t: (float('nan'), 0, 0), lambda t: (1, 0, 0))
+        with self.assertRaises(ValueError):
+            self.oracle.polygon_distance([(0, 0)], [(0, 0), (1, 0), (0, 1)])
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+FILE: tests/test_simulation.py
+"""Closed-loop outcomes; expected invariants do not call controller helpers."""
+from pathlib import Path
+import sys
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from simulation import run_episode, run_stopping_witness, geometry_witness
+import simulation
+
+
+class SimulationTests(unittest.TestCase):
+    def test_reference_completes_both_tasks_and_advice_changes_order(self):
+        for preference in ['A', 'B']:
+            result = run_episode(preference=preference)
+            self.assertEqual(result['completed_robots'], ['A', 'B'])
+            self.assertEqual(result['grant_order'][0], preference)
+            self.assertEqual(result['collision_pairs'], [])
+            self.assertEqual(result['unresolved_pairs'], [])
+            self.assertEqual(result['early_releases'], [])
+
+    def test_temporary_blockage_recovers_but_permanent_blockage_does_not(self):
+        temporary = run_episode(pedestrian='temporary')
+        permanent = run_episode(pedestrian='permanent', horizon=35)
+        self.assertEqual(temporary['completed_robots'], ['A', 'B'])
+        self.assertGreater(temporary['pedestrian_brakes'], 0)
+        self.assertGreater(temporary['resumes_after_pedestrian'], 0)
+        self.assertEqual(temporary['collision_pairs'], [])
+        self.assertEqual(permanent['completed_robots'], [])
+        self.assertEqual(permanent['collision_pairs'], [])
+        self.assertEqual(permanent['termination'], 'horizon')
+        self.assertEqual(permanent['reservation_owner'], 'A')
+
+    def test_always_stop_is_safe_but_not_successful(self):
+        result = run_episode(always_stop=True, horizon=5)
+        self.assertEqual(result['collision_pairs'], [])
+        self.assertEqual(result['completed_robots'], [])
+        self.assertFalse(result['safe_and_complete'])
+
+    def test_omitting_reaction_loses_required_margin_from_same_initial_state(self):
+        good, bad = run_stopping_witness(), run_stopping_witness(omit_reaction=True)
+        self.assertEqual(good['initial_state'], bad['initial_state'])
+        self.assertFalse(good['margin_violation'])
+        self.assertTrue(bad['margin_violation'])
+        self.assertGreater(good['halted_time'], good['brake_delivery'])
+        self.assertAlmostEqual(good['halted_time'] - good['brake_delivery'], 1.25, places=6)
+
+    def test_release_mutation_is_visible_to_independent_geometry(self):
+        result = geometry_witness()
+        self.assertTrue(result['front_only_clear'])
+        self.assertFalse(result['whole_body_clear'])
+        self.assertTrue(result['actual_body_intersects_Z'])
+
+    def test_physical_completion_rejects_done_at_wrong_goal_or_in_motion(self):
+        self.assertTrue(hasattr(simulation, 'score_completion'),
+                        'independent physical completion scorer is missing')
+        score = simulation.score_completion(
+            {'A', 'B', 'C'},
+            {'A': ((0, 0, 0), 0), 'B': ((2, 0, 0), 1),
+             'C': ((3, 0, 0), 0)},
+            {'A': (1, 0), 'B': (2, 0), 'C': (3, 0)})
+        self.assertEqual(score['completed_robots'], ['C'])
+        self.assertEqual({entry['robot'] for entry in score['completion_mismatches']}, {'A', 'B'})
+
+    def test_goal_completion_waits_for_fresh_observation_after_blackout(self):
+        result = run_episode(sensor_blackout=(29.9, 40.), horizon=32.)
+        self.assertNotIn('A', result['completed_robots'])
+        self.assertNotIn('A', result['completion_times'])
+        self.assertFalse(any(e['kind'] == 'complete' and e['robot'] == 'A'
+                             for e in result['events']))
+
+    def test_lost_observations_stop_owner_without_regranting_occupied_zone(self):
+        result = run_episode(sensor_blackout=(10., 15.), horizon=16.)
+        self.assertTrue(any(e['kind'] == 'command_issued' and e['reason'] == 'observation_unusable'
+                            and e['time'] > 10 for e in result['events']))
+        self.assertEqual(result['grant_order'], ['A'])
+        self.assertEqual(result['reservation_owner'], 'A')
+        self.assertEqual(result['early_releases'], [])
+        self.assertEqual(result['collision_pairs'], [])
+
+if __name__ == '__main__':
+    unittest.main()
+
+FILE: tests/test_parameters.py
+"""Parameter identity must not silently disagree with the fixed physical model."""
+import json
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from simulation import parameters, PARAMETER_PATH
+
+
+class ParameterTests(unittest.TestCase):
+    def test_changed_robot_width_is_rejected_instead_of_ignored(self):
+        changed = json.loads(PARAMETER_PATH.read_text(encoding='utf-8'))
+        changed['robot']['width'] = 1.8
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'parameters.json'
+            path.write_text(json.dumps(changed), encoding='utf-8')
+            with self.assertRaises(ValueError):
+                parameters(path)
+
+
+if __name__ == '__main__':
+    unittest.main()
+

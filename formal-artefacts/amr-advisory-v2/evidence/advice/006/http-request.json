@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "max_tokens": 128,
+  "stream": false,
+  "temperature": 0,
+  "thinking": {
+    "type": "disabled"
+  },
+  "response_format": {
+    "type": "json_object"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "A and B are waiting to use a shared industrial passage. Deadline(A)=30minutes, Deadline(B)=10minutes. Neither has any extra safety permission. Recommend the task with less time to its deadline.\nThis is advisory data only. Return exactly one JSON object with the single key \"prefer\" and value \"A\" or \"B\". No code, actions, credentials or explanation."
+    }
+  ]
+}
